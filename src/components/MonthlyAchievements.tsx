@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchDataFromSheet } from "@/lib/sheets";
 
-const ACHIEVEMENTS_SHEET_ID = "1yq3iz43AgYlSZKXJEE6P6aMmYme84eo8SXPmsgCt4Bs";
 const ACHIEVEMENTS_SHEET_URL = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=0&single=true&output=csv&t=${Date.now()}`;
 
 const MONTHS = ["April", "March", "February", "January", "December", "November", "October", "September", "August", "July", "June"];

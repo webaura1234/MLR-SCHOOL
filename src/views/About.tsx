@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Target, Eye, ShieldCheck, Heart, Users } from 'lucide-react';
 import OptimizedImage from '../components/OptimizedImage';
-import DynamicCalendar from '../components/DynamicCalendar';
 import './Home.css';
 
 /** Each route (/about, /vision, /principal, /management) shows its own focused page — not a duplicate wall of content. */
@@ -23,10 +22,9 @@ const About = () => {
           : 'full';
 
   const showVision = mode === 'full' || mode === 'vision';
-  const showPrincipal = mode === 'full' || mode === 'principal';
+  const showPrincipal = false;
   const showManagement = mode === 'full' || mode === 'management';
   const showSalient = mode === 'full';
-  const showCalendar = mode === 'full';
 
   const hero =
     mode === 'vision'
@@ -194,8 +192,8 @@ const About = () => {
                 textAlign: 'center',
               }}
             >
-              The school operates under a dedicated board and academic council that set policy, uphold CBSE standards,
-              and ensure transparent, child-safe operations across campus life.
+              Malla Reddy School operates under a dedicated board and academic council that set policy, uphold CBSE
+              standards, and ensure transparent, child-safe operations across campus life.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#333', textAlign: 'center' }}>
               Leadership meets regularly with faculty and parent representatives to review curriculum delivery,
@@ -225,14 +223,6 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {showCalendar && (
-        <section className="calendar-section section">
-          <div className="container">
-            <DynamicCalendar />
           </div>
         </section>
       )}

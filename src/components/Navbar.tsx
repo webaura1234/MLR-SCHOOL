@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import './Navbar.css';
+import { useSiteInfo } from '@/lib/useSiteInfo';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { siteInfo } = useSiteInfo();
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -40,7 +42,6 @@ const Navbar = () => {
       path: '#',
       dropdown: [
         { name: 'About School', path: '/about' },
-        { name: "Principal's Desk", path: '/principal' },
         { name: 'Management Team', path: '/management-team' },
         { name: 'Vision & Mission', path: '/vision' },
       ],
@@ -52,6 +53,7 @@ const Navbar = () => {
         { name: 'IIT Foundation', path: '/iit-foundation' },
         { name: 'Curriculum', path: '/curriculum' },
         { name: 'Labs', path: '/labs' },
+        { name: 'Monthly Achievements', path: '/monthly-achievements' },
         { name: 'Student Achievers', path: '/achievers' },
         { name: 'Careers', path: '/careers' },
       ],
@@ -65,7 +67,6 @@ const Navbar = () => {
         { name: 'Art & Craft', path: '/co-curricular#art-craft' },
         { name: 'Indoor Games', path: '/co-curricular#indoor' },
         { name: 'Outdoor Games', path: '/co-curricular#outdoor' },
-        { name: 'Summer Camps', path: '/co-curricular#summercamps' },
       ],
     },
     { name: 'Gallery', path: '/gallery', galleryPill: true },
@@ -140,7 +141,7 @@ const Navbar = () => {
               </nav>
 
               <div className="navbar-end">
-                <a href="tel:+919123456789" className="navbar-call-btn" onClick={closeMenu}>
+                <a href={`tel:${siteInfo.phoneTel}`} className="navbar-call-btn" onClick={closeMenu}>
                   <Phone size={16} />
                   <span>Call Us</span>
                 </a>
@@ -201,7 +202,7 @@ const Navbar = () => {
                 </div>
               ))}
               <div className="navbar-menu-ctas" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
-                <a href="tel:+919123456789" className="navbar-menu-call" onClick={closeMenu}>
+                <a href={`tel:${siteInfo.phoneTel}`} className="navbar-menu-call" onClick={closeMenu}>
                   <Phone size={20} />
                   <span>Call Us</span>
                 </a>

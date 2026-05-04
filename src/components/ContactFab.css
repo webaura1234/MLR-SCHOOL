@@ -17,10 +17,18 @@
     box-shadow 0.2s ease;
 }
 
+.contact-fab--whatsapp {
+  background: #25d366;
+}
+
 .contact-fab:hover {
   transform: scale(1.06);
   background-color: var(--primary-dark);
   box-shadow: 0 10px 28px rgba(45, 61, 36, 0.35);
+}
+
+.contact-fab--whatsapp:hover {
+  background: #1fb856;
 }
 
 .contact-fab:active {

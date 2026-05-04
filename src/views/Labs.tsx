@@ -9,55 +9,55 @@ import './Home.css';
 const Labs = () => {
   const [selectedLab, setSelectedLab] = React.useState<{ title: string; images: string[] } | null>(null);
   const labs = [
-    { 
-      title: 'Composite Science Lab', 
-      icon: <Microscope />, 
-      img: 'https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=600', 
+    {
+      title: 'Composite Science Lab',
+      icon: <Microscope />,
+      img: 'https://images.unsplash.com/photo-1572847748080-bac263fae977?q=80&w=600',
       desc: 'Equipped with the latest apparatus for Physics, Chemistry, and Biology experiments.',
       gallery: [
-        'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200',
-        'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200',
-      ]
+        'https://images.unsplash.com/photo-1572847748080-bac263fae977?q=80&w=1200',
+        'https://images.unsplash.com/photo-1719159381916-062fa9f435a6?q=80&w=1200',
+      ],
     },
-    { 
-      title: 'Computer Intelligence Lab', 
-      icon: <Laptop />, 
-      img: 'https://images.unsplash.com/photo-1510531704581-5b2870972060?q=80&w=600', 
+    {
+      title: 'Computer Intelligence Lab',
+      icon: <Laptop />,
+      img: 'https://images.unsplash.com/photo-1722573783625-eceb04251036?q=80&w=600',
       desc: 'High-speed internet and modern systems for coding, AI, and digital literacy.',
       gallery: [
-        'https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=1200',
-        'https://images.unsplash.com/photo-1510531704581-5b2870972060?q=80&w=1200',
-      ]
+        'https://images.unsplash.com/photo-1722573783625-eceb04251036?q=80&w=1200',
+        'https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=1200',
+      ],
     },
-    { 
-      title: 'Mathematical Explorer Zone', 
-      icon: <Calculator />, 
-      img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600', 
+    {
+      title: 'Mathematical Explorer Zone',
+      icon: <Calculator />,
+      img: 'https://images.unsplash.com/photo-1719159381962-4170890ada4e?q=80&w=600',
       desc: 'Making abstract concepts concrete through 3D models and interactive tools.',
       gallery: [
-        'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1200',
-        'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200',
-      ]
+        'https://images.unsplash.com/photo-1719159381962-4170890ada4e?q=80&w=1200',
+        'https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=1200',
+      ],
     },
-    { 
-      title: 'Space Lab & Astronomy', 
-      icon: <Zap />, 
-      img: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=600', 
+    {
+      title: 'Space Lab & Astronomy',
+      icon: <Zap />,
+      img: 'https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=600',
       desc: 'Embark on an exhilarating journey through the cosmos with our specialized space science simulations and telescopes.',
       gallery: [
-        'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200',
-        'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?q=80&w=1200',
-      ]
+        'https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=1200',
+        'https://images.unsplash.com/photo-1623303366639-0e330d7c3d9f?q=80&w=1200',
+      ],
     },
-    { 
-      title: 'Robotics & Innovation Lab', 
-      icon: <Zap />, 
-      img: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=600', 
+    {
+      title: 'Robotics & Innovation Lab',
+      icon: <Zap />,
+      img: 'https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=600',
       desc: 'Where students build and program robots for national level competitions.',
       gallery: [
-        'https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200',
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
-      ]
+        'https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=1200',
+        'https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?q=80&w=1200',
+      ],
     },
   ];
 
@@ -114,7 +114,11 @@ const Labs = () => {
             </div>
             <div className="polaroid-card">
               <div className="polaroid-taped"></div>
-              <img src="https://images.unsplash.com/photo-1529148482759-b35b25c5f217?q=80&w=600" alt="Library" style={{ width: '100%', borderRadius: '15px' }} />
+              <img
+                src="https://images.unsplash.com/photo-1623303366639-0e330d7c3d9f?q=80&w=800"
+                alt="Indian student reading in the school library"
+                style={{ width: '100%', borderRadius: '15px' }}
+              />
             </div>
           </div>
         </div>

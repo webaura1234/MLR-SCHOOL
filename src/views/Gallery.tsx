@@ -6,24 +6,9 @@ import { useCallback, useEffect, useState, useMemo } from 'react';
 import { X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import './Gallery.css';
 
-type GalleryItem = {
-  id: string;
-  src: string;
-  /** Larger URL for zoom view (Unsplash); same as src for local files */
-  srcHd?: string;
-  category: string;
-  title: string;
-  /** layout hint for bento grid */
-  size?: 'sm' | 'md' | 'lg';
-};
+import { fetchGalleryItemsFromPublishedSheet, type PublishedGalleryItem } from '@/lib/galleryFromPublishedSheet';
 
-
-
-
-
-import { fetchDataFromSheet } from '@/lib/sheets';
-
-const GALLERY_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=438455533&single=true&output=csv";
+type GalleryItem = PublishedGalleryItem;
 
 const Gallery = () => {
   const [items, setItems] = useState<GalleryItem[]>([]);
@@ -33,18 +18,8 @@ const Gallery = () => {
 
   useEffect(() => {
     async function loadGallery() {
-      const data = await fetchDataFromSheet<GalleryItem>(GALLERY_SHEET_URL, '0', (cols) => ({
-        id: cols[0],
-        src: cols[1],
-        srcHd: cols[1], // Use same for HD if not provided
-        category: cols[2]?.toLowerCase() || 'general',
-        title: cols[3] || '',
-        size: (cols[4] as GalleryItem['size']) || 'md',
-      }));
-      if (data && data.length > 0) {
-        const validData = data.filter(item => item.src && (item.src.startsWith('http') || item.src.startsWith('/')));
-        setItems(validData);
-      }
+      const validData = await fetchGalleryItemsFromPublishedSheet();
+      setItems(validData);
     }
     loadGallery();
   }, []);
@@ -63,6 +38,14 @@ const Gallery = () => {
   );
 
   const previewPick = useMemo(() => items.slice(0, 3), [items]);
+
+  /** Hero strip shows first 3 photos — omit those ids from the grid so nothing appears twice */
+  const heroIds = useMemo(() => new Set(previewPick.map((x) => x.id)), [previewPick]);
+
+  const gridItems = useMemo(
+    () => filtered.filter((img) => !heroIds.has(img.id)),
+    [filtered, heroIds],
+  );
   
   function label(cat: string) {
     if (cat === 'all') return 'All';
@@ -190,7 +173,7 @@ const Gallery = () => {
         <div className="gallery-bento-shell">
           <motion.div layout className="gallery-bento">
             <AnimatePresence mode="popLayout" initial={false}>
-              {filtered.map((img: GalleryItem, i: number) => (
+              {gridItems.map((img: GalleryItem, i: number) => (
                 <motion.button
                   key={img.id}
                   type="button"

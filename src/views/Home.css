@@ -217,6 +217,33 @@
   padding: 0 var(--navbar-pad-x);
 }
 
+.trust-strip-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.4vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0 auto 1.1rem;
+  color: #0A2463;
+  text-shadow: 0 10px 28px rgba(10, 36, 99, 0.08);
+}
+
+.trust-strip-heading span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.trust-strip-heading::after {
+  content: '';
+  display: block;
+  width: min(120px, 32vw);
+  height: 4px;
+  border-radius: 999px;
+  margin: 0.6rem auto 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0.9;
+}
+
 .trust-strip {
   background: #ffffff;
   border: 1px solid #f1f5f9;
@@ -225,6 +252,11 @@
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.trust-strip-heading--inside {
+  margin: 1.5rem auto 1.25rem;
+  padding: 0 1rem;
 }
 
 .trust-strip-grid {
@@ -995,6 +1027,9 @@
 }
 
 .home-gallery-tile-link {
+  display: block;
+  width: 100%;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease;
@@ -1040,6 +1075,19 @@
 /* —— Mobile: compact card typography so 2-column grids stay readable —— */
 .programs-section .blob-card {
   min-width: 0;
+}
+
+.programs-section .facilities-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1280px) {
+  .programs-section .facilities-grid {
+    gap: 2.5rem;
+  }
 }
 
 .programs-section .blob-card .blob-title {
@@ -1115,6 +1163,263 @@
 
   .facilities-section .notebook-title {
     margin-bottom: 0.75rem;
+  }
+}
+
+/* —— Homepage: World-Class Facilities — editorial mosaic —— */
+.facilities-showcase {
+  position: relative;
+  padding: clamp(4rem, 10vw, 6.5rem) 0;
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.facilities-showcase::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: min(160vw, 960px);
+  height: min(48vw, 380px);
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(61, 79, 47, 0.09),
+    rgba(166, 124, 26, 0.05) 38%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.facilities-showcase-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.facilities-showcase-head {
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto clamp(2.25rem, 5.5vw, 3.5rem);
+}
+
+.facilities-showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(61, 79, 47, 0.09);
+  padding: 0.42rem 0.95rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.facilities-showcase-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.2vw, 2.85rem);
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.18;
+  margin-bottom: 0.65rem;
+}
+
+.facilities-showcase-lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+.facilities-showcase-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--primary-dark);
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.facilities-mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.4vw, 1rem);
+  grid-auto-rows: minmax(104px, 10.5vw);
+  grid-auto-flow: dense;
+  width: 100%;
+}
+
+.facilities-card {
+  position: relative;
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: zoom-in;
+  text-align: left;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  background: var(--muted);
+  min-height: 0;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 20px 44px rgba(26, 35, 20, 0.07);
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.facilities-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 28px 56px rgba(26, 35, 20, 0.12);
+}
+
+.facilities-card:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.facilities-card-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.facilities-card-img {
+  object-fit: cover;
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.facilities-card:hover .facilities-card-img {
+  transform: scale(1.07);
+}
+
+.facilities-card-frame {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}
+
+.facilities-card-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(26, 35, 20, 0.62) 0%,
+    rgba(26, 35, 20, 0.08) 38%,
+    transparent 62%
+  );
+  opacity: 0.88;
+  transition: opacity 0.35s ease;
+}
+
+.facilities-card:hover .facilities-card-shade {
+  opacity: 0.72;
+}
+
+.facilities-card-index {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.7rem;
+  z-index: 3;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.facilities-card--base {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.facilities-card--wide {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+
+.facilities-card--tall {
+  grid-column: span 4;
+  grid-row: span 3;
+}
+
+@media (max-width: 900px) {
+  .facilities-mosaic {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: minmax(92px, 14vw);
+    gap: clamp(0.45rem, 1.8vw, 0.75rem);
+  }
+
+  .facilities-card--wide {
+    grid-column: span 6;
+    grid-row: span 2;
+  }
+
+  .facilities-card--tall {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+
+  .facilities-card--base {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .facilities-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(124px, 36vw);
+    gap: 0.55rem;
+  }
+
+  .facilities-card--wide,
+  .facilities-card--tall,
+  .facilities-card--base {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .facilities-card:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .facilities-showcase-lead {
+    font-size: 0.94rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .facilities-card,
+  .facilities-card-img,
+  .facilities-card-shade {
+    transition: none;
+  }
+
+  .facilities-card:hover {
+    transform: none;
+  }
+
+  .facilities-card:hover .facilities-card-img {
+    transform: none;
   }
 }
 
@@ -1474,5 +1779,25 @@
   .mobile-flex-grid > * {
     flex: 0 0 calc(50% - 1rem);
     min-width: 140px;
+  }
+}
+
+/* Programs Offered: force 2-column grid on desktop (overrides mobile-flex-grid flex). */
+@media (min-width: 769px) {
+  .programs-section .facilities-grid.mobile-flex-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+  }
+
+  /* If there's an odd count, center the last card on its own row */
+  .programs-section .facilities-grid.mobile-flex-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(520px, 100%);
   }
 }

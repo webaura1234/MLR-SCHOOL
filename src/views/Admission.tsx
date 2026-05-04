@@ -5,10 +5,12 @@ import { motion } from 'framer-motion';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import OptimizedImage from '../components/OptimizedImage';
 import './Admission.css';
+import { useSiteInfo } from '@/lib/useSiteInfo';
 
 const ADMISSION_SCRIPT_URL = process.env.NEXT_PUBLIC_ADMISSION_URL || "";
 
 const Admission = () => {
+  const { siteInfo } = useSiteInfo();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -16,7 +18,6 @@ const Admission = () => {
     className: '',
     parentName: '',
     phone: '',
-    branch: '',
     message: ''
   });
 
@@ -44,7 +45,6 @@ const Admission = () => {
         className: '',
         parentName: '',
         phone: '',
-        branch: '',
         message: ''
       });
     } catch (error) {
@@ -120,7 +120,14 @@ const Admission = () => {
               }}>
                 <h4 style={{ fontWeight: 800, color: 'var(--foreground)', marginBottom: '0.5rem' }}>Fee Structure</h4>
                 <p style={{ color: 'var(--muted-foreground)', fontStyle: 'italic', lineHeight: '1.6' }}>
-                  &quot;For fee structure details, please <a href="tel:+919123456789" style={{ color: 'var(--primary)', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}>call us directly</a> or visit your nearest CMR campus.&quot;
+                  &quot;For fee structure details, please{' '}
+                  <a
+                    href={`tel:${siteInfo.phoneTel}`}
+                    style={{ color: 'var(--primary)', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}
+                  >
+                    call us directly
+                  </a>
+                  {' '}or visit your nearest Malla Reddy School campus.&quot;
                 </p>
               </div>
             </div>
@@ -170,8 +177,6 @@ const Admission = () => {
                       <option value="Pre-Primary">Pre-Primary (Nursery/PP1/PP2)</option>
                       <option value="Primary">Primary (Grade I - V)</option>
                       <option value="Middle">Middle (Grade VI - VIII)</option>
-                      <option value="Secondary">Secondary (Grade IX - X)</option>
-                      <option value="High School">High School (Grade XI - XII)</option>
                     </select>
                   </div>
 
@@ -197,24 +202,6 @@ const Admission = () => {
                       placeholder="10-digit mobile number" 
                       required 
                     />
-                  </div>
-
-                  <div className="form-group">
-                    <label>Branch Preference</label>
-                    <select 
-                      name="branch"
-                      value={formData.branch}
-                      onChange={handleChange}
-                      required
-                    >
-                      <option value="">Select Branch</option>
-                      <option value="Lalgadi Malakpet">Lalgadi Malakpet</option>
-                      <option value="Kompally">Kompally</option>
-                      <option value="Suraram">Suraram</option>
-                      <option value="Shampur">Shampur</option>
-                      <option value="Kundanpally">Kundanpally</option>
-                      <option value="MB Grammar School">MB Grammar School</option>
-                    </select>
                   </div>
 
                   <div className="form-group">

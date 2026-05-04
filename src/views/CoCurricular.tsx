@@ -2,11 +2,15 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, Music, Palette, Play, Info, Users, Clock, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import './CoCurricular.css';
 
-type Category = 'All' | 'Arts' | 'Indoor' | 'Outdoor' | 'SummerCamps';
+/** Unsplash Source (source.unsplash.com) is discontinued — use images.unsplash.com with stable photo IDs. */
+function unsplashPhoto(idWithSuffix: string, width = 1400) {
+  return `https://images.unsplash.com/photo-${idWithSuffix}?auto=format&fit=crop&w=${width}&q=82`;
+}
+
+type Category = 'All' | 'Arts' | 'Indoor' | 'Outdoor';
 
 interface Activity {
   id: string;
@@ -14,32 +18,30 @@ interface Activity {
   category: Category;
   description: string;
   image: string;
-  year?: string;
-  stats?: { label: string; value: string }[];
 }
 
 const ACTIVITIES: Activity[] = [
-  // Arts
+  // Arts — children / classroom / creative (Unsplash; diverse school-age imagery)
   {
     id: 'dance',
     title: 'Dance',
     category: 'Arts',
     description: 'Classical and contemporary dance forms to enhance rhythm, poise, and cultural expression.',
-    image: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=800'
+    image: unsplashPhoto('1571019613454-1cb2f99b2d8b'),
   },
   {
     id: 'music',
     title: 'Music',
     category: 'Arts',
     description: 'Vocal and instrumental training, including keyboard and guitar, fostering melodic intelligence.',
-    image: 'https://images.unsplash.com/photo-1514119412350-e174d90d280e?q=80&w=800'
+    image: unsplashPhoto('1516280440614-37939bbacd81'),
   },
   {
     id: 'art-craft',
     title: 'Art & Craft',
     category: 'Arts',
     description: 'Unleashing creativity through painting, sculpting, and sustainable crafting workshops.',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=800'
+    image: unsplashPhoto('1596495577886-d920f1fb7238'),
   },
   // Indoor
   {
@@ -47,21 +49,21 @@ const ACTIVITIES: Activity[] = [
     title: 'Carroms',
     category: 'Indoor',
     description: 'Strategic indoor game that blends skill, concentration, and fine motor skills development.',
-    image: 'https://images.unsplash.com/photo-1601333144130-8cbb312386b6?q=80&w=800'
+    image: unsplashPhoto('1516979187457-637abb4f9353'),
   },
   {
     id: 'chess',
     title: 'Chess',
     category: 'Indoor',
     description: 'Grandmaster training sessions to develop logical thinking and strategic foresight.',
-    image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=800'
+    image: unsplashPhoto('1580582932707-520aed937b7b'),
   },
   {
     id: 'table-tennis',
     title: 'Table Tennis',
     category: 'Indoor',
     description: 'Fast-paced action to improve reflexes and hand-eye coordination.',
-    image: 'https://images.unsplash.com/photo-1534158914592-062992fbe900?q=80&w=800'
+    image: unsplashPhoto('1558618666-fcd25c85cd64'),
   },
   // Outdoor
   {
@@ -69,69 +71,40 @@ const ACTIVITIES: Activity[] = [
     title: 'Cricket',
     category: 'Outdoor',
     description: 'Professional coaching at our standard cricket nets with regular inter-school matches.',
-    image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800'
+    image: unsplashPhoto('1517649763962-0c623066013b'),
   },
   {
     id: 'tennis',
     title: 'Tennis',
     category: 'Outdoor',
     description: 'Professional clay and synthetic courts for budding tennis stars.',
-    image: 'https://images.unsplash.com/photo-1622279457486-62dcc4a4bd13?q=80&w=800'
+    image: unsplashPhoto('1576091160399-112ba8d25d1d'),
   },
   {
     id: 'basketball',
     title: 'Basketball',
     category: 'Outdoor',
     description: 'Enhancing teamwork and agility through high-energy court sessions.',
-    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800'
+    image: unsplashPhoto('1461896836934-ffe607ba8211'),
   },
   {
     id: 'athletics',
     title: 'Athletics',
     category: 'Outdoor',
     description: 'Focusing on physical fitness, speed, and endurance through various track and field events.',
-    image: 'https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=800'
+    image: unsplashPhoto('1627664819818-e147d6221422'),
   },
   {
     id: 'kabaddi',
     title: 'Kabaddi & Kho-Kho',
     category: 'Outdoor',
     description: 'Promoting traditional Indian sports to build strength and agility.',
-    image: 'https://images.unsplash.com/photo-1526676037777-05a232554f75?q=80&w=800'
+    image: unsplashPhoto('1523240795612-9a054b0db644'),
   },
-  // Summer Camps
-  {
-    id: 'summer-2024',
-    title: 'Adventure Quest',
-    category: 'SummerCamps',
-    year: '2024',
-    description: 'A month-long immersion in rock climbing, archery, and wilderness survival skills.',
-    image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800'
-  },
-  {
-    id: 'summer-2023',
-    title: 'Tech Explorers',
-    category: 'SummerCamps',
-    year: '2023',
-    description: 'Focused on robotics, drone piloting, and creative coding for the future innovators.',
-    image: 'https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?q=80&w=800'
-  },
-  {
-    id: 'summer-2022',
-    title: 'Olympic Spirit',
-    category: 'SummerCamps',
-    year: '2022',
-    description: 'Intensive multi-sport training camp focusing on stamina and competitive spirit.',
-    image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800'
-  }
 ];
 
 const CoCurricular = () => {
   const [activeTab, setActiveTab] = useState<Category>('All');
-
-  const filteredActivities = activeTab === 'All' 
-    ? ACTIVITIES 
-    : ACTIVITIES.filter(a => a.category === activeTab);
 
   return (
     <div className="co-curricular-page">
@@ -149,18 +122,17 @@ const CoCurricular = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            At Malla Reddy School, education goes beyond textbooks. Our rich co-curricular 
-            program is designed to discover and nurture every child's unique talent.
+            {`At Malla Reddy School, education goes beyond textbooks. Our rich co-curricular program is designed to discover and nurture every child's unique talent.`}
           </motion.p>
 
           <div className="section-tabs">
-            {(['All', 'Arts', 'Indoor', 'Outdoor', 'SummerCamps'] as Category[]).map(tab => (
+            {(['All', 'Arts', 'Indoor', 'Outdoor'] as Category[]).map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
               >
-                {tab === 'All' ? 'Everything' : tab === 'SummerCamps' ? 'Summer Camps' : tab}
+                {tab === 'All' ? 'Everything' : tab}
               </button>
             ))}
           </div>
@@ -199,6 +171,7 @@ const CoCurricular = () => {
                             alt={activity.title}
                             fill
                             className="activity-image"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                           />
                         </div>
                         <div className="activity-content">
@@ -213,66 +186,6 @@ const CoCurricular = () => {
               </div>
             )
           ))}
-
-          {/* Summer Camps Section - Grouped by Year */}
-          {(activeTab === 'All' || activeTab === 'SummerCamps') && (
-            <div id="summercamps" className="category-group">
-              <div className="category-header">
-                <h2>Summer <span style={{ color: '#F5A623' }}>Camps</span></h2>
-                <p>Annual programs designed for intensive learning and adventure.</p>
-              </div>
-              
-              {Object.entries(
-                ACTIVITIES
-                  .filter(a => a.category === 'SummerCamps')
-                  .reduce((acc, activity) => {
-                    const year = activity.year || 'Other';
-                    if (!acc[year]) acc[year] = [];
-                    acc[year].push(activity);
-                    return acc;
-                  }, {} as Record<string, Activity[]>)
-              )
-              .sort(([yearA], [yearB]) => yearB.localeCompare(yearA))
-              .map(([year, camps]) => (
-                <div key={year} className="year-block">
-                  <div className="year-indicator">
-                    <span className="year-label">{year}</span>
-                    <div className="year-line"></div>
-                  </div>
-                  
-                  <motion.div layout className="activity-grid centered-flex">
-                    <AnimatePresence mode="popLayout">
-                      {camps.map((activity) => (
-                        <motion.div
-                          key={activity.id}
-                          id={activity.id}
-                          layout
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
-                          className="activity-card"
-                        >
-                          <div className="activity-image-wrapper">
-                            <Image 
-                              src={activity.image} 
-                              alt={activity.title}
-                              fill
-                              className="activity-image"
-                            />
-                          </div>
-                          <div className="activity-content">
-                            <span className="activity-badge">{activity.category}</span>
-                            <h3>{activity.title}</h3>
-                            <p>{activity.description}</p>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </AnimatePresence>
-                  </motion.div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 

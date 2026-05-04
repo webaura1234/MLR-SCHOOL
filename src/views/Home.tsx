@@ -11,11 +11,18 @@ import {
   Microscope,
   GraduationCap,
   Images,
+  Building2,
 } from 'lucide-react';
-import MonthlyAchievements from '@/components/MonthlyAchievements';
 import './Home.css';
 import './Gallery.css';
 import { JourneySection } from '../components/JourneySection';
+import FacilityLightbox from '@/components/FacilityLightbox';
+import DynamicCalendar from '../components/DynamicCalendar';
+import {
+  fetchGalleryItemsFromPublishedSheet,
+  normalizeGalleryImageUrl,
+} from '@/lib/galleryFromPublishedSheet';
+import { PROGRAM_SECTION_IMAGES } from '@/lib/programSectionImages';
 import { fetchDataFromSheet } from '@/lib/sheets';
 
 // REPLACE THIS WITH YOUR REAL SHEET ID
@@ -51,44 +58,128 @@ interface Facility {
   images: string[];
 }
 
+type RawGalleryItem = Record<string, unknown>;
+
+function asString(value: unknown): string {
+  if (typeof value === 'string') return value;
+  if (value == null) return '';
+  return String(value);
+}
+
+/** Homepage facilities section: show at most this many photos */
+const FACILITY_HOME_LIMIT = 9;
+
+/** Mosaic tile sizes for the facilities grid */
+function facilitiesMosaicClass(index: number): string {
+  if (index % 7 === 0) return 'facilities-card facilities-card--wide';
+  if (index % 5 === 0) return 'facilities-card facilities-card--tall';
+  return 'facilities-card facilities-card--base';
+}
+
+const DEFAULT_PROGRAMS: Program[] = [
+  {
+    title: 'Pre-Primary',
+    desc: 'Play-based learning that builds strong early foundations in language, numbers, and social skills.',
+    image: PROGRAM_SECTION_IMAGES.prePrimary,
+    icon: 'Star',
+  },
+  {
+    title: 'Primary',
+    desc: 'Core academics with activities that develop curiosity, confidence, and communication skills.',
+    image: PROGRAM_SECTION_IMAGES.primary,
+    icon: 'BookOpen',
+  },
+  {
+    title: 'Middle (up to 8th class)',
+    desc: 'Concept-driven learning with labs and projects to prepare students for higher classes.',
+    image: PROGRAM_SECTION_IMAGES.middle,
+    icon: 'Microscope',
+  },
+];
+
 const Home = () => {
   const [galleryPreview, setGalleryPreview] = useState<{src: string, title: string}[]>([]);
   const [galleryMore, setGalleryMore] = useState<{src: string, title: string, cat: string}[]>([]);
   const [programs, setPrograms] = useState<Program[]>([]);
-  const [facilities, setFacilities] = useState<Facility[]>([]);
   const [facilityImages, setFacilityImages] = useState<string[]>([]);
   const [isFacilitiesLoading, setIsFacilitiesLoading] = useState(true);
+  const [facilityViewerOpen, setFacilityViewerOpen] = useState(false);
+  const [facilityViewerIndex, setFacilityViewerIndex] = useState(0);
 
   useEffect(() => {
     async function loadContent() {
       // Gallery via Apps Script
       try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbxzGg_9G09RThkXBTfxYnfdP25qbKjX07MAeN-9ABYwglidLfK6RvTizNWbiTuEzgk/exec?type=gallery");
-        const galleryData = await response.json();
+        const galleryJson: unknown = await response.json();
+        const galleryData: RawGalleryItem[] = Array.isArray(galleryJson)
+          ? (galleryJson as RawGalleryItem[])
+          : [];
         
-        const validGallery = galleryData
-          .filter((item: any) => {
-            const src = item.coverimage || item.coverImage || item.src;
-            return src && src.toString().length > 10;
+        let validGallery = galleryData
+          .filter((item) => {
+            const src = item.coverimage ?? item.coverImage ?? item.src;
+            const srcStr = asString(src);
+            return srcStr.length > 10;
           })
-          .map((item: any) => {
-            const rawSrc = (item.coverimage || item.coverImage || item.src).toString();
-            const imgs = rawSrc.split(/[,|]/).map((s: string) => s.trim());
+          .map((item) => {
+            const rawSrc = asString(item.coverimage ?? item.coverImage ?? item.src);
+            const imgs = rawSrc.split(/[,|]/).map((s: string) => s.trim()).filter(Boolean);
             return {
-              src: imgs[0],
-              title: item.title || item.Title || 'School Moment',
-              category: item.category || item.Category || 'General'
+              src: normalizeGalleryImageUrl(imgs[0] || ''),
+              title: asString(item.title ?? item.Title) || 'School Moment',
+              category: asString(item.category ?? item.Category) || 'General',
             };
-          });
+          })
+          .filter(
+            (item: { src: string }) =>
+              item.src && (item.src.startsWith('http') || item.src.startsWith('/')),
+          );
+
+        if (validGallery.length === 0) {
+          try {
+            const fromSheet = await fetchGalleryItemsFromPublishedSheet();
+            validGallery = fromSheet.map((g) => ({
+              src: g.src,
+              title: g.title,
+              category: g.category,
+            }));
+          } catch {
+            /* Sheet unavailable — leave homepage gallery empty */
+          }
+        }
 
         if (validGallery.length > 0) {
           setGalleryPreview(validGallery.slice(0, 3));
           if (validGallery.length > 3) {
-            setGalleryMore(validGallery.slice(3, 7).map((item: any) => ({ ...item, cat: item.category })));
+            setGalleryMore(
+              validGallery.slice(3, 7).map((item) => ({
+                src: item.src,
+                title: item.title,
+                cat: item.category,
+              })),
+            );
           }
         }
       } catch (err) {
         console.error("Gallery fetch error:", err);
+        try {
+          const fromSheet = await fetchGalleryItemsFromPublishedSheet();
+          if (fromSheet.length > 0) {
+            setGalleryPreview(fromSheet.slice(0, 3).map((g) => ({ src: g.src, title: g.title })));
+            if (fromSheet.length > 3) {
+              setGalleryMore(
+                fromSheet.slice(3, 7).map((g) => ({
+                  src: g.src,
+                  title: g.title,
+                  cat: g.category,
+                })),
+              );
+            }
+          }
+        } catch {
+          /* ignore */
+        }
       }
       // Programs
       const programsData = await fetchDataFromSheet<Program>(GOOGLE_SHEET_ID, GIDS.PROGRAMS, (cols) => ({
@@ -98,7 +189,12 @@ const Home = () => {
         icon: cols[3]?.trim() || 'Star'
       }));
       const validPrograms = programsData.filter(p => p.title && p.image && (p.image.startsWith('http') || p.image.startsWith('/')));
-      if (validPrograms.length > 0) setPrograms(validPrograms);
+      const existingTitles = new Set(validPrograms.map(p => p.title.trim().toLowerCase()));
+      const mergedPrograms = [
+        ...DEFAULT_PROGRAMS.filter(p => !existingTitles.has(p.title.trim().toLowerCase())),
+        ...validPrograms,
+      ];
+      if (mergedPrograms.length > 0) setPrograms(mergedPrograms);
 
       // Facilities
       setIsFacilitiesLoading(true);
@@ -121,7 +217,6 @@ const Home = () => {
         if (facilitiesData && facilitiesData.length > 0) {
           const validFacilities = facilitiesData.filter((f) => f.images?.length > 0);
           const allImages = Array.from(new Set(validFacilities.flatMap((f) => f.images)));
-          setFacilities(validFacilities);
           setFacilityImages(allImages);
         }
       } catch (err) {
@@ -198,6 +293,15 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="trust-strip"
         >
+          <motion.h2
+            initial={{ y: 18, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="trust-strip-heading trust-strip-heading--inside"
+          >
+            Why Choose <span>Malla Reddy?</span>
+          </motion.h2>
           <div className="trust-strip-grid">
             {[
               { img: "/images/safety/campus-safety.png", label: "Campus Safety" },
@@ -302,73 +406,6 @@ const Home = () => {
 
       <JourneySection />
 
-      {/* Wall of Fame Achievements */}
-      <MonthlyAchievements />
-
-      <section
-        className="section programs-section text-center"
-        style={{ backgroundColor: 'var(--page-bg)', padding: '6rem 0' }}
-      >
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="section-title text-center"
-            style={{ marginBottom: '4rem', fontSize: '2.5rem', color: '#333' }}
-          >
-            Programs Offered
-          </motion.h2>
-          <motion.div
-            className="facilities-grid mobile-flex-grid"
-          >
-            {programs.map((prog, idx) => {
-              // Dynamic Icon selection
-              const IconComp = prog.icon === 'Star' ? Star : 
-                               prog.icon === 'BookOpen' ? BookOpen : 
-                               prog.icon === 'Microscope' ? Microscope : 
-                               prog.icon === 'GraduationCap' ? GraduationCap : Star;
-
-              return (
-              <motion.div
-                key={idx}
-                className="blob-card"
-                style={{
-                  background: '#ffffff',
-                  borderColor: '#e2e8f0',
-                  boxShadow: '8px 8px 0 #94a3b8',
-                  padding: '0',
-                  overflow: 'hidden'
-                }}
-              >
-                <div className="blob-image-wrapper" style={{ position: 'relative', width: '100%', height: '200px' }}>
-                  <Image src={prog.image} fill style={{ objectFit: 'cover' }} alt={prog.title} />
-                  <div className="blob-card-icon-overlay" style={{ 
-                    position: 'absolute', 
-                    top: '1rem', 
-                    right: '1rem', 
-                    background: 'white', 
-                    width: '50px', 
-                    height: '50px', 
-                    borderRadius: '15px', 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    justifyContent: 'center',
-                    boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-                  }}>
-                    {React.createElement(IconComp, { size: 24, style: { color: 'var(--primary)' } })}
-                  </div>
-                </div>
-                <div style={{ padding: '2rem' }}>
-                  <h3 className="blob-title" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{prog.title}</h3>
-                  <p className="blob-desc" style={{ color: '#666', lineHeight: '1.6' }}>{prog.desc}</p>
-                </div>
-              </motion.div>
-            ); })}
-          </motion.div>
-        </div>
-      </section>
-
       <section className="section home-gallery-section">
         <div className="container home-gallery-header-wrap">
           <motion.div
@@ -382,7 +419,7 @@ const Home = () => {
               <Images size={18} aria-hidden />
               Gallery
             </span>
-            <h2 className="home-gallery-title">Moments from our school</h2>
+            <h2 className="home-gallery-title">Moments from Malla Reddy School</h2>
             <p className="home-gallery-lead">
               Same layout as our photo gallery — tap below to see the full collection.
             </p>
@@ -399,9 +436,6 @@ const Home = () => {
                   href="/gallery"
                   className={`gallery-preview-card gallery-preview-card--${idx}`}
                   aria-label={`Open gallery: ${photo.title}`}
-                  initial={{ opacity: 0, y: 36 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
                   transition={{ type: 'spring', stiffness: 380, damping: 28, delay: idx * 0.08 }}
                   whileHover={
                     idx === 1
@@ -485,70 +519,161 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="section facilities-section text-center"
-          style={{ backgroundColor: 'var(--page-bg)', padding: '6rem 0' }}
+          className="section facilities-section facilities-showcase"
         >
-          <div className="container">
-            <motion.h2
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="section-title text-center"
-              style={{ marginBottom: '4rem', fontSize: '2.5rem', color: '#333' }}
-            >
-              World-Class Facilities
-            </motion.h2>
+          <div className="container facilities-showcase-inner">
             <motion.div
+              className="facilities-showcase-head"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55 }}
+            >
+              <span className="facilities-showcase-badge">
+                <Building2 size={16} aria-hidden />
+                Campus & facilities
+              </span>
+              <h2 className="facilities-showcase-title">World-Class Facilities</h2>
+              <p className="facilities-showcase-lead">
+                Explore classrooms, grounds, and learning spaces — tap any photo for a full-screen view.
+              </p>
+              <span className="facilities-showcase-count">
+                {facilityImages.length > FACILITY_HOME_LIMIT
+                  ? `${FACILITY_HOME_LIMIT} of ${facilityImages.length} photos`
+                  : `${facilityImages.length} photos`}
+              </span>
+            </motion.div>
+
+            <motion.div
+              className="facilities-mosaic"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: '-50px', amount: 0.15 }}
+              viewport={{ once: true, margin: '-60px', amount: 0.08 }}
               variants={staggerContainer}
-              className="programs-grid mobile-flex-grid"
             >
-              <div style={{ width: '100%' }}>
-                <div style={{ marginBottom: '1rem', color: '#64748b', fontWeight: 700 }}>
-                  Showing {facilityImages.length} facility images
-                </div>
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                    gap: '1rem',
+              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((src, i) => (
+                <motion.button
+                  key={`${src}-${i}`}
+                  type="button"
+                  variants={fadeUpVariant}
+                  className={facilitiesMosaicClass(i)}
+                  aria-label={`Open facility photo ${i + 1} large`}
+                  onClick={() => {
+                    setFacilityViewerIndex(i);
+                    setFacilityViewerOpen(true);
                   }}
                 >
-                  {facilityImages.map((src, i) => (
-                    <div
-                      key={`${src}-${i}`}
-                      style={{
-                        borderRadius: '18px',
-                        overflow: 'hidden',
-                        background: '#fff',
-                        border: '1px solid #e2e8f0',
-                      }}
-                    >
-                      <img
+                  <span className="facilities-card-media">
+                    {(src.startsWith('http') || src.startsWith('/')) && (
+                      <Image
                         src={src}
-                        alt={`Facility image ${i + 1}`}
-                        loading="lazy"
-                        onError={() => console.warn('[Facilities] image failed to load:', src)}
-                        style={{
-                          width: '100%',
-                          height: '220px',
-                          objectFit: 'cover',
-                          background: '#f3f4f6',
-                          display: 'block',
-                        }}
+                        alt={`Campus facility photo ${i + 1}`}
+                        fill
+                        className="facilities-card-img"
+                        sizes="(max-width: 560px) 50vw, (max-width: 900px) 33vw, (max-width: 1400px) 28vw, 360px"
+                        loading={i < 4 ? 'eager' : 'lazy'}
                       />
-                    </div>
-                  ))}
-                </div>
-              </div>
+                    )}
+                  </span>
+                  <span className="facilities-card-frame" aria-hidden />
+                  <span className="facilities-card-shade" aria-hidden />
+                  <span className="facilities-card-index">Fig. {String(i + 1).padStart(2, '0')}</span>
+                </motion.button>
+              ))}
             </motion.div>
           </div>
+
+          <FacilityLightbox
+            key={facilityViewerOpen ? `facility-lb-${facilityViewerIndex}` : 'facility-lb-closed'}
+            isOpen={facilityViewerOpen}
+            onClose={() => setFacilityViewerOpen(false)}
+            images={facilityImages.slice(0, FACILITY_HOME_LIMIT)}
+            title="Campus facilities"
+            initialIndex={facilityViewerIndex}
+          />
         </motion.section>
       )}
 
+      <section
+        className="section programs-section text-center"
+        style={{ backgroundColor: 'var(--page-bg)', padding: '6rem 0' }}
+      >
+        <div className="container">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title text-center"
+            style={{ marginBottom: '4rem', fontSize: '2.5rem', color: '#333' }}
+          >
+            Programs Offered
+          </motion.h2>
+          <motion.div className="facilities-grid mobile-flex-grid">
+            {programs.map((prog, idx) => {
+              const IconComp =
+                prog.icon === 'Star'
+                  ? Star
+                  : prog.icon === 'BookOpen'
+                    ? BookOpen
+                    : prog.icon === 'Microscope'
+                      ? Microscope
+                      : prog.icon === 'GraduationCap'
+                        ? GraduationCap
+                        : Star;
 
+              return (
+                <motion.div
+                  key={idx}
+                  className="blob-card"
+                  style={{
+                    background: '#ffffff',
+                    borderColor: '#e2e8f0',
+                    boxShadow: '8px 8px 0 #94a3b8',
+                    padding: '0',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div className="blob-image-wrapper" style={{ position: 'relative', width: '100%', height: '200px' }}>
+                    <Image src={prog.image} fill style={{ objectFit: 'cover' }} alt={prog.title} />
+                    <div
+                      className="blob-card-icon-overlay"
+                      style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        background: 'white',
+                        width: '50px',
+                        height: '50px',
+                        borderRadius: '15px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                      }}
+                    >
+                      {React.createElement(IconComp, { size: 24, style: { color: 'var(--primary)' } })}
+                    </div>
+                  </div>
+                  <div style={{ padding: '2rem' }}>
+                    <h3 className="blob-title" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
+                      {prog.title}
+                    </h3>
+                    <p className="blob-desc" style={{ color: '#666', lineHeight: '1.6' }}>
+                      {prog.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="calendar-section section">
+        <div className="container">
+          <DynamicCalendar />
+        </div>
+      </section>
 
     </div>
   );

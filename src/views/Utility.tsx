@@ -64,7 +64,7 @@ const Utility = () => {
                 <Bus /> Transport Facilities
               </h2>
               <p style={{ marginTop: '2rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                The school provides a safe and comfortable fleet of GPS-enabled buses covering 
+                Malla Reddy School provides a safe and comfortable fleet of GPS-enabled buses covering 
                 all major areas of Hyderabad and Medchal. Every bus is equipped with a first-aid kit, 
                 fire extinguisher, and a trained female attendant.
               </p>
@@ -94,12 +94,18 @@ const Utility = () => {
             {[
               { role: 'Pre-Primary Teacher', dept: 'Academics', icon: <ExternalLink size={16} /> },
               { role: 'Music Instructor', dept: 'Arts', icon: <ExternalLink size={16} /> },
-              { role: 'Physics Teacher', dept: 'Secondary', icon: <ExternalLink size={16} /> },
+              { role: 'Science Teacher (Middle)', dept: 'VI – VIII', icon: <ExternalLink size={16} /> },
             ].map((job, i) => (
               <motion.div key={i} className="bubble-card">
                 <h4 style={{ fontWeight: 800, fontSize: '1.2rem' }}>{job.role}</h4>
                 <p style={{ color: 'var(--primary)' }}>{job.dept}</p>
-                <button className="squishy-btn btn-primary blink-btn" style={{ marginTop: '1rem', width: '100%' }}>Apply Now</button>
+                <button 
+                  className="squishy-btn btn-primary" 
+                  style={{ marginTop: '1rem', width: '100%' }}
+                  onClick={() => alert("Application Portal Opening Soon! Please check back later.")}
+                >
+                  Apply Now
+                </button>
               </motion.div>
             ))}
           </div>

@@ -1,9 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Globe, Share2, Info } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Share2, Info, MessageCircle } from 'lucide-react';
 import './Footer.css';
+import { useSiteInfo } from '@/lib/useSiteInfo';
 
 const Footer = () => {
+  const { siteInfo } = useSiteInfo();
   return (
     <footer className="footer">
       <div className="footer-background-text" aria-hidden="true">
@@ -38,15 +42,32 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <MapPin size={20} strokeWidth={2} aria-hidden />
-                <span>Medchal-Malkajgiri, Hyderabad, Telangana 501401</span>
+                <span>{siteInfo.locationLine}</span>
               </div>
               <div className="contact-item">
                 <Phone size={20} strokeWidth={2} aria-hidden />
-                <span>+91 91234 56789</span>
+                <a href={`tel:${siteInfo.phoneTel}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {siteInfo.phoneDisplay}
+                </a>
               </div>
               <div className="contact-item">
                 <Mail size={20} strokeWidth={2} aria-hidden />
-                <span>contact@mallareddyschool.com</span>
+                <a href={`mailto:${siteInfo.email}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                  {siteInfo.email}
+                </a>
+              </div>
+              <div className="contact-item">
+                <MessageCircle size={20} strokeWidth={2} aria-hidden />
+                <a
+                  href={`https://wa.me/${siteInfo.whatsappNumber}?text=${encodeURIComponent(
+                    'Hi, I would like to know about admissions at Malla Reddy School.'
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  WhatsApp: {siteInfo.whatsappDisplay}
+                </a>
               </div>
             </div>
           </div>

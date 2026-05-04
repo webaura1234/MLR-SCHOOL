@@ -230,32 +230,3 @@
     padding: 6rem 1rem 4rem;
   }
 }
-
-.year-block {
-  margin-bottom: 5rem;
-}
-
-.year-indicator {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.year-label {
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: #0DB6B5;
-  background: rgba(13, 182, 181, 0.08);
-  padding: 0.6rem 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 4px 15px rgba(13, 182, 181, 0.1);
-  border: 1px solid rgba(13, 182, 181, 0.1);
-}
-
-.year-line {
-  height: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to right, rgba(13, 182, 181, 0.3), transparent);
-  border-radius: 2px;
-}

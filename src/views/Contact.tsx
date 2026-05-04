@@ -4,8 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import './Home.css';
+import { useSiteInfo } from '@/lib/useSiteInfo';
 
 const Contact = () => {
+  const { siteInfo } = useSiteInfo();
   return (
     <div className="contact-page">
       <section className="page-header" style={{ background: 'var(--page-bg)', padding: '6rem 0 4rem', textAlign: 'center' }}>
@@ -31,10 +33,11 @@ const Contact = () => {
               <h2 className="section-title-spark" style={{ marginBottom: '2rem' }}>Reach Out</h2>
               <div className="contact-cards mobile-flex-grid" style={{ gap: '2rem' }}>
                 {[
-                  { icon: <Phone />, title: 'Call Us', detail: '+91 91234 56789', color: 'var(--c-mint)' },
-                  { icon: <Mail />, title: 'Email Us', detail: 'contact@mallareddyschool.com', color: 'var(--c-citrus)' },
-                  { icon: <MapPin />, title: 'Lalgadi Malakpet Campus', detail: 'Near Shamirpet, Lalgadi Malakpet, Hyderabad, 500078', color: 'var(--c-sky)' },
-                  { icon: <Clock />, title: 'Office Hours', detail: 'Mon - Sat: 8:00 AM - 4:00 PM', color: 'var(--c-lavender)' },
+                  { icon: <Phone />, title: 'Call Us', detail: siteInfo.phoneDisplay, color: 'var(--c-mint)' },
+                  { icon: <Mail />, title: 'Email Us', detail: siteInfo.email, color: 'var(--c-citrus)' },
+                  { icon: <Phone />, title: 'WhatsApp', detail: siteInfo.whatsappDisplay, color: 'var(--c-lavender)' },
+                  { icon: <MapPin />, title: 'Campus Address', detail: siteInfo.addressLine, color: 'var(--c-sky)' },
+                  { icon: <Clock />, title: 'Office Hours', detail: 'Mon - Sat: 8:00 AM - 4:00 PM', color: 'var(--c-mint)' },
                 ].map((item, i) => (
                   <motion.div 
                     key={i} 
@@ -73,15 +76,17 @@ const Contact = () => {
       {/* Google Maps Embed */}
       <section className="map-section section" style={{ paddingBottom: 0 }}>
         <div className="container-full">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.4109315003666!2d78.48667107572765!3d17.436737201309855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb903cd0ad35d9%3A0xc077e69213134909!2sMalla%20Reddy%20University!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="500" 
-            style={{ border: 0, display: 'block' }} 
-            allowFullScreen 
-            loading="lazy"
-            title="Google Maps"
-          ></iframe>
+          {siteInfo.mapEmbedUrl ? (
+            <iframe
+              src={siteInfo.mapEmbedUrl}
+              width="100%"
+              height="500"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              title="Google Maps"
+            ></iframe>
+          ) : null}
         </div>
       </section>
     </div>

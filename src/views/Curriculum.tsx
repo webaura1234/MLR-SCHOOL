@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Beaker, Laptop, Settings, Palette, Calculator } from 'lucide-react';
 import OptimizedImage from '../components/OptimizedImage';
+import { PROGRAM_SECTION_IMAGES } from '@/lib/programSectionImages';
 import './Curriculum.css';
 
 const Curriculum = () => {
@@ -69,7 +70,7 @@ const Curriculum = () => {
             </div>
             <div className="journey-image">
               <OptimizedImage 
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200" 
+                src={PROGRAM_SECTION_IMAGES.prePrimary}
                 alt="Pre-Primary children learning through play" 
                 className="rounded-image shadow-image hover-zoom"
                 aspectRatio="16/9"
@@ -95,7 +96,7 @@ const Curriculum = () => {
             </div>
             <div className="journey-image">
               <OptimizedImage 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" 
+                src={PROGRAM_SECTION_IMAGES.primary}
                 alt="Primary students in a modern focused classroom" 
                 className="rounded-image shadow-image hover-zoom"
                 aspectRatio="16/9"
@@ -103,26 +104,29 @@ const Curriculum = () => {
             </div>
           </div>
 
-          {/* Secondary */}
+          {/* Middle — upper primary / middle school up to Class VIII */}
           <div className="journey-step">
             <div className="journey-content">
               <span className="step-num">03</span>
-              <h2>Secondary <span className="text-accent">(Grade VI – X)</span></h2>
+              <h2>
+                Middle <span className="text-accent">(Grade VI – VIII)</span>
+              </h2>
               <p>
-                A challenging and rigorous curriculum designed to equip students with academic 
-                knowledge and practical skills. We focus on preparing students for higher 
-                education while promoting leadership and teamwork.
+                A structured CBSE-aligned programme through Class VIII that strengthens concepts,
+                inquiry, and collaboration. We emphasize STEM connections, digital literacy, and
+                values-led leadership while learners prepare confidently for the next stage of
+                schooling beyond our campus.
               </p>
               <ul className="curriculum-highlights">
-                <li>Advanced STEM Integration</li>
-                <li>Leadership & Community Service</li>
-                <li>Career Readiness Foundations</li>
+                <li>Deeper STEM & integrated projects</li>
+                <li>Leadership, clubs & community engagement</li>
+                <li>Study skills for continuity after Class VIII</li>
               </ul>
             </div>
             <div className="journey-image">
               <OptimizedImage 
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200" 
-                alt="Secondary students collaborating in school" 
+                src={PROGRAM_SECTION_IMAGES.middle}
+                alt="Middle school students at Malla Reddy School" 
                 className="rounded-image shadow-image hover-zoom"
                 aspectRatio="16/9"
               />

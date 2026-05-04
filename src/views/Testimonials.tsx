@@ -18,7 +18,7 @@ const Testimonials = () => {
       name: 'Dr. Rajesh Kumar',
       role: 'Parent of Grade 8 Student',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150',
-      content: 'Exceptional faculty and world-class infrastructure. The transition to this school was the best decision for our daughter’s holistic growth.',
+      content: 'Exceptional faculty and world-class infrastructure. Enrolling at Malla Reddy School was the best decision for our daughter’s holistic growth.',
       rating: 5,
     },
     {
@@ -30,9 +30,9 @@ const Testimonials = () => {
     },
     {
       name: 'Suresh Varma',
-      role: 'Parent of Grade 10 Student',
+      role: 'Parent of Grade 6 Student',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150',
-      content: 'The preparation for competitive exams coupled with focus on character building makes this school stand out from the rest.',
+      content: 'The preparation for competitive exams coupled with focus on character building makes Malla Reddy School stand out from the rest.',
       rating: 5,
     },
   ];

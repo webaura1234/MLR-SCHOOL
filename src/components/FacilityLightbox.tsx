@@ -10,10 +10,19 @@ interface FacilityLightboxProps {
   onClose: () => void;
   images: string[];
   title: string;
+  /** Which image to show when the lightbox opens */
+  initialIndex?: number;
 }
 
-const FacilityLightbox: React.FC<FacilityLightboxProps> = ({ isOpen, onClose, images, title }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
+  isOpen,
+  onClose,
+  images,
+  title,
+  initialIndex = 0,
+}) => {
+  const safeInitial = Math.min(Math.max(0, initialIndex), Math.max(0, images.length - 1));
+  const [currentIndex, setCurrentIndex] = useState(safeInitial);
 
   useEffect(() => {
     if (isOpen) {
@@ -28,11 +37,13 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({ isOpen, onClose, im
 
   const next = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (images.length === 0) return;
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
   const prev = (e: React.MouseEvent) => {
     e.stopPropagation();
+    if (images.length === 0) return;
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 

@@ -33,7 +33,7 @@ export const ACHIEVEMENTS_DATA: Achievement[] = [
     month: "April",
     academicYear: "2025-26",
     branch: "Kompally",
-    description: "Three students from our Kompally campus have been selected to represent the state at the National Chess Championship in Delhi.",
+    description: "Three students from Malla Reddy School’s Kompally campus have been selected to represent the state at the National Chess Championship in Delhi.",
     image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=800"
   },
   {

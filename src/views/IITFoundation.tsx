@@ -80,7 +80,7 @@ const IITFoundation = () => {
               animate={{ opacity: 1, y: 0 }}
               className="badge"
             >
-              Grades 6th to 9th
+              Grades 6th to 8th
             </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
@@ -106,9 +106,9 @@ const IITFoundation = () => {
             className="hero-image-grid"
           >
             <div className="main-image">
-              <Image 
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200" 
-                alt="Students collaborating on advanced science experiments"
+              <Image
+                src="https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=1200"
+                alt="Indian school students learning together in a classroom"
                 fill
                 style={{ objectFit: 'cover' }}
                 className="rounded-3xl"
@@ -117,7 +117,7 @@ const IITFoundation = () => {
             </div>
             <div className="accent-box">
               <h3>STEM <br/>Excellence</h3>
-              <p>Preparing for JEE, NEET & Olympiads</p>
+              <p>Strong foundations in science and mathematics</p>
             </div>
           </motion.div>
         </div>
@@ -136,7 +136,7 @@ const IITFoundation = () => {
                 curiosity and critical thinking from a young age.
               </p>
               <div className="quote-box">
-                "We don't just teach subjects; we foster a passion for discovery."
+                &ldquo;We don&apos;t just teach subjects; we foster a passion for discovery.&rdquo;
               </div>
             </div>
             <div className="overview-stats">
@@ -194,9 +194,9 @@ const IITFoundation = () => {
           <div className="features-grid">
             <div className="features-visual">
               <div className="feature-img-main">
-                <Image 
-                  src="https://images.unsplash.com/photo-1544535830-9df3f56fff6a?q=80&w=1000" 
-                  alt="Students in an engaging classroom environment"
+                <Image
+                  src="https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?q=80&w=1000"
+                  alt="Indian students in an engaging classroom discussion"
                   fill
                   style={{ objectFit: 'cover' }}
                 />

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, Star, Medal, Users, Calendar } from 'lucide-react';
+import { Trophy, Award, Star, Medal } from 'lucide-react';
 import Image from 'next/image';
 import './IITFoundation.css'; // Reusing some base styles for consistency
 
@@ -105,7 +105,12 @@ const Competitions = () => {
                 style={{ display: 'flex', flexDirection: 'column' }}
               >
                 <div className="subject-icon" style={{ backgroundColor: '#f8fafc', color: 'inherit' }}>
-                  {React.cloneElement(comp.icon as React.ReactElement, { size: 40 })}
+                  {React.isValidElement(comp.icon)
+                    ? React.cloneElement(
+                        comp.icon as React.ReactElement<{ size?: number }>,
+                        { size: 40 }
+                      )
+                    : null}
                 </div>
                 <h3>{comp.title}</h3>
                 <p style={{ marginBottom: '1.5rem' }}>{comp.desc}</p>

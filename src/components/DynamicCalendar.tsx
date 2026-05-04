@@ -16,10 +16,9 @@ import {
 } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, X } from "lucide-react";
-import { SCHOOL_EVENTS, type SchoolEvent, type EventCategory } from "@/lib/calendar-data";
+import { type SchoolEvent, type EventCategory } from "@/lib/calendar-data";
 import { fetchDataFromSheet } from "@/lib/sheets";
 
-const CALENDAR_SHEET_ID = "1yq3iz43AgYlSZKXJEE6P6aMmYme84eo8SXPmsgCt4Bs";
 const CALENDAR_SHEET_URL = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=1328060838&single=true&output=csv&t=${Date.now()}`;
 
 const MONTH_MAP: Record<string, string> = {

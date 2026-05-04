@@ -16,12 +16,12 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
   useEffect(() => {
     const logoTimer = setTimeout(() => {
       setShowLogo(true);
-    }, 2000);
+    }, 520);
 
     const fadeTimer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onLoadingComplete, 700);
-    }, 3200);
+    }, 2800);
 
     return () => {
       clearTimeout(logoTimer);
@@ -39,28 +39,27 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
           transition={{ duration: 0.65, ease: 'easeInOut' }}
         >
           <motion.div
-            className="preloader-bg"
-            initial={{ opacity: 0, scale: 1.06 }}
+            className="preloader-scene"
+            aria-hidden
+            initial={{ opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Image
-              src="/images/intro_sports_day.png"
-              alt=""
-              className="preloader-bg-img preloader-bg-img--photo"
-              fill
-              priority
-              sizes="100vw"
-            />
+            <div className="preloader-gradient" />
+            <div className="preloader-mesh" />
+            <div className="preloader-orb preloader-orb--a" />
+            <div className="preloader-orb preloader-orb--b" />
+            <div className="preloader-ring" />
+            <div className="preloader-shine" />
           </motion.div>
 
           <AnimatePresence>
             {showLogo && (
               <motion.div
                 className="preloader-logo-container"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: 'backOut' }}
+                initial={{ opacity: 0, scale: 0.88, y: 12 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.75, ease: [0.34, 1.56, 0.64, 1] }}
               >
                 <Image
                   src="/logo.svg"

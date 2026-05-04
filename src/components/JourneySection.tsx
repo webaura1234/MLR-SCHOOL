@@ -1,15 +1,14 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 import { useCountUp } from "../hooks/useCountUp";
-import { School, GraduationCap, Users, Building2, Globe, Monitor } from "lucide-react";
+import { GraduationCap, Building2, Globe, Monitor } from "lucide-react";
 import "./JourneySection.css";
 
 const stats = [
-  { label: "Secondary School Examination (X) & Senior School Certificate Examination (XII) Pass Rate", end: 100, suffix: "%", icon: <GraduationCap size={24} /> },
+  { label: "CBSE-aligned learning continuum", textValue: "Nursery – VIII", icon: <GraduationCap size={24} /> },
   { label: "Acres of Campus", end: 25, suffix: "+", icon: <Globe size={24} /> },
   { label: "Infrastructure Facilities", end: 50, suffix: "+", icon: <Building2 size={24} /> },
   { label: "Interactive Learning", textValue: "Digital Class Rooms", icon: <Monitor size={24} /> },
@@ -66,7 +65,7 @@ export function JourneySection() {
             transition={{ delay: 0.1 }}
             className="journey-title"
           >
-            For Our <span className="journey-title-accent">Journey</span>
+            <span className="journey-title-accent">Journey</span>
           </motion.h2>
         </div>
 
