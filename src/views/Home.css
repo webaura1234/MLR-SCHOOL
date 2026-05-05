@@ -1084,6 +1084,17 @@
   margin-right: auto;
 }
 
+/* Programs Offered: one card per row on mobile */
+@media (max-width: 768px) {
+  .programs-section .facilities-grid.mobile-flex-grid {
+    gap: 1.25rem;
+  }
+  .programs-section .facilities-grid.mobile-flex-grid > * {
+    flex: 0 0 100% !important;
+    max-width: 520px;
+  }
+}
+
 @media (min-width: 1280px) {
   .programs-section .facilities-grid {
     gap: 2.5rem;

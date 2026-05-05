@@ -27,21 +27,23 @@ const ACTIVITIES: Activity[] = [
     title: 'Dance',
     category: 'Arts',
     description: 'Classical and contemporary dance forms to enhance rhythm, poise, and cultural expression.',
-    image: unsplashPhoto('1571019613454-1cb2f99b2d8b'),
+    image:
+      'https://plus.unsplash.com/premium_photo-1661376842327-848f3adf9e4d?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'music',
     title: 'Music',
     category: 'Arts',
     description: 'Vocal and instrumental training, including keyboard and guitar, fostering melodic intelligence.',
-    image: unsplashPhoto('1516280440614-37939bbacd81'),
+    image:
+      'https://plus.unsplash.com/premium_photo-1750373196311-1ed99d5c0603?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'art-craft',
     title: 'Art & Craft',
     category: 'Arts',
     description: 'Unleashing creativity through painting, sculpting, and sustainable crafting workshops.',
-    image: unsplashPhoto('1596495577886-d920f1fb7238'),
+    image: 'https://images.unsplash.com/photo-1774820270838-0a78a1eb0e18?auto=format&fit=crop&w=1400&q=82',
   },
   // Indoor
   {
@@ -49,21 +51,21 @@ const ACTIVITIES: Activity[] = [
     title: 'Carroms',
     category: 'Indoor',
     description: 'Strategic indoor game that blends skill, concentration, and fine motor skills development.',
-    image: unsplashPhoto('1516979187457-637abb4f9353'),
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Kids_playing_carrom_board.jpeg',
   },
   {
     id: 'chess',
     title: 'Chess',
     category: 'Indoor',
     description: 'Grandmaster training sessions to develop logical thinking and strategic foresight.',
-    image: unsplashPhoto('1580582932707-520aed937b7b'),
+    image: 'https://images.unsplash.com/photo-1578425743428-fd163c2a26e1?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'table-tennis',
     title: 'Table Tennis',
     category: 'Indoor',
     description: 'Fast-paced action to improve reflexes and hand-eye coordination.',
-    image: unsplashPhoto('1558618666-fcd25c85cd64'),
+    image: 'https://images.unsplash.com/photo-1659303388053-e883fedaadac?auto=format&fit=crop&w=1400&q=82',
   },
   // Outdoor
   {
@@ -71,35 +73,36 @@ const ACTIVITIES: Activity[] = [
     title: 'Cricket',
     category: 'Outdoor',
     description: 'Professional coaching at our standard cricket nets with regular inter-school matches.',
-    image: unsplashPhoto('1517649763962-0c623066013b'),
+    image:
+      'https://plus.unsplash.com/premium_photo-1721963697125-c7b3374c79f4?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'tennis',
     title: 'Tennis',
     category: 'Outdoor',
     description: 'Professional clay and synthetic courts for budding tennis stars.',
-    image: unsplashPhoto('1576091160399-112ba8d25d1d'),
+    image: 'https://images.unsplash.com/photo-1714657408180-5048727a2fdb?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'basketball',
     title: 'Basketball',
     category: 'Outdoor',
     description: 'Enhancing teamwork and agility through high-energy court sessions.',
-    image: unsplashPhoto('1461896836934-ffe607ba8211'),
+    image: 'https://images.unsplash.com/photo-1756769497294-6b7d3734ed04?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'athletics',
     title: 'Athletics',
     category: 'Outdoor',
     description: 'Focusing on physical fitness, speed, and endurance through various track and field events.',
-    image: unsplashPhoto('1627664819818-e147d6221422'),
+    image: 'https://images.unsplash.com/photo-1720799359616-04f900b1e1eb?auto=format&fit=crop&w=1400&q=82',
   },
   {
     id: 'kabaddi',
     title: 'Kabaddi & Kho-Kho',
     category: 'Outdoor',
     description: 'Promoting traditional Indian sports to build strength and agility.',
-    image: unsplashPhoto('1523240795612-9a054b0db644'),
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/Glimpse_of_India_vs_Nepal_Match_during_4th_Asian_Kho_Kho_Championship.jpg',
   },
 ];
 

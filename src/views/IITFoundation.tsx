@@ -107,8 +107,8 @@ const IITFoundation = () => {
           >
             <div className="main-image">
               <Image
-                src="https://images.unsplash.com/photo-1709290749293-c6152a187b14?q=80&w=1200"
-                alt="Indian school students learning together in a classroom"
+                src="https://images.unsplash.com/photo-1758270704021-361c165d68fd?auto=format&fit=crop&w=1200&q=80"
+                alt="Teacher engaging students in a modern classroom"
                 fill
                 style={{ objectFit: 'cover' }}
                 className="rounded-3xl"
@@ -195,8 +195,8 @@ const IITFoundation = () => {
             <div className="features-visual">
               <div className="feature-img-main">
                 <Image
-                  src="https://images.unsplash.com/photo-1573894998033-c0cef4ed722b?q=80&w=1000"
-                  alt="Indian students in an engaging classroom discussion"
+                  src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?auto=format&fit=crop&w=1000&q=80"
+                  alt="Student using a tablet for interactive digital learning"
                   fill
                   style={{ objectFit: 'cover' }}
                 />

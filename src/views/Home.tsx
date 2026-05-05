@@ -16,6 +16,7 @@ import {
 import './Home.css';
 import './Gallery.css';
 import { JourneySection } from '../components/JourneySection';
+import { MilestonesOfExcellence } from '../components/MilestonesOfExcellence';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
 import {
@@ -285,6 +286,86 @@ const Home = () => {
           {/* Hero content removed as per request */}
         </div>
       </section>
+      {/* Journey */}
+      <JourneySection />
+
+      {/* 3. Programs Offered */}
+      <section
+        className="section programs-section text-center"
+        style={{ backgroundColor: 'var(--page-bg)', padding: '6rem 0' }}
+      >
+        <div className="container">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title text-center"
+            style={{ marginBottom: '4rem', fontSize: '2.5rem', color: '#333' }}
+          >
+            Programs Offered
+          </motion.h2>
+          <motion.div className="facilities-grid mobile-flex-grid">
+            {programs.map((prog, idx) => {
+              const IconComp =
+                prog.icon === 'Star'
+                  ? Star
+                  : prog.icon === 'BookOpen'
+                    ? BookOpen
+                    : prog.icon === 'Microscope'
+                      ? Microscope
+                      : prog.icon === 'GraduationCap'
+                        ? GraduationCap
+                        : Star;
+
+              return (
+                <motion.div
+                  key={idx}
+                  className="blob-card"
+                  style={{
+                    background: '#ffffff',
+                    borderColor: '#e2e8f0',
+                    boxShadow: '8px 8px 0 #94a3b8',
+                    padding: '0',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div className="blob-image-wrapper" style={{ position: 'relative', width: '100%', height: '200px' }}>
+                    <Image src={prog.image} fill style={{ objectFit: 'cover' }} alt={prog.title} />
+                    <div
+                      className="blob-card-icon-overlay"
+                      style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        background: 'white',
+                        width: '50px',
+                        height: '50px',
+                        borderRadius: '15px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                      }}
+                    >
+                      {React.createElement(IconComp, { size: 24, style: { color: 'var(--primary)' } })}
+                    </div>
+                  </div>
+                  <div style={{ padding: '2rem' }}>
+                    <h3 className="blob-title" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
+                      {prog.title}
+                    </h3>
+                    <p className="blob-desc" style={{ color: '#666', lineHeight: '1.6' }}>
+                      {prog.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. Why Choose Malla Reddy? */}
       <div className="trust-strip-wrapper">
         <motion.div
           initial={{ y: 40, opacity: 0 }}
@@ -327,85 +408,88 @@ const Home = () => {
         </motion.div>
       </div>
 
-      <section
-        className="section about-section text-center"
-        style={{ backgroundColor: 'var(--page-bg)', overflow: 'hidden', padding: '6rem 0' }}
-      >
-        <div className="container about-grid">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px', amount: 0.15 }}
-            variants={fadeUpVariant}
-            className="about-content"
-            style={{ textAlign: 'left' }}
-          >
-            <h2 className="section-title section-title-spark" style={{ color: 'var(--primary)' }}>
-              Welcome to Excellence
-            </h2>
-            <p
-              className="section-desc"
-              style={{
-                marginBottom: '2rem',
-                fontSize: '1.1rem',
-                lineHeight: '1.8',
-                color: '#555',
-              }}
+      {/* 5. Our Facilities */}
+      {/* Facilities Section — only show when loaded and has content */}
+      {!isFacilitiesLoading && facilityImages.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="section facilities-section facilities-showcase"
+        >
+          <div className="container facilities-showcase-inner">
+            <motion.div
+              className="facilities-showcase-head"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55 }}
             >
-              At Malla Reddy School, we believe in nurturing every child&apos;s potential. Our
-              holistic approach integrates academics, sports, and creative arts to build confident,
-              responsible, and forward-thinking individuals ready to face tomorrow&apos;s
-              challenges.
-            </p>
-            <Link
-              href="/about"
-              className="link-with-icon"
-              style={{
-                color: 'var(--primary)',
-                fontSize: '1.25rem',
-                fontWeight: 'bold',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                textDecoration: 'none',
-              }}
-            >
-              Read More <ArrowRight size={20} />
-            </Link>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, rotate: -10, x: 50 }}
-            whileInView={{ opacity: 1, rotate: 0, x: 0 }}
-            viewport={{ once: true, margin: '-100px', amount: 0.15 }}
-            transition={{ type: 'spring', stiffness: 60, delay: 0.2 }}
-            className="about-image-wrapper"
-            style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}
-          >
-            <div
-              className="polaroid-card"
-              style={{ '--rotation': '3deg' } as React.CSSProperties}
-            >
-              <div className="polaroid-taped" style={{ background: '#ddd' }} />
-              <div
-                className="polaroid-img-wrapper"
-                style={{ boxShadow: 'inset 0 0 10px rgba(0,0,0,0.2)', position: 'relative' }}
-              >
-                <Image
-                  src={HERO_IMAGE}
-                  alt="Students learning"
-                  style={{ width: '100%', height: '300px', objectFit: 'cover' }}
-                  width={800}
-                  height={300}
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              <span className="facilities-showcase-badge">
+                <Building2 size={16} aria-hidden />
+                Campus & facilities
+              </span>
+              <h2 className="facilities-showcase-title">World-Class Facilities</h2>
+              <p className="facilities-showcase-lead">
+                Explore classrooms, grounds, and learning spaces — tap any photo for a full-screen view.
+              </p>
+              <span className="facilities-showcase-count">
+                {facilityImages.length > FACILITY_HOME_LIMIT
+                  ? `${FACILITY_HOME_LIMIT} of ${facilityImages.length} photos`
+                  : `${facilityImages.length} photos`}
+              </span>
+            </motion.div>
 
-      <JourneySection />
+            <motion.div
+              className="facilities-mosaic"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px', amount: 0.08 }}
+              variants={staggerContainer}
+            >
+              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((src, i) => (
+                <motion.button
+                  key={`${src}-${i}`}
+                  type="button"
+                  variants={fadeUpVariant}
+                  className={facilitiesMosaicClass(i)}
+                  aria-label={`Open facility photo ${i + 1} large`}
+                  onClick={() => {
+                    setFacilityViewerIndex(i);
+                    setFacilityViewerOpen(true);
+                  }}
+                >
+                  <span className="facilities-card-media">
+                    {(src.startsWith('http') || src.startsWith('/')) && (
+                      <Image
+                        src={src}
+                        alt={`Campus facility photo ${i + 1}`}
+                        fill
+                        className="facilities-card-img"
+                        sizes="(max-width: 560px) 50vw, (max-width: 900px) 33vw, (max-width: 1400px) 28vw, 360px"
+                        loading={i < 4 ? 'eager' : 'lazy'}
+                      />
+                    )}
+                  </span>
+                  <span className="facilities-card-frame" aria-hidden />
+                  <span className="facilities-card-shade" aria-hidden />
+                </motion.button>
+              ))}
+            </motion.div>
+          </div>
 
+          <FacilityLightbox
+            key={facilityViewerOpen ? `facility-lb-${facilityViewerIndex}` : 'facility-lb-closed'}
+            isOpen={facilityViewerOpen}
+            onClose={() => setFacilityViewerOpen(false)}
+            images={facilityImages.slice(0, FACILITY_HOME_LIMIT)}
+            title="Campus facilities"
+            initialIndex={facilityViewerIndex}
+          />
+        </motion.section>
+      )}
+
+      {/* 6. Moments from Malla Reddy School */}
       <section className="section home-gallery-section">
         <div className="container home-gallery-header-wrap">
           <motion.div
@@ -513,167 +597,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Facilities Section — only show when loaded and has content */}
-      {!isFacilitiesLoading && facilityImages.length > 0 && (
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="section facilities-section facilities-showcase"
-        >
-          <div className="container facilities-showcase-inner">
-            <motion.div
-              className="facilities-showcase-head"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.55 }}
-            >
-              <span className="facilities-showcase-badge">
-                <Building2 size={16} aria-hidden />
-                Campus & facilities
-              </span>
-              <h2 className="facilities-showcase-title">World-Class Facilities</h2>
-              <p className="facilities-showcase-lead">
-                Explore classrooms, grounds, and learning spaces — tap any photo for a full-screen view.
-              </p>
-              <span className="facilities-showcase-count">
-                {facilityImages.length > FACILITY_HOME_LIMIT
-                  ? `${FACILITY_HOME_LIMIT} of ${facilityImages.length} photos`
-                  : `${facilityImages.length} photos`}
-              </span>
-            </motion.div>
-
-            <motion.div
-              className="facilities-mosaic"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-60px', amount: 0.08 }}
-              variants={staggerContainer}
-            >
-              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((src, i) => (
-                <motion.button
-                  key={`${src}-${i}`}
-                  type="button"
-                  variants={fadeUpVariant}
-                  className={facilitiesMosaicClass(i)}
-                  aria-label={`Open facility photo ${i + 1} large`}
-                  onClick={() => {
-                    setFacilityViewerIndex(i);
-                    setFacilityViewerOpen(true);
-                  }}
-                >
-                  <span className="facilities-card-media">
-                    {(src.startsWith('http') || src.startsWith('/')) && (
-                      <Image
-                        src={src}
-                        alt={`Campus facility photo ${i + 1}`}
-                        fill
-                        className="facilities-card-img"
-                        sizes="(max-width: 560px) 50vw, (max-width: 900px) 33vw, (max-width: 1400px) 28vw, 360px"
-                        loading={i < 4 ? 'eager' : 'lazy'}
-                      />
-                    )}
-                  </span>
-                  <span className="facilities-card-frame" aria-hidden />
-                  <span className="facilities-card-shade" aria-hidden />
-                  <span className="facilities-card-index">Fig. {String(i + 1).padStart(2, '0')}</span>
-                </motion.button>
-              ))}
-            </motion.div>
-          </div>
-
-          <FacilityLightbox
-            key={facilityViewerOpen ? `facility-lb-${facilityViewerIndex}` : 'facility-lb-closed'}
-            isOpen={facilityViewerOpen}
-            onClose={() => setFacilityViewerOpen(false)}
-            images={facilityImages.slice(0, FACILITY_HOME_LIMIT)}
-            title="Campus facilities"
-            initialIndex={facilityViewerIndex}
-          />
-        </motion.section>
-      )}
-
-      <section
-        className="section programs-section text-center"
-        style={{ backgroundColor: 'var(--page-bg)', padding: '6rem 0' }}
-      >
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="section-title text-center"
-            style={{ marginBottom: '4rem', fontSize: '2.5rem', color: '#333' }}
-          >
-            Programs Offered
-          </motion.h2>
-          <motion.div className="facilities-grid mobile-flex-grid">
-            {programs.map((prog, idx) => {
-              const IconComp =
-                prog.icon === 'Star'
-                  ? Star
-                  : prog.icon === 'BookOpen'
-                    ? BookOpen
-                    : prog.icon === 'Microscope'
-                      ? Microscope
-                      : prog.icon === 'GraduationCap'
-                        ? GraduationCap
-                        : Star;
-
-              return (
-                <motion.div
-                  key={idx}
-                  className="blob-card"
-                  style={{
-                    background: '#ffffff',
-                    borderColor: '#e2e8f0',
-                    boxShadow: '8px 8px 0 #94a3b8',
-                    padding: '0',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <div className="blob-image-wrapper" style={{ position: 'relative', width: '100%', height: '200px' }}>
-                    <Image src={prog.image} fill style={{ objectFit: 'cover' }} alt={prog.title} />
-                    <div
-                      className="blob-card-icon-overlay"
-                      style={{
-                        position: 'absolute',
-                        top: '1rem',
-                        right: '1rem',
-                        background: 'white',
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '15px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-                      }}
-                    >
-                      {React.createElement(IconComp, { size: 24, style: { color: 'var(--primary)' } })}
-                    </div>
-                  </div>
-                  <div style={{ padding: '2rem' }}>
-                    <h3 className="blob-title" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>
-                      {prog.title}
-                    </h3>
-                    <p className="blob-desc" style={{ color: '#666', lineHeight: '1.6' }}>
-                      {prog.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-
       <section className="calendar-section section">
         <div className="container">
           <DynamicCalendar />
         </div>
       </section>
+
+      {/* Milestones of Excellence (moved to bottom as requested) */}
+      <MilestonesOfExcellence />
 
     </div>
   );
