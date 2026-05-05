@@ -79,7 +79,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1.25rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   margin-top: 0;
 }
@@ -135,7 +135,7 @@
 }
 
 .navbar-shell.navbar-shell--home .navbar-panel {
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
