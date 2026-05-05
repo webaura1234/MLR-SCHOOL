@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -19,29 +19,15 @@ import { JourneySection } from '../components/JourneySection';
 import { MilestonesOfExcellence } from '../components/MilestonesOfExcellence';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
-import {
-  fetchGalleryItemsFromPublishedSheet,
-  normalizeGalleryImageUrl,
-} from '@/lib/galleryFromPublishedSheet';
-import { PROGRAM_SECTION_IMAGES } from '@/lib/programSectionImages';
-import { fetchDataFromSheet } from '@/lib/sheets';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
-// REPLACE THIS WITH YOUR REAL SHEET ID
-const GOOGLE_SHEET_ID = "1yq3iz43AgYISZKXJEE6P6aMmYme84eo8SXPmsgCt4Bs";
-const GIDS = {
-  GALLERY: '438455533',
-  PROGRAMS: '185361245', 
-  FACILITIES: '1248382523' 
-};
-
-// Use the same "Published to web" CSV pattern as Achievements (only gid differs)
-const FACILITIES_SHEET_URL = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=1248382523&single=true&output=csv&t=${Date.now()}`;
-
-/** Homepage hero — provided by user */
-const HERO_IMAGE = '/malla-reddy-hero.jpg';
-const HERO_IMAGE_MOBILE = '/malla-reddy-hero-mobile.png';
-
-
+import heroDesktop from '../../public/malla-reddy-hero.jpg';
+import heroMobile from '../../public/malla-reddy-hero-mobile.png';
+import safetyCampus from '../../public/images/safety/campus-safety.png';
+import safetyHealth from '../../public/images/safety/health-safety.png';
+import safetyHygiene from '../../public/images/safety/safety-hygiene.png';
+import safetyCctv from '../../public/images/safety/cctv.png';
+import safetyPest from '../../public/images/safety/pest-control.png';
 
 // Framer Motion v12+ deprecates motion(); prefer motion.create()
 const MotionLink = motion.create(Link);
@@ -51,20 +37,8 @@ const MotionLink = motion.create(Link);
 interface Program {
   title: string;
   desc: string;
-  image: string;
+  image: any;
   icon: string;
-}
-
-interface Facility {
-  images: string[];
-}
-
-type RawGalleryItem = Record<string, unknown>;
-
-function asString(value: unknown): string {
-  if (typeof value === 'string') return value;
-  if (value == null) return '';
-  return String(value);
 }
 
 /** Homepage facilities section: show at most this many photos */
@@ -77,157 +51,17 @@ function facilitiesMosaicClass(index: number): string {
   return 'facilities-card facilities-card--base';
 }
 
-const DEFAULT_PROGRAMS: Program[] = [
-  {
-    title: 'Pre-Primary',
-    desc: 'Play-based learning that builds strong early foundations in language, numbers, and social skills.',
-    image: PROGRAM_SECTION_IMAGES.prePrimary,
-    icon: 'Star',
-  },
-  {
-    title: 'Primary',
-    desc: 'Core academics with activities that develop curiosity, confidence, and communication skills.',
-    image: PROGRAM_SECTION_IMAGES.primary,
-    icon: 'BookOpen',
-  },
-  {
-    title: 'Middle (up to 8th class)',
-    desc: 'Concept-driven learning with labs and projects to prepare students for higher classes.',
-    image: PROGRAM_SECTION_IMAGES.middle,
-    icon: 'Microscope',
-  },
-];
+export type HomeProps = {
+  galleryPreview: { src: string; title: string; blurDataURL?: string }[];
+  galleryMore: { src: string; title: string; cat: string; blurDataURL?: string }[];
+  programs: Program[];
+  facilityImages: { src: string; blurDataURL?: string }[];
+  calendarEvents: { id: string; title: string; date: string; category: "Exam" | "Holiday" | "Event" | "Activity" | "Exams" | "Holidays" | "Events" | "Activities"; description: string }[];
+};
 
-const Home = () => {
-  const [galleryPreview, setGalleryPreview] = useState<{src: string, title: string}[]>([]);
-  const [galleryMore, setGalleryMore] = useState<{src: string, title: string, cat: string}[]>([]);
-  const [programs, setPrograms] = useState<Program[]>([]);
-  const [facilityImages, setFacilityImages] = useState<string[]>([]);
-  const [isFacilitiesLoading, setIsFacilitiesLoading] = useState(true);
+const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarEvents }: HomeProps) => {
   const [facilityViewerOpen, setFacilityViewerOpen] = useState(false);
   const [facilityViewerIndex, setFacilityViewerIndex] = useState(0);
-
-  useEffect(() => {
-    async function loadContent() {
-      // Gallery via Apps Script
-      try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbxzGg_9G09RThkXBTfxYnfdP25qbKjX07MAeN-9ABYwglidLfK6RvTizNWbiTuEzgk/exec?type=gallery");
-        const galleryJson: unknown = await response.json();
-        const galleryData: RawGalleryItem[] = Array.isArray(galleryJson)
-          ? (galleryJson as RawGalleryItem[])
-          : [];
-        
-        let validGallery = galleryData
-          .filter((item) => {
-            const src = item.coverimage ?? item.coverImage ?? item.src;
-            const srcStr = asString(src);
-            return srcStr.length > 10;
-          })
-          .map((item) => {
-            const rawSrc = asString(item.coverimage ?? item.coverImage ?? item.src);
-            const imgs = rawSrc.split(/[,|]/).map((s: string) => s.trim()).filter(Boolean);
-            return {
-              src: normalizeGalleryImageUrl(imgs[0] || ''),
-              title: asString(item.title ?? item.Title) || 'School Moment',
-              category: asString(item.category ?? item.Category) || 'General',
-            };
-          })
-          .filter(
-            (item: { src: string }) =>
-              item.src && (item.src.startsWith('http') || item.src.startsWith('/')),
-          );
-
-        if (validGallery.length === 0) {
-          try {
-            const fromSheet = await fetchGalleryItemsFromPublishedSheet();
-            validGallery = fromSheet.map((g) => ({
-              src: g.src,
-              title: g.title,
-              category: g.category,
-            }));
-          } catch {
-            /* Sheet unavailable — leave homepage gallery empty */
-          }
-        }
-
-        if (validGallery.length > 0) {
-          setGalleryPreview(validGallery.slice(0, 3));
-          if (validGallery.length > 3) {
-            setGalleryMore(
-              validGallery.slice(3, 7).map((item) => ({
-                src: item.src,
-                title: item.title,
-                cat: item.category,
-              })),
-            );
-          }
-        }
-      } catch (err) {
-        console.error("Gallery fetch error:", err);
-        try {
-          const fromSheet = await fetchGalleryItemsFromPublishedSheet();
-          if (fromSheet.length > 0) {
-            setGalleryPreview(fromSheet.slice(0, 3).map((g) => ({ src: g.src, title: g.title })));
-            if (fromSheet.length > 3) {
-              setGalleryMore(
-                fromSheet.slice(3, 7).map((g) => ({
-                  src: g.src,
-                  title: g.title,
-                  cat: g.category,
-                })),
-              );
-            }
-          }
-        } catch {
-          /* ignore */
-        }
-      }
-      // Programs
-      const programsData = await fetchDataFromSheet<Program>(GOOGLE_SHEET_ID, GIDS.PROGRAMS, (cols) => ({
-        title: cols[0]?.trim(),
-        desc: cols[1]?.trim(),
-        image: cols[2]?.trim(),
-        icon: cols[3]?.trim() || 'Star'
-      }));
-      const validPrograms = programsData.filter(p => p.title && p.image && (p.image.startsWith('http') || p.image.startsWith('/')));
-      const existingTitles = new Set(validPrograms.map(p => p.title.trim().toLowerCase()));
-      const mergedPrograms = [
-        ...DEFAULT_PROGRAMS.filter(p => !existingTitles.has(p.title.trim().toLowerCase())),
-        ...validPrograms,
-      ];
-      if (mergedPrograms.length > 0) setPrograms(mergedPrograms);
-
-      // Facilities
-      setIsFacilitiesLoading(true);
-      try {
-        const facilitiesData = await fetchDataFromSheet<Facility>(
-          FACILITIES_SHEET_URL,
-          '0',
-          (cols) => {
-            // Robust: facilities sheet columns may vary; extract URLs from any cell.
-            const images = cols
-              .flatMap((cell) => (cell ? cell.split(/[,|]/) : []))
-              .map((s) => s.trim())
-              .filter((s) => s.startsWith('http') || s.startsWith('/'))
-              .filter(Boolean);
-
-            return { images };
-          }
-        );
-
-        if (facilitiesData && facilitiesData.length > 0) {
-          const validFacilities = facilitiesData.filter((f) => f.images?.length > 0);
-          const allImages = Array.from(new Set(validFacilities.flatMap((f) => f.images)));
-          setFacilityImages(allImages);
-        }
-      } catch (err) {
-        console.error("Facilities fetch error:", err);
-      } finally {
-        setIsFacilitiesLoading(false);
-      }
-    }
-    loadContent();
-  }, []);
 
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -255,22 +89,24 @@ const Home = () => {
           style={{ zIndex: 1 }}
         >
           <Image
-            src={HERO_IMAGE}
+            src={heroDesktop}
             alt="Happy students walking towards the welcoming entrance of Malla Reddy School"
             className="hero-slide-img desktop-only"
             fill
             priority
             loading="eager"
             sizes="(max-width: 768px) 100vw, 1200px"
+            placeholder="blur"
           />
           <Image
-            src={HERO_IMAGE_MOBILE}
+            src={heroMobile}
             alt="Happy students walking towards the welcoming entrance of Malla Reddy School"
             className="hero-slide-img mobile-only"
             fill
             priority
             loading="eager"
             sizes="(max-width: 768px) 100vw, 1200px"
+            placeholder="blur"
           />
         </motion.div>
         <div
@@ -330,7 +166,14 @@ const Home = () => {
                   }}
                 >
                   <div className="blob-image-wrapper" style={{ position: 'relative', width: '100%', height: '200px' }}>
-                    <Image src={prog.image} fill style={{ objectFit: 'cover' }} alt={prog.title} />
+                    <Image
+                      src={prog.image}
+                      alt={prog.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                      placeholder="blur"
+                      style={{ objectFit: 'cover' }}
+                    />
                     <div
                       className="blob-card-icon-overlay"
                       style={{
@@ -385,11 +228,11 @@ const Home = () => {
           </motion.h2>
           <div className="trust-strip-grid">
             {[
-              { img: "/images/safety/campus-safety.png", label: "Campus Safety" },
-              { img: "/images/safety/health-safety.png", label: "Health and Safety Policy" },
-              { img: "/images/safety/safety-hygiene.png", label: "Safety and Hygiene" },
-              { img: "/images/safety/cctv.png", label: "CCTV" },
-              { img: "/images/safety/pest-control.png", label: "Pest Control" }
+              { img: safetyCampus, label: "Campus Safety" },
+              { img: safetyHealth, label: "Health and Safety Policy" },
+              { img: safetyHygiene, label: "Safety and Hygiene" },
+              { img: safetyCctv, label: "CCTV" },
+              { img: safetyPest, label: "Pest Control" }
             ].map((item, idx) => (
               <div key={idx} className="trust-item">
                 <div className="trust-icon-img" style={{ position: 'relative', width: '64px', height: '64px', marginBottom: '1rem' }}>
@@ -398,6 +241,7 @@ const Home = () => {
                     alt={item.label}
                     fill
                     sizes="64px"
+                    placeholder="blur"
                     style={{ objectFit: 'contain', mixBlendMode: 'multiply' }}
                   />
                 </div>
@@ -410,7 +254,7 @@ const Home = () => {
 
       {/* 5. Our Facilities */}
       {/* Facilities Section — only show when loaded and has content */}
-      {!isFacilitiesLoading && facilityImages.length > 0 && (
+      {facilityImages.length > 0 && (
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -447,9 +291,9 @@ const Home = () => {
               viewport={{ once: true, margin: '-60px', amount: 0.08 }}
               variants={staggerContainer}
             >
-              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((src, i) => (
+              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((img, i) => (
                 <motion.button
-                  key={`${src}-${i}`}
+                  key={`${img.src}-${i}`}
                   type="button"
                   variants={fadeUpVariant}
                   className={facilitiesMosaicClass(i)}
@@ -460,14 +304,16 @@ const Home = () => {
                   }}
                 >
                   <span className="facilities-card-media">
-                    {(src.startsWith('http') || src.startsWith('/')) && (
+                    {(img.src.startsWith('http') || img.src.startsWith('/')) && (
                       <Image
-                        src={src}
+                        src={img.src}
                         alt={`Campus facility photo ${i + 1}`}
                         fill
                         className="facilities-card-img"
                         sizes="(max-width: 560px) 50vw, (max-width: 900px) 33vw, (max-width: 1400px) 28vw, 360px"
                         loading={i < 4 ? 'eager' : 'lazy'}
+                        placeholder="blur"
+                        blurDataURL={img.blurDataURL ?? DEFAULT_BLUR}
                       />
                     )}
                   </span>
@@ -529,7 +375,7 @@ const Home = () => {
                   whileTap={{ scale: 0.99 }}
                 >
                   <span className="gallery-preview-shine" aria-hidden />
-                  <span className="gallery-preview-frame">
+                  <span className="gallery-preview-frame" style={{ position: 'relative' }}>
                     {photo.src && (photo.src.startsWith('http') || photo.src.startsWith('/')) && (
                       <Image
                         src={photo.src}
@@ -542,6 +388,8 @@ const Home = () => {
                             : '(max-width: 639px) 46vw, (max-width: 768px) 92vw, (max-width: 1400px) 32vw, 34vw'
                         }
                         priority={idx === 1}
+                        placeholder="blur"
+                        blurDataURL={photo.blurDataURL ?? DEFAULT_BLUR}
                       />
                     )}
                     <span className="gallery-preview-caption">{photo.title}</span>
@@ -562,7 +410,7 @@ const Home = () => {
                 className="gallery-tile gallery-tile--sm home-gallery-tile-link"
               >
                 <span className="gallery-tile-glow" aria-hidden />
-                <span className="gallery-tile-media">
+                <span className="gallery-tile-media" style={{ position: 'absolute', inset: 0 }}>
                   {photo.src && (photo.src.startsWith('http') || photo.src.startsWith('/')) && (
                     <Image
                       src={photo.src}
@@ -570,6 +418,8 @@ const Home = () => {
                       fill
                       className="gallery-tile-img"
                       sizes="(max-width: 640px) 50vw, 22vw"
+                      placeholder="blur"
+                      blurDataURL={photo.blurDataURL ?? DEFAULT_BLUR}
                     />
                   )}
                 </span>
@@ -599,7 +449,7 @@ const Home = () => {
 
       <section className="calendar-section section">
         <div className="container">
-          <DynamicCalendar />
+      <DynamicCalendar events={calendarEvents} />
         </div>
       </section>
 

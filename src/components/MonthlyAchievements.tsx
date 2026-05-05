@@ -6,50 +6,20 @@ import { Trophy, ChevronDown, Award, MapPin, Filter, ArrowRight } from "lucide-r
 import { type Achievement, type BranchName } from "@/lib/achievements-data";
 import Image from "next/image";
 import Link from "next/link";
-import { fetchDataFromSheet } from "@/lib/sheets";
-
-const ACHIEVEMENTS_SHEET_URL = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=0&single=true&output=csv&t=${Date.now()}`;
+import { DEFAULT_BLUR } from "@/lib/blurPlaceholder";
 
 const MONTHS = ["April", "March", "February", "January", "December", "November", "October", "September", "August", "July", "June"];
 const ACADEMIC_YEARS = ["2025-26", "2024-25"];
 const BRANCHES: BranchName[] = ["Lalgadi Malakpet", "Kompally", "Suraram", "Shampur", "Kundanpally", "MB Grammar School"];
 
-const MonthlyAchievements = () => {
+export type MonthlyAchievementsProps = {
+  achievements: (Achievement & { blurDataURL?: string })[];
+};
+
+const MonthlyAchievements = ({ achievements }: MonthlyAchievementsProps) => {
   const [activeMonth, setActiveMonth] = useState("April");
   const [selectedYear, setSelectedYear] = useState("2025-26");
   const [selectedBranch, setSelectedBranch] = useState<BranchName | "All">("All");
-  const [achievements, setAchievements] = useState<Achievement[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  React.useEffect(() => {
-    async function loadAchievements() {
-      setIsLoading(true);
-      try {
-        // Try fetching from the direct published CSV first (most reliable)
-        const sheetData = await fetchDataFromSheet<Achievement>(ACHIEVEMENTS_SHEET_URL, '0', (cols, index) => ({
-          id: `${cols[0] || 'ach'}-${index}`,
-          title: cols[1] || 'Achievement',
-          description: cols[2] || '',
-          image: cols[3] || '',
-          month: cols[4] || 'April',
-          academicYear: cols[5] || '2025-26',
-          branch: (cols[6] || 'Lalgadi Malakpet') as BranchName,
-        }));
-
-        if (sheetData && sheetData.length > 0) {
-          const validData = sheetData.filter(item => item.title && item.title !== 'Achievement');
-          if (validData.length > 0) {
-            setAchievements(validData);
-          }
-        }
-      } catch (err) {
-        console.error("Achievements fetch error:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    loadAchievements();
-  }, []);
 
   const filteredAchievements = useMemo(() => {
     return achievements.filter(a => 
@@ -141,11 +111,7 @@ const MonthlyAchievements = () => {
         {/* Content Area */}
         <div className="achievements-content-area" style={{ minHeight: '400px' }}>
           <AnimatePresence mode="wait">
-            {isLoading ? (
-              <div style={{ display: 'flex', justifyContent: 'center', padding: '10rem 0' }}>
-                <div style={{ width: '3rem', height: '3rem', borderRadius: '50%', border: '4px solid #f3f4f6', borderTopColor: '#F5A623', animation: 'spin 1s linear infinite' }} />
-              </div>
-            ) : filteredAchievements.length > 0 ? (
+            {filteredAchievements.length > 0 ? (
               <motion.div 
                 key={`${activeMonth}-${selectedYear}-${selectedBranch}`}
                 initial={{ opacity: 0, y: 20 }}
@@ -178,6 +144,9 @@ const MonthlyAchievements = () => {
                           src={achievement.image}
                           alt={achievement.title}
                           fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          placeholder="blur"
+                          blurDataURL={achievement.blurDataURL ?? DEFAULT_BLUR}
                           style={{ objectFit: 'cover' }}
                         />
                       </div>

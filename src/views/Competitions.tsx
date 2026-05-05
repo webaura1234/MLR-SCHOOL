@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Award, Star, Medal } from 'lucide-react';
 import Image from 'next/image';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './IITFoundation.css'; // Reusing some base styles for consistency
 
 const Competitions = () => {
@@ -76,6 +77,9 @@ const Competitions = () => {
                 src="https://images.unsplash.com/photo-1578262825743-a4e402caab76?q=80&w=1200" 
                 alt="Award Ceremony"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={DEFAULT_BLUR}
                 style={{ objectFit: 'cover' }}
                 className="rounded-3xl"
               />
@@ -146,6 +150,9 @@ const Competitions = () => {
                 src="https://images.unsplash.com/photo-1526676037777-05a232554f75?q=80&w=800" 
                 alt="Legacy of Achievers"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={DEFAULT_BLUR}
                 style={{ objectFit: 'cover' }}
               />
             </div>

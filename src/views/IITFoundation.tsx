@@ -16,6 +16,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import Image from 'next/image';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './IITFoundation.css';
 
 const IITFoundation = () => {
@@ -110,6 +111,9 @@ const IITFoundation = () => {
                 src="https://images.unsplash.com/photo-1758270704021-361c165d68fd?auto=format&fit=crop&w=1200&q=80"
                 alt="Teacher engaging students in a modern classroom"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={DEFAULT_BLUR}
                 style={{ objectFit: 'cover' }}
                 className="rounded-3xl"
                 priority
@@ -198,6 +202,9 @@ const IITFoundation = () => {
                   src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?auto=format&fit=crop&w=1000&q=80"
                   alt="Student using a tablet for interactive digital learning"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  placeholder="blur"
+                  blurDataURL={DEFAULT_BLUR}
                   style={{ objectFit: 'cover' }}
                 />
               </div>

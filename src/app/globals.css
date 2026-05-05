@@ -608,3 +608,7 @@ h4 { font-size: clamp(1.2rem, 3.5vw, 1.75rem); }
   }
 }
 
+img {
+  transition: filter 0.3s ease;
+}
+

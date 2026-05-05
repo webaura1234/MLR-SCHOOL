@@ -97,8 +97,7 @@ function sheetRowToGalleryItems(cols: string[], rowIndex: number): PublishedGall
 }
 
 export async function fetchGalleryItemsFromPublishedSheet(): Promise<PublishedGalleryItem[]> {
-  const bust = `t=${Date.now()}`;
-  const url = `${GALLERY_PUBLISHED_SHEET_URL}&${bust}`;
+  const url = GALLERY_PUBLISHED_SHEET_URL;
   const rows = await fetchDataFromSheet<PublishedGalleryItem[]>(
     url,
     '0',

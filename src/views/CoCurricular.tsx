@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './CoCurricular.css';
 
 /** Unsplash Source (source.unsplash.com) is discontinued — use images.unsplash.com with stable photo IDs. */
@@ -175,6 +176,8 @@ const CoCurricular = () => {
                             fill
                             className="activity-image"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                            placeholder="blur"
+                            blurDataURL={DEFAULT_BLUR}
                           />
                         </div>
                         <div className="activity-content">

@@ -3,25 +3,27 @@
 import Image from 'next/image';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useCallback, useEffect, useState, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import './Gallery.css';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
-import { fetchGalleryItemsFromPublishedSheet, type PublishedGalleryItem } from '@/lib/galleryFromPublishedSheet';
+import type { PublishedGalleryItem } from '@/lib/galleryFromPublishedSheet';
 
-type GalleryItem = PublishedGalleryItem;
+export type GalleryItem = PublishedGalleryItem & { blurDataURL?: string };
 
-const Gallery = () => {
-  const [items, setItems] = useState<GalleryItem[]>([]);
+export type GalleryProps = {
+  items: GalleryItem[];
+};
+
+const Gallery = ({ items }: GalleryProps) => {
   const [filter, setFilter] = useState<string>('all');
   const [selected, setSelected] = useState<GalleryItem | null>(null);
   const reduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    async function loadGallery() {
-      const validData = await fetchGalleryItemsFromPublishedSheet();
-      setItems(validData);
-    }
-    loadGallery();
+    setMounted(true);
   }, []);
 
   const categories = useMemo(() => {
@@ -111,7 +113,7 @@ const Gallery = () => {
             <div className="gallery-preview" aria-hidden={false}>
               {previewPick.map((item: GalleryItem, idx: number) => (
                 <motion.button
-                  key={item.id}
+                  key={`${item.id}-${idx}`}
                   type="button"
                   aria-label={`Open large photo: ${item.title}`}
                   className={`gallery-preview-card gallery-preview-card--${idx}`}
@@ -130,7 +132,7 @@ const Gallery = () => {
                   onClick={() => setSelected(item)}
                 >
                   <span className="gallery-preview-shine" aria-hidden />
-                  <span className="gallery-preview-frame">
+                  <span className="gallery-preview-frame" style={{ position: 'relative' }}>
                     <Image
                       src={item.src}
                       alt=""
@@ -142,6 +144,8 @@ const Gallery = () => {
                           : '(max-width: 639px) 46vw, (max-width: 768px) 92vw, (max-width: 1400px) 32vw, 34vw'
                       }
                       priority={idx === 1}
+                      placeholder="blur"
+                      blurDataURL={item.blurDataURL ?? DEFAULT_BLUR}
                     />
                     <span className="gallery-preview-caption">{item.title}</span>
                   </span>
@@ -175,7 +179,7 @@ const Gallery = () => {
             <AnimatePresence mode="popLayout" initial={false}>
               {gridItems.map((img: GalleryItem, i: number) => (
                 <motion.button
-                  key={img.id}
+                  key={`${img.id}-${i}`}
                   type="button"
                   layout
                   initial={{ opacity: 0, scale: 0.94, y: 20 }}
@@ -192,13 +196,15 @@ const Gallery = () => {
                   whileTap={{ scale: 0.99 }}
                 >
                   <span className="gallery-tile-glow" />
-                  <span className="gallery-tile-media">
+                  <span className="gallery-tile-media" style={{ position: 'absolute', inset: 0 }}>
                     <Image
                       src={img.src}
                       alt={img.title}
                       fill
                       sizes="(max-width: 899px) 50vw, (max-width: 1200px) 33vw, 22vw"
                       className="gallery-tile-img"
+                      placeholder="blur"
+                      blurDataURL={img.blurDataURL ?? DEFAULT_BLUR}
                     />
                   </span>
                   <span className="gallery-tile-bottom">
@@ -212,81 +218,86 @@ const Gallery = () => {
         </div>
       </section>
 
-      <AnimatePresence>
-        {selected && (
-          <motion.div
-            className="gallery-lightbox"
-            role="dialog"
-            aria-modal="true"
-            aria-label={selected.title}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={() => setSelected(null)}
-          >
-            <motion.div
-              className="gallery-lightbox-inner"
-              initial={{ opacity: 0, scale: 0.92, y: 16 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 12 }}
-              transition={spring}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                type="button"
-                className="gallery-lightbox-close"
-                aria-label="Close"
+      {mounted && selected
+        ? createPortal(
+            <AnimatePresence>
+              <motion.div
+                className="gallery-lightbox"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Image viewer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
                 onClick={() => setSelected(null)}
               >
-                <X size={28} strokeWidth={2} />
-              </button>
-
-              {openIndex > 0 && (
-                <button
-                  type="button"
-                  className="gallery-lightbox-nav gallery-lightbox-nav--prev"
-                  aria-label="Previous photo"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    goPrev();
-                  }}
+                <motion.div
+                  className="gallery-lightbox-inner"
+                  initial={{ opacity: 0, scale: 0.92, y: 16 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.96, y: 12 }}
+                  transition={spring}
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <ChevronLeft size={36} />
-                </button>
-              )}
-              {openIndex >= 0 && openIndex < filtered.length - 1 && (
-                <button
-                  type="button"
-                  className="gallery-lightbox-nav gallery-lightbox-nav--next"
-                  aria-label="Next photo"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    goNext();
-                  }}
-                >
-                  <ChevronRight size={36} />
-                </button>
-              )}
+                  <button
+                    type="button"
+                    className="gallery-lightbox-close"
+                    aria-label="Close"
+                    onClick={() => setSelected(null)}
+                  >
+                    <X size={28} strokeWidth={2} />
+                  </button>
 
-              <div className="gallery-lightbox-figure">
-                <Image
-                  src={selected.srcHd ?? selected.src}
-                  alt={selected.title}
-                  fill
-                  className="gallery-lightbox-img"
-                  sizes="min(96vw, 1440px)"
-                  priority
-                />
-              </div>
-              <div className="gallery-lightbox-meta">
-                <h2>{selected.title}</h2>
-                <p>{label(selected.category)}</p>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                  {openIndex > 0 && (
+                    <button
+                      type="button"
+                      className="gallery-lightbox-nav gallery-lightbox-nav--prev"
+                      aria-label="Previous photo"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        goPrev();
+                      }}
+                    >
+                      <ChevronLeft size={36} />
+                    </button>
+                  )}
+                  {openIndex >= 0 && openIndex < filtered.length - 1 && (
+                    <button
+                      type="button"
+                      className="gallery-lightbox-nav gallery-lightbox-nav--next"
+                      aria-label="Next photo"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        goNext();
+                      }}
+                    >
+                      <ChevronRight size={36} />
+                    </button>
+                  )}
+
+                  <div className="gallery-lightbox-figure">
+                    <Image
+                      src={selected.srcHd ?? selected.src}
+                      alt={selected.title}
+                      fill
+                      className="gallery-lightbox-img"
+                      sizes="min(96vw, 1440px)"
+                      priority
+                      placeholder="blur"
+                      blurDataURL={selected.blurDataURL ?? DEFAULT_BLUR}
+                    />
+                  </div>
+                  <div className="gallery-lightbox-meta">
+                    <h2>{selected.title}</h2>
+                    <p>{label(selected.category)}</p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>,
+            document.body,
+          )
+        : null}
     </div>
   );
 };

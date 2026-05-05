@@ -3,9 +3,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Bus, Briefcase, Download, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './Home.css';
 
-const Utility = () => {
+export type UtilityProps = {
+  busBlurDataURL?: string;
+};
+
+const Utility = ({ busBlurDataURL }: UtilityProps) => {
   return (
     <div className="utility-page">
       <section className="page-header" style={{ background: 'var(--page-bg)', padding: '6rem 0 4rem', textAlign: 'center' }}>
@@ -75,7 +81,16 @@ const Utility = () => {
             </div>
             <div className="polaroid-card">
               <div className="polaroid-taped"></div>
-              <img src="https://images.unsplash.com/photo-1574621100236-d25b64cfd647?q=80&w=800" alt="School Bus" style={{ width: '100%', borderRadius: '15px' }} />
+              <Image
+                src="https://images.unsplash.com/photo-1574621100236-d25b64cfd647?q=80&w=800"
+                alt="School Bus"
+                width={800}
+                height={600}
+                placeholder="blur"
+                blurDataURL={busBlurDataURL ?? DEFAULT_BLUR}
+                style={{ width: '100%', height: 'auto', borderRadius: '15px' }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

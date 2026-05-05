@@ -96,7 +96,15 @@ const Navbar = () => {
                 onClick={closeMenu}
                 aria-label="Malla Reddy School home"
               >
-                <img src="/logo.svg" alt="" width={56} height={56} className="navbar-mark-img" />
+                <img
+                  src="/logo.svg"
+                  alt=""
+                  width={56}
+                  height={56}
+                  loading="eager"
+                  fetchPriority="high"
+                  className="navbar-mark-img"
+                />
                 <span className="navbar-wordmark">Malla Reddy School</span>
               </Link>
             </div>

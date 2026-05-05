@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, Globe, Share2, Info, MessageCircle } from 'lucide-react';
 import './Footer.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
+import { CARD_BLUR } from '@/lib/blurPlaceholder';
 
 const Footer = () => {
   const { siteInfo } = useSiteInfo();
@@ -25,6 +26,9 @@ const Footer = () => {
                   width={60}
                   height={60}
                   className="logo-img"
+                  placeholder="blur"
+                  blurDataURL={CARD_BLUR}
+                  style={{ width: '100%', height: '100%' }}
                 />
               </span>
               <span className="footer-logo-text">

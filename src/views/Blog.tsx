@@ -3,10 +3,9 @@
 import React, { type CSSProperties } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
-import { fetchDataFromSheet } from '@/lib/sheets';
+import Image from 'next/image';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './Home.css';
-
-const NEWS_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=818070186&single=true&output=csv";
 
 interface BlogPost {
   title: string;
@@ -14,27 +13,14 @@ interface BlogPost {
   author: string;
   img: string;
   excerpt: string;
+  blurDataURL?: string;
 }
 
-const Blog = () => {
-  const [posts, setPosts] = React.useState<BlogPost[]>([]);
+export type BlogProps = {
+  posts: BlogPost[];
+};
 
-  React.useEffect(() => {
-    async function loadNews() {
-      const data = await fetchDataFromSheet<BlogPost>(NEWS_SHEET_URL, '0', (cols) => ({
-        title: cols[1], // Assuming title is col 1
-        excerpt: cols[2],
-        date: cols[3],
-        img: cols[4],
-        author: 'School Admin'
-      }));
-      if (data && data.length > 0) {
-        const validPosts = data.filter(post => post.title && post.title.trim() !== '');
-        setPosts(validPosts);
-      }
-    }
-    loadNews();
-  }, []);
+const Blog = ({ posts }: BlogProps) => {
 
   return (
     <div className="blog-page">
@@ -67,7 +53,15 @@ const Blog = () => {
                 <div className="polaroid-taped"></div>
                 <div className="polaroid-img-wrapper" style={{ height: '250px' }}>
                   {post.img && post.img.length > 5 ? (
-                    <img src={post.img} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image
+                      src={post.img}
+                      alt={post.title ?? 'Blog post'}
+                      width={400}
+                      height={250}
+                      placeholder="blur"
+                      blurDataURL={post.blurDataURL ?? DEFAULT_BLUR}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
                   ) : (
                     <div style={{ width: '100%', height: '100%', background: '#f3f4f6', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#9ca3af' }}>No Image</div>
                   )}

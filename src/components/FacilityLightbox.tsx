@@ -4,11 +4,18 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { createPortal } from 'react-dom';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
+
+export type LightboxImage = {
+  src: string;
+  blurDataURL?: string;
+};
 
 interface FacilityLightboxProps {
   isOpen: boolean;
   onClose: () => void;
-  images: string[];
+  images: LightboxImage[];
   title: string;
   /** Which image to show when the lightbox opens */
   initialIndex?: number;
@@ -35,6 +42,15 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isOpen, onClose]);
+
   const next = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (images.length === 0) return;
@@ -48,38 +64,85 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
   };
 
   if (!isOpen) return null;
+  const current = images[currentIndex];
+  if (!current?.src) return null;
 
-  return (
+  const overlay = (
     <AnimatePresence>
       <motion.div
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image viewer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[2000] flex items-center justify-center bg-[#0A2463]/98 backdrop-blur-xl p-4 md:p-10"
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 99999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'rgba(10, 36, 99, 0.98)',
+          backdropFilter: 'blur(18px)',
+          padding: 'clamp(1rem, 3vw, 2.5rem)',
+        }}
         onClick={onClose}
       >
         <button
           onClick={onClose}
-          className="absolute top-8 right-8 text-white/50 hover:text-white p-3 hover:rotate-90 transition-all z-[2001]"
+          aria-label="Close"
+          style={{
+            position: 'absolute',
+            top: '2rem',
+            right: '2rem',
+            zIndex: 100001,
+            background: 'transparent',
+            border: 'none',
+            padding: '0.75rem',
+            cursor: 'pointer',
+            color: 'rgba(255,255,255,0.7)',
+          }}
         >
           <X size={40} />
         </button>
 
-        <div className="relative w-full max-w-6xl aspect-video flex items-center justify-center">
+        <div
+          style={{
+            position: 'relative',
+            width: '100%',
+            maxWidth: '72rem',
+            aspectRatio: '16 / 9',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-3xl border-[8px] border-white/10"
+            style={{
+              position: 'relative',
+              width: '100%',
+              height: '100%',
+              borderRadius: '2.5rem',
+              overflow: 'hidden',
+              boxShadow: '0 40px 80px rgba(0,0,0,0.35)',
+              border: '8px solid rgba(255,255,255,0.10)',
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[currentIndex]}
+              src={current.src}
               alt={`${title} view ${currentIndex + 1}`}
               fill
-              className="object-cover"
+              sizes="min(96vw, 1200px)"
+              placeholder="blur"
+              blurDataURL={current.blurDataURL ?? DEFAULT_BLUR}
+              style={{ objectFit: 'cover' }}
               priority
             />
           </motion.div>
@@ -88,26 +151,79 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
             <>
               <button
                 onClick={prev}
-                className="absolute left-4 md:-left-20 w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95"
+                aria-label="Previous image"
+                style={{
+                  position: 'absolute',
+                  left: '1rem',
+                  width: '4rem',
+                  height: '4rem',
+                  borderRadius: '999px',
+                  background: 'rgba(255,255,255,0.10)',
+                  border: '1px solid rgba(255,255,255,0.20)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
               >
                 <ChevronLeft size={32} />
               </button>
               <button
                 onClick={next}
-                className="absolute right-4 md:-right-20 w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all hover:scale-110 active:scale-95"
+                aria-label="Next image"
+                style={{
+                  position: 'absolute',
+                  right: '1rem',
+                  width: '4rem',
+                  height: '4rem',
+                  borderRadius: '999px',
+                  background: 'rgba(255,255,255,0.10)',
+                  border: '1px solid rgba(255,255,255,0.20)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  cursor: 'pointer',
+                }}
               >
                 <ChevronRight size={32} />
               </button>
             </>
           )}
 
-          <div className="absolute -bottom-16 left-0 right-0 text-center">
-            <h4 className="text-white font-display text-2xl font-black mb-2 uppercase tracking-widest">{title}</h4>
-            <div className="flex items-center justify-center gap-2">
+          <div
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: '-4rem',
+              textAlign: 'center',
+              color: '#fff',
+            }}
+          >
+            <h4
+              style={{
+                fontSize: '1.5rem',
+                fontWeight: 900,
+                margin: '0 0 0.5rem 0',
+                textTransform: 'uppercase',
+                letterSpacing: '0.18em',
+              }}
+            >
+              {title}
+            </h4>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
               {images.map((_, i) => (
-                <div 
-                  key={i} 
-                  className={`h-1.5 transition-all duration-300 rounded-full ${i === currentIndex ? 'w-8 bg-[#F5A623]' : 'w-2 bg-white/30'}`}
+                <div
+                  key={i}
+                  style={{
+                    height: '0.375rem',
+                    borderRadius: '999px',
+                    transition: 'all 0.3s ease',
+                    width: i == currentIndex ? '2rem' : '0.5rem',
+                    background: i == currentIndex ? '#F5A623' : 'rgba(255,255,255,0.30)',
+                  }}
                 />
               ))}
             </div>
@@ -116,6 +232,8 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
       </motion.div>
     </AnimatePresence>
   );
+
+  return typeof document !== 'undefined' ? createPortal(overlay, document.body) : overlay;
 };
 
 export default FacilityLightbox;

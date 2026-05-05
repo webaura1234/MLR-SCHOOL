@@ -3,12 +3,14 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import './OptimizedImage.css';
+import type { StaticImageData } from 'next/image';
+import { CARD_BLUR, DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
 const DEFAULT_FALLBACK =
   'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800';
 
 interface OptimizedImageProps {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   className?: string;
   aspectRatio?: string;
@@ -29,6 +31,8 @@ export default function OptimizedImage({
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
   const finalSrc = error ? fallbackSrc : src;
+  const blur = typeof finalSrc === 'string' && finalSrc.startsWith('/') ? CARD_BLUR : DEFAULT_BLUR;
+  const isStatic = typeof finalSrc !== 'string';
 
   const useFill = aspectRatio !== undefined && aspectRatio !== 'auto';
 
@@ -44,6 +48,8 @@ export default function OptimizedImage({
           fill
           sizes={sizes}
           priority={priority}
+          placeholder="blur"
+          blurDataURL={isStatic ? undefined : blur}
           className={`optimized-image ${loaded ? 'loaded' : 'loading'}`}
           onLoad={() => setLoaded(true)}
           onError={() => setError(true)}
@@ -62,6 +68,8 @@ export default function OptimizedImage({
         height={600}
         sizes={sizes}
         priority={priority}
+        placeholder="blur"
+        blurDataURL={isStatic ? undefined : blur}
         className={`optimized-image ${loaded ? 'loaded' : 'loading'}`}
         style={{ width: '100%', height: 'auto' }}
         onLoad={() => setLoaded(true)}

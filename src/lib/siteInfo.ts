@@ -52,7 +52,7 @@ export async function fetchSiteInfo(): Promise<SiteInfo> {
   if (!url) return DEFAULT_SITE_INFO;
 
   try {
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(url, { next: { revalidate: 3600 } });
     if (!res.ok) return DEFAULT_SITE_INFO;
     const csvText = await res.text();
     const rows = csvText.split('\n').filter((r) => r.trim() !== '');

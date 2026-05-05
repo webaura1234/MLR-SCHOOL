@@ -17,9 +17,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, X } from "lucide-react";
 import { type SchoolEvent, type EventCategory } from "@/lib/calendar-data";
-import { fetchDataFromSheet } from "@/lib/sheets";
-
-const CALENDAR_SHEET_URL = `https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=1328060838&single=true&output=csv&t=${Date.now()}`;
+import { createPortal } from "react-dom";
 
 const MONTH_MAP: Record<string, string> = {
   'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04', 'MAY': '05', 'JUN': '06',
@@ -39,33 +37,27 @@ const CATEGORY_COLORS: Record<string, string> = {
   Activities: "#0DB6B5",
 };
 
-const DynamicCalendar = () => {
+export type DynamicCalendarProps = {
+  events: SchoolEvent[];
+};
+
+const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedEvent, setSelectedEvent] = useState<SchoolEvent | null>(null);
-  const [events, setEvents] = useState<SchoolEvent[]>([]);
 
   React.useEffect(() => {
-    async function loadEvents() {
-      const data = await fetchDataFromSheet<SchoolEvent>(CALENDAR_SHEET_URL, '0', (cols, index) => {
-        const day = cols[0]?.padStart(2, '0');
-        const monthRaw = cols[1]?.toUpperCase() || 'JAN';
-        const month = MONTH_MAP[monthRaw] || '01';
-        const year = cols[2] || new Date().getFullYear().toString();
-        
-        return {
-          id: `event-${index}`,
-          title: cols[4] || 'School Event',
-          date: `${year}-${month}-${day}`,
-          category: (cols[3] || 'Event') as EventCategory,
-          description: cols[5] || ''
-        };
-      });
-      if (data && data.length > 0) {
-        setEvents(data);
-      }
-    }
-    loadEvents();
-  }, []);
+    if (!selectedEvent) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedEvent(null);
+    };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [selectedEvent]);
 
   const nextMonth = () => setCurrentMonth(addMonths(currentMonth, 1));
   const prevMonth = () => setCurrentMonth(subMonths(currentMonth, 1));
@@ -247,54 +239,61 @@ const DynamicCalendar = () => {
 
       {/* Event Details Modal */}
       <AnimatePresence>
-        {selectedEvent && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{ 
-              position: 'fixed', 
-              inset: 0, 
-              zIndex: 2000, 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              backgroundColor: 'rgba(10, 36, 99, 0.9)', 
-              backdropFilter: 'blur(8px)', 
-              padding: '1.5rem' 
-            }}
-            onClick={() => setSelectedEvent(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.9, y: 20 }}
-              style={{ 
-                backgroundColor: 'white', 
-                width: '100%', 
-                maxWidth: '450px', 
-                borderRadius: '40px', 
-                padding: '2.5rem', 
-                position: 'relative', 
-                border: '4px solid #000', 
-                boxShadow: '0 20px 50px rgba(0,0,0,0.3)' 
-              }}
-              onClick={e => e.stopPropagation()}
-            >
-              <button 
-                onClick={() => setSelectedEvent(null)}
-                style={{ 
-                  position: 'absolute', 
-                  top: '1.5rem', 
-                  right: '1.5rem', 
-                  background: 'none', 
-                  border: 'none', 
-                  cursor: 'pointer', 
-                  color: '#999' 
+        {selectedEvent && typeof document !== 'undefined'
+          ? createPortal(
+              <motion.div
+                role="dialog"
+                aria-modal="true"
+                aria-label="Image viewer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                style={{
+                  position: 'fixed',
+                  inset: 0,
+                  zIndex: 99999,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgba(10, 36, 99, 0.9)',
+                  backdropFilter: 'blur(8px)',
+                  padding: '1.5rem',
                 }}
+                onClick={() => setSelectedEvent(null)}
               >
-                <X size={24} />
-              </button>
+                <motion.div
+                  initial={{ scale: 0.9, y: 20 }}
+                  animate={{ scale: 1, y: 0 }}
+                  exit={{ scale: 0.9, y: 20 }}
+                  style={{
+                    backgroundColor: 'white',
+                    width: '100%',
+                    maxWidth: '450px',
+                    borderRadius: '40px',
+                    padding: '2.5rem',
+                    position: 'relative',
+                    border: '4px solid #000',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
+                    zIndex: 100000,
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={() => setSelectedEvent(null)}
+                    style={{
+                      position: 'absolute',
+                      top: '1.5rem',
+                      right: '1.5rem',
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      color: '#999',
+                      zIndex: 100001,
+                    }}
+                    aria-label="Close"
+                  >
+                    <X size={24} />
+                  </button>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
                 <div style={{ 
@@ -345,9 +344,11 @@ const DynamicCalendar = () => {
               >
                 GOT IT
               </button>
-            </motion.div>
-          </motion.div>
-        )}
+                </motion.div>
+              </motion.div>,
+              document.body,
+            )
+          : null}
       </AnimatePresence>
     </div>
   );

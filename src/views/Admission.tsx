@@ -7,7 +7,7 @@ import OptimizedImage from '../components/OptimizedImage';
 import './Admission.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 
-const ADMISSION_SCRIPT_URL = process.env.NEXT_PUBLIC_ADMISSION_URL || "";
+import heroDesktop from '../../public/malla-reddy-hero.jpg';
 
 const Admission = () => {
   const { siteInfo } = useSiteInfo();
@@ -27,18 +27,20 @@ const Admission = () => {
     setStatus('idle');
 
     try {
-      // We use a simple request to avoid preflight CORS issues with Apps Script
-      await fetch(ADMISSION_SCRIPT_URL, {
+      const response = await fetch('/api/admission', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-        },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            ...formData,
+            name: formData.studentName,
+        }),
       });
 
-      // Since we use no-cors, we can't check response.ok, 
-      // but if it doesn't throw, we assume success for the UI
+      const result = await response.json();
+      if (!result.success) {
+        throw new Error(result.error || 'Submission failed');
+      }
+
       setStatus('success');
       setFormData({
         studentName: '',
@@ -81,7 +83,7 @@ const Admission = () => {
           <div className="admission-grid">
             <div className="admission-info">
               <OptimizedImage 
-                src="/malla-reddy-hero.jpg" 
+                src={heroDesktop} 
                 alt="Malla Reddy School Campus" 
                 className="rounded-image shadow-image mb-8"
                 aspectRatio="16/9"

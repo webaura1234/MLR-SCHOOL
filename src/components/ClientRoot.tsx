@@ -32,20 +32,20 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
 
   return (
     <>
-      <AnimatePresence>
-        {showPreloader && <Preloader onLoadingComplete={handleComplete} />}
-      </AnimatePresence>
+      {showPreloader && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 9999 }}>
+          <AnimatePresence>
+            <Preloader onLoadingComplete={handleComplete} />
+          </AnimatePresence>
+        </div>
+      )}
 
       <div className="app-container">
-        {!showPreloader && (
-          <>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-            <ContactFab />
-            <CallFab />
-          </>
-        )}
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <ContactFab />
+        <CallFab />
       </div>
     </>
   );

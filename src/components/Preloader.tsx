@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Preloader.css';
+import { CARD_BLUR } from '@/lib/blurPlaceholder';
 
 interface PreloaderProps {
   onLoadingComplete: () => void;
@@ -67,6 +68,9 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
                   className="preloader-logo"
                   width={180}
                   height={180}
+                  placeholder="blur"
+                  blurDataURL={CARD_BLUR}
+                  style={{ width: 'auto', height: 'auto' }}
                   priority
                   unoptimized
                 />

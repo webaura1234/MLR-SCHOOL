@@ -127,7 +127,7 @@ const Labs = () => {
       <FacilityLightbox 
         isOpen={!!selectedLab}
         onClose={() => setSelectedLab(null)}
-        images={selectedLab?.images || []}
+        images={(selectedLab?.images || []).map((src) => ({ src }))}
         title={selectedLab?.title || ''}
       />
     </div>

@@ -24,7 +24,7 @@ export async function fetchDataFromSheet<T>(sheetId: string, gid: string = '0', 
       ? sheetId 
       : `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=csv&gid=${gid}`;
     
-    const response = await fetch(url, { cache: 'no-store' });
+    const response = await fetch(url, { next: { revalidate: 3600 } });
     
     if (!response.ok) {
       // Handle the case where response is not OK (e.g. 404, 401)
