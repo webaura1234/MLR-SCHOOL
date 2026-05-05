@@ -107,7 +107,6 @@ const Navbar = () => {
                     className="navbar-mark-img"
                   />
                 </span>
-                <span className="navbar-wordmark">Malla Reddy School</span>
               </Link>
             </div>
 
