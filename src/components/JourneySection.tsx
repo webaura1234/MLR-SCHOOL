@@ -39,7 +39,13 @@ function StatItem({ label, end, suffix, icon, active, textValue }: { label: stri
 }
 
 export function JourneySection() {
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>({
+    once: false,
+    // Trigger when a meaningful part of the section is visible,
+    // so scroll-away reliably flips it back to false.
+    threshold: 0.35,
+    rootMargin: "0px 0px -15% 0px",
+  });
 
   return (
     <section className="journey-section" ref={ref}>

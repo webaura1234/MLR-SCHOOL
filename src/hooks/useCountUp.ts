@@ -13,7 +13,18 @@ export function useCountUp(
   const startTime = useRef<number | null>(null);
 
   useEffect(() => {
-    if (!enabled) return;
+    if (!enabled) {
+      // When the section isn't in view, keep the number at 0 so the next
+      // scroll-in always visibly starts from zero.
+      setValue(0);
+      startTime.current = null;
+      if (frame.current) cancelAnimationFrame(frame.current);
+      frame.current = null;
+      return;
+    }
+
+    // Ensure we always start from 0 on each enable.
+    setValue(0);
     startTime.current = null;
 
     const tick = (now: number) => {
@@ -32,7 +43,5 @@ export function useCountUp(
     };
   }, [end, durationMs, enabled]);
 
-  const formatted =
-    decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
-  return formatted;
+  return decimals > 0 ? Number(value.toFixed(decimals)) : Math.round(value);
 }

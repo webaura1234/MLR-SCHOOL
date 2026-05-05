@@ -137,6 +137,26 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          <div className="footer-credit">
+            <span className="footer-credit-label">Designed and developed by</span>
+            <a
+              href="https://piidigitech.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-credit-link"
+              aria-label="Pii Digital Technologies — opens in a new tab"
+            >
+              <Image
+                src="/images/pii-digital-logo.png"
+                alt="Pii Digital Technologies"
+                width={220}
+                height={72}
+                className="footer-credit-logo"
+                style={{ width: "auto", height: "auto" }}
+                sizes="(max-width: 480px) 180px, 220px"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

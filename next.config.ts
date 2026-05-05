@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   /** Hides the Next.js dev-tools indicator (circular N) in development */
   devIndicators: false,
+  turbopack: {
+    // Ensure Turbopack resolves deps from this app folder,
+    // even if parent directories contain unrelated lockfiles.
+    root: __dirname,
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],

@@ -13,13 +13,11 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    /* eslint-disable react-hooks/set-state-in-effect */
     setIsMounted(true);
     const seen = localStorage.getItem('mr-preloader-seen');
     if (seen === 'true') {
       setLoading(false);
     }
-    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   const handleComplete = () => {
