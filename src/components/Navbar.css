@@ -6,7 +6,9 @@
   width: 100%;
   z-index: 1001;
   background: transparent;
-  padding: env(safe-area-inset-top, 0px) 0 0.5rem;
+  /* Leave breathing room from top while respecting safe-area */
+  margin-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
+  padding: 0 0 0.5rem;
   pointer-events: none;
   transition: padding 0.3s ease, background 0.25s ease;
 }
@@ -68,7 +70,8 @@
 /* Home: shell transparent; panel uses same --navbar-pad-x as inner pages for alignment */
 .navbar-shell.navbar-shell--home {
   background: transparent;
-  padding: env(safe-area-inset-top, 0px) 0 0.35rem;
+  margin-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
+  padding: 0 0 0.35rem;
 }
 
 .navbar-shell.navbar-shell--home .navbar-panel {
