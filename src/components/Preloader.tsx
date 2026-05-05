@@ -63,7 +63,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
                 transition={{ duration: 0.75, ease: [0.34, 1.56, 0.64, 1] }}
               >
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="School Logo"
                   className="preloader-logo"
                   width={180}

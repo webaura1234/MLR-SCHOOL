@@ -21,10 +21,10 @@ const Footer = () => {
             <Link href="/" className="footer-logo" aria-label="Malla Reddy School home">
               <span className="footer-logo-mark">
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt=""
-                  width={60}
-                  height={60}
+                  width={170}
+                  height={80}
                   className="logo-img"
                   placeholder="blur"
                   blurDataURL={CARD_BLUR}

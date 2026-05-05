@@ -202,10 +202,23 @@
 }
 
 .navbar-mark-img {
-  width: 3.5rem;
+  width: 7.25rem;
   height: 3.5rem;
   object-fit: contain;
   display: block;
+}
+
+.navbar-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar-shell--home .navbar-mark-img {
@@ -228,7 +241,7 @@
   }
 
   .navbar-mark-img {
-    width: 3rem;
+    width: 6.25rem;
     height: 3rem;
   }
 }
