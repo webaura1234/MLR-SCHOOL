@@ -8,9 +8,12 @@ import { getBlurDataURL } from '@/lib/getBlurDataURL';
 import type { StaticImageData } from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Malla Reddy School, Kompally — CBSE School in Hyderabad',
   description:
-    'Malla Reddy School — Empowering minds and shaping the future through holistic education, STEAM, and world-class facilities.',
+    'Malla Reddy School (Kompally) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Explore academics, campus life, and admissions.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 // Do NOT change these IDs (hardcoded by requirement)
