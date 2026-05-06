@@ -355,6 +355,22 @@
   gap: 1.5rem;
 }
 
+.iit-cta .cta-buttons > a {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 280px;
+}
+
+.iit-cta .btn-primary {
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.15;
+  padding: 1rem 1.25rem;
+  border-radius: 1.5rem;
+  font-weight: 800;
+  white-space: normal;
+}
+
 .btn-secondary-outline {
   padding: 1rem 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -368,6 +384,33 @@
 .btn-secondary-outline:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: white;
+}
+
+@media (max-width: 640px) {
+  .cta-box {
+    padding: 3rem 1.5rem;
+    border-radius: 2.25rem;
+  }
+
+  .cta-box p {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    gap: 1rem;
+  }
+
+  .iit-cta .cta-buttons > a {
+    max-width: none;
+  }
+
+  .iit-cta .btn-primary,
+  .btn-secondary-outline {
+    padding: 0.95rem 1rem;
+    border-radius: 1.25rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 1024px) {
