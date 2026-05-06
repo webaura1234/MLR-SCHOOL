@@ -242,7 +242,7 @@
   justify-content: flex-end;
   flex: 0 1 auto;
   flex-wrap: nowrap;
-  gap: 0.2rem;
+  gap: 0.35rem;
   min-width: 0;
 }
 
@@ -264,6 +264,8 @@
   text-decoration: none;
   border-radius: 99px;
   white-space: nowrap;
+  line-height: 1;
+  min-height: 2.375rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -317,20 +319,23 @@
   justify-content: center;
   gap: 0.3rem;
   min-height: 2.375rem;
-  padding: 0.35rem 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #2d2d2d;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #333;
   cursor: pointer;
-  border-radius: 6px;
-  transition: color 0.18s ease, background 0.18s ease;
+  border-radius: 999px;
+  white-space: nowrap;
+  line-height: 1;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
 .navbar-dd:hover .navbar-dd-trigger {
-  color: var(--nav-accent);
-  background: rgba(61, 79, 47, 0.05);
+  background: rgba(61, 79, 47, 0.08);
+  color: var(--primary);
+  transform: translateY(-1px);
 }
 
 .navbar-dd-menu {
