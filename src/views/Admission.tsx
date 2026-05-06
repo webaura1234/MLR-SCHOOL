@@ -135,7 +135,7 @@ const Admission = () => {
             </div>
 
             <div className="admission-form-container card">
-              <h2 style={{ fontSize: '2rem', marginBottom: '2rem', fontWeight: 800 }}>Enquiry Form</h2>
+              <h2>Enquiry Form</h2>
               
               {status === 'success' ? (
                 <motion.div 
@@ -144,7 +144,7 @@ const Admission = () => {
                   style={{ textAlign: 'center', padding: '3rem 0' }}
                 >
                   <CheckCircle2 size={64} color="#0DB6B5" style={{ margin: '0 auto 1.5rem' }} />
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 900, color: '#0A2463', marginBottom: '1rem' }}>Enquiry Sent!</h3>
+                  <h3 style={{ fontWeight: 900, color: '#0A2463', marginBottom: '1rem' }}>Enquiry Sent!</h3>
                   <p style={{ color: '#666', marginBottom: '2rem' }}>Thank you for your interest. Our admissions team will contact you shortly.</p>
                   <button 
                     onClick={() => setStatus('idle')}

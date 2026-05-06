@@ -192,6 +192,8 @@ h4 { font-size: clamp(1.2rem, 3.5vw, 1.75rem); }
   background-color: var(--page-bg);
   /* Keeps page content below the fixed nav on every route */
   padding-top: calc(var(--nav-height) + 0.85rem + env(safe-area-inset-top, 0px));
+  /* Keeps content clear of fixed FABs (Call/WhatsApp) */
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
 }
 
 /* Home: cream canvas in top/side margins behind floating nav; hero starts below clearance */
