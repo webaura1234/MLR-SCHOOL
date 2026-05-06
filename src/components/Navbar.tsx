@@ -155,7 +155,7 @@ const Navbar = () => {
                   <span>Call Us</span>
                 </a>
                 <Link href="/admission" className="navbar-cta" onClick={closeMenu}>
-                  APPLY NOW
+                  ADMISSIONS OPEN 2026–2027
                 </Link>
                 <button
                   type="button"
@@ -216,7 +216,7 @@ const Navbar = () => {
                   <span>Call Us</span>
                 </a>
                 <Link href="/admission" className="navbar-menu-cta" onClick={closeMenu}>
-                  APPLY NOW
+                  ADMISSIONS OPEN 2026–2027
                 </Link>
               </div>
             </nav>
