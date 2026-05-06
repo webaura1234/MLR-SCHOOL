@@ -8,10 +8,12 @@ import Preloader from '@/components/Preloader';
 import ContactFab from '@/components/ContactFab';
 import CallFab from '@/components/CallFab';
 import AdmissionsPopup from '@/components/AdmissionsPopup';
+import { usePathname } from 'next/navigation';
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
@@ -28,6 +30,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
 
   // We must ensure the first render matches the server exactly to avoid hydration errors
   const showPreloader = !isMounted || loading;
+  const isAdmissionPage = pathname === '/admission';
 
   return (
     <>
@@ -45,7 +48,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
         <Footer />
         <ContactFab />
         <CallFab />
-        <AdmissionsPopup enabled={!showPreloader} intervalMs={30_000} />
+        <AdmissionsPopup enabled={!showPreloader && !isAdmissionPage} intervalMs={30_000} />
       </div>
     </>
   );

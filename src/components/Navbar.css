@@ -205,9 +205,9 @@
 }
 
 .navbar-mark-img {
-  width: clamp(11rem, 15vw, 13.5rem);
+  width: clamp(12.75rem, 17vw, 15.5rem);
   height: auto;
-  max-height: clamp(3.4rem, 5vw, 4.25rem);
+  max-height: clamp(3.85rem, 5.8vw, 4.95rem);
   object-fit: contain;
   display: block;
 }
@@ -228,7 +228,7 @@
 @media (min-width: 1024px) {
   /* Prevent the first nav pill from visually sitting on the logo area */
   .navbar-start {
-    margin-left: -0.35rem;
+    margin-left: -2.85rem;
     margin-right: clamp(1.25rem, 3vw, 2.75rem);
   }
 
@@ -238,8 +238,8 @@
   }
 
   .navbar-mark-img {
-    width: clamp(10rem, 12.5vw, 12.25rem);
-    max-height: clamp(3.35rem, 4.4vw, 3.95rem);
+    width: clamp(13rem, 15.5vw, 15.25rem);
+    max-height: clamp(4rem, 5.6vw, 5rem);
   }
 
   /* Extra safety: keep the very first item away from the logo edge */
@@ -254,9 +254,9 @@
 
 @media (max-width: 480px) {
   .navbar-mark-img {
-    width: 10rem;
+    width: 11.75rem;
     height: auto;
-    max-height: 3.4rem;
+    max-height: 4.05rem;
   }
 }
 
