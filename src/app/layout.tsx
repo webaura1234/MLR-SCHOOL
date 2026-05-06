@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     images: [
       {
-        url: '/logo.svg',
+        url: '/logo.png',
         width: 512,
         height: 512,
         alt: 'Malla Reddy School',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: 'Malla Reddy School, Kompally',
     description:
       'CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Admissions open.',
-    images: ['/logo.svg'],
+    images: ['/logo.png'],
   },
   icons: {
     icon: [
