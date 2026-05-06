@@ -206,7 +206,8 @@
 
 .navbar-mark-img {
   width: clamp(10rem, 14vw, 12.25rem);
-  height: clamp(3.2rem, 4.6vw, 3.9rem);
+  height: auto;
+  max-height: clamp(3.2rem, 4.6vw, 3.9rem);
   object-fit: contain;
   display: block;
 }
@@ -231,7 +232,8 @@
 @media (max-width: 480px) {
   .navbar-mark-img {
     width: 9.25rem;
-    height: 3.25rem;
+    height: auto;
+    max-height: 3.25rem;
   }
 }
 
