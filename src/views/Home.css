@@ -280,14 +280,14 @@
 
 @media (max-width: 768px) {
   .trust-item {
-    flex: 0 0 100%;
+    flex: 0 0 calc(50% - 0.5rem);
     border-right: none !important;
   }
 }
 
 @media (max-width: 480px) {
   .trust-item {
-    flex: 0 0 100%;
+    flex: 0 0 calc(50% - 0.5rem);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
   .trust-item:last-child {
@@ -388,7 +388,9 @@
 @media (max-width: 1024px) {
   .salient-grid .blob-card:nth-child(4) {
     grid-column: auto;
-      margin: 0;
+    margin: 0;
+    max-width: none;
+    width: 100%;
   }
 }
 
@@ -428,9 +430,9 @@
   .creative-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1075,6 +1077,13 @@
 /* —— Mobile: compact card typography so 2-column grids stay readable —— */
 .programs-section .blob-card {
   min-width: 0;
+  border-radius: 44px;
+}
+
+.programs-section .blob-image-wrapper {
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  overflow: hidden;
 }
 
 .programs-section .facilities-grid {
@@ -1118,6 +1127,12 @@
   .programs-section .blob-card {
     padding: 1.2rem 0.95rem;
     box-shadow: 8px 8px 0 #94a3b8;
+    border-radius: 28px;
+  }
+
+  .programs-section .blob-image-wrapper {
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
   }
 
   .programs-section .blob-card-icon {

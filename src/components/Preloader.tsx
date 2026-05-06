@@ -66,11 +66,10 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
                   src="/logo.png"
                   alt="School Logo"
                   className="preloader-logo"
-                  width={180}
-                  height={180}
+                  width={530}
+                  height={460}
                   placeholder="blur"
                   blurDataURL={CARD_BLUR}
-                  style={{ width: 'auto', height: 'auto' }}
                   priority
                   unoptimized
                 />

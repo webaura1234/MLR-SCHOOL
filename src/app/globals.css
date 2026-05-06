@@ -409,6 +409,81 @@ h4 { font-size: clamp(1.2rem, 3.5vw, 1.75rem); }
   transform: rotate(15deg) scale(1.1);
 }
 
+/* Touch devices: prevent "sticky hover" after tap */
+@media (hover: none) and (pointer: coarse) {
+  /* iOS/Android tap highlight */
+  .blob-card,
+  .card,
+  .polaroid-card,
+  .notebook-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .blob-card:hover {
+    transform: none;
+    box-shadow: 12px 12px 0px 0px #000;
+    border-radius: 120px;
+  }
+
+  .blob-card:active,
+  .blob-card:focus,
+  .blob-card:focus-visible {
+    transform: none !important;
+    outline: none !important;
+    box-shadow: 12px 12px 0px 0px #000 !important;
+  }
+
+  .blob-card:hover .blob-card-icon {
+    transform: none;
+  }
+
+  .polaroid-card:hover {
+    transform: rotate(var(--rotation, -2deg));
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .notebook-card:hover {
+    transform: none;
+    box-shadow: 12px 12px 0 #000;
+  }
+}
+
+/*
+  Some mobile browsers still report hover capability and can keep :hover styles "stuck"
+  after a tap. Coarse pointer is the reliable signal for touch devices.
+*/
+@media (pointer: coarse) {
+  .blob-card,
+  .blob-card:hover,
+  .blob-card:active,
+  .blob-card:focus,
+  .blob-card:focus-visible {
+    transform: none !important;
+    outline: none !important;
+    border-radius: 44px !important;
+  }
+
+  .blob-card:hover .blob-card-icon,
+  .blob-card:active .blob-card-icon {
+    transform: none !important;
+  }
+}
+
+@media (pointer: coarse) and (max-width: 640px) {
+  .blob-card,
+  .blob-card:hover,
+  .blob-card:active,
+  .blob-card:focus,
+  .blob-card:focus-visible {
+    border-radius: 28px !important;
+  }
+}
+
 /* Polaroid Card Style */
 .polaroid-card {
   background: #fff;

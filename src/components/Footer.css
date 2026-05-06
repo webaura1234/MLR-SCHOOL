@@ -157,32 +157,6 @@
   opacity: 0.95;
 }
 
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-}
-
-.social-link {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.88);
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-  background-color: rgba(166, 124, 26, 0.35);
-  border-color: rgba(230, 200, 120, 0.45);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
 .footer-background-text {
   position: absolute;
   bottom: -2%;
@@ -273,9 +247,6 @@
     align-items: center;
     text-align: center;
     gap: 1.5rem;
-  }
-  .social-links {
-    justify-content: center;
   }
 
   .footer-credit-logo {

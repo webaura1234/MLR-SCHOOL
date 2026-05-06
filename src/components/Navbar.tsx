@@ -53,7 +53,6 @@ const Navbar = () => {
         { name: 'IIT Foundation', path: '/iit-foundation' },
         { name: 'Curriculum', path: '/curriculum' },
         { name: 'Labs', path: '/labs' },
-        { name: 'Monthly Achievements', path: '/monthly-achievements' },
         { name: 'Student Achievers', path: '/achievers' },
         { name: 'Careers', path: '/careers' },
       ],

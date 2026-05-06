@@ -1,0 +1,120 @@
+.admissions-pop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.25rem);
+  background: rgba(10, 14, 10, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.admissions-pop-card {
+  position: relative;
+  width: min(92vw, 520px);
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+  padding: clamp(1.25rem, 3.5vw, 1.75rem);
+}
+
+.admissions-pop-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.admissions-pop-close:hover {
+  background: #ffffff;
+}
+
+.admissions-pop-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(61, 79, 47, 0.1);
+  color: #2d3d24;
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(61, 79, 47, 0.18);
+}
+
+.admissions-pop-title {
+  margin: 0.85rem 0 0.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+  font-weight: 900;
+  color: #1a2314;
+  line-height: 1.15;
+}
+
+.admissions-pop-desc {
+  margin: 0 0 1.25rem;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.admissions-pop-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.admissions-pop-primary {
+  flex: 1 1 220px;
+  min-height: 44px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1rem;
+  box-shadow: 0 14px 28px rgba(61, 79, 47, 0.22);
+}
+
+.admissions-pop-primary:hover {
+  background: var(--primary-dark);
+}
+
+.admissions-pop-secondary {
+  flex: 1 1 140px;
+  min-height: 44px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #0f172a;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0.95rem 1rem;
+}
+
+.admissions-pop-secondary:hover {
+  background: rgba(15, 23, 42, 0.09);
+}
+

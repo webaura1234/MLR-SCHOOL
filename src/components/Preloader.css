@@ -180,14 +180,14 @@
 }
 
 .preloader-logo {
-  width: 180px;
+  width: min(260px, 70vw);
   height: auto;
   display: block;
 }
 
 @media (max-width: 768px) {
   .preloader-logo {
-    width: 120px;
+    width: min(200px, 72vw);
   }
 
   .preloader-ring {

@@ -17,7 +17,6 @@ export type GalleryProps = {
 };
 
 const Gallery = ({ items }: GalleryProps) => {
-  const [filter, setFilter] = useState<string>('all');
   const [selected, setSelected] = useState<GalleryItem | null>(null);
   const reduceMotion = useReducedMotion();
   const [mounted, setMounted] = useState(false);
@@ -26,45 +25,31 @@ const Gallery = ({ items }: GalleryProps) => {
     setMounted(true);
   }, []);
 
-  const categories = useMemo(() => {
-    const cats = new Set(['all']);
-    items.forEach(item => {
-      if (item.category) cats.add(item.category.toLowerCase());
-    });
-    return Array.from(cats);
-  }, [items]);
-
-  const filtered = useMemo(() => 
-    filter === 'all' ? items : items.filter((img) => img.category.toLowerCase() === filter.toLowerCase()),
-    [items, filter]
-  );
-
   const previewPick = useMemo(() => items.slice(0, 3), [items]);
 
   /** Hero strip shows first 3 photos — omit those ids from the grid so nothing appears twice */
   const heroIds = useMemo(() => new Set(previewPick.map((x) => x.id)), [previewPick]);
 
   const gridItems = useMemo(
-    () => filtered.filter((img) => !heroIds.has(img.id)),
-    [filtered, heroIds],
+    () => items.filter((img) => !heroIds.has(img.id)),
+    [items, heroIds],
   );
   
   function label(cat: string) {
-    if (cat === 'all') return 'All';
     return cat.charAt(0).toUpperCase() + cat.slice(1);
   }
 
-  const openIndex = selected ? filtered.findIndex((i: GalleryItem) => i.id === selected.id) : -1;
+  const openIndex = selected ? items.findIndex((i: GalleryItem) => i.id === selected.id) : -1;
 
   const goPrev = useCallback(() => {
     if (!selected || openIndex <= 0) return;
-    setSelected(filtered[openIndex - 1]);
-  }, [selected, openIndex, filtered]);
+    setSelected(items[openIndex - 1]);
+  }, [selected, openIndex, items]);
 
   const goNext = useCallback(() => {
-    if (!selected || openIndex < 0 || openIndex >= filtered.length - 1) return;
-    setSelected(filtered[openIndex + 1]);
-  }, [selected, openIndex, filtered]);
+    if (!selected || openIndex < 0 || openIndex >= items.length - 1) return;
+    setSelected(items[openIndex + 1]);
+  }, [selected, openIndex, items]);
 
   useEffect(() => {
     if (!selected) return;
@@ -157,23 +142,6 @@ const Gallery = ({ items }: GalleryProps) => {
       </section>
 
       <section className="gallery-section section gallery-section--fluid">
-        <div className="gallery-toolbar">
-          <div className="gallery-filter-row" role="tablist" aria-label="Filter photos">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                role="tab"
-                aria-selected={filter === cat}
-                className={`gallery-filter ${filter === cat ? 'is-active' : ''}`}
-                onClick={() => setFilter(cat)}
-              >
-                {label(cat)}
-              </button>
-            ))}
-          </div>
-        </div>
-
         <div className="gallery-bento-shell">
           <motion.div layout className="gallery-bento">
             <AnimatePresence mode="popLayout" initial={false}>
@@ -262,7 +230,7 @@ const Gallery = ({ items }: GalleryProps) => {
                       <ChevronLeft size={36} />
                     </button>
                   )}
-                  {openIndex >= 0 && openIndex < filtered.length - 1 && (
+                  {openIndex >= 0 && openIndex < items.length - 1 && (
                     <button
                       type="button"
                       className="gallery-lightbox-nav gallery-lightbox-nav--next"

@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
 import ContactFab from '@/components/ContactFab';
 import CallFab from '@/components/CallFab';
+import AdmissionsPopup from '@/components/AdmissionsPopup';
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
         <Footer />
         <ContactFab />
         <CallFab />
+        <AdmissionsPopup enabled={!showPreloader} intervalMs={30_000} />
       </div>
     </>
   );

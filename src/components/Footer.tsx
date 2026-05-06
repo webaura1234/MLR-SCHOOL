@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, Globe, Share2, Info, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import './Footer.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 import { CARD_BLUR } from '@/lib/blurPlaceholder';
@@ -125,17 +125,6 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-inner">
             <p className="copyright-text">&copy; {new Date().getFullYear()} Malla Reddy School. All rights reserved.</p>
-            <div className="social-links">
-              <a href="#" className="social-link" aria-label="Website">
-                <Globe size={16} strokeWidth={2} />
-              </a>
-              <a href="#" className="social-link" aria-label="Social">
-                <Share2 size={16} strokeWidth={2} />
-              </a>
-              <a href="#" className="social-link" aria-label="About">
-                <Info size={16} strokeWidth={2} />
-              </a>
-            </div>
           </div>
           <div className="footer-credit">
             <span className="footer-credit-label">Designed and developed by</span>
