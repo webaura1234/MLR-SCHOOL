@@ -55,7 +55,7 @@
   .mobile-text-left { text-align: left !important; }
   .mobile-mx-auto { margin-left: auto !important; margin-right: auto !important; }
 
-  /* Enforces 2-column layout on mobile while keeping items centered */
+  /* Mobile card grids: 1 card per row */
   .mobile-flex-grid {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -64,8 +64,8 @@
   }
   
   .mobile-flex-grid > * {
-    flex: 0 0 calc(50% - 0.625rem) !important;
-    min-width: 140px !important;
+    flex: 0 0 100% !important;
+    min-width: 0 !important;
   }
 }
 

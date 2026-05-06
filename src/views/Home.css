@@ -280,14 +280,14 @@
 
 @media (max-width: 768px) {
   .trust-item {
-    flex: 0 0 calc(50% - 0.5rem);
+    flex: 0 0 100%;
     border-right: none !important;
   }
 }
 
 @media (max-width: 480px) {
   .trust-item {
-    flex: 0 0 calc(50% - 0.5rem);
+    flex: 0 0 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
   .trust-item:last-child {
@@ -461,7 +461,7 @@
     padding: 0 0.5rem;
   }
   .vision-mission .creative-grid > * {
-    flex: 0 0 calc(50% - 0.375rem);
+    flex: 0 0 100%;
     padding: 1.25rem 0.65rem;
     min-height: 240px;
     justify-content: center;
@@ -484,7 +484,7 @@
     gap: 0.5rem;
   }
   .vision-mission .creative-grid > * {
-    flex: 0 0 calc(50% - 0.25rem);
+    flex: 0 0 100%;
     padding: 1rem 0.4rem;
   }
   .vision-mission h3 {
@@ -623,8 +623,8 @@
     gap: 2rem;
   }
   .facilities-grid > * {
-    flex: 0 0 calc(50% - 1rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 
@@ -633,7 +633,7 @@
     gap: 0.85rem;
   }
   .facilities-grid > * {
-    flex: 0 0 calc(50% - 0.425rem);
+    flex: 0 0 100%;
   }
 }
 
@@ -744,8 +744,8 @@
     gap: 2rem;
   }
   .programs-grid > * {
-    flex: 0 0 calc(50% - 1rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 
@@ -758,15 +758,15 @@
 
 @media (max-width: 768px) {
 
-  /* World-Class Facilities: 2×2 notebook cards on mobile */
+  /* World-Class Facilities: 1 card per row on mobile */
   .programs-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: clamp(0.75rem, 2vw, 1.25rem);
     align-items: stretch;
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
@@ -936,8 +936,8 @@
 
 @media (max-width: 768px) {
   .disclosure-grid > * {
-    flex: 0 0 calc(50% - 1rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 
@@ -1042,7 +1042,7 @@
 
 @media (max-width: 768px) {
   .home-gallery-more-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 0.55rem;
   }
 
@@ -1788,8 +1788,8 @@
 
 @media (max-width: 768px) {
   .mobile-flex-grid > * {
-    flex: 0 0 calc(50% - 1rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 

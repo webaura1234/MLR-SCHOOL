@@ -98,15 +98,14 @@
     gap: 1.5rem;
   }
   .testimonials-grid > * {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 
-/* Maintain 2-column theme even on small mobile */
 @media (max-width: 480px) {
   .testimonials-grid > * {
-    flex: 0 0 calc(50% - 0.75rem);
+    flex: 0 0 100%;
   }
 }
 

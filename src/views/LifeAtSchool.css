@@ -11,8 +11,8 @@
 
 @media (max-width: 768px) {
   .highlights-grid > * {
-    flex: 0 0 calc(50% - 1.25rem);
-    min-width: 140px;
+    flex: 0 0 100%;
+    min-width: 0;
   }
 }
 
