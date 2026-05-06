@@ -228,7 +228,7 @@
 @media (min-width: 1024px) {
   /* Prevent the first nav pill from visually sitting on the logo area */
   .navbar-start {
-    margin-right: clamp(0.75rem, 2vw, 1.75rem);
+    margin-right: clamp(1rem, 2.4vw, 2.25rem);
   }
 
   .navbar-logo-badge {
@@ -239,6 +239,11 @@
   .navbar-mark-img {
     width: clamp(9rem, 11vw, 10.75rem);
     max-height: clamp(3.1rem, 4vw, 3.5rem);
+  }
+
+  /* Extra safety: keep the very first item away from the logo edge */
+  .navbar-desktop > :first-child {
+    margin-left: 0.5rem;
   }
 }
 
