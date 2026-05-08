@@ -228,7 +228,7 @@
 @media (min-width: 1024px) {
   /* Prevent the first nav pill from visually sitting on the logo area */
   .navbar-start {
-    margin-left: -2.85rem;
+    margin-left: -4.85rem;
     margin-right: clamp(1.25rem, 3vw, 2.75rem);
   }
 
@@ -252,11 +252,37 @@
   filter: none;
 }
 
+/* Mobile: keep logo pinned left + tighter spacing */
+@media (max-width: 640px) {
+  .navbar-panel {
+    width: calc(100% - 0.75rem);
+    padding: 0.45rem 0.75rem;
+  }
+
+  .navbar-start {
+    margin-right: auto;
+  }
+
+  .navbar-trailing {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .navbar-menu-trigger {
+    margin-left: 0.25rem;
+  }
+
+  .navbar-mark-img {
+    width: 10.75rem;
+    max-height: 3.65rem;
+  }
+}
+
 @media (max-width: 480px) {
   .navbar-mark-img {
-    width: 11.75rem;
+    width: 10.75rem;
     height: auto;
-    max-height: 4.05rem;
+    max-height: 3.65rem;
   }
 }
 
