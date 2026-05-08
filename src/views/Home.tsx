@@ -208,7 +208,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
         </div>
       </section>
 
-      {/* 4. Why Choose Malla Reddy? */}
+      {/* 4. Why Choose Malla Reddy School? */}
       <div className="trust-strip-wrapper">
         <motion.div
           initial={{ y: 40, opacity: 0 }}
@@ -224,7 +224,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
             transition={{ duration: 0.7 }}
             className="trust-strip-heading trust-strip-heading--inside"
           >
-            Why Choose <span>Malla Reddy?</span>
+            Why Choose <span>Malla Reddy School?</span>
           </motion.h2>
           <div className="trust-strip-grid">
             {[
