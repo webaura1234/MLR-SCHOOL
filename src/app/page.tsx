@@ -6,11 +6,12 @@ import { PROGRAM_SECTION_IMAGES } from '@/lib/programSectionImages';
 import type { SchoolEvent, EventCategory } from '@/lib/calendar-data';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
 import type { StaticImageData } from 'next/image';
+import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
 
 export const metadata: Metadata = {
-  title: 'Malla Reddy School, Kompally — CBSE School in Hyderabad',
+  title: 'Malla Reddy School, Medchal — CBSE School in Hyderabad',
   description:
-    'Malla Reddy School (Kompally) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Explore academics, campus life, and admissions.',
+    `Malla Reddy School (Medchal) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Address: ${DEFAULT_SITE_INFO.addressLine}`,
   alternates: {
     canonical: '/',
   },

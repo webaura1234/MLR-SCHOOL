@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Source_Serif_4 } from 'next/font/google';
 import ClientRoot from '@/components/ClientRoot';
+import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
 import './globals.css';
 
 const siteUrl =
@@ -21,11 +22,11 @@ const serif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Malla Reddy School, Kompally — CBSE-Aligned STEAM Education',
+    default: 'Malla Reddy School, Medchal — CBSE School in Hyderabad',
     template: '%s | Malla Reddy School',
   },
   description:
-    'Malla Reddy School (Kompally) offers CBSE-aligned learning with STEAM focus, expert faculty, and world-class facilities. Admissions open — apply online or call now.',
+    `Malla Reddy School (Medchal) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Address: ${DEFAULT_SITE_INFO.addressLine}`,
   keywords: [
     'school',
     'CBSE',
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
     'admissions',
     'primary school',
     'pre-primary',
-    'Kompally',
-    'Hyderabad',
     'Medchal',
+    'Hyderabad',
+    'Telangana',
   ],
   alternates: {
     canonical: '/',
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Malla Reddy School, Kompally',
+    title: 'Malla Reddy School, Medchal',
     description:
-      'CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Admissions open.',
+      `CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Address: ${DEFAULT_SITE_INFO.locationLine}.`,
     type: 'website',
     url: '/',
     siteName: 'Malla Reddy School',
@@ -71,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Malla Reddy School, Kompally',
+    title: 'Malla Reddy School, Medchal',
     description:
-      'CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Admissions open.',
+      `CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Address: ${DEFAULT_SITE_INFO.locationLine}.`,
     images: ['/logo.png'],
   },
   icons: {

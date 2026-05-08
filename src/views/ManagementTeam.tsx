@@ -35,7 +35,7 @@ const MANAGEMENT_TEAM: ManagementMember[] = [
   },
   {
     name: "P. Snithija Reddy",
-    title: "Director, Malla Reddy School – Kompally",
+    title: "Director, Malla Reddy School – Medchal",
     image: "https://cmrschoolkompally.com/wp-content/uploads/2024/02/Director.webp",
     message: "At Malla Reddy School, we believe education is not mere accumulation of facts — it is preparation for life itself. Education is knowledge imbued with wisdom and ethics. It develops the personality of our students, moulds their character, and builds mental skills to help them meet the challenges of today’s world. Our aim is to help them succeed in life while staying conscious of their duties and responsibilities."
   },
