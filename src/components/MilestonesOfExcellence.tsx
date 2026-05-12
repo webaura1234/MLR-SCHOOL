@@ -59,10 +59,11 @@ export function MilestonesOfExcellence() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.6 }}
+          className="milestones-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "1.25rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(clamp(280px, 30vw, 360px), 1fr))",
+            gap: "1.5rem",
             justifyItems: "stretch",
             marginBottom: "3rem",
           }}

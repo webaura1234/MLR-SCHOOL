@@ -22,7 +22,7 @@
   pointer-events: auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
   .navbar-top-bar {
     display: block;
   }
@@ -37,7 +37,8 @@
   padding: 0 var(--navbar-pad-x);
 }
 
-.navbar-top-left, .navbar-top-right {
+.navbar-top-left,
+.navbar-top-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -103,7 +104,7 @@
   width: calc(100% - 1.5rem);
   max-width: var(--container-max);
   margin: 0.5rem auto 0;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.25rem 0.5rem 0;
   background: #ffffff;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -114,11 +115,11 @@
   overflow: visible;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
   .navbar-panel {
     width: calc(100% - 4rem);
     margin: 1rem auto 0;
-    padding: 0.65rem 2rem;
+    padding: 0.65rem 2rem 0.65rem 0;
     border-radius: 1.5rem;
   }
 }
@@ -167,7 +168,7 @@
   gap: clamp(0.5rem, 1.5vw, 1.25rem);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
   .navbar-trailing {
     gap: clamp(0.75rem, 1.8vw, 1.5rem);
   }
@@ -177,6 +178,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-left: -0.75rem;
 }
 
 /* Logo and Wordmark */
@@ -205,9 +207,9 @@
 }
 
 .navbar-mark-img {
-  width: clamp(12.75rem, 17vw, 15.5rem);
+  width: clamp(11rem, 15vw, 15.5rem);
   height: auto;
-  max-height: clamp(3.85rem, 5.8vw, 4.95rem);
+  max-height: clamp(3.5rem, 5vw, 4.95rem);
   object-fit: contain;
   display: block;
 }
@@ -225,11 +227,12 @@
   -webkit-backdrop-filter: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
+
   /* Prevent the first nav pill from visually sitting on the logo area */
   .navbar-start {
-    margin-left: -4.85rem;
-    margin-right: clamp(1.25rem, 3vw, 2.75rem);
+    margin-left: -1.5rem;
+    margin-right: clamp(1rem, 2vw, 2.75rem);
   }
 
   .navbar-logo-badge {
@@ -238,13 +241,24 @@
   }
 
   .navbar-mark-img {
-    width: clamp(13rem, 15.5vw, 15.25rem);
-    max-height: clamp(4rem, 5.6vw, 5rem);
+    width: clamp(10.5rem, 13vw, 15.25rem);
+    max-height: clamp(3.5rem, 4.5vw, 5rem);
   }
 
   /* Extra safety: keep the very first item away from the logo edge */
-  .navbar-desktop > :first-child {
-    margin-left: 1.1rem;
+  .navbar-desktop> :first-child {
+    margin-left: -0.8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar-start {
+    margin-left: -1.5rem;
+  }
+
+  .navbar-mark-img {
+    width: clamp(13rem, 15.5vw, 15.25rem);
+    max-height: clamp(4rem, 5.6vw, 5rem);
   }
 }
 
@@ -256,11 +270,12 @@
 @media (max-width: 640px) {
   .navbar-panel {
     width: calc(100% - 0.75rem);
-    padding: 0.45rem 0.75rem;
+    padding: 0.45rem 0.75rem 0.45rem 0;
   }
 
   .navbar-start {
     margin-right: auto;
+    margin-left: -0.75rem;
   }
 
   .navbar-trailing {
@@ -297,7 +312,7 @@
   min-width: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
   .navbar-desktop {
     display: flex;
   }
@@ -307,8 +322,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.1rem;
-  font-size: 0.82rem;
+  padding: 0.5rem clamp(0.6rem, 1vw, 1.1rem);
+  font-size: clamp(0.78rem, 0.85vw, 0.82rem);
   font-weight: 700;
   letter-spacing: 0.01em;
   color: #333;
@@ -368,10 +383,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
   min-height: 2.375rem;
-  padding: 0.5rem 1.1rem;
-  font-size: 0.82rem;
+  padding: 0.5rem clamp(0.6rem, 1vw, 1.1rem);
+  font-size: clamp(0.78rem, 0.85vw, 0.82rem);
   font-weight: 700;
   letter-spacing: 0.01em;
   text-transform: none;
@@ -459,10 +474,10 @@
   align-items: center;
   justify-content: center;
   min-height: 2.5rem;
-  padding: 0 1.75rem;
-  font-size: 0.78rem;
+  padding: 0 clamp(1rem, 1.5vw, 1.75rem);
+  font-size: clamp(0.72rem, 0.8vw, 0.78rem);
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -474,13 +489,30 @@
   animation: navbar-blink 2s infinite ease-in-out;
 }
 
+.navbar-cta-mobile {
+  display: none;
+}
+
+@media (max-width: 1149px) {
+  .navbar-cta-desktop {
+    display: none;
+  }
+
+  .navbar-cta-mobile {
+    display: inline;
+  }
+}
+
 @keyframes navbar-blink {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
     box-shadow: 0 4px 16px rgba(166, 124, 26, 0.3);
     background: var(--accent);
   }
+
   50% {
     opacity: 0.9;
     transform: scale(1.05);
@@ -505,7 +537,7 @@
   justify-content: center;
   gap: 0.5rem;
   min-height: 2.375rem;
-  padding: 0 1.25rem;
+  padding: 0 0.85rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -523,8 +555,22 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 1023px) {
-  .navbar-cta, .navbar-call-btn {
+@media (max-width: 1149px) {
+  .navbar-call-btn {
+    display: none;
+  }
+
+  .navbar-cta {
+    display: inline-flex;
+    padding: 0 1.25rem;
+    min-height: 2.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Compact mode: hide call btn even on small desktops if it's too cramped */
+@media (min-width: 1150px) and (max-width: 1280px) {
+  .navbar-call-btn {
     display: none;
   }
 }
@@ -543,7 +589,7 @@
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
   .navbar-menu-trigger {
     display: none;
   }
@@ -674,10 +720,13 @@
 }
 
 @keyframes navbar-blink-mobile {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.9;
     transform: scale(1.02);
@@ -732,7 +781,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1149px) {
   .navbar-menu-panel {
     position: fixed;
     top: calc(var(--nav-height, 5.5rem) + 0.85rem + env(safe-area-inset-top, 0px));

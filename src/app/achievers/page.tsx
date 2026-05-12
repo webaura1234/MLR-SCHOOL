@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
 import Achievers from '@/views/Achievers';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
   title: 'Student Achievers',
   description: 'Hall of fame — celebrating academic, sports, arts, and science achievers.',
-};
+  path: '/achievers',
+});
 
 type Achiever = {
   name: string;

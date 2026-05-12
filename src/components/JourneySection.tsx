@@ -4,14 +4,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "../hooks/useInView";
 import { useCountUp } from "../hooks/useCountUp";
-import { GraduationCap, Building2, Globe, Monitor } from "lucide-react";
+import { GraduationCap, Building2, Globe, Monitor, Award } from "lucide-react";
 import "./JourneySection.css";
 
 const stats = [
-  { label: "CBSE-aligned learning continuum", textValue: "Nursery – VIII", icon: <GraduationCap size={24} /> },
-  { label: "Acres of Campus", end: 25, suffix: "+", icon: <Globe size={24} /> },
-  { label: "Infrastructure Facilities", end: 50, suffix: "+", icon: <Building2 size={24} /> },
-  { label: "Interactive Learning", textValue: "Digital Class Rooms", icon: <Monitor size={24} /> },
+  { label: "YEARS OF EXCELLENCE", end: 40, suffix: "+", icon: <Award size={22} /> },
+  { label: "SMART CLASSROOMS", end: 40, suffix: "+", icon: <Building2 size={22} /> },
+  { label: "BOARD PASS RATE", end: 100, suffix: "%", icon: <GraduationCap size={22} /> },
+  { label: "ACRES OF CAMPUS", end: 5, suffix: "+", icon: <Globe size={22} /> },
+  { label: "MODERN LABS", end: 15, suffix: "+", icon: <Monitor size={22} /> },
 ];
 
 

@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
 import Blog from '@/views/Blog';
 import { fetchDataFromSheet } from '@/lib/sheets';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
   title: 'News & Blog',
   description: 'Latest news, events, and stories from the Malla Reddy School campus.',
-};
+  path: '/blog',
+});
 
 const NEWS_SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=818070186&single=true&output=csv';

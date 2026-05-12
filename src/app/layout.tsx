@@ -39,9 +39,7 @@ export const metadata: Metadata = {
     'Hyderabad',
     'Telangana',
   ],
-  alternates: {
-    canonical: '/',
-  },
+  alternates: {},
   robots: {
     index: true,
     follow: true,
@@ -58,7 +56,6 @@ export const metadata: Metadata = {
     description:
       `CBSE-aligned learning with a STEAM focus, expert faculty, and world-class facilities. Address: ${DEFAULT_SITE_INFO.locationLine}.`,
     type: 'website',
-    url: '/',
     siteName: 'Malla Reddy School',
     locale: 'en_IN',
     images: [

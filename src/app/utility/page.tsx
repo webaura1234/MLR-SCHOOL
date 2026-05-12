@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
 import Utility from '@/views/Utility';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
   title: 'Resources & Disclosure',
-  description:
-    'Mandatory public disclosure, transport information, and school resources.',
-};
+  description: 'Mandatory public disclosure, transport information, and school resources.',
+  path: '/utility',
+});
 
 export default async function Page() {
   const busBlurDataURL = await getBlurDataURL(

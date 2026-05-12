@@ -65,7 +65,7 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <section className="page-header" style={{ background: 'var(--page-bg)', padding: '6rem 0 4rem', textAlign: 'center' }}>
+      <section className="page-header" style={{ background: 'var(--page-bg)', padding: '6rem 0 1rem', textAlign: 'center' }}>
         <div className="container">
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
@@ -77,12 +77,12 @@ const About = () => {
           </motion.h1>
           <p
             className="hero-brand-tagline"
-            style={{ color: 'var(--muted-foreground)', margin: '1rem auto', maxWidth: '40rem' }}
+            style={{ color: 'var(--muted-foreground)', margin: '1rem auto 0', maxWidth: '40rem' }}
           >
             {hero.lead}
           </p>
           {mode !== 'full' && (
-            <p style={{ marginTop: '1.5rem' }}>
+            <p style={{ marginTop: '0.75rem' }}>
               <Link href="/about" className="btn-primary squishy-btn" style={{ textDecoration: 'none' }}>
                 View full About School
               </Link>
@@ -206,8 +206,8 @@ const About = () => {
       {showSalient && (
         <section className="salient-features section">
           <div className="container">
-            <div className="section-header text-center">
-              <h2 className="section-title-spark">Why We Are Different</h2>
+            <div className="section-header text-center" style={{ marginBottom: '1.5rem' }}>
+              <h2 className="section-title-spark" style={{ marginBottom: '1rem' }}>Why We Are Different</h2>
             </div>
             <div className="creative-grid salient-grid">
               {[

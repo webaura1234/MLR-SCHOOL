@@ -47,6 +47,7 @@
   font-style: italic;
   background: linear-gradient(90deg, #0DB6B5, #F5A623);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -74,9 +75,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(61, 79, 47, 0.08);
-  color: #3d4f2f;
-  margin-bottom: 1rem;
+  background: #fdf5e6;
+  color: #a67c1a;
+  margin-bottom: 1.5rem;
 }
 
 .journey-stat-number {
@@ -89,13 +90,13 @@
 }
 
 .journey-stat-label {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: rgba(10, 36, 99, 0.7);
-  margin-top: 0.5rem;
-  max-width: 140px;
+  color: #0DB6B5;
+  margin-top: 1rem;
+  max-width: 200px;
   line-height: 1.4;
 }
 
@@ -117,8 +118,7 @@
 
 @media (min-width: 768px) {
   .journey-stat-label {
-    font-size: 10px;
-    letter-spacing: 0.2em;
+    font-size: 14px;
     max-width: none;
   }
 }
@@ -203,10 +203,16 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .journey-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .journey-stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
   }

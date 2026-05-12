@@ -154,7 +154,8 @@ const Navbar = () => {
                   <span>Call Us</span>
                 </a>
                 <Link href="/admission" className="navbar-cta" onClick={closeMenu}>
-                  ADMISSIONS OPEN 2026–2027
+                  <span className="navbar-cta-desktop">ADMISSIONS OPEN 2026–2027</span>
+                  <span className="navbar-cta-mobile">APPLY NOW</span>
                 </Link>
                 <button
                   type="button"
@@ -210,12 +211,8 @@ const Navbar = () => {
                 </div>
               ))}
               <div className="navbar-menu-ctas" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
-                <a href={`tel:${siteInfo.phoneTel}`} className="navbar-menu-call" onClick={closeMenu}>
-                  <Phone size={20} />
-                  <span>Call Us</span>
-                </a>
                 <Link href="/admission" className="navbar-menu-cta" onClick={closeMenu}>
-                  ADMISSIONS OPEN 2026–2027
+                  APPLY NOW
                 </Link>
               </div>
             </nav>

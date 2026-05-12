@@ -1,34 +1,36 @@
-import type { MetadataRoute } from 'next';
-
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://mallareddyschool.com';
-const origin = baseUrl.replace(/\/$/, '');
-
-const routes = [
-  '/',
-  '/life',
-  '/curriculum',
-  '/testimonials',
-  '/gallery',
-  '/admission',
-  '/about',
-  '/principal',
-  '/management-team',
-  '/vision',
-  '/iit-foundation',
-  '/blog',
-  '/contact',
-  '/utility',
-  '/achievers',
-  '/labs',
-  '/careers',
-];
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-  return routes.map((path) => ({
-    url: `${origin}${path}`,
-    lastModified,
-    changeFrequency: 'weekly' as const,
-    priority: path === '/' ? 1 : 0.8,
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://www.mallareddyschool.com';
+
+  const routes = [
+    '',
+    '/about',
+    '/management-team',
+    '/vision',
+    '/iit-foundation',
+    '/curriculum',
+    '/labs',
+    '/achievers',
+    '/careers',
+    '/co-curricular',
+    '/gallery',
+    '/admission',
+    '/contact',
+    '/blog',
+    '/competitions',
+    '/life',
+    '/media',
+    '/monthly-achievements',
+    '/principal',
+    '/testimonials',
+    '/utility',
+  ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === '' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1.0 : 0.8,
   }));
 }

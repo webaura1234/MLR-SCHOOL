@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, X } from "lucide-react";
 import { type SchoolEvent, type EventCategory } from "@/lib/calendar-data";
 import { createPortal } from "react-dom";
+import "./DynamicCalendar.css";
 
 const MONTH_MAP: Record<string, string> = {
   'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04', 'MAY': '05', 'JUN': '06',
@@ -142,13 +143,7 @@ const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
       </div>
 
       {/* Grid Container */}
-      <div style={{ 
-        backgroundColor: 'white', 
-        border: '3px solid #000', 
-        borderRadius: '30px', 
-        overflow: 'hidden', 
-        boxShadow: '12px 12px 0 rgba(0,0,0,0.05)' 
-      }}>
+      <div className="calendar-grid">
         {/* Weekday Row */}
         <div style={{ 
           display: 'grid', 
@@ -157,15 +152,7 @@ const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
           color: 'white' 
         }}>
           {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(d => (
-            <div key={d} style={{ 
-              padding: '1rem 0', 
-              textAlign: 'center', 
-              fontSize: '0.65rem', 
-              fontWeight: 900, 
-              textTransform: 'uppercase', 
-              letterSpacing: '0.1em', 
-              borderRight: '1px solid rgba(255,255,255,0.1)' 
-            }}>
+            <div key={d} className="calendar-weekday-header">
               {d}
             </div>
           ))}
@@ -184,16 +171,13 @@ const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
             return (
               <div 
                 key={idx}
+                className="calendar-day-cell"
                 style={{ 
-                  minHeight: '80px', 
-                  padding: '0.75rem', 
-                  borderRight: '1px solid #eee', 
-                  borderBottom: '1px solid #eee', 
-                  position: 'relative',
-                  backgroundColor: !isCurrentMonth ? '#f9f9f9' : 'white'
+                  backgroundColor: !isCurrentMonth ? '#f9f9f9' : 'white',
+                  borderRight: (idx + 1) % 7 === 0 ? 'none' : undefined
                 }}
               >
-                <span style={{ 
+                <span className="calendar-day-number" style={{ 
                   fontSize: '0.85rem', 
                   fontWeight: 900, 
                   color: !isCurrentMonth ? '#ccc' : '#0A2463' 
@@ -206,6 +190,7 @@ const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
                     <div
                       key={event.id}
                       onClick={() => setSelectedEvent(event)}
+                      className="calendar-event-pill"
                       style={{ 
                         cursor: 'pointer', 
                         padding: '0.4rem', 
@@ -214,7 +199,7 @@ const DynamicCalendar = ({ events }: DynamicCalendarProps) => {
                         backgroundColor: `${CATEGORY_COLORS[event.category]}15` 
                       }}
                     >
-                      <p style={{ 
+                      <p className="calendar-event-title" style={{ 
                         fontSize: '0.6rem', 
                         fontWeight: 800, 
                         textTransform: 'uppercase', 

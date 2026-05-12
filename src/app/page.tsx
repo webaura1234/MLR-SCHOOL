@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Home from '@/views/Home';
 import { fetchGalleryItemsFromPublishedSheet, normalizeGalleryImageUrl } from '@/lib/galleryFromPublishedSheet';
 import { fetchDataFromSheet } from '@/lib/sheets';
@@ -7,15 +6,13 @@ import type { SchoolEvent, EventCategory } from '@/lib/calendar-data';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
 import type { StaticImageData } from 'next/image';
 import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
+import { constructMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
   title: 'Malla Reddy School, Medchal — CBSE School in Hyderabad',
-  description:
-    `Malla Reddy School (Medchal) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Address: ${DEFAULT_SITE_INFO.addressLine}`,
-  alternates: {
-    canonical: '/',
-  },
-};
+  description: `Malla Reddy School (Medchal) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Address: ${DEFAULT_SITE_INFO.addressLine}`,
+  path: '/',
+});
 
 // Do NOT change these IDs (hardcoded by requirement)
 // NOTE: This must match the real spreadsheet id exactly (from the /d/<id>/edit URL).

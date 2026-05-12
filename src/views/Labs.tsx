@@ -12,11 +12,10 @@ const Labs = () => {
     {
       title: 'Composite Science Lab',
       icon: <Microscope />,
-      img: '/images/labs/science-1.jpg',
+      img: '/images/composite_science_lab.png',
       desc: 'Equipped with the latest apparatus for Physics, Chemistry, and Biology experiments.',
       gallery: [
-        '/images/labs/science-1.jpg',
-        '/images/labs/science-2.jpg',
+        '/images/composite_science_lab.png',
       ],
     },
     {
@@ -63,7 +62,7 @@ const Labs = () => {
 
   return (
     <div className="labs-page">
-      <section className="page-header" style={{ background: 'linear-gradient(to bottom, #f8fafc, #ffffff)', padding: '8rem 0 4rem', textAlign: 'center' }}>
+      <section className="page-header" style={{ background: 'linear-gradient(to bottom, #f8fafc, #ffffff)', padding: '6rem 0 1rem', textAlign: 'center' }}>
         <div className="container">
           <motion.h1 
             initial={{ opacity: 0, y: -20 }}
@@ -73,7 +72,7 @@ const Labs = () => {
           >
             Labs & <span className="text-primary" style={{ color: '#0DB6B5' }}>Facilities</span>
           </motion.h1>
-          <p className="hero-brand-tagline" style={{ color: '#64748b', fontSize: '1.25rem' }}>Infrastructure designed to spark curiosity and innovation.</p>
+          <p className="hero-brand-tagline" style={{ color: '#64748b', fontSize: '1.25rem', margin: '1rem auto 0' }}>Infrastructure designed to spark curiosity and innovation.</p>
         </div>
       </section>
 

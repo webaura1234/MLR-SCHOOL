@@ -266,15 +266,17 @@
 
 @media (max-width: 1024px) {
   .trust-strip-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
   }
   .trust-item {
-    flex: 0 0 calc(33.33% - 1rem);
-    border-right: none !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .trust-item:nth-child(3n) {
+    border-right: none;
+  }
+  .trust-item:nth-child(4), .trust-item:nth-child(5) {
+    border-bottom: none;
   }
 }
 
@@ -326,15 +328,19 @@
   color: #0A2463;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .trust-strip-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .trust-item:nth-child(even) {
-    border-right: none;
+  .trust-item {
+    border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
   }
-  .trust-item:nth-child(1), .trust-item:nth-child(2) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  .trust-item:nth-child(even) {
+    border-right: none !important;
+  }
+  .trust-item:last-child {
+    border-bottom: none !important;
   }
 }
 

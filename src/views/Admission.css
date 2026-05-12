@@ -1,15 +1,26 @@
 .admission-page {
   overflow-x: hidden;
-  /* Keep content clear of fixed Call/WhatsApp FABs */
   padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
 }
 
+.admission-page .page-header {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.admission-page .page-header p {
+  margin-bottom: 0;
+}
+
+.admission-page .admission-content.section {
+  padding-top: 1.5rem;
+}
+
 .admission-grid {
-  display: grid;
-  /* Mobile-first: stack */
-  grid-template-columns: minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: start;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  align-items: stretch;
 }
 
 .admission-info h2 {
@@ -138,8 +149,10 @@
 
 @media (min-width: 1024px) {
   .admission-grid {
+    display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 6rem;
+    align-items: start;
   }
 }
 

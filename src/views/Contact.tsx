@@ -10,7 +10,7 @@ const Contact = () => {
   const { siteInfo } = useSiteInfo();
   return (
     <div className="contact-page">
-      <section className="page-header" style={{ background: 'var(--page-bg)', padding: '6rem 0 4rem', textAlign: 'center' }}>
+      <section className="page-header" style={{ background: 'var(--page-bg)', padding: '1.5rem 0 0.5rem', textAlign: 'center' }}>
         <div className="container">
           <motion.h1 
             initial={{ opacity: 0, scale: 0.8 }}
@@ -20,17 +20,17 @@ const Contact = () => {
           >
             Contact <span className="text-primary">Us</span>
           </motion.h1>
-          <p className="hero-brand-tagline" style={{ color: 'var(--muted-foreground)', margin: '1rem auto' }}>
+          <p className="hero-brand-tagline" style={{ color: 'var(--muted-foreground)', margin: '0.5rem auto 0' }}>
             We&apos;re here to answer any questions you may have.
           </p>
         </div>
       </section>
 
-      <section className="contact-details-section section">
+      <section className="contact-details-section section" style={{ paddingTop: '1.5rem' }}>
         <div className="container">
           <div className="contact-grid contact-page-grid">
             <div className="contact-info-panel">
-              <h2 className="section-title-spark" style={{ marginBottom: '2rem' }}>Reach Out</h2>
+              <h2 className="section-title-spark" style={{ marginBottom: '1rem' }}>Reach Out</h2>
               <div className="contact-cards mobile-flex-grid" style={{ gap: '2rem' }}>
                 {[
                   { icon: <Phone />, title: 'Call Us', detail: siteInfo.phoneDisplay, color: 'var(--c-mint)' },
@@ -56,7 +56,7 @@ const Contact = () => {
             </div>
 
             <div className="contact-form-panel">
-              <h2 className="section-title-spark" style={{ marginBottom: '2rem' }}>Inquiry Form</h2>
+              <h2 className="section-title-spark" style={{ marginBottom: '1rem' }}>Inquiry Form</h2>
               <form action="https://formspree.io/f/your-id" method="POST" style={{ 
                 background: 'white', padding: '2.5rem', borderRadius: '40px', 
                 border: '4px solid #000', boxShadow: '15px 15px 0 #000',

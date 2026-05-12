@@ -113,28 +113,28 @@ const Admission = () => {
                 </div>
               </div>
 
-              <div className="fee-notice" style={{ 
-                padding: '2rem', 
-                borderRadius: 'var(--radius-xl)', 
-                background: 'var(--muted)', 
-                border: '2px dashed var(--border)',
-                marginTop: '2rem'
-              }}>
-                <h4 style={{ fontWeight: 800, color: 'var(--foreground)', marginBottom: '0.5rem' }}>Fee Structure</h4>
-                <p style={{ color: 'var(--muted-foreground)', fontStyle: 'italic', lineHeight: '1.6' }}>
-                  &quot;For fee structure details, please{' '}
-                  <a
-                    href={`tel:${siteInfo.phoneTel}`}
-                    style={{ color: 'var(--primary)', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}
-                  >
-                    call us directly
-                  </a>
-                  {' '}or visit your nearest Malla Reddy School campus.&quot;
-                </p>
-              </div>
             </div>
 
             <div className="admission-form-container card">
+              <div className="fee-notice" style={{ 
+                padding: '1.5rem', 
+                borderRadius: 'var(--radius-lg)', 
+                background: 'rgba(13, 182, 181, 0.05)', 
+                border: '1px dashed #0DB6B5',
+                marginBottom: '2rem'
+              }}>
+                <h4 style={{ fontWeight: 800, color: '#0A2463', marginBottom: '0.5rem', fontSize: '1rem' }}>Fee Structure</h4>
+                <p style={{ color: '#475569', fontStyle: 'italic', lineHeight: '1.5', fontSize: '0.85rem' }}>
+                  &quot;For fee structure details, please{' '}
+                  <a
+                    href={`tel:${siteInfo.phoneTel}`}
+                    style={{ color: '#0DB6B5', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}
+                  >
+                    call us directly
+                  </a>
+                  {' '}or visit our Malla Reddy School campus.&quot;
+                </p>
+              </div>
               <h2>Enquiry Form</h2>
               
               {status === 'success' ? (

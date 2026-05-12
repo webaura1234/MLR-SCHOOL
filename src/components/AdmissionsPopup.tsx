@@ -95,7 +95,7 @@ export default function AdmissionsPopup({ enabled = true, intervalMs = 30_000 }:
 
             <div className="admissions-pop-actions">
               <Link href="/admission" className="admissions-pop-primary" onClick={() => setIsOpen(false)}>
-                Go to Admission
+                Apply Now
               </Link>
               <button type="button" className="admissions-pop-secondary" onClick={() => setIsOpen(false)}>
                 Close
