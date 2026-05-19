@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { Inter, Source_Serif_4 } from 'next/font/google';
 import ClientRoot from '@/components/ClientRoot';
 import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
+import { getSiteUrl } from '@/lib/siteUrl';
 import './globals.css';
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://mallareddyschool.com';
+const siteUrl = getSiteUrl();
 
 const sans = Inter({
   subsets: ['latin'],
