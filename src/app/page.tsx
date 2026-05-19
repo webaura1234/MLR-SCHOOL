@@ -7,10 +7,11 @@ import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import type { StaticImageData } from 'next/image';
 import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
 import { constructMetadata } from '@/lib/seo';
+import { DEFAULT_SEO_DESCRIPTION, DEFAULT_SEO_TITLE } from '@/lib/seoKeywords';
 
 export const metadata = constructMetadata({
-  title: 'Malla Reddy School, Medchal — CBSE School in Hyderabad',
-  description: `Malla Reddy School (Medchal) is a CBSE-aligned school in Hyderabad offering holistic learning, STEAM programs, and modern facilities. Address: ${DEFAULT_SITE_INFO.addressLine}`,
+  title: DEFAULT_SEO_TITLE,
+  description: `${DEFAULT_SEO_DESCRIPTION} Located at ${DEFAULT_SITE_INFO.addressLine}`,
   path: '/',
 });
 

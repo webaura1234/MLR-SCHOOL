@@ -2,8 +2,9 @@ import About from '@/views/About';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata = constructMetadata({
-  title: 'About School',
-  description: 'Vision, mission, principal message, and what makes Malla Reddy School different.',
+  title: 'About Malla Reddy School Medchal',
+  description:
+    'Learn about Malla Reddy Schools — vision, mission, leadership, and why we are a top CBSE school in Medchal, Hyderabad.',
   path: '/about',
 });
 

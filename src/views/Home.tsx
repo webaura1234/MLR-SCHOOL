@@ -90,7 +90,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
         >
           <Image
             src={heroDesktop}
-            alt="Happy students walking towards the welcoming entrance of Malla Reddy School"
+            alt="Malla Reddy School Medchal — Malla Reddy Schools CBSE campus in Hyderabad"
             className="hero-slide-img desktop-only"
             fill
             priority
@@ -100,7 +100,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
           />
           <Image
             src={heroMobile}
-            alt="Happy students walking towards the welcoming entrance of Malla Reddy School"
+            alt="Malla Reddy Schools Medchal — best CBSE school in Hyderabad"
             className="hero-slide-img mobile-only"
             fill
             priority
@@ -118,9 +118,18 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
 
 
 
-        <div className="container hero-content-container">
-          {/* Hero content removed as per request */}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="container hero-content-container hero-seo-copy"
+        >
+          <h1 className="hero-seo-title">Malla Reddy School, Medchal</h1>
+          <p className="hero-seo-tagline">
+            Malla Reddy Schools — a leading CBSE school in Medchal, Hyderabad with STEAM learning,
+            modern labs, and holistic education from pre-primary to middle school.
+          </p>
+        </motion.div>
       </section>
       {/* Journey */}
       <JourneySection />
