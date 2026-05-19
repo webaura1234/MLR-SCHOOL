@@ -3,7 +3,7 @@ import { fetchGalleryItemsFromPublishedSheet, normalizeGalleryImageUrl } from '@
 import { fetchDataFromSheet } from '@/lib/sheets';
 import { PROGRAM_SECTION_IMAGES } from '@/lib/programSectionImages';
 import type { SchoolEvent, EventCategory } from '@/lib/calendar-data';
-import { getBlurDataURL } from '@/lib/getBlurDataURL';
+import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import type { StaticImageData } from 'next/image';
 import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
 import { constructMetadata } from '@/lib/seo';
@@ -27,6 +27,8 @@ const FACILITIES_SHEET_URL =
 
 const CALENDAR_SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=1328060838&single=true&output=csv';
+
+const HOME_FETCH_TIMEOUT_MS = 5_000;
 
 type RawGalleryItem = Record<string, unknown>;
 
@@ -94,10 +96,21 @@ const DEFAULT_PROGRAMS: Program[] = [
   },
 ];
 
+async function fetchWithTimeout(url: string, init: RequestInit = {}) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), HOME_FETCH_TIMEOUT_MS);
+
+  try {
+    return await fetch(url, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 async function fetchHomeGallery() {
   // Prefer Apps Script, fallback to published CSV sheet
   try {
-    const response = await fetch(
+    const response = await fetchWithTimeout(
       'https://script.google.com/macros/s/AKfycbxzGg_9G09RThkXBTfxYnfdP25qbKjX07MAeN-9ABYwglidLfK6RvTizNWbiTuEzgk/exec?type=gallery',
       { next: { revalidate: 3600 } },
     );
@@ -166,12 +179,10 @@ export default async function Page() {
   ]);
 
   const galleryTop = gallery.slice(0, 7);
-  const galleryTopWithBlur = await Promise.all(
-    galleryTop.map(async (g) => ({
-      ...g,
-      blurDataURL: g.src ? await getBlurDataURL(g.src) : undefined,
-    })),
-  );
+  const galleryTopWithBlur = galleryTop.map((g) => ({
+    ...g,
+    blurDataURL: g.src ? DEFAULT_BLUR : undefined,
+  }));
   const galleryPreview = galleryTopWithBlur.slice(0, 3).map((g) => ({
     src: g.src,
     title: g.title,
@@ -191,12 +202,10 @@ export default async function Page() {
   const validFacilities = facilitiesData.filter((f) => f.images?.length > 0);
   const facilityImages = Array.from(new Set(validFacilities.flatMap((f) => f.images)));
   const FACILITY_HOME_LIMIT = 9;
-  const facilityTopWithBlur = await Promise.all(
-    facilityImages.slice(0, FACILITY_HOME_LIMIT).map(async (src) => ({
-      src,
-      blurDataURL: src ? await getBlurDataURL(src) : undefined,
-    })),
-  );
+  const facilityTopWithBlur = facilityImages.slice(0, FACILITY_HOME_LIMIT).map((src) => ({
+    src,
+    blurDataURL: src ? DEFAULT_BLUR : undefined,
+  }));
   const facilityImagesWithBlur = facilityImages.map((src, idx) =>
     idx < FACILITY_HOME_LIMIT ? facilityTopWithBlur[idx] : { src },
   );
