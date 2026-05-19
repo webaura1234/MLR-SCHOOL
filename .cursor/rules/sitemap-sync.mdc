@@ -1,0 +1,35 @@
+---
+description: Keep public/sitemap.xml in sync whenever routes or pages change
+alwaysApply: true
+---
+
+# Sitemap must stay in sync
+
+This project uses a **static** `public/sitemap.xml` (not `src/app/sitemap.ts`).
+
+## When to update the sitemap
+
+Whenever you add, remove, or rename anything that affects public URLs:
+
+- New or removed `src/app/**/page.tsx` routes
+- URL path changes (folder renames under `src/app`)
+- Major SEO/canonical URL changes
+
+## How to update
+
+1. Run from the `School` folder:
+   ```bash
+   npm run sitemap
+   ```
+2. Or run a production build (regenerates automatically via `postbuild`):
+   ```bash
+   npm run build
+   ```
+
+The generator `scripts/generate-sitemap.mjs` **auto-discovers** all `page.tsx` files under `src/app` (excluding `/api`).
+
+## Before finishing a task
+
+If your changes touched routes under `src/app`, **commit the updated `public/sitemap.xml`** along with your other files.
+
+`robots.txt` already points to `https://www.mallareddyschool.com/sitemap.xml` via `src/app/robots.ts`.
