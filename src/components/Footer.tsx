@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import type { SVGProps } from 'react';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import './Footer.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 import { CARD_BLUR } from '@/lib/blurPlaceholder';
+import { HOME_HERO_PATH, handleHomeHeroClick } from '@/lib/goToHomeHero';
 
 const InstagramIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...props}>
@@ -53,6 +55,7 @@ const socialLinks = [
 
 const Footer = () => {
   const { siteInfo } = useSiteInfo();
+  const pathname = usePathname();
   return (
     <footer className="footer">
       <div className="footer-background-text" aria-hidden="true">
@@ -62,7 +65,12 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col footer-brand">
-            <Link href="/" className="footer-logo" aria-label="Malla Reddy School home">
+            <Link
+              href={HOME_HERO_PATH}
+              className="footer-logo"
+              aria-label="Malla Reddy School home"
+              onClick={(event) => handleHomeHeroClick(pathname, event)}
+            >
               <span className="footer-logo-mark">
                 <Image
                   src="/logo.png"

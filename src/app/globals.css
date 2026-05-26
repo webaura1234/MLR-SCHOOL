@@ -199,19 +199,14 @@ h4 { font-size: clamp(1.2rem, 3.5vw, 1.75rem); }
   padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
 }
 
-/* Home: cream canvas in top/side margins behind floating nav; hero starts below clearance */
-.app-container main .home {
-  margin-top: calc(-1 * (var(--nav-height) + 1.5rem)) !important;
-}
-
-@media (max-width: 1024px) {
-  .app-container main .home {
-    margin-top: calc(-1 * (var(--nav-height) + 1rem)) !important;
-  }
-}
-
 .app-container:has(.home) main {
+  padding-top: 0;
   background-color: transparent !important;
+}
+
+/* Home hero sits flush under the floating navbar (no cream gap above/beside carousel) */
+.app-container main .home {
+  margin-top: 0 !important;
 }
 
 .section {

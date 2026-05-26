@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import './Navbar.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
+import { HOME_HERO_PATH, handleHomeHeroClick, isHomeNavActive } from '@/lib/goToHomeHero';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navbar = () => {
   }, [menuOpen, closeMenu]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/#hero' },
     {
       name: 'About',
       path: '#',
@@ -90,9 +91,12 @@ const Navbar = () => {
             {/* Left: Logo + Wordmark */}
             <div className="navbar-start">
               <Link
-                href="/"
+                href={HOME_HERO_PATH}
                 className="navbar-mark"
-                onClick={closeMenu}
+                onClick={(event) => {
+                  closeMenu();
+                  handleHomeHeroClick(pathname, event);
+                }}
                 aria-label="Malla Reddy School home"
               >
                 <span className="navbar-logo-badge" aria-hidden="true">
@@ -139,8 +143,12 @@ const Navbar = () => {
                     <Link
                       key={link.name}
                       href={link.path}
-                      className={`navbar-desktop-link ${pathname === link.path ? 'is-active' : ''
+                      className={`navbar-desktop-link ${isHomeNavActive(pathname, link.path) ? 'is-active' : ''
                         } ${'galleryPill' in link && link.galleryPill ? 'navbar-desktop-link--gallery' : ''}`}
+                      onClick={(event) => {
+                        closeMenu();
+                        if (link.path === HOME_HERO_PATH) handleHomeHeroClick(pathname, event);
+                      }}
                     >
                       {link.name}
                     </Link>
@@ -202,8 +210,11 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={link.path}
-                      className={`navbar-menu-link navbar-menu-link--solo ${pathname === link.path ? 'is-active' : ''}`}
-                      onClick={closeMenu}
+                      className={`navbar-menu-link navbar-menu-link--solo ${isHomeNavActive(pathname, link.path) ? 'is-active' : ''}`}
+                      onClick={(event) => {
+                        closeMenu();
+                        if (link.path === HOME_HERO_PATH) handleHomeHeroClick(pathname, event);
+                      }}
                     >
                       {link.name}
                     </Link>

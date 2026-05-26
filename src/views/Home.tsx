@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -20,10 +20,14 @@ import { MilestonesOfExcellence } from '../components/MilestonesOfExcellence';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
 import { formatGalleryCategory } from '@/lib/galleryCategories';
+import { HOME_HERO_ID, scrollToHomeHero } from '@/lib/goToHomeHero';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
+import HeroCarousel, { type HeroSlide } from '@/components/HeroCarousel';
 import heroDesktop from '../../public/malla-reddy-hero.jpg';
 import heroMobile from '../../public/malla-reddy-hero-mobile.png';
+import heroAdmissions from '../../public/images/hero-admissions-2026-27.png';
+import heroAdmissionsMobile from '../../public/images/hero-admissions-2026-27-mobile.png';
 import safetyCampus from '../../public/images/safety/campus-safety.png';
 import safetyHealth from '../../public/images/safety/health-safety.png';
 import safetyHygiene from '../../public/images/safety/safety-hygiene.png';
@@ -33,7 +37,24 @@ import safetyPest from '../../public/images/safety/pest-control.png';
 // Framer Motion v12+ deprecates motion(); prefer motion.create()
 const MotionLink = motion.create(Link);
 
-
+const HERO_SLIDES: HeroSlide[] = [
+  {
+    id: 'campus',
+    desktop: heroDesktop,
+    mobile: heroMobile,
+    alt: 'Malla Reddy School Medchal — Malla Reddy Schools CBSE campus in Hyderabad',
+    overlayOpacity: 0.15,
+    variant: 'photo',
+  },
+  {
+    id: 'admissions-2026',
+    desktop: heroAdmissions,
+    mobile: heroAdmissionsMobile,
+    alt: 'Malla Reddy School — 40+ years of legacy. Admissions open for 2026–27',
+    overlayOpacity: 0,
+    variant: 'banner',
+  },
+];
 
 interface Program {
   title: string;
@@ -78,59 +99,35 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
   };
 
+  useEffect(() => {
+    if (window.location.hash !== `#${HOME_HERO_ID}`) return;
+    requestAnimationFrame(() => scrollToHomeHero('smooth'));
+  }, []);
+
 
   return (
     <div className="home" style={{ color: '#1a1a1a' }}>
-      <section className="hero-modern">
-        <motion.div
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 3, ease: 'easeOut' }}
-          className="hero-slide active"
-          style={{ zIndex: 1 }}
-        >
-          <Image
-            src={heroDesktop}
-            alt="Malla Reddy School Medchal — Malla Reddy Schools CBSE campus in Hyderabad"
-            className="hero-slide-img desktop-only"
-            fill
-            priority
-            loading="eager"
-            sizes="(max-width: 768px) 100vw, 1200px"
-            placeholder="blur"
-          />
-          <Image
-            src={heroMobile}
-            alt="Malla Reddy Schools Medchal — best CBSE school in Hyderabad"
-            className="hero-slide-img mobile-only"
-            fill
-            priority
-            loading="eager"
-            sizes="(max-width: 768px) 100vw, 1200px"
-            placeholder="blur"
-          />
-        </motion.div>
-        <div
-          className="hero-overlay"
-          style={{
-            background: 'rgba(0,0,0,0.15)',
-          }}
-        />
-
-
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="container hero-content-container hero-seo-copy"
-        >
-          <h1 className="hero-seo-title">Malla Reddy School, Medchal</h1>
-          <p className="hero-seo-tagline">
-            Malla Reddy Schools — a leading CBSE school in Medchal, Hyderabad with STEAM learning,
-            modern labs, and holistic education from pre-primary to middle school.
-          </p>
-        </motion.div>
+      <section id={HOME_HERO_ID} className="hero-modern">
+        <HeroCarousel slides={HERO_SLIDES} autoPlayMs={6000}>
+          {(activeIndex) =>
+            activeIndex === 0 ? (
+              <motion.div
+                key="hero-seo"
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
+                className="container hero-content-container hero-seo-copy"
+              >
+                <h1 className="hero-seo-title">Malla Reddy School, Medchal</h1>
+                <p className="hero-seo-tagline">
+                  Malla Reddy Schools — a leading CBSE school in Medchal, Hyderabad with STEAM learning,
+                  modern labs, and holistic education from pre-primary to middle school.
+                </p>
+              </motion.div>
+            ) : null
+          }
+        </HeroCarousel>
       </section>
       {/* Journey */}
       <JourneySection />
