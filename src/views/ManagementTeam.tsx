@@ -12,6 +12,8 @@ type ManagementMember = {
   message: string;
   /** Omit when no photo yet — shows empty frame */
   image?: string;
+  /** Show full portrait without crop (Principal only) */
+  fullPhoto?: boolean;
 };
 
 const MANAGEMENT_TEAM: ManagementMember[] = [
@@ -42,8 +44,15 @@ const MANAGEMENT_TEAM: ManagementMember[] = [
   {
     name: "Madhu Sharma",
     title: "Dean, MRGI",
-    image: "/images/madhu-sharma-dean.png",
+    image: "/images/madhu-sharma-dean-2026.jpg",
     message: "As the Dean of MRGI, it gives me immense pleasure to extend a warm welcome to all of you to Malla Reddy School. We believe in nurturing young minds and fostering a holistic learning environment that empowers students to excel academically, socially, and personally. Our commitment to providing quality education is unwavering, and we strive to create an atmosphere where students feel supported and inspired."
+  },
+  {
+    name: "Dr. Anitha Reddy",
+    title: "Principal, Malla Reddy School – Medchal",
+    image: "/images/principal-anitha-reddy.jpg",
+    fullPhoto: true,
+    message: "Education is not the learning of facts, but the training of the mind to think. At Malla Reddy School, we believe in unlocking the potential within every child. Our commitment is to provide a safe, nurturing, and high-tech environment for all our students — join us in this journey of academic and personal growth."
   }
 ];
 
@@ -68,7 +77,7 @@ const ManagementTeam = () => {
             {MANAGEMENT_TEAM.map((member, index) => (
               <motion.div 
                 key={index}
-                className="management-card"
+                className={`management-card${index === 0 ? ' management-card--chairman' : ''}${member.fullPhoto ? ' management-card--principal' : ''}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -80,14 +89,14 @@ const ManagementTeam = () => {
                       src={member.image}
                       alt={member.name}
                       className="member-image"
-                      aspectRatio={index === 0 ? '4/5' : '1/1'}
+                      aspectRatio={member.fullPhoto || index === 0 ? '4/5' : '1/1'}
                     />
                   ) : (
                     <div
                       className="member-image-empty"
                       aria-hidden
                       style={{
-                        aspectRatio: index === 0 ? '4 / 5' : '1 / 1',
+                        aspectRatio: member.fullPhoto || index === 0 ? '4 / 5' : '1 / 1',
                       }}
                     />
                   )}

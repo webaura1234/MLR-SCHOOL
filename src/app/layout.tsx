@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Source_Serif_4 } from 'next/font/google';
 import ClientRoot from '@/components/ClientRoot';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import SchoolJsonLd from '@/components/SchoolJsonLd';
 import { getSiteUrl } from '@/lib/siteUrl';
 import {
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${serif.variable}`}>
       <body>
+        <GoogleAnalytics />
         <SchoolJsonLd />
         <ClientRoot>{children}</ClientRoot>
       </body>

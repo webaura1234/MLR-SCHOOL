@@ -2,6 +2,7 @@
  * Loads gallery rows from the public Google Sheet CSV (same source as /gallery).
  */
 
+import { isOtherSchoolBranchCategory } from '@/lib/galleryCategories';
 import { fetchDataFromSheet } from '@/lib/sheets';
 
 export type PublishedGalleryItem = {
@@ -105,7 +106,10 @@ export async function fetchGalleryItemsFromPublishedSheet(): Promise<PublishedGa
   );
   const data = rows.flat();
   const filtered = data.filter(
-    (item) => item.src && (item.src.startsWith('http') || item.src.startsWith('/')),
+    (item) =>
+      item.src &&
+      (item.src.startsWith('http') || item.src.startsWith('/')) &&
+      !isOtherSchoolBranchCategory(item.category),
   );
 
   const seen = new Set<string>();

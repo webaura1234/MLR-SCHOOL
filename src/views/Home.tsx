@@ -19,6 +19,7 @@ import { JourneySection } from '../components/JourneySection';
 import { MilestonesOfExcellence } from '../components/MilestonesOfExcellence';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
+import { formatGalleryCategory } from '@/lib/galleryCategories';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
 import heroDesktop from '../../public/malla-reddy-hero.jpg';
@@ -412,7 +413,9 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
         {/* Second row — compact tiles like the main gallery grid */}
         <div className="gallery-bento-shell home-gallery-more-shell">
           <div className="home-gallery-more-grid">
-            {galleryMore.map((photo, idx) => (
+            {galleryMore.map((photo, idx) => {
+              const categoryLabel = formatGalleryCategory(photo.cat);
+              return (
               <Link
                 key={`${photo.src}-${idx}`}
                 href="/gallery"
@@ -434,10 +437,13 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                 </span>
                 <span className="gallery-tile-bottom">
                   <span className="gallery-tile-title">{photo.title}</span>
-                  <span className="gallery-tile-cat">{photo.cat}</span>
+                  {categoryLabel ? (
+                    <span className="gallery-tile-cat">{categoryLabel}</span>
+                  ) : null}
                 </span>
               </Link>
-            ))}
+            );
+            })}
           </div>
         </div>
 

@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import './Gallery.css';
+import { formatGalleryCategory } from '@/lib/galleryCategories';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
 import type { PublishedGalleryItem } from '@/lib/galleryFromPublishedSheet';
@@ -35,10 +36,6 @@ const Gallery = ({ items }: GalleryProps) => {
     [items, heroIds],
   );
   
-  function label(cat: string) {
-    return cat.charAt(0).toUpperCase() + cat.slice(1);
-  }
-
   const openIndex = selected ? items.findIndex((i: GalleryItem) => i.id === selected.id) : -1;
 
   const goPrev = useCallback(() => {
@@ -68,6 +65,7 @@ const Gallery = ({ items }: GalleryProps) => {
   }, [selected, goPrev, goNext]);
 
   const spring = reduceMotion ? { duration: 0.01 } : { type: 'spring' as const, stiffness: 380, damping: 28 };
+  const selectedCategoryLabel = selected ? formatGalleryCategory(selected.category) : null;
 
   return (
     <div className="gallery-page">
@@ -145,7 +143,9 @@ const Gallery = ({ items }: GalleryProps) => {
         <div className="gallery-bento-shell">
           <motion.div layout className="gallery-bento">
             <AnimatePresence mode="popLayout" initial={false}>
-              {gridItems.map((img: GalleryItem, i: number) => (
+              {gridItems.map((img: GalleryItem, i: number) => {
+                const categoryLabel = formatGalleryCategory(img.category);
+                return (
                 <motion.button
                   key={`${img.id}-${i}`}
                   type="button"
@@ -177,10 +177,13 @@ const Gallery = ({ items }: GalleryProps) => {
                   </span>
                   <span className="gallery-tile-bottom">
                     <span className="gallery-tile-title">{img.title}</span>
-                    <span className="gallery-tile-cat">{label(img.category)}</span>
+                    {categoryLabel ? (
+                      <span className="gallery-tile-cat">{categoryLabel}</span>
+                    ) : null}
                   </span>
                 </motion.button>
-              ))}
+              );
+              })}
             </AnimatePresence>
           </motion.div>
         </div>
@@ -258,7 +261,7 @@ const Gallery = ({ items }: GalleryProps) => {
                   </div>
                   <div className="gallery-lightbox-meta">
                     <h2>{selected.title}</h2>
-                    <p>{label(selected.category)}</p>
+                    {selectedCategoryLabel ? <p>{selectedCategoryLabel}</p> : null}
                   </div>
                 </motion.div>
               </motion.div>

@@ -47,6 +47,9 @@
   --container-padding-x: clamp(1rem, 5vw, 2.5rem);
   /* Navbar inner horizontal inset — must match .container for edge alignment on every route */
   --navbar-pad-x: var(--container-padding-x);
+
+  /* Max width when a card sits alone on a row (mobile / tablet) */
+  --card-solo-max-width: min(100%, 450px);
 }
 
 /* Responsive Alignment Helpers */
@@ -689,3 +692,55 @@ img {
   transition: filter 0.3s ease;
 }
 
+/*
+  Mobile / tablet: when only one card sits on a row, center it in the section.
+  Works for 2-column grids (odd last item) and flex-wrap card rows.
+*/
+@media (max-width: 1024px) {
+  :is(
+    .creative-grid,
+    .trust-strip-grid,
+    .stats-grid,
+    .facilities-grid,
+    .activity-grid,
+    .mobile-flex-grid,
+    .salient-grid,
+    .testimonials-grid,
+    .programs-section .facilities-grid
+  ) > *:last-child:nth-child(odd):not(:only-child) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: var(--card-solo-max-width);
+    max-width: var(--card-solo-max-width);
+  }
+}
+
+@media (max-width: 768px) {
+  :is(
+    .management-grid,
+    .centered-flex,
+    .highlights-grid,
+    .programs-grid,
+    .mobile-flex-grid,
+    .facilities-grid,
+    .creative-grid
+  ) {
+    justify-content: center;
+    justify-items: center;
+  }
+
+  :is(
+    .management-grid,
+    .centered-flex,
+    .highlights-grid,
+    .programs-grid,
+    .mobile-flex-grid,
+    .facilities-grid,
+    .creative-grid,
+    .activity-grid.centered-flex
+  ) > *:not(.management-card--chairman) {
+    margin-inline: auto;
+    width: var(--card-solo-max-width);
+    max-width: var(--card-solo-max-width);
+  }
+}
