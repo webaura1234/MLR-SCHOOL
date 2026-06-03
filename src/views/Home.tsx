@@ -16,7 +16,7 @@ import {
 import './Home.css';
 import './Gallery.css';
 import { JourneySection } from '../components/JourneySection';
-import { MilestonesOfExcellence } from '../components/MilestonesOfExcellence';
+import { OurCampusesSection } from '../components/OurCampusesSection';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
 import { formatGalleryCategory } from '@/lib/galleryCategories';
@@ -131,6 +131,9 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
       </section>
       {/* Journey */}
       <JourneySection />
+
+      {/* Our Campuses */}
+      <OurCampusesSection />
 
       {/* 3. Programs Offered */}
       <section
@@ -464,9 +467,6 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
       <DynamicCalendar events={calendarEvents} />
         </div>
       </section>
-
-      {/* Milestones of Excellence (moved to bottom as requested) */}
-      <MilestonesOfExcellence />
 
     </div>
   );

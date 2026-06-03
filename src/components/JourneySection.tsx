@@ -2,82 +2,82 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Award, MapPin, Globe, Building2, type LucideIcon } from "lucide-react";
 import { useInView } from "../hooks/useInView";
 import { useCountUp } from "../hooks/useCountUp";
-import { GraduationCap, Building2, Globe, Monitor, Award } from "lucide-react";
 import "./JourneySection.css";
 
 const stats = [
-  { label: "YEARS OF EXCELLENCE", end: 40, suffix: "+", icon: <Award size={22} /> },
-  { label: "SMART CLASSROOMS", end: 15, suffix: "+", icon: <Building2 size={22} /> },
-  { label: "ACRES OF CAMPUS", end: 5, suffix: "+", icon: <Globe size={22} /> },
-  { label: "MODERN LABS", end: 15, suffix: "+", icon: <Monitor size={22} /> },
+  { label: "Years of Excellence", end: 40, suffix: "+", icon: Award },
+  { label: "Total Campuses", end: 7, suffix: "", icon: MapPin },
+  { label: "Acres of Campus", end: 5, suffix: "+", icon: Globe },
+  { label: "Modern Labs", end: 15, suffix: "+", icon: Building2 },
 ];
 
+type StatItemProps = {
+  label: string;
+  end: number;
+  suffix: string;
+  icon: LucideIcon;
+  active: boolean;
+};
 
-function StatItem({ label, end, suffix, icon, active, textValue }: { label: string; end?: number; suffix?: string; icon: React.ReactNode; active: boolean; textValue?: string }) {
-  const value = useCountUp(end || 0, 2500, active);
+function StatItem({ label, end, suffix, icon: Icon, active }: StatItemProps) {
+  const value = useCountUp(end, 2500, active);
+
   return (
-    <div className="journey-stat-item">
-      <div className="journey-stat-icon">
-        {icon}
-      </div>
-      {textValue ? (
-        <p className="journey-stat-number" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', lineHeight: '1.2' }}>
-          {textValue}
-        </p>
-      ) : (
+    <div className="journey-stat-wrap">
+      <div className="journey-stat-card">
+        <div className="journey-stat-icon" aria-hidden>
+          <Icon className="journey-stat-icon-svg" size={24} />
+        </div>
         <p className="journey-stat-number">
-          {value.toLocaleString()}{suffix}
+          {value.toLocaleString()}
+          {suffix}
         </p>
-      )}
-      <p className="journey-stat-label">
-        {label}
-      </p>
+        <p className="journey-stat-label">{label}</p>
+      </div>
     </div>
   );
 }
 
 export function JourneySection() {
-  const { ref, inView } = useInView<HTMLDivElement>({
+  const { ref, inView } = useInView<HTMLElement>({
     once: false,
-    // Trigger when a meaningful part of the section is visible,
-    // so scroll-away reliably flips it back to false.
     threshold: 0.35,
     rootMargin: "0px 0px -15% 0px",
   });
 
   return (
-    <section className="journey-section" ref={ref}>
-      <div className="journey-overlay">
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 20% 30%, #0DB6B5 0%, transparent 50%)' }} />
-        <div style={{ position: 'absolute', bottom: 0, right: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 80% 70%, #F5A623 0%, transparent 50%)' }} />
-      </div>
-      
+    <section className="journey-section" ref={ref} aria-labelledby="journey-heading">
+      <div className="journey-section-glow" aria-hidden />
+
       <div className="container journey-container">
         <div className="journey-header">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="journey-eyebrow"
           >
             Milestones of Excellence
-          </motion.span>
+          </motion.p>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            id="journey-heading"
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.08 }}
             className="journey-title"
           >
-            <span className="journey-title-accent">Journey</span>
+            For Our <span className="journey-title-highlight">40 Year Journey</span>
           </motion.h2>
         </div>
 
         <div className="journey-stats-grid">
-          {stats.map((stat, idx) => (
-            <StatItem key={idx} {...stat} active={inView} />
+          {stats.map((stat) => (
+            <StatItem key={stat.label} {...stat} active={inView} />
           ))}
         </div>
       </div>

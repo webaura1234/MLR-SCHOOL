@@ -92,7 +92,7 @@ export default function HeroCarousel({
               fill
               priority={index === 0}
               loading={index === 0 ? 'eager' : 'lazy'}
-              sizes="100vw"
+              sizes="(min-width: 769px) 100vw, 1px"
               placeholder="blur"
             />
             <Image
@@ -102,7 +102,7 @@ export default function HeroCarousel({
               fill
               priority={index === 0}
               loading={index === 0 ? 'eager' : 'lazy'}
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 1px"
               placeholder="blur"
             />
             <div

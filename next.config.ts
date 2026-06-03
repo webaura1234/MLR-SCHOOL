@@ -96,6 +96,26 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'www.cmrschoollalgadimalakpet.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'mbgrammarschool.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: '*.supabase.co',
         pathname: '/storage/v1/object/public/**',
       },

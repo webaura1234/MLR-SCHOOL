@@ -20,5 +20,11 @@ if [[ ! -d node_modules ]]; then
   npm install
 fi
 
+if lsof -ti :3000 >/dev/null 2>&1; then
+  echo "→ Port 3000 in use — stopping old process"
+  lsof -ti :3000 | xargs kill -9 2>/dev/null || true
+  sleep 1
+fi
+
 echo "→ Starting dev server at http://127.0.0.1:3000"
 exec npx next dev --hostname 127.0.0.1 --port 3000 --webpack
