@@ -11,6 +11,8 @@ import { HOME_HERO_PATH, handleHomeHeroClick, isHomeNavActive } from '@/lib/goTo
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
+  const [suppressedDropdown, setSuppressedDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const { siteInfo } = useSiteInfo();
 
@@ -43,6 +45,7 @@ const Navbar = () => {
       path: '#',
       dropdown: [
         { name: 'About School', path: '/about' },
+        { name: "Principal's Desk", path: '/principal' },
         { name: 'Management Team', path: '/management-team' },
         { name: 'Vision & Mission', path: '/vision' },
       ],
@@ -69,7 +72,15 @@ const Navbar = () => {
         { name: 'Outdoor Games', path: '/co-curricular#outdoor' },
       ],
     },
-    { name: 'Gallery', path: '/gallery', galleryPill: true },
+    {
+      name: 'Gallery',
+      path: '#',
+      galleryPill: true,
+      dropdown: [
+        { name: 'Event Gallery', path: '/gallery' },
+        { name: 'Media Gallery', path: '/media-gallery' },
+      ],
+    },
     {
       name: 'Admissions',
       path: '#',
@@ -118,12 +129,29 @@ const Navbar = () => {
               <nav className="navbar-desktop" aria-label="Primary">
                 {navLinks.map((link) =>
                   'dropdown' in link && link.dropdown ? (
-                    <div key={link.name} className="navbar-dd">
-                      <div className="navbar-dd-trigger">
+                    <div
+                      key={link.name}
+                      className="navbar-dd"
+                      onMouseEnter={() => {
+                        if (suppressedDropdown !== link.name) {
+                          setHoveredDropdown(link.name);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredDropdown(null);
+                        setSuppressedDropdown(null);
+                      }}
+                    >
+                      <div 
+                        className={`navbar-dd-trigger 
+                          ${'galleryPill' in link && link.galleryPill ? 'navbar-desktop-link--gallery' : ''} 
+                          ${'galleryPill' in link && link.galleryPill && (pathname === '/gallery' || pathname === '/media-gallery') ? 'is-active' : ''}
+                        `}
+                      >
                         {link.name}
                         <ChevronDown size={14} strokeWidth={2.5} aria-hidden />
                       </div>
-                      <div className="navbar-dd-menu">
+                      <div className={`navbar-dd-menu ${hoveredDropdown === link.name ? 'is-visible' : ''}`}>
                         {link.dropdown.map((sub) => {
                           const subPath = sub.path.split('#')[0];
                           return (
@@ -131,7 +159,12 @@ const Navbar = () => {
                               key={sub.name}
                               href={sub.path}
                               className={`navbar-dd-item ${pathname === subPath ? 'is-active' : ''}`}
-                              onClick={closeMenu}
+                              onClick={(e) => {
+                                closeMenu();
+                                setHoveredDropdown(null);
+                                setSuppressedDropdown(link.name);
+                                (e.currentTarget as HTMLElement).blur();
+                              }}
                             >
                               {sub.name}
                             </Link>
@@ -162,8 +195,8 @@ const Navbar = () => {
                   <span>Call Us</span>
                 </a>
                 <Link href="/admission" className="navbar-cta" onClick={closeMenu}>
-                  <span className="navbar-cta-desktop">ADMISSIONS OPEN 2026–2027</span>
-                  <span className="navbar-cta-mobile">APPLY NOW</span>
+                  <span className="navbar-cta-desktop">ADMISSIONS OPEN 2026-27</span>
+                  <span className="navbar-cta-mobile">ADMISSIONS OPEN 2026-27</span>
                 </Link>
                 <button
                   type="button"
@@ -223,7 +256,7 @@ const Navbar = () => {
               ))}
               <div className="navbar-menu-ctas" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <Link href="/admission" className="navbar-menu-cta" onClick={closeMenu}>
-                  APPLY NOW
+                  ADMISSIONS OPEN 2026-27
                 </Link>
               </div>
             </nav>

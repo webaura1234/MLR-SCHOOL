@@ -22,7 +22,7 @@ const About = () => {
           : 'full';
 
   const showVision = mode === 'full' || mode === 'vision';
-  const showPrincipal = false;
+  const showPrincipal = mode === 'full' || mode === 'principal';
   const showManagement = mode === 'full' || mode === 'management';
   const showSalient = mode === 'full';
 
@@ -137,12 +137,12 @@ const About = () => {
               <motion.div className="polaroid-card" whileHover={{ rotate: 0 }}>
                 <div className="polaroid-taped"></div>
                 <OptimizedImage
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
+                  src="/images/principal-anitha-reddy.jpg"
                   alt="Principal"
-                  aspectRatio="1/1"
+                  aspectRatio="4/5"
                 />
                 <div className="text-center" style={{ marginTop: '1rem' }}>
-                  <h4 style={{ fontWeight: 800 }}>Dr. Anitha Reddy</h4>
+                  <h4 style={{ fontWeight: 800 }}>Swathi Vattikota</h4>
                   <p style={{ color: 'var(--primary)', fontWeight: 600 }}>Principal</p>
                 </div>
               </motion.div>

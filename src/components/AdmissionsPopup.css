@@ -13,6 +13,8 @@
 .admissions-pop-card {
   position: relative;
   width: min(92vw, 520px);
+  max-height: 90svh;
+  overflow-y: auto;
   border-radius: 22px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -34,6 +36,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 10;
 }
 
 .admissions-pop-close:hover {
@@ -116,5 +119,117 @@
 
 .admissions-pop-secondary:hover {
   background: rgba(15, 23, 42, 0.09);
+}
+
+/* Enquiry Form Styling */
+.admissions-pop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.admissions-pop-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.admissions-pop-form-group label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e293b;
+  text-align: left;
+}
+
+.admissions-pop-form-group input, 
+.admissions-pop-form-group select, 
+.admissions-pop-form-group textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  color: #0f172a;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admissions-pop-form-group input:focus, 
+.admissions-pop-form-group select:focus, 
+.admissions-pop-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(13, 182, 181, 0.1);
+}
+
+.admissions-pop-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ef4444;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+.admissions-pop-submit-btn {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1rem;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 20px rgba(13, 182, 181, 0.2);
+  margin-top: 0.5rem;
+}
+
+.admissions-pop-submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.admissions-pop-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admissions-pop-primary-btn {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1rem;
+  box-shadow: 0 14px 28px rgba(13, 182, 181, 0.2);
+}
+
+.admissions-pop-primary-btn:hover {
+  background: var(--primary-dark);
 }
 

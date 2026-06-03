@@ -4,6 +4,16 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   /** Hides the Next.js dev-tools indicator (circular N) in development */
   devIndicators: false,
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+        ignored: ['**/node_modules/**'],
+      };
+    }
+    return config;
+  },
   turbopack: {
     // Ensure Turbopack resolves deps from this app folder,
     // even if parent directories contain unrelated lockfiles.

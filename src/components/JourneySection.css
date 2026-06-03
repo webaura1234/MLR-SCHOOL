@@ -205,13 +205,13 @@
 
 @media (min-width: 900px) {
   .journey-stats-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
   .journey-stats-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;

@@ -48,7 +48,7 @@ const MANAGEMENT_TEAM: ManagementMember[] = [
     message: "As the Dean of MRGI, it gives me immense pleasure to extend a warm welcome to all of you to Malla Reddy School. We believe in nurturing young minds and fostering a holistic learning environment that empowers students to excel academically, socially, and personally. Our commitment to providing quality education is unwavering, and we strive to create an atmosphere where students feel supported and inspired."
   },
   {
-    name: "Dr. Anitha Reddy",
+    name: "Swathi Vattikota",
     title: "Principal, Malla Reddy School – Medchal",
     image: "/images/principal-anitha-reddy.jpg",
     fullPhoto: true,

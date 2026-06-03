@@ -42,6 +42,9 @@ const Admission = () => {
       }
 
       setStatus('success');
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('hasSubmittedAdmissionsEnquiry', 'true');
+      }
       setFormData({
         studentName: '',
         className: '',

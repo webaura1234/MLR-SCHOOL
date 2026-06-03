@@ -9,8 +9,7 @@ import "./JourneySection.css";
 
 const stats = [
   { label: "YEARS OF EXCELLENCE", end: 40, suffix: "+", icon: <Award size={22} /> },
-  { label: "SMART CLASSROOMS", end: 40, suffix: "+", icon: <Building2 size={22} /> },
-  { label: "BOARD PASS RATE", end: 100, suffix: "%", icon: <GraduationCap size={22} /> },
+  { label: "SMART CLASSROOMS", end: 15, suffix: "+", icon: <Building2 size={22} /> },
   { label: "ACRES OF CAMPUS", end: 5, suffix: "+", icon: <Globe size={22} /> },
   { label: "MODERN LABS", end: 15, suffix: "+", icon: <Monitor size={22} /> },
 ];

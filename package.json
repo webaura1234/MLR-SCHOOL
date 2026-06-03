@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev --hostname 127.0.0.1",
+    "dev": "bash scripts/dev-local.sh",
+    "dev:icloud": "node scripts/dev.mjs",
     "build": "next build",
     "postbuild": "node scripts/generate-sitemap.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
