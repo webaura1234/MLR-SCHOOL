@@ -9,9 +9,14 @@ import './AdmissionsPopup.css';
 type AdmissionsPopupProps = {
   enabled?: boolean;
   intervalMs?: number;
+  initialDelayMs?: number;
 };
 
-export default function AdmissionsPopup({ enabled = true, intervalMs = 30_000 }: AdmissionsPopupProps) {
+export default function AdmissionsPopup({ 
+  enabled = true, 
+  intervalMs = 30_000,
+  initialDelayMs = 5_000
+}: AdmissionsPopupProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -43,15 +48,15 @@ export default function AdmissionsPopup({ enabled = true, intervalMs = 30_000 }:
 
     const openIfClosed = () => setIsOpen((prev) => (prev ? prev : true));
 
-    // First popup after 30 seconds, then repeat every 30 seconds.
-    const timeoutId = window.setTimeout(openIfClosed, intervalMs);
+    // First popup after initialDelayMs, then repeat every intervalMs.
+    const timeoutId = window.setTimeout(openIfClosed, initialDelayMs);
     const intervalId = window.setInterval(openIfClosed, intervalMs);
 
     return () => {
       window.clearTimeout(timeoutId);
       window.clearInterval(intervalId);
     };
-  }, [enabled, intervalMs, mounted, hasSubmitted]);
+  }, [enabled, intervalMs, initialDelayMs, mounted, hasSubmitted]);
 
   useEffect(() => {
     if (!isOpen) return;

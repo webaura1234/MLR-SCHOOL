@@ -48,7 +48,11 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
         <Footer />
         <ContactFab />
         <CallFab />
-        <AdmissionsPopup enabled={!showPreloader && !isAdmissionPage} intervalMs={30_000} />
+        <AdmissionsPopup 
+          enabled={!showPreloader && !isAdmissionPage} 
+          initialDelayMs={5_000} 
+          intervalMs={30_000} 
+        />
       </div>
     </>
   );
