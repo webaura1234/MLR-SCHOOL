@@ -4,36 +4,42 @@ export type Campus = {
   image: string;
 };
 
+/** Append "School" at the end when the name does not already include it */
+export function formatCampusName(name: string): string {
+  if (/\bschool\b/i.test(name)) return name;
+  return `${name.trimEnd()} School`;
+}
+
 /** Campus photos served locally — avoids hotlink / Next image optimizer failures */
 export const OUR_CAMPUSES: Campus[] = [
   {
-    name: 'CMR International, Suraram',
+    name: formatCampusName('CMR International, Suraram'),
     image: '/images/campuses/suraram.webp',
   },
   {
-    name: 'CMR School, Kompally',
+    name: formatCampusName('CMR School, Kompally'),
     image: '/images/campuses/kompally.webp',
   },
   {
-    name: 'CMR International School, Shapur',
+    name: formatCampusName('CMR International School, Shapur'),
     image: '/images/campuses/shapur.webp',
   },
   {
-    name: 'MB Grammar School, Jeedimetla',
+    name: formatCampusName('MB Grammar School, Jeedimetla'),
     image: '/images/campuses/jeedimetla.jpg',
   },
   {
-    name: 'CMR School Lalgadi Malakpet',
+    name: formatCampusName('CMR School Lalgadi Malakpet'),
     board: 'CBSE curriculum',
     image: '/images/campuses/lalgadi.webp',
   },
   {
-    name: 'Malla Reddy School, Medchal',
+    name: formatCampusName('Malla Reddy School, Medchal'),
     board: 'CBSE curriculum',
     image: '/images/campuses/medchal.jpg',
   },
   {
-    name: 'CMR Kundanpally',
+    name: formatCampusName('CMR Kundanpally'),
     image: '/images/campuses/kundanpally.webp',
   },
 ];

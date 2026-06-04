@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useSiteInfo } from '@/lib/useSiteInfo';
+import { trackWhatsAppClick } from '@/lib/googleAds';
 import './ContactFab.css';
 
 function WhatsAppIcon({ size = 22 }: { size?: number }) {
@@ -35,6 +36,7 @@ export default function ContactFab() {
       title="Chat on WhatsApp"
       target="_blank"
       rel="noreferrer"
+      onClick={() => trackWhatsAppClick('contact_fab')}
     >
       <WhatsAppIcon size={22} />
     </a>

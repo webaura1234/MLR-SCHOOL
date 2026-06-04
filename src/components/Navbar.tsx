@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import './Navbar.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
+import { trackPhoneClick } from '@/lib/googleAds';
 import { HOME_HERO_PATH, handleHomeHeroClick, isHomeNavActive } from '@/lib/goToHomeHero';
 
 const Navbar = () => {
@@ -190,7 +191,14 @@ const Navbar = () => {
               </nav>
 
               <div className="navbar-end">
-                <a href={`tel:${siteInfo.phoneTel}`} className="navbar-call-btn" onClick={closeMenu}>
+                <a
+                  href={`tel:${siteInfo.phoneTel}`}
+                  className="navbar-call-btn"
+                  onClick={() => {
+                    trackPhoneClick('navbar');
+                    closeMenu();
+                  }}
+                >
                   <Phone size={16} />
                   <span>Call Us</span>
                 </a>

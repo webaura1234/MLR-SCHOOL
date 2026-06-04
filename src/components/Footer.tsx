@@ -8,6 +8,7 @@ import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import './Footer.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 import { CARD_BLUR } from '@/lib/blurPlaceholder';
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/googleAds';
 import { HOME_HERO_PATH, handleHomeHeroClick } from '@/lib/goToHomeHero';
 
 const InstagramIcon = (props: SVGProps<SVGSVGElement>) => (
@@ -116,7 +117,11 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <Phone size={20} strokeWidth={2} aria-hidden />
-                <a href={`tel:${siteInfo.phoneTel}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                <a
+                  href={`tel:${siteInfo.phoneTel}`}
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  onClick={() => trackPhoneClick('footer')}
+                >
                   {siteInfo.phoneDisplay}
                 </a>
               </div>
@@ -135,6 +140,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                   style={{ color: 'inherit', textDecoration: 'none' }}
+                  onClick={() => trackWhatsAppClick('footer')}
                 >
                   WhatsApp: {siteInfo.whatsappDisplay}
                 </a>

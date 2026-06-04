@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import OptimizedImage from '../components/OptimizedImage';
+import { trackAdmissionSubmit, trackPhoneClick } from '@/lib/googleAds';
 import './Admission.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 
@@ -42,6 +43,7 @@ const Admission = () => {
       }
 
       setStatus('success');
+      trackAdmissionSubmit('admission_page');
       if (typeof window !== 'undefined') {
         localStorage.setItem('hasSubmittedAdmissionsEnquiry', 'true');
       }
@@ -132,6 +134,7 @@ const Admission = () => {
                   <a
                     href={`tel:${siteInfo.phoneTel}`}
                     style={{ color: '#0DB6B5', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}
+                    onClick={() => trackPhoneClick('admission_page')}
                   >
                     call us directly
                   </a>

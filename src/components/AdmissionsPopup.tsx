@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { trackAdmissionSubmit } from '@/lib/googleAds';
 import './AdmissionsPopup.css';
 
 type AdmissionsPopupProps = {
@@ -93,6 +94,7 @@ export default function AdmissionsPopup({
       }
 
       setStatus('success');
+      trackAdmissionSubmit('admissions_popup');
       if (typeof window !== 'undefined') {
         localStorage.setItem('hasSubmittedAdmissionsEnquiry', 'true');
         setHasSubmitted(true);
