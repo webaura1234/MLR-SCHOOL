@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Choosing the right CBSE school in Medchal is one of the most important decisions a parent can make. This guide helps you evaluate options, ask the right questions, and find the best fit for your child.',
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school in Hyderabad',
     intro:
       "Medchal has grown rapidly as a residential hub on the northern edge of Hyderabad. With that growth has come a surge in school options — and for parents, more choices can mean more confusion. If you are searching for the right CBSE school in Medchal for your child, this guide will help you cut through the noise, ask the right questions, and make a confident decision.",
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Families in Medchal no longer need to commute into central Hyderabad for quality CBSE schooling. Here is why the Medchal area has become a preferred destination for parents seeking great schools close to home.',
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school near Hyderabad Outer Ring Road',
     intro:
       "A decade ago, families living in Medchal and the surrounding areas often faced a difficult choice: commute children long distances to well-known schools in Hyderabad, or settle for limited local options. That picture has changed significantly. Medchal has grown into a well-connected residential area with quality CBSE schools — and families are increasingly choosing to school their children locally.",
@@ -1003,7 +1003,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       "Hyderabad's Outer Ring Road corridor has seen rapid residential growth. Families in areas like Medchal, Kompally, and Shamirpet now have access to CBSE schools without long city commutes. Here's what to look for.",
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'CBSE school near Outer Ring Road Hyderabad — Malla Reddy School Medchal',
     intro:
       "Hyderabad's Outer Ring Road (ORR) has transformed access across the city. For families living along the northern ORR corridor — in areas such as Medchal, Kompally, Dundigal, and Shamirpet — the question of quality schooling has become much easier to answer. Several established CBSE schools now operate in this corridor, offering families genuine alternatives to long commutes into the city.",
@@ -1558,7 +1558,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'School Admissions',
     excerpt: 'With dozens of schools to choose from in Hyderabad, parents often feel overwhelmed. This practical guide cuts through the noise and shows you exactly what to look for.',
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'Parents choosing the right school in Hyderabad — Malla Reddy School Medchal',
     intro: 'Choosing a school is one of the most consequential decisions a parent makes for their child. In Hyderabad, the number of options — CBSE, ICSE, state board, international — can make the process feel overwhelming. This guide gives you a clear, practical framework for making the right choice.',
     sections: [
@@ -2216,7 +2216,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "Parent-teacher meetings are often brief, awkward, and under-used. Here is how to turn them into genuinely useful conversations about your child.",
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: "Parent-teacher communication at Malla Reddy School Medchal",
     intro: "The parent-teacher relationship is one of the most important partnerships in a child's education — and one of the most under-utilised. Many parents speak to their child's teacher only at formal meetings, and those conversations are often brief and one-directional. Here is how to make them genuinely useful.",
     sections: [
@@ -2680,7 +2680,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Local SEO',
     excerpt: "Medchal has transformed from a peripheral town into one of Hyderabad's preferred family residential destinations. Here is what families moving to the area need to know.",
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'Medchal Hyderabad — schools and family life near Malla Reddy School',
     intro: "Medchal, located in the Medchal-Malkajgiri district on the northern edge of Hyderabad, has undergone significant transformation over the past decade. What was once a predominantly agricultural area adjacent to the city has grown into an established residential and educational hub — attracting families who want proximity to Hyderabad's employment centres without the cost and congestion of city-centre living.",
     sections: [
@@ -3309,7 +3309,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: 'Research is clear that parental involvement improves academic outcomes — up to a point. Here is what helpful involvement looks like and where it becomes harmful.',
-    coverImage: '/images/hero-malla-reddy.png',
+    coverImage: '/images/hero-aspirational.png',
     coverImageAlt: 'Parent engaging with school at Malla Reddy School Medchal — right level of involvement',
     intro: 'Parental involvement in school education is consistently associated with better academic outcomes, higher attendance, and stronger social adjustment. But there is a significant difference between supportive involvement — staying informed, communicating with teachers, supporting learning at home — and over-involvement that denies children the independence they need to develop. Here is how to get the balance right.',
     sections: [
