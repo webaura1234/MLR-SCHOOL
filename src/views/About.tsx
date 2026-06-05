@@ -29,39 +29,39 @@ const About = () => {
   const hero =
     mode === 'vision'
       ? {
-          title: (
-            <>
-              Vision <span className="text-primary">&amp; Mission</span>
-            </>
-          ),
-          lead: 'Our purpose and promise to every learner — aligned with CBSE excellence and whole-child growth.',
-        }
+        title: (
+          <>
+            Vision <span className="text-primary">&amp; Mission</span>
+          </>
+        ),
+        lead: 'Our purpose and promise to every learner — aligned with CBSE excellence and whole-child growth.',
+      }
       : mode === 'principal'
         ? {
-            title: (
-              <>
-                Principal&apos;s <span className="text-primary">Desk</span>
-              </>
-            ),
-            lead: 'A message from our leadership on learning, care, and community.',
-          }
+          title: (
+            <>
+              Principal&apos;s <span className="text-primary">Desk</span>
+            </>
+          ),
+          lead: 'A message from our leadership on learning, care, and community.',
+        }
         : mode === 'management'
           ? {
-              title: (
-                <>
-                  Leadership &amp; <span className="text-primary">Management</span>
-                </>
-              ),
-              lead: 'Governance, oversight, and the people guiding Malla Reddy School.',
-            }
+            title: (
+              <>
+                Leadership &amp; <span className="text-primary">Management</span>
+              </>
+            ),
+            lead: 'Governance, oversight, and the people guiding Malla Reddy School.',
+          }
           : {
-              title: (
-                <>
-                  About <span className="text-primary">Malla Reddy School</span>
-                </>
-              ),
-              lead: 'A legacy of excellence, innovation, and community.',
-            };
+            title: (
+              <>
+                About <span className="text-primary">Malla Reddy School</span>
+              </>
+            ),
+            lead: 'A legacy of excellence, innovation, and community.',
+          };
 
   return (
     <div className="about-page">
@@ -138,7 +138,7 @@ const About = () => {
                 <div className="polaroid-taped"></div>
                 <OptimizedImage
                   src="/images/principal-anitha-reddy.jpg"
-                  alt="Principal"
+                  alt="Swathi Vattikota, Principal of Malla Reddy School Medchal"
                   aspectRatio="4/5"
                 />
                 <div className="text-center" style={{ marginTop: '1rem' }}>

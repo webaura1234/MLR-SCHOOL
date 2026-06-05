@@ -55,10 +55,10 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     images: [
       {
-        url: '/logo.png',
-        width: 512,
-        height: 512,
-        alt: 'Malla Reddy School',
+        url: '/malla-reddy-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Malla Reddy School Medchal — Leading CBSE School in Hyderabad',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: DEFAULT_SEO_TITLE,
     description: DEFAULT_SEO_DESCRIPTION,
-    images: ['/logo.png'],
+    images: ['/malla-reddy-hero.jpg'],
   },
   icons: {
     icon: [
@@ -81,11 +81,15 @@ export const metadata: Metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#0A2463' },
+    { media: '(prefers-color-scheme: dark)',  color: '#0A2463' },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en-IN" data-scroll-behavior="smooth" className={`${sans.variable} ${serif.variable}`}>
       <body>
         <GoogleTagLoader />
         <MetaPixelLoader />

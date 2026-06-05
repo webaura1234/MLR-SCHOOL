@@ -105,7 +105,7 @@ const LifeAtSchool = () => {
             <div className="campus-image">
               <OptimizedImage 
                 src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" 
-                alt="Infrastructure" 
+                alt="Modern infrastructure and classrooms at Malla Reddy School Medchal" 
                 className="rounded-image shadow-image hover-zoom" 
                 aspectRatio="16/9"
               />
@@ -129,7 +129,7 @@ const LifeAtSchool = () => {
             <div className="campus-image">
               <OptimizedImage 
                 src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800" 
-                alt="Sports" 
+                alt="Students participating in sports and physical education at Malla Reddy School Medchal" 
                 className="rounded-image shadow-image hover-zoom"
                 aspectRatio="16/9"
               />

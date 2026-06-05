@@ -75,7 +75,7 @@ const Competitions = () => {
             <div className="main-image">
               <Image 
                 src="https://images.unsplash.com/photo-1578262825743-a4e402caab76?q=80&w=1200" 
-                alt="Award Ceremony"
+                alt="Students receiving awards at a school competition — Malla Reddy School Medchal"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 placeholder="blur"
@@ -148,7 +148,7 @@ const Competitions = () => {
             <div className="overview-visual" style={{ position: 'relative', height: '350px', borderRadius: '2rem', overflow: 'hidden' }}>
               <Image 
                 src="https://images.unsplash.com/photo-1526676037777-05a232554f75?q=80&w=800" 
-                alt="Legacy of Achievers"
+                alt="Wall of fame celebrating student achievers at Malla Reddy School Medchal"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 placeholder="blur"

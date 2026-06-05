@@ -114,7 +114,7 @@ const Navbar = () => {
                 <span className="navbar-logo-badge" aria-hidden="true">
                   <img
                     src="/logo.png"
-                    alt=""
+                    alt="Malla Reddy School logo"
                     width={170}
                     height={80}
                     loading="eager"
@@ -143,7 +143,7 @@ const Navbar = () => {
                         setSuppressedDropdown(null);
                       }}
                     >
-                      <div 
+                      <div
                         className={`navbar-dd-trigger 
                           ${'galleryPill' in link && link.galleryPill ? 'navbar-desktop-link--gallery' : ''} 
                           ${'galleryPill' in link && link.galleryPill && (pathname === '/gallery' || pathname === '/media-gallery') ? 'is-active' : ''}
@@ -162,9 +162,7 @@ const Navbar = () => {
                               className={`navbar-dd-item ${pathname === subPath ? 'is-active' : ''}`}
                               onClick={(e) => {
                                 closeMenu();
-                                setHoveredDropdown(null);
-                                setSuppressedDropdown(link.name);
-                                (e.currentTarget as HTMLElement).blur();
+                                e.currentTarget.blur();
                               }}
                             >
                               {sub.name}

@@ -118,7 +118,7 @@ const Gallery = ({ items }: GalleryProps) => {
                   <span className="gallery-preview-frame" style={{ position: 'relative' }}>
                     <Image
                       src={item.src}
-                      alt=""
+                      alt={item.title}
                       fill
                       className="gallery-preview-img"
                       sizes={

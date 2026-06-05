@@ -2,11 +2,22 @@ import Blog from '@/views/Blog';
 import { fetchDataFromSheet } from '@/lib/sheets';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
 import { constructMetadata } from '@/lib/seo';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata = constructMetadata({
-  title: 'News & Blog',
-  description: 'Latest news, events, and stories from the Malla Reddy School campus.',
+  title: 'School Blog & News | Malla Reddy School Medchal',
+  description:
+    'Stay updated with the latest news, events, parenting tips, and education insights from Malla Reddy School Medchal. Read expert articles on CBSE education, STEAM learning, and school admissions in Hyderabad.',
   path: '/blog',
+  keywords: [
+    'Malla Reddy School blog',
+    'CBSE school news Medchal',
+    'school events Hyderabad',
+    'parenting education tips Hyderabad',
+    'STEAM education articles',
+    'school admissions guide Hyderabad',
+    'Malla Reddy Schools news',
+  ],
 });
 
 const NEWS_SHEET_URL =
@@ -38,5 +49,15 @@ export default async function Page() {
     })),
   );
 
-  return <Blog posts={postsWithBlur} />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Blog', href: '/blog' },
+        ]}
+      />
+      <Blog posts={postsWithBlur} />
+    </>
+  );
 }

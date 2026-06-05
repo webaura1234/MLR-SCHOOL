@@ -18,7 +18,7 @@ interface ConstructMetadataProps {
 export function constructMetadata({
   title = DEFAULT_SEO_TITLE,
   description = DEFAULT_SEO_DESCRIPTION,
-  image = '/logo.png',
+  image = '/malla-reddy-hero.jpg',
   path = '',
   keywords = [...SITE_KEYWORDS],
   noIndex = false,
@@ -32,11 +32,12 @@ export function constructMetadata({
       description,
       url: path === '' ? '/' : path,
       siteName: 'Malla Reddy School',
+      locale: 'en_IN',
       images: [
         {
           url: image,
-          width: 512,
-          height: 512,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
@@ -49,6 +50,8 @@ export function constructMetadata({
       images: [image],
     },
     alternates: {
+      // Next.js resolves relative paths against metadataBase (set in layout.tsx).
+      // e.g. '/admission' → 'https://www.mallareddyschool.com/admission'
       canonical: path === '' ? '/' : path,
     },
     ...(noIndex && {
