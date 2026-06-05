@@ -22,7 +22,7 @@ const About = () => {
           : 'full';
 
   const showVision = mode === 'full' || mode === 'vision';
-  const showPrincipal = false;
+  const showPrincipal = mode === 'full' || mode === 'principal';
   const showManagement = mode === 'full' || mode === 'management';
   const showSalient = mode === 'full';
 
@@ -138,7 +138,7 @@ const About = () => {
                 <div className="polaroid-taped"></div>
                 <OptimizedImage
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
-                  alt="Principal"
+                  alt="Dr. Anitha Reddy, Principal of Malla Reddy School Medchal"
                   aspectRatio="1/1"
                 />
                 <div className="text-center" style={{ marginTop: '1rem' }}>

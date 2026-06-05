@@ -2,11 +2,20 @@ import Gallery from '@/views/Gallery';
 import { fetchGalleryItemsFromPublishedSheet } from '@/lib/galleryFromPublishedSheet';
 import { getBlurDataURL } from '@/lib/getBlurDataURL';
 import { constructMetadata } from '@/lib/seo';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export const metadata = constructMetadata({
-  title: 'Gallery',
-  description: 'Glimpses of life at Malla Reddy School.',
+  title: 'School Gallery | Campus Life at Malla Reddy School Medchal',
+  description:
+    'Browse photos from Malla Reddy School Medchal — classrooms, labs, sports, events, arts, and everyday campus life. See what learning looks like at our CBSE school in Hyderabad.',
   path: '/gallery',
+  keywords: [
+    'Malla Reddy School gallery',
+    'school campus photos Medchal',
+    'CBSE school campus Hyderabad',
+    'school life photos Medchal',
+    'Malla Reddy School campus',
+  ],
 });
 
 export default async function GalleryPage() {
@@ -18,5 +27,15 @@ export default async function GalleryPage() {
     })),
   );
 
-  return <Gallery items={itemsWithBlur} />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Gallery', href: '/gallery' },
+        ]}
+      />
+      <Gallery items={itemsWithBlur} />
+    </>
+  );
 }

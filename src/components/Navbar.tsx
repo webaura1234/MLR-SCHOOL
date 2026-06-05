@@ -102,7 +102,7 @@ const Navbar = () => {
                 <span className="navbar-logo-badge" aria-hidden="true">
                   <img
                     src="/logo.png"
-                    alt=""
+                    alt="Malla Reddy School logo"
                     width={170}
                     height={80}
                     loading="eager"
@@ -131,7 +131,10 @@ const Navbar = () => {
                               key={sub.name}
                               href={sub.path}
                               className={`navbar-dd-item ${pathname === subPath ? 'is-active' : ''}`}
-                              onClick={closeMenu}
+                              onClick={(e) => {
+                                closeMenu();
+                                e.currentTarget.blur();
+                              }}
                             >
                               {sub.name}
                             </Link>

@@ -74,7 +74,7 @@ const Footer = () => {
               <span className="footer-logo-mark">
                 <Image
                   src="/logo.png"
-                  alt=""
+                  alt="Malla Reddy School logo"
                   width={170}
                   height={80}
                   className="logo-img"
@@ -146,13 +146,19 @@ const Footer = () => {
             <h4 className="footer-title">Academics</h4>
             <ul className="footer-links">
               <li>
-                <Link href="/curriculum">Curriculum</Link>
+                <Link href="/admission">Admissions 2026-27</Link>
+              </li>
+              <li>
+                <Link href="/curriculum">CBSE Curriculum</Link>
+              </li>
+              <li>
+                <Link href="/iit-foundation">IIT Foundation</Link>
               </li>
               <li>
                 <Link href="/labs">Laboratories</Link>
               </li>
               <li>
-                <Link href="/utility">Disclosure</Link>
+                <Link href="/co-curricular">Co-Curricular</Link>
               </li>
               <li>
                 <Link href="/contact">Contact Us</Link>
@@ -167,22 +173,22 @@ const Footer = () => {
                 <Link href="/about">About School</Link>
               </li>
               <li>
-                <Link href="/achievers">Achievers Wall</Link>
+                <Link href="/blog">Blog</Link>
               </li>
               <li>
-                <Link href="/blog">School News</Link>
+                <Link href="/testimonials">Parent Testimonials</Link>
+              </li>
+              <li>
+                <Link href="/competitions">Olympiads &amp; Competitions</Link>
               </li>
               <li>
                 <Link href="/gallery">Gallery</Link>
               </li>
               <li>
+                <Link href="/achievers">Achievers Wall</Link>
+              </li>
+              <li>
                 <Link href="/careers">Careers</Link>
-              </li>
-              <li>
-                <Link href="/co-curricular">Co-Curricular</Link>
-              </li>
-              <li>
-                <Link href="/admission">Admission</Link>
               </li>
             </ul>
           </div>

@@ -386,7 +386,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                     {photo.src && (photo.src.startsWith('http') || photo.src.startsWith('/')) && (
                       <Image
                         src={photo.src}
-                        alt=""
+                        alt={photo.title}
                         fill
                         className="gallery-preview-img"
                         sizes={
