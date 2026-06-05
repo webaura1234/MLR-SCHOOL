@@ -77,11 +77,6 @@ const admissionRelatedLinks = [
     description: 'Sports, arts, music, and performing arts programs.',
   },
   {
-    label: 'Parent Testimonials',
-    href: '/testimonials',
-    description: "What parents say about Malla Reddy School.",
-  },
-  {
     label: 'School Admissions Guide',
     href: '/blog/school-admissions-2026-27-hyderabad-what-parents-need-to-know',
     description: 'Read our complete parent guide to school admissions 2026-27.',

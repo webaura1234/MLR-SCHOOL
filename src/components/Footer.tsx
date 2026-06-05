@@ -39,17 +39,17 @@ const socialLinks = [
   },
   {
     label: 'X',
-    href: 'https://x.com/malla_reddy_scl',
+    href: 'https://x.com/mallareddyschl',
     icon: <span className="social-x-icon" aria-hidden>X</span>,
   },
   {
     label: 'YouTube',
-    href: 'https://www.youtube.com/@MALLAREDDYSCHOOLS',
+    href: 'https://www.youtube.com/@mallareddyschool_medchal',
     icon: <YouTubeIcon width={21} height={21} />,
   },
   {
     label: 'Facebook',
-    href: 'https://www.facebook.com/profile.php?id=61589149336453',
+    href: 'https://www.facebook.com/people/Malla-Reddy-School-Medchal/61590200867782/',
     icon: <FacebookIcon width={20} height={20} />,
   },
 ];
@@ -152,19 +152,10 @@ const Footer = () => {
             <h4 className="footer-title">Academics</h4>
             <ul className="footer-links">
               <li>
-                <Link href="/admission">Admissions 2026-27</Link>
-              </li>
-              <li>
-                <Link href="/curriculum">CBSE Curriculum</Link>
-              </li>
-              <li>
-                <Link href="/iit-foundation">IIT Foundation</Link>
+                <Link href="/curriculum">Curriculum</Link>
               </li>
               <li>
                 <Link href="/labs">Laboratories</Link>
-              </li>
-              <li>
-                <Link href="/co-curricular">Co-Curricular</Link>
               </li>
               <li>
                 <Link href="/contact">Contact Us</Link>
@@ -179,22 +170,22 @@ const Footer = () => {
                 <Link href="/about">About School</Link>
               </li>
               <li>
+                <Link href="/achievers">Achievers Wall</Link>
+              </li>
+              <li>
                 <Link href="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="/testimonials">Parent Testimonials</Link>
-              </li>
-              <li>
-                <Link href="/competitions">Olympiads &amp; Competitions</Link>
               </li>
               <li>
                 <Link href="/gallery">Gallery</Link>
               </li>
               <li>
-                <Link href="/achievers">Achievers Wall</Link>
+                <Link href="/careers">Careers</Link>
               </li>
               <li>
-                <Link href="/careers">Careers</Link>
+                <Link href="/co-curricular">Co-Curricular</Link>
+              </li>
+              <li>
+                <Link href="/admission">Admission</Link>
               </li>
             </ul>
           </div>

@@ -417,7 +417,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Parenting Guides',
     excerpt:
       "The pre-primary years are the most foundational stage of a child's education. Choosing the right school for Nursery, LKG, or UKG in Medchal sets the tone for everything that follows.",
-    coverImage: '/images/programs/pre-primary.png',
+    coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: 'Pre-primary students learning through play at Malla Reddy School Medchal',
     intro:
       "Research consistently shows that the quality of a child's early years education has a lasting impact on their academic performance, social skills, and emotional wellbeing. If you are looking for a pre-primary school in Medchal, this guide will help you understand what to look for and what questions to ask.",
@@ -714,7 +714,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'CBSE Education',
     excerpt:
       "CBSE is India's most widely recognised school board — but many parents are unsure what the curriculum actually covers and how it works. This guide breaks it down clearly.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Primary school students in a CBSE classroom at Malla Reddy School Medchal',
     intro:
       "The Central Board of Secondary Education (CBSE) is the most widely followed school board in India. If your child attends or is about to join a CBSE school, understanding how the curriculum works helps you support their learning more effectively at home. This guide explains the CBSE curriculum in straightforward terms — no jargon.",
@@ -813,7 +813,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Parenting Guides',
     excerpt:
       "Play is not the opposite of learning — for young children, play is learning. Here's why play-based education in pre-primary school builds the foundation for everything that follows.",
-    coverImage: '/images/programs/pre-primary.png',
+    coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: 'Pre-primary children engaged in play-based learning at Malla Reddy School Medchal',
     intro:
       "When parents walk into a pre-primary classroom and see children building with blocks, painting, role-playing, or sorting coloured shapes, they sometimes wonder: where is the actual learning? The answer is: everywhere. Play-based learning is one of the most evidence-supported approaches in early childhood education, and it underpins everything good pre-primary programs do.",
@@ -1391,7 +1391,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Parenting Guides',
     excerpt:
       "Homework is one of the most friction-filled parts of a school day for families. These practical strategies help you support your child's learning without creating dependency or nightly battles.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: 'Middle school student completing homework — study support tips for parents',
     intro:
       "For many families, the homework hour is the most stressful part of the school day. Parents face a genuine dilemma: help too much, and the child learns to depend on you rather than developing their own skills; help too little, and the child falls behind or feels unsupported. The goal is to be present and supportive without becoming the one who actually does the thinking.",
@@ -1648,7 +1648,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'CBSE Education',
     excerpt: "CBSE or ICSE? It's one of the most common questions parents ask when choosing a school. Here's a clear, honest comparison to help you decide.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Comparing CBSE and ICSE school boards for children in India',
     intro: 'When parents start researching schools in India, the CBSE vs ICSE question comes up quickly. Both are nationally recognised, both produce excellent students, and both have passionate advocates. The right answer depends on your child, your family circumstances, and what you value in an education.',
     sections: [
@@ -1687,7 +1687,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'CBSE Education',
     excerpt: 'For parents in Hyderabad and Telangana, the choice between CBSE and the State Board is common. Here is an honest comparison of what each offers.',
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: 'Comparing CBSE and Telangana State Board schools in Hyderabad',
     intro: 'For families in Telangana, the two most common schooling choices are CBSE and the Telangana State Board. Both are legitimate educational pathways, but they differ significantly in curriculum scope, examination structure, and national portability. Here is what you need to know.',
     sections: [
@@ -1793,7 +1793,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: 'Nursery, LKG, UKG — three pre-primary stages that lay the foundation for everything that follows. Here is what each stage covers and when your child should join.',
-    coverImage: '/images/programs/pre-primary.png',
+    coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: 'Pre-primary children in Nursery, LKG and UKG at Malla Reddy School Medchal',
     intro: 'If you are enrolling your child in pre-primary school for the first time, the three-stage structure of Nursery, LKG (Lower Kindergarten), and UKG (Upper Kindergarten) can be confusing. Each stage has a distinct developmental focus, and understanding the progression helps you set appropriate expectations for your child at each level.',
     sections: [
@@ -1835,7 +1835,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "The first day of school is one of the most significant transitions in a young child's life. A little preparation goes a long way in making it positive.",
-    coverImage: '/images/programs/pre-primary.png',
+    coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: "A young child's first day at Malla Reddy School Medchal — preparation tips for parents",
     intro: "For many young children, the first day of school is the first time they have been separated from their parents in a structured setting. It is normal for children — and parents — to feel anxious. The good news is that a few deliberate steps in the days and weeks before school begins can make the transition significantly smoother.",
     sections: [
@@ -2029,7 +2029,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'Education Trends',
     excerpt: "NEP 2020 is India's most significant education reform in 34 years. Here is what it actually means for your child's school experience, without the jargon.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "NEP 2020 education reform impact on school children in India",
     intro: "India's National Education Policy 2020 (NEP 2020) is the most comprehensive overhaul of the country's education system since 1986. Approved by the Union Cabinet in July 2020, it introduces fundamental changes to how schools are structured, what children learn, and how they are assessed. Here is what parents need to understand.",
     sections: [
@@ -2107,7 +2107,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Student Development',
     excerpt: 'A child who earns top marks but cannot handle setbacks, work in a team, or manage frustration will struggle in ways grades cannot predict. Emotional intelligence changes that.',
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Students developing emotional intelligence through group activities at Malla Reddy School Medchal',
     intro: "Emotional intelligence (EQ) refers to the ability to recognise, understand, manage, and express emotions effectively — both one's own and those of others. Research by psychologists including Daniel Goleman has consistently found that EQ predicts professional success, relationship quality, and wellbeing more reliably than IQ alone.",
     sections: [
@@ -2143,7 +2143,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Parenting Guides',
     excerpt: 'Academic pressure is a reality of school life in India. Here is how to tell the difference between productive challenge and harmful stress — and what to do about both.',
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Supporting children with school stress — parent guide from Malla Reddy School',
     intro: "Some degree of academic pressure is normal and can be motivating. But when pressure becomes persistent stress — affecting sleep, appetite, behaviour, or a child's willingness to attend school — it requires a different response. Recognising the difference and knowing how to respond is one of the most important parenting skills for a school-age child.",
     sections: [
@@ -2252,7 +2252,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Student Development',
     excerpt: "Children who believe their abilities can grow with effort outperform equally intelligent children who believe ability is fixed. Here is how to build that belief.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "Students demonstrating growth mindset through persistence at Malla Reddy School Medchal",
     intro: "Psychologist Carol Dweck's research on mindset has had more influence on education than almost any other body of work in recent decades. The core insight: children who believe intelligence and ability are fixed (\"I'm not good at maths\") give up faster, avoid challenges, and perform worse than children who believe abilities grow through effort (\"I can't do this yet, but I will if I practise\"). The good news is that mindset is not fixed — it can be deliberately cultivated.",
     sections: [
@@ -2398,7 +2398,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Child Growth & Learning',
     excerpt: "Different children absorb information differently. Understanding your child's preferred learning style helps you choose study methods that actually work for them.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: "Children with different learning styles in a CBSE classroom at Malla Reddy School Medchal",
     intro: "Every parent has noticed that children learn differently from one another. Some children absorb information effortlessly from reading; others need to hear something explained; still others need to physically engage with a concept before it sticks. This is not a myth — different children do have different strengths in how they process information.",
     sections: [
@@ -2477,7 +2477,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "What children learn about relationships, emotions, and themselves in pre-primary school shapes their academic trajectory and wellbeing for years.",
-    coverImage: '/images/programs/pre-primary.png',
+    coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: "Pre-primary children developing social emotional skills at Malla Reddy School Medchal",
     intro: "Social and Emotional Learning (SEL) refers to the process through which children develop the skills to understand and manage emotions, build healthy relationships, show empathy, make responsible decisions, and handle challenges effectively. In pre-primary school, SEL is not a separate subject — it is embedded in every interaction, activity, and routine.",
     sections: [
@@ -2510,7 +2510,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'CBSE Education',
     excerpt: 'CBSE report cards use letter grades and grade points rather than just percentages. Here is a clear explanation of how the system works.',
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Understanding CBSE grading system for school students in India',
     intro: "When parents receive their child's CBSE report card, the letter grades and grade points can be confusing if you are accustomed to percentage-based assessment. Here is a clear explanation of how the CBSE grading system works.",
     sections: [
@@ -2579,7 +2579,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Study Tips',
     excerpt: 'Last-minute cramming and exam anxiety are not inevitable. Here are revision strategies that actually work — and keep stress manageable.',
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: 'Students revising for exams effectively at Malla Reddy School Medchal',
     intro: "Exam time in many households becomes a period of family stress, late nights, and last-minute revision. Most of this is avoidable. The strategies that actually produce good exam results — spaced repetition, active recall, distributed practice — are also less stressful than the methods many students use by default (re-reading, cramming the night before).",
     sections: [
@@ -2717,7 +2717,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "A child who is genuinely thriving at school shows it in behaviour that parents can observe. So does a child who is struggling.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: "Happy school children thriving — signs to look for as a parent",
     intro: "Parents often have a sense that something is right or wrong with their child's school experience before they can articulate what it is. Learning to read the signals more clearly — both positive and negative — allows you to respond early rather than after problems have compounded.",
     sections: [
@@ -2933,7 +2933,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Education Trends',
     excerpt: "India's education system is changing — away from memorisation and toward understanding. Here is why it matters and what it means for your child's school.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "Students developing conceptual understanding rather than rote learning at Malla Reddy School Medchal",
     intro: "For decades, a significant criticism of Indian school education has been its reliance on rote memorisation — learning definitions, dates, and formulas without understanding why they are true or how to apply them. This approach produces students who can reproduce what they have memorised in familiar formats but struggle when questions require application, analysis, or synthesis. NEP 2020 and thoughtful CBSE schools have been working to change this.",
     sections: [
@@ -2967,7 +2967,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "Brain performance depends on nutrition. Children who eat well during school hours concentrate better, behave better, and learn more effectively.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: "School children eating nutritious food — importance of nutrition for learning",
     intro: "Children spend 6 to 8 hours in school each day — a significant portion of their waking hours. What they eat during those hours directly affects how well their brains function in the classroom. The relationship between nutrition and cognitive performance is well-established, and the implications for school-age children are practical and actionable.",
     sections: [
@@ -3093,7 +3093,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'CBSE Education',
     excerpt: "CBSE board exams are a major milestone in a student's academic journey. Here is how schools prepare students — and how parents can reinforce that preparation at home.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "CBSE board exam preparation at Malla Reddy School Medchal Hyderabad",
     intro: "For students in Classes 9 to 12, CBSE board examinations are among the most significant academic milestones they will face. The results influence college admissions, scholarship eligibility, and in some cases career pathways. Understanding how schools prepare students — and what role parents play — helps families support their children most effectively.",
     sections: [
@@ -3164,7 +3164,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Parenting Guides',
     excerpt: 'Moving from primary to middle school brings new teachers, new subjects, higher expectations, and a new social environment. Here is how to make it smooth.',
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: 'Students transitioning from primary to middle school at Malla Reddy School Medchal',
     intro: "The move from Class 5 to Class 6 is one of the most significant transitions in a CBSE student's school journey. A single class teacher is replaced by multiple subject specialists. The curriculum jumps in complexity. Social groups shift. For many children, it is the first time they have felt academically challenged or socially unsettled. Understanding what to expect — and how to prepare — makes an enormous difference.",
     sections: [
@@ -3206,7 +3206,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: 'Hours of homework every evening is not a sign of a rigorous school — it may be a sign of a poorly managed one. Here is what is appropriate at each class level.',
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Child doing homework at home — how much is the right amount for CBSE school students',
     intro: 'Homework is one of the most contentious topics in school education. Parents in India often interpret heavy homework as a sign of academic seriousness. Research, however, consistently shows that beyond a modest amount, homework has diminishing returns — and for younger children, it may actively harm the love of learning. Here is what the evidence says.',
     sections: [
@@ -3240,7 +3240,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'CBSE Education',
     excerpt: 'NCERT books are the backbone of CBSE education — and mastering them is the most reliable path to board exam success. Here is what parents need to know.',
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'NCERT textbooks used in CBSE schools — explained for parents by Malla Reddy School Medchal',
     intro: 'If your child attends a CBSE school, they use NCERT textbooks. But many parents have only a vague understanding of what NCERT is, why these books are prescribed, and how central they are to board exam performance. Here is a clear explanation.',
     sections: [
@@ -3274,7 +3274,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: "A child who has a friend at school attends more willingly, learns better, and is more resilient. Here is how to support your child's social connections.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'School children making friends and playing together at Malla Reddy School Medchal',
     intro: "Research on school wellbeing consistently identifies one variable as the most powerful predictor of a child's willingness to attend school and engagement with learning: having at least one good friend. Social belonging is not a luxury — it is a prerequisite for the psychological safety that learning requires. Here is how parents can genuinely support it.",
     sections: [
@@ -3386,7 +3386,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Career Readiness',
     excerpt: "Career decisions in Class 11 and 12 should not be the first time a student thinks about what they enjoy and where their strengths lie. Here is why the conversation should start much earlier.",
-    coverImage: '/images/programs/middle.png',
+    coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "School students exploring career options — career counselling at Malla Reddy School Medchal",
     intro: "In India, career conversations typically happen at one of two crisis points: when a student is choosing Class 11 stream (Science, Commerce, or Arts) or when college applications begin. Both are too late to be useful. Real career readiness starts years earlier — with the exploration of interests, aptitudes, and values that happens naturally in a rich school environment.",
     sections: [
@@ -3454,7 +3454,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Child Growth & Learning',
     excerpt: "India is naturally multilingual. Children raised with multiple languages — English, Hindi, a regional language — gain cognitive advantages that go far beyond the languages themselves.",
-    coverImage: '/images/programs/primary.png',
+    coverImage: '/images/programs/primary.jpg',
     coverImageAlt: "Multilingual school children learning multiple languages at Malla Reddy School Medchal",
     intro: "India's linguistic landscape is uniquely rich. Most Indian children grow up exposed to at least two languages — a regional language at home, and English or Hindi at school. CBSE schools typically teach three languages: English, Hindi, and a regional language like Telugu. Far from being a burden, this multilingual environment confers significant cognitive advantages.",
     sections: [

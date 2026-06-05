@@ -48,9 +48,9 @@ export default function SchoolJsonLd() {
         ],
         sameAs: [
           'https://www.mallareddyschool.com',
-          'https://www.facebook.com/mallareddyschool',
-          'https://www.instagram.com/mallareddyschool',
-          'https://www.youtube.com/@mallareddyschool',
+          'https://www.facebook.com/people/Malla-Reddy-School-Medchal/61590200867782/',
+          'https://x.com/mallareddyschl',
+          'https://www.youtube.com/@mallareddyschool_medchal',
         ],
         educationalCredentialAwarded: 'CBSE',
         teaches: [
