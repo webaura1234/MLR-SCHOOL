@@ -49,6 +49,7 @@ const Blog = ({ posts }: BlogProps) => {
       month: 'short',
       day: 'numeric',
     }),
+    _ts: new Date(p.publishedDate).getTime(),
     author: p.author,
     img: p.coverImage,
     excerpt: p.excerpt,
@@ -58,6 +59,7 @@ const Blog = ({ posts }: BlogProps) => {
 
   const sheetPostsWithSlugs = posts.map((p) => {
     let formattedDate = p.date;
+    let sortTs = new Date('2026-05-01').getTime();
     try {
       let d = new Date(p.date);
       if (isNaN(d.getTime())) {
@@ -75,6 +77,7 @@ const Blog = ({ posts }: BlogProps) => {
         month: 'short',
         day: 'numeric',
       });
+      sortTs = d.getTime();
     } catch (e) {
       formattedDate = '1 May 2026';
     }
@@ -82,6 +85,7 @@ const Blog = ({ posts }: BlogProps) => {
     return {
       ...p,
       date: formattedDate,
+      _ts: sortTs,
       slug: findSlugForTitle(p.title),
     };
   });
@@ -94,7 +98,7 @@ const Blog = ({ posts }: BlogProps) => {
         bp.title.toLowerCase().slice(0, 30) === sp.title?.toLowerCase().slice(0, 30),
       );
     }),
-  ];
+  ].sort((a, b) => (b._ts ?? 0) - (a._ts ?? 0)); // newest first
 
   return (
     <div className="blog-page">
