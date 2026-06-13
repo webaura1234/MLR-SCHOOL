@@ -50,32 +50,42 @@ const Preloader: React.FC<PreloaderProps> = ({ onLoadingComplete }) => {
             <div className="preloader-mesh" />
             <div className="preloader-orb preloader-orb--a" />
             <div className="preloader-orb preloader-orb--b" />
-            <div className="preloader-ring" />
             <div className="preloader-shine" />
           </motion.div>
 
-          <AnimatePresence>
-            {showLogo && (
-              <motion.div
-                className="preloader-logo-container"
-                initial={{ opacity: 0, scale: 0.88, y: 12 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.75, ease: [0.34, 1.56, 0.64, 1] }}
-              >
-                <Image
-                  src="/logo.png"
-                  alt="School Logo"
-                  className="preloader-logo"
-                  width={530}
-                  height={460}
-                  placeholder="blur"
-                  blurDataURL={CARD_BLUR}
-                  priority
-                  unoptimized
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <motion.div
+            className="preloader-emblem"
+            aria-hidden={!showLogo}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="preloader-ring" />
+            <AnimatePresence>
+              {showLogo && (
+                <motion.div
+                  className="preloader-logo-container"
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className="preloader-logo-wrap">
+                    <Image
+                      src="/logo.png"
+                      alt="School Logo"
+                      className="preloader-logo"
+                      width={200}
+                      height={174}
+                      placeholder="blur"
+                      blurDataURL={CARD_BLUR}
+                      priority
+                      unoptimized
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

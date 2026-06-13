@@ -11,7 +11,7 @@ export const MEDIA_GALLERY_ITEMS: MediaGalleryItem[] = [
   {
     id: 'nigha-kalam-medchal-inauguration',
     src: '/images/media-gallery/nigha-kalam-medchal-inauguration-2026-06-13.png',
-    title: 'Quality education at very low fee — our goal',
+    title: 'Quality education at affordable fees — our goal',
     publication: 'Nigha Kalam',
     date: '13 June 2026',
     summary:
@@ -29,7 +29,7 @@ export const MEDIA_GALLERY_ITEMS: MediaGalleryItem[] = [
   {
     id: 'manam-medchal-inauguration',
     src: '/images/media-gallery/manam-medchal-inauguration-2026-06-13.png',
-    title: 'Corporate-level education at low cost for Medchal families',
+    title: 'Corporate-level education at affordable fees for Medchal families',
     publication: 'Manam',
     date: '13 June 2026',
     summary:
