@@ -103,6 +103,7 @@ const MediaGallery = ({ items }: MediaGalleryProps) => {
                     src={item.src}
                     alt={`${item.publication} — ${item.title}`}
                     fill
+                    unoptimized
                     className="media-gallery-card-img"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     placeholder="blur"
@@ -183,6 +184,7 @@ const MediaGallery = ({ items }: MediaGalleryProps) => {
                       src={selected.src}
                       alt={`${selected.publication} — ${selected.title}`}
                       fill
+                      unoptimized
                       className="media-gallery-lightbox-img"
                       sizes="min(92vw, 720px)"
                       priority
