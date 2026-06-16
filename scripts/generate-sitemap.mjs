@@ -153,6 +153,17 @@ const BLOG_SLUGS = [
   'why-reading-fiction-benefits-school-children',
   'multilingual-children-language-learning-benefits',
   'future-skills-children-school-2030',
+  // Batch 5 — Posts 71–80
+  'how-to-identify-good-school-cbse-hyderabad',
+  'importance-of-morning-routine-school-children',
+  'social-emotional-learning-schools-india',
+  'what-is-formative-assessment-cbse-schools',
+  'how-to-talk-to-child-about-failure-resilience',
+  'what-is-cbse-pre-school-nursery-vs-class-1',
+  'importance-of-extracurricular-leadership-school',
+  'how-to-support-child-learning-disabilities-india',
+  'medchal-malkajgiri-education-growing-families',
+  'nutrition-brain-development-school-children',
 ];
 
 const blogRoutes = BLOG_SLUGS.map((slug) => ({
