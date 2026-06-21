@@ -164,6 +164,17 @@ const BLOG_SLUGS = [
   'how-to-support-child-learning-disabilities-india',
   'medchal-malkajgiri-education-growing-families',
   'nutrition-brain-development-school-children',
+  // Batch 6 — Posts 81–90
+  'how-to-choose-between-cbse-and-state-board',
+  'how-to-prepare-child-for-class-10-board-exams',
+  'importance-of-peer-learning-school-children',
+  'how-to-talk-to-school-teachers-effectively-parent',
+  'what-is-project-based-learning-cbse-schools',
+  'how-to-develop-critical-thinking-school-children',
+  'back-to-school-checklist-parents-india',
+  'understanding-cbse-grading-system-parents',
+  'why-children-need-unstructured-play-school-age',
+  'how-to-choose-right-tuition-coaching-class-cbse',
 ];
 
 const blogRoutes = BLOG_SLUGS.map((slug) => ({
