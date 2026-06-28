@@ -139,6 +139,7 @@ const FacilityLightbox: React.FC<FacilityLightboxProps> = ({
               src={current.src}
               alt={`${title} view ${currentIndex + 1}`}
               fill
+              unoptimized
               sizes="min(96vw, 1200px)"
               placeholder="blur"
               blurDataURL={current.blurDataURL ?? DEFAULT_BLUR}

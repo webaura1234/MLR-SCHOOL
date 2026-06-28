@@ -19,7 +19,6 @@ import { JourneySection } from '../components/JourneySection';
 import { OurCampusesSection } from '../components/OurCampusesSection';
 import FacilityLightbox from '@/components/FacilityLightbox';
 import DynamicCalendar from '../components/DynamicCalendar';
-import { formatGalleryCategory } from '@/lib/galleryCategories';
 import { HOME_HERO_ID, scrollToHomeHero } from '@/lib/goToHomeHero';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 
@@ -63,27 +62,26 @@ interface Program {
   icon: string;
 }
 
-/** Homepage facilities section: show at most this many photos */
-const FACILITY_HOME_LIMIT = 9;
+/** Homepage gallery & facilities: show exactly this many photos */
+const HOME_SECTION_IMAGE_LIMIT = 3;
 
-/** Mosaic tile sizes for the facilities grid */
-function facilitiesMosaicClass(index: number): string {
-  if (index % 7 === 0) return 'facilities-card facilities-card--wide';
-  if (index % 5 === 0) return 'facilities-card facilities-card--tall';
-  return 'facilities-card facilities-card--base';
+/** Equal tiles when homepage shows only three facility photos */
+function facilitiesMosaicClass(): string {
+  return 'facilities-card facilities-card--triple';
 }
 
 export type HomeProps = {
   galleryPreview: { src: string; title: string; blurDataURL?: string }[];
-  galleryMore: { src: string; title: string; cat: string; blurDataURL?: string }[];
   programs: Program[];
   facilityImages: { src: string; blurDataURL?: string }[];
   calendarEvents: { id: string; title: string; date: string; category: "Exam" | "Holiday" | "Event" | "Activity" | "Exams" | "Holidays" | "Events" | "Activities"; description: string }[];
 };
 
-const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarEvents }: HomeProps) => {
+const Home = ({ galleryPreview, programs, facilityImages, calendarEvents }: HomeProps) => {
   const [facilityViewerOpen, setFacilityViewerOpen] = useState(false);
   const [facilityViewerIndex, setFacilityViewerIndex] = useState(0);
+  const homeGalleryPreview = galleryPreview.slice(0, HOME_SECTION_IMAGE_LIMIT);
+  const homeFacilityImages = facilityImages.slice(0, HOME_SECTION_IMAGE_LIMIT);
 
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -264,7 +262,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
 
       {/* 5. Our Facilities */}
       {/* Facilities Section — only show when loaded and has content */}
-      {facilityImages.length > 0 && (
+      {homeFacilityImages.length > 0 && (
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -288,25 +286,23 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                 Explore classrooms, grounds, and learning spaces — tap any photo for a full-screen view.
               </p>
               <span className="facilities-showcase-count">
-                {facilityImages.length > FACILITY_HOME_LIMIT
-                  ? `${FACILITY_HOME_LIMIT} of ${facilityImages.length} photos`
-                  : `${facilityImages.length} photos`}
+                {homeFacilityImages.length} photos
               </span>
             </motion.div>
 
             <motion.div
-              className="facilities-mosaic"
+              className="facilities-mosaic facilities-mosaic--three"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px', amount: 0.08 }}
               variants={staggerContainer}
             >
-              {facilityImages.slice(0, FACILITY_HOME_LIMIT).map((img, i) => (
+              {homeFacilityImages.map((img, i) => (
                 <motion.button
                   key={`${img.src}-${i}`}
                   type="button"
                   variants={fadeUpVariant}
-                  className={facilitiesMosaicClass(i)}
+                  className={facilitiesMosaicClass()}
                   aria-label={`Open facility photo ${i + 1} large`}
                   onClick={() => {
                     setFacilityViewerIndex(i);
@@ -319,6 +315,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                         src={img.src}
                         alt={`Campus facility photo ${i + 1}`}
                         fill
+                        unoptimized
                         className="facilities-card-img"
                         sizes="(max-width: 560px) 50vw, (max-width: 900px) 33vw, (max-width: 1400px) 28vw, 360px"
                         loading={i < 4 ? 'eager' : 'lazy'}
@@ -338,7 +335,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
             key={facilityViewerOpen ? `facility-lb-${facilityViewerIndex}` : 'facility-lb-closed'}
             isOpen={facilityViewerOpen}
             onClose={() => setFacilityViewerOpen(false)}
-            images={facilityImages.slice(0, FACILITY_HOME_LIMIT)}
+            images={homeFacilityImages}
             title="Campus facilities"
             initialIndex={facilityViewerIndex}
           />
@@ -370,7 +367,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
         <div className="gallery-preview-outer">
           <div className="gallery-preview-stage">
             <div className="gallery-preview">
-              {galleryPreview.map((photo, idx) => (
+              {homeGalleryPreview.map((photo, idx) => (
                 <MotionLink
                   key={`${photo.src}-${idx}`}
                   href="/gallery"
@@ -391,6 +388,7 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                         src={photo.src}
                         alt={photo.title}
                         fill
+                        unoptimized
                         className="gallery-preview-img"
                         sizes={
                           idx === 1
@@ -407,43 +405,6 @@ const Home = ({ galleryPreview, galleryMore, programs, facilityImages, calendarE
                 </MotionLink>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Second row — compact tiles like the main gallery grid */}
-        <div className="gallery-bento-shell home-gallery-more-shell">
-          <div className="home-gallery-more-grid">
-            {galleryMore.map((photo, idx) => {
-              const categoryLabel = formatGalleryCategory(photo.cat);
-              return (
-              <Link
-                key={`${photo.src}-${idx}`}
-                href="/gallery"
-                className="gallery-tile gallery-tile--sm home-gallery-tile-link"
-              >
-                <span className="gallery-tile-glow" aria-hidden />
-                <span className="gallery-tile-media" style={{ position: 'absolute', inset: 0 }}>
-                  {photo.src && (photo.src.startsWith('http') || photo.src.startsWith('/')) && (
-                    <Image
-                      src={photo.src}
-                      alt={photo.title}
-                      fill
-                      className="gallery-tile-img"
-                      sizes="(max-width: 640px) 50vw, 22vw"
-                      placeholder="blur"
-                      blurDataURL={photo.blurDataURL ?? DEFAULT_BLUR}
-                    />
-                  )}
-                </span>
-                <span className="gallery-tile-bottom">
-                  <span className="gallery-tile-title">{photo.title}</span>
-                  {categoryLabel ? (
-                    <span className="gallery-tile-cat">{categoryLabel}</span>
-                  ) : null}
-                </span>
-              </Link>
-            );
-            })}
           </div>
         </div>
 

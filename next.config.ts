@@ -1,4 +1,8 @@
 import type { NextConfig } from 'next';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const appDir = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -17,7 +21,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     // Ensure Turbopack resolves deps from this app folder,
     // even if parent directories contain unrelated lockfiles.
-    root: __dirname,
+    root: appDir,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
