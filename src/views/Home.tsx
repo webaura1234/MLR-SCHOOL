@@ -343,6 +343,7 @@ const Home = ({ galleryPreview, programs, facilityImages, calendarEvents }: Home
       )}
 
       {/* 6. Moments from Malla Reddy School */}
+      {homeGalleryPreview.length > 0 && (
       <section className="section home-gallery-section">
         <div className="container home-gallery-header-wrap">
           <motion.div
@@ -422,6 +423,7 @@ const Home = ({ galleryPreview, programs, facilityImages, calendarEvents }: Home
           </motion.div>
         </div>
       </section>
+      )}
 
       <section className="calendar-section section">
         <div className="container">

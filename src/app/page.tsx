@@ -8,11 +8,6 @@ import type { StaticImageData } from 'next/image';
 import { DEFAULT_SITE_INFO } from '@/lib/siteInfo';
 import { constructMetadata } from '@/lib/seo';
 import { DEFAULT_SEO_DESCRIPTION, DEFAULT_SEO_TITLE } from '@/lib/seoKeywords';
-import {
-  HOME_FACILITY_FALLBACKS,
-  HOME_GALLERY_FALLBACKS,
-  USE_HOMEPAGE_LOCAL_IMAGES,
-} from '@/lib/homeFallbackImages';
 
 export const metadata = constructMetadata({
   title: DEFAULT_SEO_TITLE,
@@ -163,7 +158,7 @@ export default async function Page() {
     fetchDataFromSheet<Facility>(FACILITIES_SHEET_URL, '0', (cols) => {
       const images = cols
         .flatMap((cell) => (cell ? cell.split(/[,|]/) : []))
-        .map((s) => s.trim())
+        .map((s) => normalizeGalleryImageUrl(s.trim()))
         .filter((s) => s.startsWith('http') || s.startsWith('/'))
         .filter(Boolean);
       return { images };
@@ -184,13 +179,9 @@ export default async function Page() {
     }),
   ]);
 
-  const gallerySource = USE_HOMEPAGE_LOCAL_IMAGES
-    ? HOME_GALLERY_FALLBACKS
-    : gallery.length >= 3
-      ? gallery
-      : [...HOME_GALLERY_FALLBACKS, ...gallery];
-
-  const galleryTop = gallerySource.slice(0, 3);
+  // Supabase image URLs are supplied by Apps Script / Google Sheets.
+  // Show only those fetched images here—do not substitute local program images.
+  const galleryTop = gallery.slice(0, 3);
   const galleryTopWithBlur = galleryTop.map((g) => ({
     ...g,
     blurDataURL: g.src ? DEFAULT_BLUR : undefined,
@@ -207,12 +198,7 @@ export default async function Page() {
 
   const validFacilities = facilitiesData.filter((f) => f.images?.length > 0);
   const remoteFacilityImages = Array.from(new Set(validFacilities.flatMap((f) => f.images)));
-  const facilityImages = USE_HOMEPAGE_LOCAL_IMAGES
-    ? HOME_FACILITY_FALLBACKS
-    : remoteFacilityImages.length >= 3
-      ? remoteFacilityImages
-      : [...HOME_FACILITY_FALLBACKS, ...remoteFacilityImages];
-  const facilityTopWithBlur = facilityImages.slice(0, 3).map((src) => ({
+  const facilityTopWithBlur = remoteFacilityImages.slice(0, 3).map((src) => ({
     src,
     blurDataURL: src ? DEFAULT_BLUR : undefined,
   }));
