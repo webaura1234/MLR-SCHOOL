@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "bash scripts/dev-local.sh",
-    "dev:icloud": "node scripts/dev.mjs",
+    "dev": "node scripts/dev.mjs",
     "build": "next build",
     "postbuild": "node scripts/generate-sitemap.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -14,8 +13,8 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "date-fns": "^4.1.0",
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.14.0",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.23.0",
     "next": "^16.2.4",
     "plaiceholder": "^3.0.0",
     "react": "^19.2.5",
