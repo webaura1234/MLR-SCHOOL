@@ -3,7 +3,7 @@
  * (e.g. Vercel image optimizer quota). Set USE_HOMEPAGE_LOCAL_IMAGES to false
  * once remote images are working again.
  */
-export const USE_HOMEPAGE_LOCAL_IMAGES = true;
+export const USE_HOMEPAGE_LOCAL_IMAGES = false;
 
 /** Same three program photos shown in “Programs Offered” */
 export const HOME_PROGRAM_IMAGE_PATHS = [
