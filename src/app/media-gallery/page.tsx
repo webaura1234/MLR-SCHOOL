@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises';
+import { promises as fsPromises } from 'fs';
 import path from 'path';
 import { getPlaiceholder } from 'plaiceholder';
 import MediaGallery from '@/views/MediaGallery';
@@ -16,7 +16,7 @@ export const metadata = constructMetadata({
 async function getLocalBlurDataURL(src: string): Promise<string> {
   try {
     const filePath = path.join(process.cwd(), 'public', src.replace(/^\//, ''));
-    const buffer = await readFile(filePath);
+    const buffer = await fsPromises.readFile(filePath);
     const { base64 } = await getPlaiceholder(buffer, { size: 8 });
     return base64;
   } catch {

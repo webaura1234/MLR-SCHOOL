@@ -7,7 +7,7 @@
  *   - /api          — server routes, never public pages
  *   - /[slug] paths — dynamic routes (e.g. /blog/[slug]); these are added manually
  */
-import { readdirSync, statSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const siteUrl = (
@@ -76,84 +76,17 @@ const discovered = collectPageRoutes(APP_DIR).sort((a, b) => {
   return a.localeCompare(b);
 });
 
-/** Blog post slugs — keep in sync with src/lib/blog-posts.ts */
-const BLOG_SLUGS = [
-  // Batch 1
-  'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-  'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-  'what-is-steam-education-and-why-it-matters-for-your-child',
-  'pre-primary-school-medchal-how-to-choose',
-  'iit-foundation-early-preparation-matters',
-  // Batch 2
-  'documents-required-school-admission-hyderabad',
-  'understanding-cbse-curriculum-parents-guide',
-  'what-is-play-based-learning-and-why-it-matters',
-  'why-families-choose-schools-near-medchal',
-  'cbse-schools-near-outer-ring-road-hyderabad',
-  'what-to-look-for-in-a-school-campus-parents-checklist',
-  'school-safety-standards-every-parent-should-check',
-  'why-co-curricular-activities-matter-child-development',
-  'how-to-help-child-with-homework-without-taking-over',
-  'how-to-create-perfect-study-environment-home-children',
-  // Batch 3
-  'how-to-choose-right-school-hyderabad',
-  'what-to-ask-during-school-admission-visit',
-  'cbse-vs-icse-which-board-right-child',
-  'cbse-vs-state-board-hyderabad',
-  'coding-robotics-problem-solving-children',
-  'science-labs-schools-hands-on-learning',
-  'nursery-lkg-ukg-difference-parents',
-  'how-to-prepare-child-first-day-school',
-  'build-confidence-child-school-activities',
-  'sports-physical-education-academic-performance',
-  'benefits-music-education-children',
-  'dance-performing-arts-confidence-children',
-  'how-to-build-reading-habit-children',
-  'nep-2020-explained-parents',
-  'iit-foundation-vs-regular-cbse',
-  'emotional-intelligence-children-school',
-  'managing-school-stress-children',
-  'what-is-digital-library-school-benefits',
-  'how-to-talk-to-child-teacher-effectively',
-  'growth-mindset-children-school',
-  'chess-schools-cognitive-benefits',
-  'improve-concentration-children',
-  'school-events-community-student-confidence',
-  'learning-styles-visual-auditory-kinesthetic',
-  'reading-readiness-early-literacy-home',
-  'social-emotional-learning-pre-primary',
-  'cbse-grading-system-explained',
-  'benefits-team-sports-children-school',
-  'how-to-revise-for-exams-children',
-  'leadership-skills-school-students',
-  'coding-schools-new-literacy-india',
-  'living-in-medchal-schools-family',
-  // Batch 3 C
-  'signs-child-thriving-at-school',
-  'competitive-exams-school-students-india',
-  'study-habits-class-6-students',
-  'mathematics-skills-competitive-exams',
-  'what-is-mathematics-lab-benefits',
-  'technology-in-classroom-primary-school',
-  'rote-learning-vs-conceptual-understanding-india',
-  'importance-school-canteen-nutrition-children',
-  'art-craft-education-children-school',
-  'benefits-of-sports-day-school',
-  'summer-camp-school-children-benefits',
-  'cbse-board-exam-preparation-hyderabad',
-  'importance-physical-activity-learning-children',
-  // Batch 4
-  'class-5-to-6-transition-guide-parents',
-  'how-much-homework-is-too-much-cbse',
-  'what-is-ncert-why-cbse-schools-use-it',
-  'how-to-help-child-make-friends-school',
-  'parent-involvement-school-how-much-is-right',
-  'screen-time-sleep-learning-school-children',
-  'career-counselling-school-students-when-to-start',
-  'why-reading-fiction-benefits-school-children',
-  'multilingual-children-language-learning-benefits',
-  'future-skills-children-school-2030',
-];
+/** Blog post slugs — dynamically extracted from src/lib/blog-posts.ts to keep in sync automatically */
+const blogPostsPath = join(process.cwd(), 'src', 'lib', 'blog-posts.ts');
+const blogPostsContent = readFileSync(blogPostsPath, 'utf8');
+const BLOG_SLUGS = [];
+const slugRegex = /\bslug:\s*['"]([^'"]+)['"]/g;
+let match;
+while ((match = slugRegex.exec(blogPostsContent)) !== null) {
+  if (!BLOG_SLUGS.includes(match[1])) {
+    BLOG_SLUGS.push(match[1]);
+  }
+}
 
 const blogRoutes = BLOG_SLUGS.map((slug) => ({
   path: `/blog/${slug}`,

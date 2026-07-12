@@ -8,20 +8,41 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const cacheDir = path.join(os.homedir(), '.cache', 'mlr-school-next');
-const nextLink = path.join(root, '.next');
 
-fs.mkdirSync(cacheDir, { recursive: true });
+// Only use the iCloud workaround if we are on macOS and the project resides in iCloud Drive
+const isICloud = process.platform === 'darwin' && (
+  root.includes('com~apple~CloudDocs') || 
+  root.includes('Mobile Documents')
+);
 
-try {
-  const stat = fs.lstatSync(nextLink);
-  if (stat.isSymbolicLink()) fs.unlinkSync(nextLink);
-  else if (stat.isDirectory()) fs.rmSync(nextLink, { recursive: true, force: true });
-} catch {
-  /* .next does not exist yet */
+if (isICloud) {
+  console.log('→ iCloud Drive detected, configuring external cache symlink...');
+  const cacheDir = path.join(os.homedir(), '.cache', 'mlr-school-next');
+  const nextLink = path.join(root, '.next');
+
+  try {
+    fs.mkdirSync(cacheDir, { recursive: true });
+
+    try {
+      const stat = fs.lstatSync(nextLink);
+      if (stat.isSymbolicLink()) {
+        fs.unlinkSync(nextLink);
+      } else if (stat.isDirectory()) {
+        fs.rmSync(nextLink, { recursive: true, force: true });
+      }
+    } catch {
+      /* .next does not exist yet */
+    }
+
+    fs.symlinkSync(cacheDir, nextLink);
+    console.log(`→ Symlinked .next to ${cacheDir}`);
+  } catch (err) {
+    console.warn(`→ Warning: Could not create symlink for iCloud cache directory: ${err.message}`);
+    console.warn(`→ Proceeding with standard directory structure.`);
+  }
+} else {
+  console.log('→ Starting dev server in standard local mode...');
 }
-
-fs.symlinkSync(cacheDir, nextLink);
 
 const env = {
   ...process.env,
