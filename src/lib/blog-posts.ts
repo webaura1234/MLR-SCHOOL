@@ -4438,38 +4438,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Marks fade from memory, but character stays for life. At Malla Reddy School, values are not a separate subject — they are woven into every lesson, every interaction, every school day.',
     coverImage: '/images/value-based-education.png',
     coverImageAlt: 'Students participating in a community service activity or values assembly at Malla Reddy School.',
-    content: `
-      <p class="lead">Parents don't just want their child to score well in exams — they want them to grow into honest, respectful, and responsible adults. This is exactly what values in education aims to achieve, and at Malla Reddy School, it is treated as seriously as any academic subject.</p>
-
-      <h2>Why Value-Based Education Cannot Be an Afterthought</h2>
-      <p>Academic knowledge without character can take a child only so far. The ability to be honest under pressure, kind without being asked, and responsible without supervision are qualities that shape long-term success far more than a single exam score ever could. A strong CBSE school doesn't just teach the syllabus — it shapes the person delivering the answers.</p>
-
-      <h2>How Malla Reddy School Builds Character Every Day</h2>
-
-      <h3>Daily Assembly and Reflection</h3>
-      <p>Short, consistent moments of reflection during morning assembly reinforce values like honesty, gratitude, and respect in a way that becomes habitual rather than occasional.</p>
-
-      <h3>Community Service and Social Responsibility</h3>
-      <p>Structured service activities help students understand empathy and social responsibility through direct experience, not just discussion.</p>
-
-      <h3>Conflict Resolution as a Teaching Moment</h3>
-      <p>Rather than simply disciplining conflicts, teachers use them as opportunities to teach fairness, listening, and accountability.</p>
-
-      <h3>Role Modelling by Staff</h3>
-      <p>Teachers and staff are trained to model the same values they teach, since children learn as much from what they observe as from what they're told.</p>
-
-      <h3>Integration Across Subjects</h3>
-      <p>Value-based discussions are woven into literature, social studies, and even science lessons, rather than confined to a single moral science period.</p>
-
-      <h2>The Long-Term Impact of Moral Development</h2>
-      <p>Strong early moral development shapes how children handle pressure, disagreement, and temptation throughout their lives — skills far more durable than any single academic concept. Employers and universities increasingly value character alongside competence, making this investment relevant well beyond the school years.</p>
-
-      <h2>Character Building Alongside Academic Excellence</h2>
-      <p>At Malla Reddy School, character building happens in parallel with, not instead of, strong academics. A student who understands both the "how" and the "why" of doing the right thing carries an advantage that shows up in leadership roles, teamwork, and personal integrity throughout life.</p>
-
-      <h2>Conclusion</h2>
-      <p>The truest measure of a school isn't just its exam results — it's the kind of people its students become. At Malla Reddy School, our commitment to value-based education ensures every child grows into someone their family, and the world, can be proud of.</p>
-    `,
+    intro: "Parents don't just want their child to score well in exams — they want them to grow into honest, respectful, and responsible adults. This is exactly what values in education aims to achieve, and at Malla Reddy School, it is treated as seriously as any academic subject.",
+    sections: [
+      {
+        heading: "Why Value-Based Education Cannot Be an Afterthought",
+        content: "Academic knowledge without character can take a child only so far. The ability to be honest under pressure, kind without being asked, and responsible without supervision are qualities that shape long-term success far more than a single exam score ever could. A strong CBSE school doesn't just teach the syllabus — it shapes the person delivering the answers."
+      },
+      {
+        heading: "How Malla Reddy School Builds Character Every Day",
+        content: "",
+        subsections: [
+          {
+            heading: "Daily Assembly and Reflection",
+            content: "Short, consistent moments of reflection during morning assembly reinforce values like honesty, gratitude, and respect in a way that becomes habitual rather than occasional."
+          },
+          {
+            heading: "Community Service and Social Responsibility",
+            content: "Structured service activities help students understand empathy and social responsibility through direct experience, not just discussion."
+          },
+          {
+            heading: "Conflict Resolution as a Teaching Moment",
+            content: "Rather than simply disciplining conflicts, teachers use them as opportunities to teach fairness, listening, and accountability."
+          },
+          {
+            heading: "Role Modelling by Staff",
+            content: "Teachers and staff are trained to model the same values they teach, since children learn as much from what they observe as from what they're told."
+          },
+          {
+            heading: "Integration Across Subjects",
+            content: "Value-based discussions are woven into literature, social studies, and even science lessons, rather than confined to a single moral science period."
+          },
+        ]
+      },
+      {
+        heading: "The Long-Term Impact of Moral Development",
+        content: "Strong early moral development shapes how children handle pressure, disagreement, and temptation throughout their lives — skills far more durable than any single academic concept. Employers and universities increasingly value character alongside competence, making this investment relevant well beyond the school years."
+      },
+      {
+        heading: "Character Building Alongside Academic Excellence",
+        content: "At Malla Reddy School, character building happens in parallel with, not instead of, strong academics. A student who understands both the \"how\" and the \"why\" of doing the right thing carries an advantage that shows up in leadership roles, teamwork, and personal integrity throughout life."
+      },
+    ],
+    faqs: [],
+    conclusion: "The truest measure of a school isn't just its exam results — it's the kind of people its students become. At Malla Reddy School, our commitment to value-based education ensures every child grows into someone their family, and the world, can be proud of.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: [
       'why-malla-reddy-school-focuses-on-holistic-education-for-every-child',
       'how-experiential-learning-helps-students-learn-beyond-textbooks',
@@ -4495,41 +4508,55 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The classroom teaches a child what to know. Co-curricular activities teach a child who to become. At Malla Reddy School, both are treated as equally essential.',
     coverImage: '/images/co-curricular-activities.png',
     coverImageAlt: 'Students participating in a mix of clubs — dance, debate, art, or music activities',
-    content: `
-      <p class="lead">Ask a student what they remember most fondly about school years later, and it's rarely a chapter from a textbook — it's the play they performed in, the club they joined, or the competition they trained for. Co-curricular activities aren't a break from real learning; they are a core part of it, and at Malla Reddy School, they receive the same care and structure as the academic curriculum.</p>
-
-      <h2>Why Co-Curricular Activities Deserve Equal Priority</h2>
-      <p>Academic subjects build knowledge, but co-curricular activities build the skills that help students apply that knowledge in the real world — communication, collaboration, creativity, and confidence. A child who only studies rarely gets the chance to discover talents and interests that don't show up in a textbook.</p>
-
-      <h2>What Co-Curricular Life Looks Like at Malla Reddy School</h2>
-
-      <h3>Performing and Visual Arts Clubs</h3>
-      <p>Dance, music, drama, and art clubs give students structured space to explore creative talents and build performance confidence.</p>
-
-      <h3>Debate and Literary Societies</h3>
-      <p>Regular debates, elocution, and quiz competitions sharpen critical thinking and public speaking skills in a genuinely engaging format.</p>
-
-      <h3>Clubs Based on Interest and Aptitude</h3>
-      <p>From science and eco clubs to robotics and photography, students can pursue specific interests beyond what the core curriculum covers.</p>
-
-      <h3>Inter-School Competitions and Events</h3>
-      <p>Participation in competitions beyond campus gives students exposure to a wider peer group and healthy, motivating competition.</p>
-
-      <h3>Structured Time Within the Weekly Schedule</h3>
-      <p>Co-curricular periods are built into the timetable, ensuring these activities are consistent rather than occasional add-ons.</p>
-
-      <h2>The Case for Extracurricular Activities Beyond Academics</h2>
-      <p>Universities and future employers increasingly look for well-rounded individuals, not just high scorers. Extracurricular activities demonstrate initiative, time management, and genuine passion — qualities that a transcript alone cannot capture.</p>
-
-      <h2>Supporting Overall Growth, Not Just Grades</h2>
-      <p>True overall growth happens when a child develops confidence in more than one arena — academic, creative, social, and physical. Co-curricular participation often becomes the space where a child discovers strengths they didn't know they had, building self-esteem that carries into every other part of life.</p>
-
-      <h2>Building a Genuinely Well-Rounded Education</h2>
-      <p>A well-rounded education isn't a marketing phrase at Malla Reddy School — it's reflected in how seriously co-curricular life is planned, staffed, and scheduled alongside academics.</p>
-
-      <h2>Conclusion</h2>
-      <p>A child's growth cannot be measured by test scores alone. At Malla Reddy School, our structured co-curricular program ensures every student has the space to explore, create, compete, and discover who they are — beyond the classroom.</p>
-    `,
+    intro: "Ask a student what they remember most fondly about school years later, and it's rarely a chapter from a textbook — it's the play they performed in, the club they joined, or the competition they trained for. Co-curricular activities aren't a break from real learning; they are a core part of it, and at Malla Reddy School, they receive the same care and structure as the academic curriculum.",
+    sections: [
+      {
+        heading: "Why Co-Curricular Activities Deserve Equal Priority",
+        content: "Academic subjects build knowledge, but co-curricular activities build the skills that help students apply that knowledge in the real world — communication, collaboration, creativity, and confidence. A child who only studies rarely gets the chance to discover talents and interests that don't show up in a textbook."
+      },
+      {
+        heading: "What Co-Curricular Life Looks Like at Malla Reddy School",
+        content: "",
+        subsections: [
+          {
+            heading: "Performing and Visual Arts Clubs",
+            content: "Dance, music, drama, and art clubs give students structured space to explore creative talents and build performance confidence."
+          },
+          {
+            heading: "Debate and Literary Societies",
+            content: "Regular debates, elocution, and quiz competitions sharpen critical thinking and public speaking skills in a genuinely engaging format."
+          },
+          {
+            heading: "Clubs Based on Interest and Aptitude",
+            content: "From science and eco clubs to robotics and photography, students can pursue specific interests beyond what the core curriculum covers."
+          },
+          {
+            heading: "Inter-School Competitions and Events",
+            content: "Participation in competitions beyond campus gives students exposure to a wider peer group and healthy, motivating competition."
+          },
+          {
+            heading: "Structured Time Within the Weekly Schedule",
+            content: "Co-curricular periods are built into the timetable, ensuring these activities are consistent rather than occasional add-ons."
+          },
+        ]
+      },
+      {
+        heading: "The Case for Extracurricular Activities Beyond Academics",
+        content: "Universities and future employers increasingly look for well-rounded individuals, not just high scorers. Extracurricular activities demonstrate initiative, time management, and genuine passion — qualities that a transcript alone cannot capture."
+      },
+      {
+        heading: "Supporting Overall Growth, Not Just Grades",
+        content: "True overall growth happens when a child develops confidence in more than one arena — academic, creative, social, and physical. Co-curricular participation often becomes the space where a child discovers strengths they didn't know they had, building self-esteem that carries into every other part of life."
+      },
+      {
+        heading: "Building a Genuinely Well-Rounded Education",
+        content: "A well-rounded education isn't a marketing phrase at Malla Reddy School — it's reflected in how seriously co-curricular life is planned, staffed, and scheduled alongside academics."
+      },
+    ],
+    faqs: [],
+    conclusion: "A child's growth cannot be measured by test scores alone. At Malla Reddy School, our structured co-curricular program ensures every student has the space to explore, create, compete, and discover who they are — beyond the classroom.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4551,38 +4578,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The board a child studies under shapes far more than exam patterns — it shapes how they think, prepare, and compete for opportunities later in life. Here is why the CBSE curriculum remains one of the strongest choices.',
     coverImage: '/images/cbse-curriculum.png',
     coverImageAlt: 'Students in a CBSE classroom engaged in a lesson',
-    content: `
-      <p class="lead">Choosing the right educational board is one of the most consequential decisions a parent makes, often years before a child even reaches competitive exams or college applications. The CBSE curriculum has remained a preferred choice for millions of Indian families for good reason — and at Malla Reddy School, we deliver it with the depth and rigor it deserves.</p>
-
-      <h2>What Sets the CBSE Curriculum Apart</h2>
-      <p>The CBSE curriculum, prescribed by the Central Board of Secondary Education, is recognized nationwide and is closely aligned with the requirements of national entrance exams like JEE and NEET. Its structured, concept-driven approach to subjects like mathematics and science gives students a strong foundation for competitive exams later in their academic journey.</p>
-
-      <h2>Key Advantages of a CBSE Education</h2>
-
-      <h3>National Recognition and Mobility</h3>
-      <p>A CBSE curriculum is recognized consistently across India, making transitions between cities or states far smoother for families that may relocate.</p>
-
-      <h3>Alignment With Competitive Exams</h3>
-      <p>The CBSE syllabus for science and mathematics closely mirrors the foundation needed for national entrance exams, giving students a head start in exam preparation.</p>
-
-      <h3>Balanced Focus on Core Subjects</h3>
-      <p>CBSE places strong emphasis on mathematics, science, and language skills, while still allowing room for arts, physical education, and skill-based subjects.</p>
-
-      <h3>Structured, Predictable Assessment Pattern</h3>
-      <p>A well-defined evaluation structure helps students and parents track academic progress clearly and consistently across the year.</p>
-
-      <h3>Emphasis on Conceptual Understanding</h3>
-      <p>Modern CBSE curriculum design increasingly rewards application-based learning over pure memorization, aligning with how Malla Reddy School already teaches.</p>
-
-      <h2>CBSE vs State Board: What Parents Should Know</h2>
-      <p>Families comparing CBSE vs state board options often find that CBSE offers greater consistency for students likely to pursue national-level competitive exams or relocate across states during their school years. State boards can offer strong regional relevance, but CBSE's standardized, national curriculum tends to provide broader flexibility for long-term academic planning.</p>
-
-      <h2>How This Supports Long-Term Board Exam Preparation</h2>
-      <p>Because the CBSE curriculum builds progressively from foundational years through senior secondary, board exam preparation becomes a natural extension of consistent classroom learning rather than last-minute cramming — provided the groundwork is built correctly from the early years.</p>
-
-      <h2>Conclusion</h2>
-      <p>The curriculum a child studies under lays the groundwork for years of academic decisions to come. At Malla Reddy School, our commitment to the CBSE national curriculum ensures every student is equipped not just for exams, but for whatever academic path lies ahead.</p>
-    `,
+    intro: "Choosing the right educational board is one of the most consequential decisions a parent makes, often years before a child even reaches competitive exams or college applications. The CBSE curriculum has remained a preferred choice for millions of Indian families for good reason — and at Malla Reddy School, we deliver it with the depth and rigor it deserves.",
+    sections: [
+      {
+        heading: "What Sets the CBSE Curriculum Apart",
+        content: "The CBSE curriculum, prescribed by the Central Board of Secondary Education, is recognized nationwide and is closely aligned with the requirements of national entrance exams like JEE and NEET. Its structured, concept-driven approach to subjects like mathematics and science gives students a strong foundation for competitive exams later in their academic journey."
+      },
+      {
+        heading: "Key Advantages of a CBSE Education",
+        content: "",
+        subsections: [
+          {
+            heading: "National Recognition and Mobility",
+            content: "A CBSE curriculum is recognized consistently across India, making transitions between cities or states far smoother for families that may relocate."
+          },
+          {
+            heading: "Alignment With Competitive Exams",
+            content: "The CBSE syllabus for science and mathematics closely mirrors the foundation needed for national entrance exams, giving students a head start in exam preparation."
+          },
+          {
+            heading: "Balanced Focus on Core Subjects",
+            content: "CBSE places strong emphasis on mathematics, science, and language skills, while still allowing room for arts, physical education, and skill-based subjects."
+          },
+          {
+            heading: "Structured, Predictable Assessment Pattern",
+            content: "A well-defined evaluation structure helps students and parents track academic progress clearly and consistently across the year."
+          },
+          {
+            heading: "Emphasis on Conceptual Understanding",
+            content: "Modern CBSE curriculum design increasingly rewards application-based learning over pure memorization, aligning with how Malla Reddy School already teaches."
+          },
+        ]
+      },
+      {
+        heading: "CBSE vs State Board: What Parents Should Know",
+        content: "Families comparing CBSE vs state board options often find that CBSE offers greater consistency for students likely to pursue national-level competitive exams or relocate across states during their school years. State boards can offer strong regional relevance, but CBSE's standardized, national curriculum tends to provide broader flexibility for long-term academic planning."
+      },
+      {
+        heading: "How This Supports Long-Term Board Exam Preparation",
+        content: "Because the CBSE curriculum builds progressively from foundational years through senior secondary, board exam preparation becomes a natural extension of consistent classroom learning rather than last-minute cramming — provided the groundwork is built correctly from the early years."
+      },
+    ],
+    faqs: [],
+    conclusion: "The curriculum a child studies under lays the groundwork for years of academic decisions to come. At Malla Reddy School, our commitment to the CBSE national curriculum ensures every student is equipped not just for exams, but for whatever academic path lies ahead.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4604,38 +4644,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Board exams don\'t have to feel like a last-minute scramble. With the right preparation habits built over time, students can walk in confident instead of anxious.',
     coverImage: '/images/board-exam-preparation.png',
     coverImageAlt: 'Students studying or in a focused revision session',
-    content: `
-      <p class="lead">For many families, Class 10 and Class 12 board exams represent one of the most stressful periods of school life — for students and parents alike. But board exam preparation doesn't need to be a source of panic when it's approached as a gradual, structured process rather than a last-minute sprint. At Malla Reddy School, we build exam readiness into the entire academic year, not just the final weeks.</p>
-
-      <h2>Why Early, Structured Preparation Matters</h2>
-      <p>Cramming in the final weeks before an exam rarely produces the deep understanding needed to perform well under pressure. Students who prepare consistently throughout the year retain concepts better, experience less anxiety, and are better equipped to handle unexpected question patterns on exam day.</p>
-
-      <h2>How Malla Reddy School Supports Exam Readiness</h2>
-
-      <h3>Structured Revision Schedules</h3>
-      <p>Well-planned revision timetables, spread across the year rather than compressed into the final weeks, help students cover the syllabus without last-minute stress.</p>
-
-      <h3>Regular Mock Tests and Practice Papers</h3>
-      <p>Frequent practice with previous years' papers and mock tests familiarizes students with exam patterns and time management under real exam conditions.</p>
-
-      <h3>Doubt-Clearing and Remedial Sessions</h3>
-      <p>Dedicated time for resolving conceptual gaps ensures no student enters the exam hall with unresolved confusion on core topics.</p>
-
-      <h3>Stress Management and Wellbeing Support</h3>
-      <p>Counselling support and guided relaxation techniques help students manage exam stress, recognizing that mental readiness matters as much as academic readiness.</p>
-
-      <h3>Personalized Feedback From Teachers</h3>
-      <p>Regular one-on-one feedback helps students understand exactly where to focus their remaining preparation time most effectively.</p>
-
-      <h2>CBSE Exam Tips Every Student Should Know</h2>
-      <p>Beyond classroom support, a few consistent habits make a measurable difference: reading question papers carefully before starting, allocating time per question realistically, revising using self-made notes rather than only textbooks, and prioritizing high-weightage topics without ignoring the rest of the syllabus. These simple CBSE exam tips, reinforced consistently by our teachers, help turn preparation into performance.</p>
-
-      <h2>Supporting Class 10 and Class 12 Students Differently</h2>
-      <p>Class 10 students are often navigating board exams for the first time, requiring more guided structure and reassurance. Class 12 students, facing both board exams and competitive exam pressures, need more autonomy paired with targeted subject support — a distinction Malla Reddy School's teaching approach takes seriously.</p>
-
-      <h2>Conclusion</h2>
-      <p>Board exams are a milestone, not a threat, when preparation is structured, consistent, and supported the right way. At Malla Reddy School, our approach to board exam preparation ensures students walk into the exam hall with confidence built over months, not manufactured overnight.</p>
-    `,
+    intro: "For many families, Class 10 and Class 12 board exams represent one of the most stressful periods of school life — for students and parents alike. But board exam preparation doesn't need to be a source of panic when it's approached as a gradual, structured process rather than a last-minute sprint. At Malla Reddy School, we build exam readiness into the entire academic year, not just the final weeks.",
+    sections: [
+      {
+        heading: "Why Early, Structured Preparation Matters",
+        content: "Cramming in the final weeks before an exam rarely produces the deep understanding needed to perform well under pressure. Students who prepare consistently throughout the year retain concepts better, experience less anxiety, and are better equipped to handle unexpected question patterns on exam day."
+      },
+      {
+        heading: "How Malla Reddy School Supports Exam Readiness",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Revision Schedules",
+            content: "Well-planned revision timetables, spread across the year rather than compressed into the final weeks, help students cover the syllabus without last-minute stress."
+          },
+          {
+            heading: "Regular Mock Tests and Practice Papers",
+            content: "Frequent practice with previous years' papers and mock tests familiarizes students with exam patterns and time management under real exam conditions."
+          },
+          {
+            heading: "Doubt-Clearing and Remedial Sessions",
+            content: "Dedicated time for resolving conceptual gaps ensures no student enters the exam hall with unresolved confusion on core topics."
+          },
+          {
+            heading: "Stress Management and Wellbeing Support",
+            content: "Counselling support and guided relaxation techniques help students manage exam stress, recognizing that mental readiness matters as much as academic readiness."
+          },
+          {
+            heading: "Personalized Feedback From Teachers",
+            content: "Regular one-on-one feedback helps students understand exactly where to focus their remaining preparation time most effectively."
+          },
+        ]
+      },
+      {
+        heading: "CBSE Exam Tips Every Student Should Know",
+        content: "Beyond classroom support, a few consistent habits make a measurable difference: reading question papers carefully before starting, allocating time per question realistically, revising using self-made notes rather than only textbooks, and prioritizing high-weightage topics without ignoring the rest of the syllabus. These simple CBSE exam tips, reinforced consistently by our teachers, help turn preparation into performance."
+      },
+      {
+        heading: "Supporting Class 10 and Class 12 Students Differently",
+        content: "Class 10 students are often navigating board exams for the first time, requiring more guided structure and reassurance. Class 12 students, facing both board exams and competitive exam pressures, need more autonomy paired with targeted subject support — a distinction Malla Reddy School's teaching approach takes seriously."
+      },
+    ],
+    faqs: [],
+    conclusion: "Board exams are a milestone, not a threat, when preparation is structured, consistent, and supported the right way. At Malla Reddy School, our approach to board exam preparation ensures students walk into the exam hall with confidence built over months, not manufactured overnight.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4657,38 +4710,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The years between Nursery and UKG shape more of a child\'s future than most parents realize. At Malla Reddy School, early childhood education is treated as the most important foundation we build.',
     coverImage: '/images/early-childhood-education.png',
     coverImageAlt: 'Young children engaged in play-based learning in a bright, colourful classroom',
-    content: `
-      <p class="lead">Long before a child sits for their first formal exam, the foundation for how they think, learn, and relate to others is already being built. This is the heart of early childhood education, and the quality of these first years often shapes a child's entire academic and emotional trajectory.</p>
-
-      <h2>Why the Early Years Matter So Much</h2>
-      <p>Between the ages of 2 and 6, a child's brain develops faster than at any other stage of life. This is the critical window for building language skills, number sense, social-emotional competencies, and a genuine love of learning. A nurturing, well-structured early program doesn't rush academics — it creates the right environment for children to explore, build confidence, and develop curiosity at their own pace.</p>
-
-      <h2>What Quality Early Childhood Education Looks Like</h2>
-
-      <h3>Play-Based Learning</h3>
-      <p>At the pre-primary level, play is learning. Structured play, storytelling, music, and movement build foundational skills far more effectively than worksheets or rote repetition.</p>
-
-      <h3>Low Teacher-to-Student Ratios</h3>
-      <p>Young children need individual attention. Smaller class sizes and adequate support staff ensure every child gets the guidance they need during this critical stage.</p>
-
-      <h3>Language and Communication Development</h3>
-      <p>Early literacy and numeracy foundations — built through stories, songs, rhymes, and play — lay the groundwork for reading, writing, and mathematical thinking in later years.</p>
-
-      <h3>A Safe, Nurturing Environment</h3>
-      <p>Low furniture, soft learning spaces, secure entrances, and warm, gentle staff interactions help young children feel emotionally and physically safe.</p>
-
-      <h3>Smooth Transition to Primary School</h3>
-      <p>The best nursery admission programs are connected to a primary school on the same campus, reducing transition anxiety and ensuring the curriculum builds progressively.</p>
-
-      <h2>Early Childhood Education as the Foundation for Everything Else</h2>
-      <p>Foundational learning built during these early years directly influences how confidently and capably a child approaches formal schooling later. Children who experience a warm, well-structured pre-primary program tend to enter primary school more confident, more curious, and more ready to learn.</p>
-
-      <h2>Pre-Primary Education at Malla Reddy School</h2>
-      <p>Malla Reddy School's pre-primary program for Nursery, LKG, and UKG focuses on language development, early numeracy, creative arts, music, and physical activity — all within a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE campus running through senior classes, children enjoy a smooth, familiar transition through every stage of their schooling.</p>
-
-      <h2>Conclusion</h2>
-      <p>Choosing an early childhood program is about more than finding the closest option — it is about finding a place where your child feels safe, curious, and happy to be. A warm, well-organised early years program is one of the best gifts a parent can give a child's educational journey.</p>
-    `,
+    intro: "Long before a child sits for their first formal exam, the foundation for how they think, learn, and relate to others is already being built. This is the heart of early childhood education, and the quality of these first years often shapes a child's entire academic and emotional trajectory.",
+    sections: [
+      {
+        heading: "Why the Early Years Matter So Much",
+        content: "Between the ages of 2 and 6, a child's brain develops faster than at any other stage of life. This is the critical window for building language skills, number sense, social-emotional competencies, and a genuine love of learning. A nurturing, well-structured early program doesn't rush academics — it creates the right environment for children to explore, build confidence, and develop curiosity at their own pace."
+      },
+      {
+        heading: "What Quality Early Childhood Education Looks Like",
+        content: "",
+        subsections: [
+          {
+            heading: "Play-Based Learning",
+            content: "At the pre-primary level, play is learning. Structured play, storytelling, music, and movement build foundational skills far more effectively than worksheets or rote repetition."
+          },
+          {
+            heading: "Low Teacher-to-Student Ratios",
+            content: "Young children need individual attention. Smaller class sizes and adequate support staff ensure every child gets the guidance they need during this critical stage."
+          },
+          {
+            heading: "Language and Communication Development",
+            content: "Early literacy and numeracy foundations — built through stories, songs, rhymes, and play — lay the groundwork for reading, writing, and mathematical thinking in later years."
+          },
+          {
+            heading: "A Safe, Nurturing Environment",
+            content: "Low furniture, soft learning spaces, secure entrances, and warm, gentle staff interactions help young children feel emotionally and physically safe."
+          },
+          {
+            heading: "Smooth Transition to Primary School",
+            content: "The best nursery admission programs are connected to a primary school on the same campus, reducing transition anxiety and ensuring the curriculum builds progressively."
+          },
+        ]
+      },
+      {
+        heading: "Early Childhood Education as the Foundation for Everything Else",
+        content: "Foundational learning built during these early years directly influences how confidently and capably a child approaches formal schooling later. Children who experience a warm, well-structured pre-primary program tend to enter primary school more confident, more curious, and more ready to learn."
+      },
+      {
+        heading: "Pre-Primary Education at Malla Reddy School",
+        content: "Malla Reddy School's pre-primary program for Nursery, LKG, and UKG focuses on language development, early numeracy, creative arts, music, and physical activity — all within a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE campus running through senior classes, children enjoy a smooth, familiar transition through every stage of their schooling."
+      },
+    ],
+    faqs: [],
+    conclusion: "Choosing an early childhood program is about more than finding the closest option — it is about finding a place where your child feels safe, curious, and happy to be. A warm, well-organised early years program is one of the best gifts a parent can give a child's educational journey.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4710,38 +4776,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The ability to stand up, speak clearly, and argue a point with confidence is one of the most valuable skills a school can build — and one of the hardest to teach through a textbook alone.',
     coverImage: '/images/public-speaking-debate.png',
     coverImageAlt: 'A student speaking at a podium or participating in a school debate competition',
-    content: `
-      <p class="lead">Many of the most successful adults point to a single school memory as a turning point in their confidence — the first time they spoke in front of an audience and realized they could do it. Public speaking skills don't develop by accident; they are built through consistent, structured practice, which is exactly what Malla Reddy School's debate and elocution programs are designed to provide.</p>
-
-      <h2>Why Public Speaking Deserves Dedicated Attention</h2>
-      <p>Strong communication skills influence far more than stage performances — they shape how a student participates in class discussions, presents projects, interviews for opportunities, and eventually navigates professional life. Yet without deliberate practice, many capable students remain hesitant to speak up simply because they've never had structured opportunities to build that muscle.</p>
-
-      <h2>How Malla Reddy School Builds Speaking Confidence</h2>
-
-      <h3>Structured Debate Club Sessions</h3>
-      <p>Our debate club gives students regular practice constructing arguments, responding to counterpoints, and thinking on their feet in a supportive, low-stakes environment.</p>
-
-      <h3>Elocution and Recitation Competitions</h3>
-      <p>Regular elocution events help even naturally shy students build comfort with speaking in front of an audience, one small step at a time.</p>
-
-      <h3>Classroom Presentation Opportunities</h3>
-      <p>Presentations built into regular subjects give every student — not just those in extracurricular clubs — consistent practice articulating ideas clearly.</p>
-
-      <h3>Assembly Hosting and Announcements</h3>
-      <p>Rotating opportunities to host morning assembly or make announcements give students real, low-pressure public speaking practice as part of everyday school life.</p>
-
-      <h3>Constructive Feedback From Teachers</h3>
-      <p>Rather than simply grading a performance, teachers provide specific, encouraging feedback that helps students improve with each attempt.</p>
-
-      <h2>Communication Skills as a Lifelong Asset</h2>
-      <p>Communication skills built through consistent practice extend far beyond the debate stage. Clear, confident communication influences academic performance, leadership opportunities, and eventually career success — making it one of the most transferable skills a school can help develop.</p>
-
-      <h2>Confidence in Children Starts With Small, Safe Steps</h2>
-      <p>Genuine confidence in children isn't built through a single big performance — it's built gradually, through repeated small opportunities to speak, be heard, and improve without fear of harsh judgment. This is exactly the environment Malla Reddy School's speaking programs are designed to create.</p>
-
-      <h2>Conclusion</h2>
-      <p>A child who can express their ideas clearly and confidently carries an advantage in every part of life — academic, social, and professional. At Malla Reddy School, our structured public speaking and debate programs ensure every student gets the chance to find, and strengthen, their own voice.</p>
-    `,
+    intro: "Many of the most successful adults point to a single school memory as a turning point in their confidence — the first time they spoke in front of an audience and realized they could do it. Public speaking skills don't develop by accident; they are built through consistent, structured practice, which is exactly what Malla Reddy School's debate and elocution programs are designed to provide.",
+    sections: [
+      {
+        heading: "Why Public Speaking Deserves Dedicated Attention",
+        content: "Strong communication skills influence far more than stage performances — they shape how a student participates in class discussions, presents projects, interviews for opportunities, and eventually navigates professional life. Yet without deliberate practice, many capable students remain hesitant to speak up simply because they've never had structured opportunities to build that muscle."
+      },
+      {
+        heading: "How Malla Reddy School Builds Speaking Confidence",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Debate Club Sessions",
+            content: "Our debate club gives students regular practice constructing arguments, responding to counterpoints, and thinking on their feet in a supportive, low-stakes environment."
+          },
+          {
+            heading: "Elocution and Recitation Competitions",
+            content: "Regular elocution events help even naturally shy students build comfort with speaking in front of an audience, one small step at a time."
+          },
+          {
+            heading: "Classroom Presentation Opportunities",
+            content: "Presentations built into regular subjects give every student — not just those in extracurricular clubs — consistent practice articulating ideas clearly."
+          },
+          {
+            heading: "Assembly Hosting and Announcements",
+            content: "Rotating opportunities to host morning assembly or make announcements give students real, low-pressure public speaking practice as part of everyday school life."
+          },
+          {
+            heading: "Constructive Feedback From Teachers",
+            content: "Rather than simply grading a performance, teachers provide specific, encouraging feedback that helps students improve with each attempt."
+          },
+        ]
+      },
+      {
+        heading: "Communication Skills as a Lifelong Asset",
+        content: "Communication skills built through consistent practice extend far beyond the debate stage. Clear, confident communication influences academic performance, leadership opportunities, and eventually career success — making it one of the most transferable skills a school can help develop."
+      },
+      {
+        heading: "Confidence in Children Starts With Small, Safe Steps",
+        content: "Genuine confidence in children isn't built through a single big performance — it's built gradually, through repeated small opportunities to speak, be heard, and improve without fear of harsh judgment. This is exactly the environment Malla Reddy School's speaking programs are designed to create."
+      },
+    ],
+    faqs: [],
+    conclusion: "A child who can express their ideas clearly and confidently carries an advantage in every part of life — academic, social, and professional. At Malla Reddy School, our structured public speaking and debate programs ensure every student gets the chance to find, and strengthen, their own voice.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4763,38 +4842,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Not every child finds their confidence in a textbook. For some, it\'s a paintbrush, an instrument, or a stage. At Malla Reddy School, art and music are given the space to matter.',
     coverImage: '/images/art-music-education.png',
     coverImageAlt: 'Students engaged in art class or a music/instrument session',
-    content: `
-      <p class="lead">It's easy to view art and music as pleasant extras in a school day — nice to have, but not essential. At Malla Reddy School, we see it differently. Art education and music education aren't decorative additions to the curriculum; they are essential tools for building creativity, emotional expression, and confidence in students who may not find those outlets anywhere else.</p>
-
-      <h2>Why Creative Arts Deserve a Central Place in Education</h2>
-      <p>Creative subjects develop parts of a child's thinking that traditional academics often don't reach — imagination, emotional expression, fine motor skills, and the confidence that comes from creating something entirely their own. For many students, art and music become the space where they first discover genuine self-expression and personal identity.</p>
-
-      <h2>How Art and Music Are Taught at Malla Reddy School</h2>
-
-      <h3>Structured Art Curriculum</h3>
-      <p>Regular art classes introduce students to a range of techniques and mediums, building both technical skill and creative confidence over time.</p>
-
-      <h3>Instrumental and Vocal Music Training</h3>
-      <p>Music sessions give students exposure to instruments and vocal training, nurturing talent and appreciation for music as both a skill and an emotional outlet.</p>
-
-      <h3>Creative Arts Exhibitions and Performances</h3>
-      <p>Regular showcases and performances give students the opportunity to share their creative work, building pride and confidence in their abilities.</p>
-
-      <h3>Integration With Cultural Events</h3>
-      <p>School festivals and cultural celebrations give art and music students real platforms to apply what they've learned in meaningful, engaging contexts.</p>
-
-      <h3>Encouraging Individual Expression</h3>
-      <p>Rather than enforcing a single "correct" style, teachers encourage students to develop their own creative voice within structured guidance.</p>
-
-      <h2>The Broader Benefits of Creative Arts Education</h2>
-      <p>Beyond talent development, creative arts education has been shown to support emotional regulation, improve focus, and even strengthen skills in seemingly unrelated subjects like mathematics and language, through the discipline and pattern recognition creative practice builds.</p>
-
-      <h2>Building Genuinely Well-Rounded Students</h2>
-      <p>A well-rounded student isn't defined solely by academic performance. Confidence built on a stage, in an art exhibition, or through a completed creative project often translates directly into greater self-assurance in the classroom and beyond.</p>
-
-      <h2>Conclusion</h2>
-      <p>Every child has a form of expression that resonates with them — for some, it's equations; for others, it's a canvas or a melody. At Malla Reddy School, our commitment to art and music education ensures every student has the chance to discover theirs.</p>
-    `,
+    intro: "It's easy to view art and music as pleasant extras in a school day — nice to have, but not essential. At Malla Reddy School, we see it differently. Art education and music education aren't decorative additions to the curriculum; they are essential tools for building creativity, emotional expression, and confidence in students who may not find those outlets anywhere else.",
+    sections: [
+      {
+        heading: "Why Creative Arts Deserve a Central Place in Education",
+        content: "Creative subjects develop parts of a child's thinking that traditional academics often don't reach — imagination, emotional expression, fine motor skills, and the confidence that comes from creating something entirely their own. For many students, art and music become the space where they first discover genuine self-expression and personal identity."
+      },
+      {
+        heading: "How Art and Music Are Taught at Malla Reddy School",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Art Curriculum",
+            content: "Regular art classes introduce students to a range of techniques and mediums, building both technical skill and creative confidence over time."
+          },
+          {
+            heading: "Instrumental and Vocal Music Training",
+            content: "Music sessions give students exposure to instruments and vocal training, nurturing talent and appreciation for music as both a skill and an emotional outlet."
+          },
+          {
+            heading: "Creative Arts Exhibitions and Performances",
+            content: "Regular showcases and performances give students the opportunity to share their creative work, building pride and confidence in their abilities."
+          },
+          {
+            heading: "Integration With Cultural Events",
+            content: "School festivals and cultural celebrations give art and music students real platforms to apply what they've learned in meaningful, engaging contexts."
+          },
+          {
+            heading: "Encouraging Individual Expression",
+            content: "Rather than enforcing a single \"correct\" style, teachers encourage students to develop their own creative voice within structured guidance."
+          },
+        ]
+      },
+      {
+        heading: "The Broader Benefits of Creative Arts Education",
+        content: "Beyond talent development, creative arts education has been shown to support emotional regulation, improve focus, and even strengthen skills in seemingly unrelated subjects like mathematics and language, through the discipline and pattern recognition creative practice builds."
+      },
+      {
+        heading: "Building Genuinely Well-Rounded Students",
+        content: "A well-rounded student isn't defined solely by academic performance. Confidence built on a stage, in an art exhibition, or through a completed creative project often translates directly into greater self-assurance in the classroom and beyond."
+      },
+    ],
+    faqs: [],
+    conclusion: "Every child has a form of expression that resonates with them — for some, it's equations; for others, it's a canvas or a melody. At Malla Reddy School, our commitment to art and music education ensures every student has the chance to discover theirs.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4816,38 +4908,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The generation growing up today will inherit the consequences of how the planet is cared for now. At Malla Reddy School, environmental responsibility is taught as a value, not just a topic.',
     coverImage: '/images/environmental-awareness.png',
     coverImageAlt: 'Students participating in a tree-planting activity or eco club project',
-    content: `
-      <p class="lead">Climate change, resource scarcity, and environmental responsibility are no longer distant, abstract topics — they are realities the next generation will navigate directly. Environmental education helps children understand not just the science behind these challenges, but their own role in addressing them, and at Malla Reddy School, this awareness is built into everyday school life.</p>
-
-      <h2>Why Environmental Education Belongs in Every Classroom</h2>
-      <p>Environmental issues are increasingly shaping policy, industry, and everyday life across the world. Children who grow up with genuine environmental awareness are better equipped to make informed, responsible choices — not out of guilt, but out of understanding. Teaching this early builds habits that last far longer than any single lesson.</p>
-
-      <h2>How Malla Reddy School Builds Environmental Awareness</h2>
-
-      <h3>Active Eco Clubs</h3>
-      <p>Our eco clubs give students hands-on opportunities to lead recycling drives, plantation activities, and awareness campaigns within the school community.</p>
-
-      <h3>Curriculum Integration</h3>
-      <p>Environmental concepts are woven into science and social studies lessons, connecting classroom theory to real-world environmental challenges.</p>
-
-      <h3>Campus Sustainability Practices</h3>
-      <p>Practical initiatives like water conservation, waste segregation, and green campus spaces model sustainability in schools in ways students can see and participate in directly.</p>
-
-      <h3>Awareness Days and Campaigns</h3>
-      <p>Events like World Environment Day and Earth Hour give students structured opportunities to reflect on and act toward environmental responsibility.</p>
-
-      <h3>Student-Led Green Initiatives</h3>
-      <p>Students are encouraged to propose and lead their own environmental projects, building ownership and genuine investment in sustainability practices.</p>
-
-      <h2>Building a Genuine Green School Culture</h2>
-      <p>A green school isn't defined by occasional plantation drives — it's reflected in daily habits, from responsible resource use to a campus culture that treats sustainability as a shared value rather than a once-a-year event.</p>
-
-      <h2>Preparing Students for a Sustainability-Conscious Future</h2>
-      <p>As sustainability becomes central to industries, careers, and public policy, students who grow up with genuine environmental literacy carry a long-term advantage — both as informed citizens and as future professionals navigating an increasingly sustainability-focused world.</p>
-
-      <h2>Conclusion</h2>
-      <p>Teaching children to care for the environment isn't just about today's classroom projects — it's an investment in the kind of world they will help build. At Malla Reddy School, our commitment to environmental education ensures students grow up as genuinely responsible, aware global citizens.</p>
-    `,
+    intro: "Climate change, resource scarcity, and environmental responsibility are no longer distant, abstract topics — they are realities the next generation will navigate directly. Environmental education helps children understand not just the science behind these challenges, but their own role in addressing them, and at Malla Reddy School, this awareness is built into everyday school life.",
+    sections: [
+      {
+        heading: "Why Environmental Education Belongs in Every Classroom",
+        content: "Environmental issues are increasingly shaping policy, industry, and everyday life across the world. Children who grow up with genuine environmental awareness are better equipped to make informed, responsible choices — not out of guilt, but out of understanding. Teaching this early builds habits that last far longer than any single lesson."
+      },
+      {
+        heading: "How Malla Reddy School Builds Environmental Awareness",
+        content: "",
+        subsections: [
+          {
+            heading: "Active Eco Clubs",
+            content: "Our eco clubs give students hands-on opportunities to lead recycling drives, plantation activities, and awareness campaigns within the school community."
+          },
+          {
+            heading: "Curriculum Integration",
+            content: "Environmental concepts are woven into science and social studies lessons, connecting classroom theory to real-world environmental challenges."
+          },
+          {
+            heading: "Campus Sustainability Practices",
+            content: "Practical initiatives like water conservation, waste segregation, and green campus spaces model sustainability in schools in ways students can see and participate in directly."
+          },
+          {
+            heading: "Awareness Days and Campaigns",
+            content: "Events like World Environment Day and Earth Hour give students structured opportunities to reflect on and act toward environmental responsibility."
+          },
+          {
+            heading: "Student-Led Green Initiatives",
+            content: "Students are encouraged to propose and lead their own environmental projects, building ownership and genuine investment in sustainability practices."
+          },
+        ]
+      },
+      {
+        heading: "Building a Genuine Green School Culture",
+        content: "A green school isn't defined by occasional plantation drives — it's reflected in daily habits, from responsible resource use to a campus culture that treats sustainability as a shared value rather than a once-a-year event."
+      },
+      {
+        heading: "Preparing Students for a Sustainability-Conscious Future",
+        content: "As sustainability becomes central to industries, careers, and public policy, students who grow up with genuine environmental literacy carry a long-term advantage — both as informed citizens and as future professionals navigating an increasingly sustainability-focused world."
+      },
+    ],
+    faqs: [],
+    conclusion: "Teaching children to care for the environment isn't just about today's classroom projects — it's an investment in the kind of world they will help build. At Malla Reddy School, our commitment to environmental education ensures students grow up as genuinely responsible, aware global citizens.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4869,38 +4974,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The tools students will use in their future careers are evolving faster than any curriculum can predict. At Malla Reddy School, we focus on building the underlying digital literacy.',
     coverImage: '/images/ai-digital-literacy.png',
     coverImageAlt: 'Students working on computers or engaged in a digital learning session',
-    content: `
-      <p class="lead">Artificial intelligence and digital tools are no longer distant, futuristic concepts — they are already shaping how information is created, verified, and used across nearly every industry. AI literacy and broader digital literacy are quickly becoming as fundamental as reading and arithmetic, and at Malla Reddy School, we are building these skills into how students learn today.</p>
-
-      <h2>Why Digital and AI Literacy Matter Now</h2>
-      <p>Understanding how digital tools and AI systems work — and, just as importantly, understanding their limitations — helps students engage with technology critically rather than passively. This isn't about turning every student into a programmer; it's about equipping them to navigate an increasingly digital world with confidence and discernment.</p>
-
-      <h2>How Malla Reddy School Builds These Skills</h2>
-
-      <h3>Foundational Digital Literacy</h3>
-      <p>Students learn essential digital skills — from safe internet use to basic productivity tools — starting from an age-appropriate level in the early years.</p>
-
-      <h3>Introduction to AI Concepts</h3>
-      <p>Age-appropriate lessons introduce students to how AI tools work at a conceptual level, building understanding rather than dependency.</p>
-
-      <h3>Critical Thinking Around Digital Information</h3>
-      <p>Students are taught to evaluate online information critically, recognizing misinformation and understanding source credibility — a vital 21st century skill.</p>
-
-      <h3>Coding and Computational Thinking</h3>
-      <p>Structured coding classes build the logical thinking foundation that underpins both traditional programming and modern AI tools.</p>
-
-      <h3>Responsible and Ethical Technology Use</h3>
-      <p>Lessons on digital citizenship help students understand privacy, online safety, and the ethical use of AI tools in academic and personal contexts.</p>
-
-      <h2>Technology Skills as a Long-Term Career Advantage</h2>
-      <p>Nearly every future career, regardless of field, will require some degree of comfort with digital tools and AI-assisted workflows. Building strong technology skills early gives students a lasting advantage, regardless of which specific career path they eventually choose.</p>
-
-      <h2>Balancing Technology With Critical Thinking</h2>
-      <p>Malla Reddy School's approach to digital and AI literacy isn't about replacing traditional learning — it's about ensuring students can use these powerful tools thoughtfully, without losing the critical thinking and creativity that no algorithm can replace.</p>
-
-      <h2>Conclusion</h2>
-      <p>The world our students will work in is being reshaped by technology at a pace no curriculum can fully anticipate. At Malla Reddy School, our focus on AI and digital literacy ensures students aren't just consumers of technology — they are confident, critical, and capable users of it.</p>
-    `,
+    intro: "Artificial intelligence and digital tools are no longer distant, futuristic concepts — they are already shaping how information is created, verified, and used across nearly every industry. AI literacy and broader digital literacy are quickly becoming as fundamental as reading and arithmetic, and at Malla Reddy School, we are building these skills into how students learn today.",
+    sections: [
+      {
+        heading: "Why Digital and AI Literacy Matter Now",
+        content: "Understanding how digital tools and AI systems work — and, just as importantly, understanding their limitations — helps students engage with technology critically rather than passively. This isn't about turning every student into a programmer; it's about equipping them to navigate an increasingly digital world with confidence and discernment."
+      },
+      {
+        heading: "How Malla Reddy School Builds These Skills",
+        content: "",
+        subsections: [
+          {
+            heading: "Foundational Digital Literacy",
+            content: "Students learn essential digital skills — from safe internet use to basic productivity tools — starting from an age-appropriate level in the early years."
+          },
+          {
+            heading: "Introduction to AI Concepts",
+            content: "Age-appropriate lessons introduce students to how AI tools work at a conceptual level, building understanding rather than dependency."
+          },
+          {
+            heading: "Critical Thinking Around Digital Information",
+            content: "Students are taught to evaluate online information critically, recognizing misinformation and understanding source credibility — a vital 21st century skill."
+          },
+          {
+            heading: "Coding and Computational Thinking",
+            content: "Structured coding classes build the logical thinking foundation that underpins both traditional programming and modern AI tools."
+          },
+          {
+            heading: "Responsible and Ethical Technology Use",
+            content: "Lessons on digital citizenship help students understand privacy, online safety, and the ethical use of AI tools in academic and personal contexts."
+          },
+        ]
+      },
+      {
+        heading: "Technology Skills as a Long-Term Career Advantage",
+        content: "Nearly every future career, regardless of field, will require some degree of comfort with digital tools and AI-assisted workflows. Building strong technology skills early gives students a lasting advantage, regardless of which specific career path they eventually choose."
+      },
+      {
+        heading: "Balancing Technology With Critical Thinking",
+        content: "Malla Reddy School's approach to digital and AI literacy isn't about replacing traditional learning — it's about ensuring students can use these powerful tools thoughtfully, without losing the critical thinking and creativity that no algorithm can replace."
+      },
+    ],
+    faqs: [],
+    conclusion: "The world our students will work in is being reshaped by technology at a pace no curriculum can fully anticipate. At Malla Reddy School, our focus on AI and digital literacy ensures students aren't just consumers of technology — they are confident, critical, and capable users of it.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4922,38 +5040,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'New subjects, new teachers, new expectations — the jump from primary to middle school can feel overwhelming for children and parents alike. Here\'s how to make it a smooth one.',
     coverImage: '/images/middle-school-transition.png',
     coverImageAlt: 'Middle school students in a classroom or transitioning between class periods',
-    content: `
-      <p class="lead">For many children, the move from primary to middle school marks one of the most significant shifts in their academic journey — new subjects, multiple teachers instead of one, increased independence, and higher expectations, all at once. This school transition can be exciting, but it can also be genuinely stressful without the right support, and understanding what to expect makes a real difference for both students and parents.</p>
-
-      <h2>Why This Transition Feels So Different</h2>
-      <p>Primary school typically offers a single, consistent teacher and a predictable daily structure. Middle school introduces subject-specific teachers, more independent responsibility for tracking assignments, and a faster academic pace. This shift asks children to develop organizational and self-management skills they haven't needed before — and that takes deliberate support to build.</p>
-
-      <h2>How Malla Reddy School Supports a Smooth Transition</h2>
-
-      <h3>Gradual Introduction of Independence</h3>
-      <p>Structured routines in the upper primary years slowly introduce more independent responsibility, easing students into middle school expectations rather than a sudden shift.</p>
-
-      <h3>Consistent Campus and Familiar Environment</h3>
-      <p>Because our primary and middle school sections share the same campus, students transition without the added stress of a completely new environment.</p>
-
-      <h3>Orientation and Familiarization Sessions</h3>
-      <p>Dedicated orientation activities help incoming middle schoolers understand new routines, subject structures, and expectations before the academic year fully begins.</p>
-
-      <h3>Ongoing Counselling and Teacher Support</h3>
-      <p>Counsellors and teachers remain closely attentive during the transition period, watching for signs of academic or emotional stress and addressing them early.</p>
-
-      <h3>Structured Academic Preparation for Middle School</h3>
-      <p>Curriculum in the final primary years is designed to build the study skills — note-taking, time management, independent revision — that middle school will require.</p>
-
-      <h2>Middle School Preparation Starts Earlier Than Parents Expect</h2>
-      <p>Effective middle school preparation doesn't begin the summer before the transition — it starts gradually, years earlier, through consistent skill-building in organization, responsibility, and independent thinking during the primary years.</p>
-
-      <h2>How Parents Can Help During the Academic Transition</h2>
-      <p>Simple support at home makes a real difference: maintaining open conversations about how school feels, helping (without taking over) with organization and planning, and reassuring children that some adjustment difficulty is completely normal during any significant academic transition.</p>
-
-      <h2>Conclusion</h2>
-      <p>The shift from primary to middle school is a milestone, not a hurdle — when it's supported the right way. At Malla Reddy School, our approach to this transition ensures students move forward with confidence, not anxiety.</p>
-    `,
+    intro: "For many children, the move from primary to middle school marks one of the most significant shifts in their academic journey — new subjects, multiple teachers instead of one, increased independence, and higher expectations, all at once. This school transition can be exciting, but it can also be genuinely stressful without the right support, and understanding what to expect makes a real difference for both students and parents.",
+    sections: [
+      {
+        heading: "Why This Transition Feels So Different",
+        content: "Primary school typically offers a single, consistent teacher and a predictable daily structure. Middle school introduces subject-specific teachers, more independent responsibility for tracking assignments, and a faster academic pace. This shift asks children to develop organizational and self-management skills they haven't needed before — and that takes deliberate support to build."
+      },
+      {
+        heading: "How Malla Reddy School Supports a Smooth Transition",
+        content: "",
+        subsections: [
+          {
+            heading: "Gradual Introduction of Independence",
+            content: "Structured routines in the upper primary years slowly introduce more independent responsibility, easing students into middle school expectations rather than a sudden shift."
+          },
+          {
+            heading: "Consistent Campus and Familiar Environment",
+            content: "Because our primary and middle school sections share the same campus, students transition without the added stress of a completely new environment."
+          },
+          {
+            heading: "Orientation and Familiarization Sessions",
+            content: "Dedicated orientation activities help incoming middle schoolers understand new routines, subject structures, and expectations before the academic year fully begins."
+          },
+          {
+            heading: "Ongoing Counselling and Teacher Support",
+            content: "Counsellors and teachers remain closely attentive during the transition period, watching for signs of academic or emotional stress and addressing them early."
+          },
+          {
+            heading: "Structured Academic Preparation for Middle School",
+            content: "Curriculum in the final primary years is designed to build the study skills — note-taking, time management, independent revision — that middle school will require."
+          },
+        ]
+      },
+      {
+        heading: "Middle School Preparation Starts Earlier Than Parents Expect",
+        content: "Effective middle school preparation doesn't begin the summer before the transition — it starts gradually, years earlier, through consistent skill-building in organization, responsibility, and independent thinking during the primary years."
+      },
+      {
+        heading: "How Parents Can Help During the Academic Transition",
+        content: "Simple support at home makes a real difference: maintaining open conversations about how school feels, helping (without taking over) with organization and planning, and reassuring children that some adjustment difficulty is completely normal during any significant academic transition."
+      },
+    ],
+    faqs: [],
+    conclusion: "The shift from primary to middle school is a milestone, not a hurdle — when it's supported the right way. At Malla Reddy School, our approach to this transition ensures students move forward with confidence, not anxiety.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -4975,38 +5106,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'The students who succeed aren\'t always the most naturally gifted — they\'re often simply the ones who\'ve learned how to manage their time and study effectively.',
     coverImage: '/images/time-management.png',
     coverImageAlt: 'A student using a planner or organizing study materials at a desk',
-    content: `
-      <p class="lead">Talent alone rarely explains why some students consistently perform well while others, equally capable, struggle to keep up. More often, the difference comes down to time management and study habits — skills that are rarely taught explicitly, yet shape academic outcomes more than almost anything else.</p>
-
-      <h2>Why These Skills Deserve Direct Attention</h2>
-      <p>Most students are expected to simply "figure out" how to study effectively, with little structured guidance. Left unaddressed, this leads to last-minute cramming, inconsistent effort, and unnecessary stress — not because students lack ability, but because they lack a system. Teaching these skills directly closes that gap.</p>
-
-      <h2>How Malla Reddy School Builds Strong Study Skills</h2>
-
-      <h3>Structured Homework and Revision Routines</h3>
-      <p>Clear expectations around homework timing and revision schedules help students build consistency rather than relying on last-minute effort.</p>
-
-      <h3>Teaching Prioritization, Not Just Content</h3>
-      <p>Students are guided on how to identify high-priority topics and allocate study time proportionally, rather than treating every topic equally.</p>
-
-      <h3>Introducing Practical Study Techniques</h3>
-      <p>Techniques like active recall, spaced repetition, and summarization are introduced progressively, giving students tools that go beyond simply re-reading notes.</p>
-
-      <h3>Balanced Timetables That Model Good Habits</h3>
-      <p>A well-structured school timetable itself models effective time allocation, helping students internalize structure through daily routine.</p>
-
-      <h3>Regular Check-Ins on Progress</h3>
-      <p>Teachers monitor not just academic output but how students are managing their workload, offering guidance before small gaps become larger problems.</p>
-
-      <h2>Study Habits as a Foundation for Student Productivity</h2>
-      <p>Strong study habits don't just improve grades — they build genuine student productivity, a skill that continues to matter well beyond school, into higher education and professional life.</p>
-
-      <h2>Effective Learning Is a Skill, Not a Talent</h2>
-      <p>Effective learning is often mistaken for natural intelligence, when in reality it is a learnable process — one Malla Reddy School invests in teaching directly, rather than assuming students will develop it on their own.</p>
-
-      <h2>Conclusion</h2>
-      <p>Time management and study skills are among the most valuable, transferable lessons a school can teach — often more impactful long-term than any single piece of subject knowledge. At Malla Reddy School, we make sure every student graduates with both the knowledge and the habits to use it well.</p>
-    `,
+    intro: "Talent alone rarely explains why some students consistently perform well while others, equally capable, struggle to keep up. More often, the difference comes down to time management and study habits — skills that are rarely taught explicitly, yet shape academic outcomes more than almost anything else.",
+    sections: [
+      {
+        heading: "Why These Skills Deserve Direct Attention",
+        content: "Most students are expected to simply \"figure out\" how to study effectively, with little structured guidance. Left unaddressed, this leads to last-minute cramming, inconsistent effort, and unnecessary stress — not because students lack ability, but because they lack a system. Teaching these skills directly closes that gap."
+      },
+      {
+        heading: "How Malla Reddy School Builds Strong Study Skills",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Homework and Revision Routines",
+            content: "Clear expectations around homework timing and revision schedules help students build consistency rather than relying on last-minute effort."
+          },
+          {
+            heading: "Teaching Prioritization, Not Just Content",
+            content: "Students are guided on how to identify high-priority topics and allocate study time proportionally, rather than treating every topic equally."
+          },
+          {
+            heading: "Introducing Practical Study Techniques",
+            content: "Techniques like active recall, spaced repetition, and summarization are introduced progressively, giving students tools that go beyond simply re-reading notes."
+          },
+          {
+            heading: "Balanced Timetables That Model Good Habits",
+            content: "A well-structured school timetable itself models effective time allocation, helping students internalize structure through daily routine."
+          },
+          {
+            heading: "Regular Check-Ins on Progress",
+            content: "Teachers monitor not just academic output but how students are managing their workload, offering guidance before small gaps become larger problems."
+          },
+        ]
+      },
+      {
+        heading: "Study Habits as a Foundation for Student Productivity",
+        content: "Strong study habits don't just improve grades — they build genuine student productivity, a skill that continues to matter well beyond school, into higher education and professional life."
+      },
+      {
+        heading: "Effective Learning Is a Skill, Not a Talent",
+        content: "Effective learning is often mistaken for natural intelligence, when in reality it is a learnable process — one Malla Reddy School invests in teaching directly, rather than assuming students will develop it on their own."
+      },
+    ],
+    faqs: [],
+    conclusion: "Time management and study skills are among the most valuable, transferable lessons a school can teach — often more impactful long-term than any single piece of subject knowledge. At Malla Reddy School, we make sure every student graduates with both the knowledge and the habits to use it well.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5028,38 +5172,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Choosing a stream after Class 10, or a career path after Class 12, can feel like one of the biggest decisions a teenager will ever make. At Malla Reddy School, students don\'t navigate that alone.',
     coverImage: '/images/career-guidance.png',
     coverImageAlt: 'A senior secondary student in a counselling session or career workshop',
-    content: `
-      <p class="lead">For many students, senior secondary years bring a wave of significant decisions — which stream to choose, which entrance exams to prepare for, and eventually, which career path to pursue. Without proper support, these choices are often made based on incomplete information or outside pressure rather than genuine self-understanding. Career guidance at Malla Reddy School is designed to change that.</p>
-
-      <h2>Why Structured Career Guidance Matters</h2>
-      <p>Teenagers are often asked to make life-shaping academic and career decisions with limited exposure to what those paths actually involve day to day. Structured, professional career counselling helps bridge that gap — connecting a student's genuine interests and strengths to realistic, well-informed choices.</p>
-
-      <h2>How Malla Reddy School Supports Career Decision-Making</h2>
-
-      <h3>Aptitude and Interest Assessments</h3>
-      <p>Structured assessments help students understand their natural strengths and interests, providing a data-informed starting point for career conversations.</p>
-
-      <h3>One-on-One Counselling Sessions</h3>
-      <p>Dedicated sessions with trained counsellors give students space to discuss options, concerns, and expectations in a supportive, judgment-free setting.</p>
-
-      <h3>Stream Selection Guidance After Class 10</h3>
-      <p>Detailed guidance helps students understand the implications of choosing Science, Commerce, or Humanities, based on genuine interest rather than assumption or peer pressure.</p>
-
-      <h3>Exposure to Diverse Career Paths</h3>
-      <p>Workshops, guest sessions, and exposure to varied career fields help students look beyond the most commonly discussed options like engineering and medicine.</p>
-
-      <h3>College and Entrance Exam Guidance</h3>
-      <p>Support in understanding entrance exam requirements, application processes, and realistic timelines helps students plan their senior secondary years strategically.</p>
-
-      <h2>Making Informed Decisions, Not Pressured Ones</h2>
-      <p>A core part of Malla Reddy School's approach to future career planning is ensuring decisions come from genuine self-understanding rather than family expectation or social pressure alone — while still respecting the important role parents play in these conversations.</p>
-
-      <h2>Supporting Students Through Uncertainty</h2>
-      <p>Not knowing exactly what career to pursue at 16 or 17 is completely normal, and our counselling approach treats it that way — helping students explore options with curiosity rather than anxiety, and revisit decisions as their interests naturally evolve.</p>
-
-      <h2>Conclusion</h2>
-      <p>The right career guidance doesn't hand students an answer — it equips them to find their own, with clarity and confidence. At Malla Reddy School, our counselling support ensures every senior secondary student approaches this pivotal stage well-informed and genuinely supported.</p>
-    `,
+    intro: "For many students, senior secondary years bring a wave of significant decisions — which stream to choose, which entrance exams to prepare for, and eventually, which career path to pursue. Without proper support, these choices are often made based on incomplete information or outside pressure rather than genuine self-understanding. Career guidance at Malla Reddy School is designed to change that.",
+    sections: [
+      {
+        heading: "Why Structured Career Guidance Matters",
+        content: "Teenagers are often asked to make life-shaping academic and career decisions with limited exposure to what those paths actually involve day to day. Structured, professional career counselling helps bridge that gap — connecting a student's genuine interests and strengths to realistic, well-informed choices."
+      },
+      {
+        heading: "How Malla Reddy School Supports Career Decision-Making",
+        content: "",
+        subsections: [
+          {
+            heading: "Aptitude and Interest Assessments",
+            content: "Structured assessments help students understand their natural strengths and interests, providing a data-informed starting point for career conversations."
+          },
+          {
+            heading: "One-on-One Counselling Sessions",
+            content: "Dedicated sessions with trained counsellors give students space to discuss options, concerns, and expectations in a supportive, judgment-free setting."
+          },
+          {
+            heading: "Stream Selection Guidance After Class 10",
+            content: "Detailed guidance helps students understand the implications of choosing Science, Commerce, or Humanities, based on genuine interest rather than assumption or peer pressure."
+          },
+          {
+            heading: "Exposure to Diverse Career Paths",
+            content: "Workshops, guest sessions, and exposure to varied career fields help students look beyond the most commonly discussed options like engineering and medicine."
+          },
+          {
+            heading: "College and Entrance Exam Guidance",
+            content: "Support in understanding entrance exam requirements, application processes, and realistic timelines helps students plan their senior secondary years strategically."
+          },
+        ]
+      },
+      {
+        heading: "Making Informed Decisions, Not Pressured Ones",
+        content: "A core part of Malla Reddy School's approach to future career planning is ensuring decisions come from genuine self-understanding rather than family expectation or social pressure alone — while still respecting the important role parents play in these conversations."
+      },
+      {
+        heading: "Supporting Students Through Uncertainty",
+        content: "Not knowing exactly what career to pursue at 16 or 17 is completely normal, and our counselling approach treats it that way — helping students explore options with curiosity rather than anxiety, and revisit decisions as their interests naturally evolve."
+      },
+    ],
+    faqs: [],
+    conclusion: "The right career guidance doesn't hand students an answer — it equips them to find their own, with clarity and confidence. At Malla Reddy School, our counselling support ensures every senior secondary student approaches this pivotal stage well-informed and genuinely supported.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5081,38 +5238,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Discipline isn\'t about control — it\'s about giving children the structure they need to feel secure, respected, and capable of managing themselves.',
     coverImage: '/images/school-discipline.png',
     coverImageAlt: 'Students following an orderly classroom routine or morning assembly',
-    content: `
-      <p class="lead">The word "discipline" often carries a negative connotation — rules, restrictions, punishment. But genuine school discipline, done well, is one of the most supportive things a school can offer a child. It provides the structure, consistency, and clear expectations that help students feel secure and, over time, manage themselves independently.</p>
-
-      <h2>Why Structure Helps Children Thrive</h2>
-      <p>Children generally feel more secure, not less, when expectations are clear and consistently applied. Structure removes ambiguity, reduces anxiety about "getting it wrong," and creates an environment where children can focus on learning rather than navigating unpredictable rules.</p>
-
-      <h2>How Malla Reddy School Approaches Discipline</h2>
-
-      <h3>Clear, Consistently Applied Expectations</h3>
-      <p>Rules around punctuality, conduct, and respect are communicated clearly and applied consistently, helping students understand exactly what is expected of them.</p>
-
-      <h3>Positive Reinforcement Over Punishment</h3>
-      <p>Good behaviour is actively recognized and encouraged, reinforcing positive behaviour rather than relying solely on correcting negative behaviour after the fact.</p>
-
-      <h3>Restorative Approaches to Conflict</h3>
-      <p>When issues arise, the focus is on understanding, accountability, and repair — helping students learn from mistakes rather than simply being punished for them.</p>
-
-      <h3>Building Self-Discipline Gradually</h3>
-      <p>As students mature, structured independence increases, helping them internalize self-discipline rather than relying solely on external enforcement.</p>
-
-      <h3>Consistent Classroom Management</h3>
-      <p>Teachers are trained in consistent, fair classroom management techniques that maintain order without creating an atmosphere of fear or excessive control.</p>
-
-      <h2>The Long-Term Value of Self-Discipline</h2>
-      <p>Discipline learned in school — punctuality, follow-through, respect for boundaries — becomes self-discipline in adulthood. Students who internalize these habits early tend to manage responsibilities, deadlines, and commitments more effectively throughout their lives.</p>
-
-      <h2>Discipline as a Foundation, Not a Restriction</h2>
-      <p>At Malla Reddy School, discipline isn't treated as the opposite of freedom — it's treated as the foundation that makes genuine growth, creativity, and confidence possible within a safe, predictable environment.</p>
-
-      <h2>Conclusion</h2>
-      <p>Good discipline isn't about control for its own sake — it's about giving children the structure to grow into capable, self-aware individuals. At Malla Reddy School, our approach to discipline reflects genuine care for each student's long-term development.</p>
-    `,
+    intro: "The word \"discipline\" often carries a negative connotation — rules, restrictions, punishment. But genuine school discipline, done well, is one of the most supportive things a school can offer a child. It provides the structure, consistency, and clear expectations that help students feel secure and, over time, manage themselves independently.",
+    sections: [
+      {
+        heading: "Why Structure Helps Children Thrive",
+        content: "Children generally feel more secure, not less, when expectations are clear and consistently applied. Structure removes ambiguity, reduces anxiety about \"getting it wrong,\" and creates an environment where children can focus on learning rather than navigating unpredictable rules."
+      },
+      {
+        heading: "How Malla Reddy School Approaches Discipline",
+        content: "",
+        subsections: [
+          {
+            heading: "Clear, Consistently Applied Expectations",
+            content: "Rules around punctuality, conduct, and respect are communicated clearly and applied consistently, helping students understand exactly what is expected of them."
+          },
+          {
+            heading: "Positive Reinforcement Over Punishment",
+            content: "Good behaviour is actively recognized and encouraged, reinforcing positive behaviour rather than relying solely on correcting negative behaviour after the fact."
+          },
+          {
+            heading: "Restorative Approaches to Conflict",
+            content: "When issues arise, the focus is on understanding, accountability, and repair — helping students learn from mistakes rather than simply being punished for them."
+          },
+          {
+            heading: "Building Self-Discipline Gradually",
+            content: "As students mature, structured independence increases, helping them internalize self-discipline rather than relying solely on external enforcement."
+          },
+          {
+            heading: "Consistent Classroom Management",
+            content: "Teachers are trained in consistent, fair classroom management techniques that maintain order without creating an atmosphere of fear or excessive control."
+          },
+        ]
+      },
+      {
+        heading: "The Long-Term Value of Self-Discipline",
+        content: "Discipline learned in school — punctuality, follow-through, respect for boundaries — becomes self-discipline in adulthood. Students who internalize these habits early tend to manage responsibilities, deadlines, and commitments more effectively throughout their lives."
+      },
+      {
+        heading: "Discipline as a Foundation, Not a Restriction",
+        content: "At Malla Reddy School, discipline isn't treated as the opposite of freedom — it's treated as the foundation that makes genuine growth, creativity, and confidence possible within a safe, predictable environment."
+      },
+    ],
+    faqs: [],
+    conclusion: "Good discipline isn't about control for its own sake — it's about giving children the structure to grow into capable, self-aware individuals. At Malla Reddy School, our approach to discipline reflects genuine care for each student's long-term development.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5134,38 +5304,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'A child who learns to think in more than one language gains more than vocabulary — they gain flexibility, empathy, and a broader way of seeing the world.',
     coverImage: '/images/multilingual-education.png',
     coverImageAlt: 'Students in a language class engaged in reading or conversation practice',
-    content: `
-      <p class="lead">India's linguistic diversity offers children a natural advantage that many countries can't replicate — the opportunity to grow up genuinely multilingual. Multilingual education does far more than help with communication; it shapes cognitive flexibility, cultural awareness, and confidence, and at Malla Reddy School, we treat language learning as a core part of a child's overall development.</p>
-
-      <h2>Why Multilingual Learning Benefits Growing Minds</h2>
-      <p>Research consistently shows that children who learn multiple languages develop stronger problem-solving skills, better memory, and greater cognitive flexibility compared to monolingual peers. Beyond the academic benefits, multilingual students often develop greater empathy and cultural awareness, having engaged directly with more than one linguistic and cultural framework from an early age.</p>
-
-      <h2>How Malla Reddy School Builds Strong Language Foundations</h2>
-
-      <h3>Structured Language Learning Across Hindi, English, and Telugu</h3>
-      <p>Our curriculum builds genuine proficiency across Hindi, English, Telugu — supporting both academic requirements and everyday communication confidence.</p>
-
-      <h3>Balanced Focus on All Four Language Skills</h3>
-      <p>Reading, writing, speaking, and listening are all given dedicated attention, ensuring students develop well-rounded fluency rather than just textbook knowledge.</p>
-
-      <h3>English as a Medium of Global Opportunity</h3>
-      <p>While respecting and building strong regional language skills, English proficiency is emphasized as a gateway to wider academic and professional opportunities.</p>
-
-      <h3>Interactive Language Learning Methods</h3>
-      <p>Storytelling, role-play, and conversational practice make language learning engaging rather than purely grammar-focused.</p>
-
-      <h3>Cultural Context Woven Into Language Study</h3>
-      <p>Language lessons often include cultural context — literature, festivals, and traditions — deepening appreciation alongside linguistic skill.</p>
-
-      <h2>Bilingual and Multilingual Skills as a Lifelong Advantage</h2>
-      <p>Bilingual skills, and multilingual ability more broadly, offer lasting advantages — from stronger cognitive flexibility in childhood to genuine professional advantages in an increasingly interconnected, global job market later in life.</p>
-
-      <h2>Preparing Students for a Connected World</h2>
-      <p>In a country as linguistically diverse as India, and in a world that increasingly rewards cross-cultural fluency, strong multilingual foundations give Malla Reddy School students a genuine, lasting edge — academically, socially, and professionally.</p>
-
-      <h2>Conclusion</h2>
-      <p>Language shapes how a child thinks, connects, and understands the world around them. At Malla Reddy School, our commitment to multilingual education ensures every student graduates with the linguistic confidence to thrive in a diverse, connected world.</p>
-    `,
+    intro: "India's linguistic diversity offers children a natural advantage that many countries can't replicate — the opportunity to grow up genuinely multilingual. Multilingual education does far more than help with communication; it shapes cognitive flexibility, cultural awareness, and confidence, and at Malla Reddy School, we treat language learning as a core part of a child's overall development.",
+    sections: [
+      {
+        heading: "Why Multilingual Learning Benefits Growing Minds",
+        content: "Research consistently shows that children who learn multiple languages develop stronger problem-solving skills, better memory, and greater cognitive flexibility compared to monolingual peers. Beyond the academic benefits, multilingual students often develop greater empathy and cultural awareness, having engaged directly with more than one linguistic and cultural framework from an early age."
+      },
+      {
+        heading: "How Malla Reddy School Builds Strong Language Foundations",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Language Learning Across Hindi, English, and Telugu",
+            content: "Our curriculum builds genuine proficiency across Hindi, English, Telugu — supporting both academic requirements and everyday communication confidence."
+          },
+          {
+            heading: "Balanced Focus on All Four Language Skills",
+            content: "Reading, writing, speaking, and listening are all given dedicated attention, ensuring students develop well-rounded fluency rather than just textbook knowledge."
+          },
+          {
+            heading: "English as a Medium of Global Opportunity",
+            content: "While respecting and building strong regional language skills, English proficiency is emphasized as a gateway to wider academic and professional opportunities."
+          },
+          {
+            heading: "Interactive Language Learning Methods",
+            content: "Storytelling, role-play, and conversational practice make language learning engaging rather than purely grammar-focused."
+          },
+          {
+            heading: "Cultural Context Woven Into Language Study",
+            content: "Language lessons often include cultural context — literature, festivals, and traditions — deepening appreciation alongside linguistic skill."
+          },
+        ]
+      },
+      {
+        heading: "Bilingual and Multilingual Skills as a Lifelong Advantage",
+        content: "Bilingual skills, and multilingual ability more broadly, offer lasting advantages — from stronger cognitive flexibility in childhood to genuine professional advantages in an increasingly interconnected, global job market later in life."
+      },
+      {
+        heading: "Preparing Students for a Connected World",
+        content: "In a country as linguistically diverse as India, and in a world that increasingly rewards cross-cultural fluency, strong multilingual foundations give Malla Reddy School students a genuine, lasting edge — academically, socially, and professionally."
+      },
+    ],
+    faqs: [],
+    conclusion: "Language shapes how a child thinks, connects, and understands the world around them. At Malla Reddy School, our commitment to multilingual education ensures every student graduates with the linguistic confidence to thrive in a diverse, connected world.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5187,38 +5370,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Knowing an answer is one kind of intelligence. Knowing how to manage frustration, understand a friend\'s feelings, or recover from disappointment is another.',
     coverImage: '/images/emotional-intelligence.png',
     coverImageAlt: 'Students engaged in a group activity or peer discussion showing collaboration',
-    content: `
-      <p class="lead">For decades, academic intelligence was treated as the primary measure of a child's potential. Today, we understand that emotional intelligence — the ability to recognize, understand, and manage emotions, both one's own and others' — is just as critical to long-term success and wellbeing. At Malla Reddy School, nurturing this alongside academics is a deliberate part of how we teach.</p>
-
-      <h2>Why Emotional Intelligence Deserves Real Attention</h2>
-      <p>Children with strong emotional intelligence tend to build healthier relationships, handle setbacks with greater resilience, and navigate conflict more constructively than those who haven't had the chance to develop these skills. These abilities directly affect classroom behaviour, friendships, and eventually, professional success as adults.</p>
-
-      <h2>How Malla Reddy School Nurtures Emotional Growth</h2>
-
-      <h3>Structured Social-Emotional Learning</h3>
-      <p>Age-appropriate social-emotional learning activities help students identify, name, and manage their emotions in healthy, constructive ways.</p>
-
-      <h3>Peer Collaboration and Group Activities</h3>
-      <p>Regular group work and collaborative projects give students practice reading social cues, resolving disagreements, and cooperating toward shared goals.</p>
-
-      <h3>Counselling Support for Emotional Challenges</h3>
-      <p>Trained counsellors are available to help students work through stress, conflict, or emotional difficulty in a supportive, judgment-free environment.</p>
-
-      <h3>Teaching Empathy Through Real Interactions</h3>
-      <p>Rather than treating empathy as an abstract concept, teachers actively model and reinforce it through everyday classroom and playground interactions.</p>
-
-      <h3>Building Self-Awareness Gradually</h3>
-      <p>Reflection activities and guided discussions help students build genuine self-awareness about their own emotional responses and triggers over time.</p>
-
-      <h2>Empathy in Children as a Foundation for Kindness</h2>
-      <p>Empathy in children doesn't develop automatically — it's built through consistent modelling, guided reflection, and real opportunities to understand another person's perspective, all of which are woven into daily school life at Malla Reddy School.</p>
-
-      <h2>The Long-Term Payoff of Emotional Intelligence</h2>
-      <p>Adults with strong emotional intelligence tend to build stronger relationships, handle workplace challenges more effectively, and manage stress with greater resilience — making this one of the most valuable, lasting skills a school can help a child develop.</p>
-
-      <h2>Conclusion</h2>
-      <p>Academic knowledge prepares a child for exams. Emotional intelligence prepares them for life. At Malla Reddy School, we believe both deserve genuine, deliberate attention — because true student success depends on developing them together.</p>
-    `,
+    intro: "For decades, academic intelligence was treated as the primary measure of a child's potential. Today, we understand that emotional intelligence — the ability to recognize, understand, and manage emotions, both one's own and others' — is just as critical to long-term success and wellbeing. At Malla Reddy School, nurturing this alongside academics is a deliberate part of how we teach.",
+    sections: [
+      {
+        heading: "Why Emotional Intelligence Deserves Real Attention",
+        content: "Children with strong emotional intelligence tend to build healthier relationships, handle setbacks with greater resilience, and navigate conflict more constructively than those who haven't had the chance to develop these skills. These abilities directly affect classroom behaviour, friendships, and eventually, professional success as adults."
+      },
+      {
+        heading: "How Malla Reddy School Nurtures Emotional Growth",
+        content: "",
+        subsections: [
+          {
+            heading: "Structured Social-Emotional Learning",
+            content: "Age-appropriate social-emotional learning activities help students identify, name, and manage their emotions in healthy, constructive ways."
+          },
+          {
+            heading: "Peer Collaboration and Group Activities",
+            content: "Regular group work and collaborative projects give students practice reading social cues, resolving disagreements, and cooperating toward shared goals."
+          },
+          {
+            heading: "Counselling Support for Emotional Challenges",
+            content: "Trained counsellors are available to help students work through stress, conflict, or emotional difficulty in a supportive, judgment-free environment."
+          },
+          {
+            heading: "Teaching Empathy Through Real Interactions",
+            content: "Rather than treating empathy as an abstract concept, teachers actively model and reinforce it through everyday classroom and playground interactions."
+          },
+          {
+            heading: "Building Self-Awareness Gradually",
+            content: "Reflection activities and guided discussions help students build genuine self-awareness about their own emotional responses and triggers over time."
+          },
+        ]
+      },
+      {
+        heading: "Empathy in Children as a Foundation for Kindness",
+        content: "Empathy in children doesn't develop automatically — it's built through consistent modelling, guided reflection, and real opportunities to understand another person's perspective, all of which are woven into daily school life at Malla Reddy School."
+      },
+      {
+        heading: "The Long-Term Payoff of Emotional Intelligence",
+        content: "Adults with strong emotional intelligence tend to build stronger relationships, handle workplace challenges more effectively, and manage stress with greater resilience — making this one of the most valuable, lasting skills a school can help a child develop."
+      },
+    ],
+    faqs: [],
+    conclusion: "Academic knowledge prepares a child for exams. Emotional intelligence prepares them for life. At Malla Reddy School, we believe both deserve genuine, deliberate attention — because true student success depends on developing them together.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5240,38 +5436,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'A child\'s ability to focus, learn, and stay energetic through a full school day starts with something surprisingly simple: what and how they eat.',
     coverImage: '/images/nutrition-healthy-habits.png',
     coverImageAlt: 'Students during a healthy meal break or a nutrition awareness activity',
-    content: `
-      <p class="lead">Parents often focus heavily on academics, extracurriculars, and screen time — but one of the most overlooked factors in a child's daily performance is school nutrition. What a child eats directly affects their concentration, energy levels, mood, and even long-term health, making it a genuinely important part of the school experience.</p>
-
-      <h2>Why Nutrition Affects So Much More Than Physical Health</h2>
-      <p>A well-nourished child concentrates better, experiences fewer energy crashes during the school day, and generally shows more stable mood and behaviour than a child running on poor nutrition or irregular meals. These effects are especially pronounced during growth years, when nutritional needs are at their highest relative to body size.</p>
-
-      <h2>How Malla Reddy School Encourages Healthy Habits</h2>
-
-      <h3>Nutrition Awareness in the Curriculum</h3>
-      <p>Age-appropriate lessons on food groups, balanced eating, and the effects of nutrition on the body help students understand the "why" behind healthy choices.</p>
-
-      <h3>Encouraging Balanced Tiffin Choices</h3>
-      <p>Guidance to parents around packing balanced, nutritious lunches supports consistency between school messaging and what students actually eat.</p>
-
-      <h3>Structured Meal and Snack Breaks</h3>
-      <p>Consistent break timings ensure students have adequate time to eat properly rather than rushing meals between activities.</p>
-
-      <h3>Physical Activity as a Complement to Nutrition</h3>
-      <p>Regular physical education reinforces the connection between healthy eating, activity, and overall wellbeing as part of a complete balanced diet and lifestyle approach.</p>
-
-      <h3>Hygiene and Healthy Routine Education</h3>
-      <p>Basic hygiene practices — handwashing, clean eating spaces, and healthy daily routines — are reinforced consistently as part of campus culture.</p>
-
-      <h2>Building Lifelong Healthy Habits, Not Just School-Day Rules</h2>
-      <p>The goal isn't simply enforcing healthy eating within school hours — it's helping students internalize healthy habits they carry with them well beyond the classroom, into how they approach their own wellbeing as they grow older.</p>
-
-      <h2>Supporting Child Health Through Partnership With Parents</h2>
-      <p>Genuine improvement in child health habits happens when school guidance and home practices reinforce each other. We encourage open communication with parents around nutrition, ensuring consistent messaging both at school and at home.</p>
-
-      <h2>Conclusion</h2>
-      <p>A child cannot learn, focus, or thrive at their best on poor nutrition and inconsistent habits. At Malla Reddy School, our attention to healthy habits reflects a genuine understanding that a child's wellbeing and academic performance are deeply connected.</p>
-    `,
+    intro: "Parents often focus heavily on academics, extracurriculars, and screen time — but one of the most overlooked factors in a child's daily performance is school nutrition. What a child eats directly affects their concentration, energy levels, mood, and even long-term health, making it a genuinely important part of the school experience.",
+    sections: [
+      {
+        heading: "Why Nutrition Affects So Much More Than Physical Health",
+        content: "A well-nourished child concentrates better, experiences fewer energy crashes during the school day, and generally shows more stable mood and behaviour than a child running on poor nutrition or irregular meals. These effects are especially pronounced during growth years, when nutritional needs are at their highest relative to body size."
+      },
+      {
+        heading: "How Malla Reddy School Encourages Healthy Habits",
+        content: "",
+        subsections: [
+          {
+            heading: "Nutrition Awareness in the Curriculum",
+            content: "Age-appropriate lessons on food groups, balanced eating, and the effects of nutrition on the body help students understand the \"why\" behind healthy choices."
+          },
+          {
+            heading: "Encouraging Balanced Tiffin Choices",
+            content: "Guidance to parents around packing balanced, nutritious lunches supports consistency between school messaging and what students actually eat."
+          },
+          {
+            heading: "Structured Meal and Snack Breaks",
+            content: "Consistent break timings ensure students have adequate time to eat properly rather than rushing meals between activities."
+          },
+          {
+            heading: "Physical Activity as a Complement to Nutrition",
+            content: "Regular physical education reinforces the connection between healthy eating, activity, and overall wellbeing as part of a complete balanced diet and lifestyle approach."
+          },
+          {
+            heading: "Hygiene and Healthy Routine Education",
+            content: "Basic hygiene practices — handwashing, clean eating spaces, and healthy daily routines — are reinforced consistently as part of campus culture."
+          },
+        ]
+      },
+      {
+        heading: "Building Lifelong Healthy Habits, Not Just School-Day Rules",
+        content: "The goal isn't simply enforcing healthy eating within school hours — it's helping students internalize healthy habits they carry with them well beyond the classroom, into how they approach their own wellbeing as they grow older."
+      },
+      {
+        heading: "Supporting Child Health Through Partnership With Parents",
+        content: "Genuine improvement in child health habits happens when school guidance and home practices reinforce each other. We encourage open communication with parents around nutrition, ensuring consistent messaging both at school and at home."
+      },
+    ],
+    faqs: [],
+    conclusion: "A child cannot learn, focus, or thrive at their best on poor nutrition and inconsistent habits. At Malla Reddy School, our attention to healthy habits reflects a genuine understanding that a child's wellbeing and academic performance are deeply connected.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5293,38 +5502,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Graduating from school is just the beginning of a much bigger journey. At Malla Reddy School, we prepare students not just to pass their board exams, but to genuinely thrive in whatever comes next.',
     coverImage: '/images/college-career-readiness.png',
     coverImageAlt: 'Senior secondary students engaged in a workshop or presentation activity',
-    content: `
-      <p class="lead">Board exam results matter, but they are only one part of what actually determines how well a student adapts to college, further study, or early career life. College readiness and career readiness require a broader set of skills — independence, critical thinking, communication, and adaptability — that go well beyond what any single exam can measure. At Malla Reddy School, preparing students for life after school is a deliberate part of our senior years.</p>
-
-      <h2>Why Academic Results Alone Aren't Enough</h2>
-      <p>Strong grades open doors, but navigating college life, managing independence, and adapting to new environments requires practical life skills that aren't always taught explicitly in a traditional classroom. Students who arrive at college or their first job only academically prepared often face a steep, unnecessary adjustment curve.</p>
-
-      <h2>How Malla Reddy School Builds Genuine Readiness</h2>
-
-      <h3>Higher Education Guidance</h3>
-      <p>Structured support around college applications, entrance exams, and course selection helps students plan their next steps with clarity and confidence.</p>
-
-      <h3>Independent Learning Skills</h3>
-      <p>Senior years gradually shift toward greater academic independence, mirroring the self-directed learning style expected in college environments.</p>
-
-      <h3>Practical Life Skills Development</h3>
-      <p>Basic financial literacy, time management, and personal responsibility are introduced to help students manage independence more smoothly after school.</p>
-
-      <h3>Communication and Presentation Practice</h3>
-      <p>Regular presentations, group projects, and discussions build the communication confidence students will need in college classrooms and early workplaces.</p>
-
-      <h3>Real-World Exposure Through Workshops</h3>
-      <p>Guest sessions, career workshops, and exposure to varied professional fields give students a more realistic understanding of what different paths actually involve.</p>
-
-      <h2>Higher Education Preparation Starts Earlier Than Expected</h2>
-      <p>Genuine higher education preparation doesn't begin in Class 12 — it develops gradually, through consistent focus on independent thinking, communication, and self-management built over the senior secondary years.</p>
-
-      <h2>Life Skills That Matter Beyond the Classroom</h2>
-      <p>The life skills students build in their final school years — managing time independently, communicating clearly, handling setbacks, and making informed decisions — often matter as much for their college and career success as the academic content itself.</p>
-
-      <h2>Conclusion</h2>
-      <p>School doesn't end with a final exam — it opens the door to the next stage of a student's life. At Malla Reddy School, our approach to the senior years ensures students leave not just academically capable, but genuinely ready for what comes next.</p>
-    `,
+    intro: "Board exam results matter, but they are only one part of what actually determines how well a student adapts to college, further study, or early career life. College readiness and career readiness require a broader set of skills — independence, critical thinking, communication, and adaptability — that go well beyond what any single exam can measure. At Malla Reddy School, preparing students for life after school is a deliberate part of our senior years.",
+    sections: [
+      {
+        heading: "Why Academic Results Alone Aren't Enough",
+        content: "Strong grades open doors, but navigating college life, managing independence, and adapting to new environments requires practical life skills that aren't always taught explicitly in a traditional classroom. Students who arrive at college or their first job only academically prepared often face a steep, unnecessary adjustment curve."
+      },
+      {
+        heading: "How Malla Reddy School Builds Genuine Readiness",
+        content: "",
+        subsections: [
+          {
+            heading: "Higher Education Guidance",
+            content: "Structured support around college applications, entrance exams, and course selection helps students plan their next steps with clarity and confidence."
+          },
+          {
+            heading: "Independent Learning Skills",
+            content: "Senior years gradually shift toward greater academic independence, mirroring the self-directed learning style expected in college environments."
+          },
+          {
+            heading: "Practical Life Skills Development",
+            content: "Basic financial literacy, time management, and personal responsibility are introduced to help students manage independence more smoothly after school."
+          },
+          {
+            heading: "Communication and Presentation Practice",
+            content: "Regular presentations, group projects, and discussions build the communication confidence students will need in college classrooms and early workplaces."
+          },
+          {
+            heading: "Real-World Exposure Through Workshops",
+            content: "Guest sessions, career workshops, and exposure to varied professional fields give students a more realistic understanding of what different paths actually involve."
+          },
+        ]
+      },
+      {
+        heading: "Higher Education Preparation Starts Earlier Than Expected",
+        content: "Genuine higher education preparation doesn't begin in Class 12 — it develops gradually, through consistent focus on independent thinking, communication, and self-management built over the senior secondary years."
+      },
+      {
+        heading: "Life Skills That Matter Beyond the Classroom",
+        content: "The life skills students build in their final school years — managing time independently, communicating clearly, handling setbacks, and making informed decisions — often matter as much for their college and career success as the academic content itself."
+      },
+    ],
+    faqs: [],
+    conclusion: "School doesn't end with a final exam — it opens the door to the next stage of a student's life. At Malla Reddy School, our approach to the senior years ensures students leave not just academically capable, but genuinely ready for what comes next.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5346,38 +5568,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'No more waiting for a report card to know how your child is doing. At Malla Reddy School, digital tools keep parents genuinely connected to their child\'s daily school experience.',
     coverImage: '/images/parent-teacher-communication.png',
     coverImageAlt: 'A parent checking a school communication app or portal on a phone',
-    content: `
-      <p class="lead">For years, parent-school communication was largely limited to report cards, occasional notices, and scheduled parent-teacher meetings — leaving long gaps where parents had little visibility into their child's day-to-day school experience. Today, a well-designed school communication app changes that entirely, and at Malla Reddy School, we use digital tools to keep parents genuinely informed, not just occasionally updated.</p>
-
-      <h2>Why Real-Time Communication Matters</h2>
-      <p>Children don't always share the full picture of their school day at home — sometimes because they forget, sometimes because they don't think it's important, and sometimes because they simply don't want to. Digital communication tools close that gap, giving parents direct visibility into assignments, events, and progress without relying solely on their child's account of the day.</p>
-
-      <h2>How Malla Reddy School Uses Digital Communication Tools</h2>
-
-      <h3>Centralized Parent Portal</h3>
-      <p>Our parent portal gives families a single place to check attendance, assignments, upcoming events, and academic progress, reducing confusion and missed communication.</p>
-
-      <h3>Real-Time Updates on Assignments and Events</h3>
-      <p>Homework, project deadlines, and school events are communicated digitally as they're assigned or scheduled, rather than relying solely on students to relay information.</p>
-
-      <h3>Direct Messaging With Teachers</h3>
-      <p>Structured communication channels allow parents to reach out to teachers directly with questions or concerns, without waiting for the next scheduled meeting.</p>
-
-      <h3>Digital Progress Tracking</h3>
-      <p>Ongoing access to academic performance data helps parents stay informed continuously, rather than only at term-end report card time.</p>
-
-      <h3>Emergency and Important Notice Alerts</h3>
-      <p>Time-sensitive announcements — schedule changes, weather-related closures, or urgent notices — reach parents instantly through the digital communication system.</p>
-
-      <h2>Building Genuine Partnership Through Technology</h2>
-      <p>Real-time updates don't just improve convenience — they strengthen the overall parent-school partnership by making sure parents are equipped with current, accurate information to support their child effectively at home.</p>
-
-      <h2>Balancing Digital Convenience With Personal Connection</h2>
-      <p>While digital tools improve day-to-day communication significantly, they complement — rather than replace — regular parent-teacher meetings and personal conversations, which remain essential for deeper discussions about a child's progress and wellbeing.</p>
-
-      <h2>Conclusion</h2>
-      <p>Staying informed about a child's school life shouldn't require waiting for a report card. At Malla Reddy School, our digital communication tools ensure parents remain genuinely connected partners in their child's education, every single day.</p>
-    `,
+    intro: "For years, parent-school communication was largely limited to report cards, occasional notices, and scheduled parent-teacher meetings — leaving long gaps where parents had little visibility into their child's day-to-day school experience. Today, a well-designed school communication app changes that entirely, and at Malla Reddy School, we use digital tools to keep parents genuinely informed, not just occasionally updated.",
+    sections: [
+      {
+        heading: "Why Real-Time Communication Matters",
+        content: "Children don't always share the full picture of their school day at home — sometimes because they forget, sometimes because they don't think it's important, and sometimes because they simply don't want to. Digital communication tools close that gap, giving parents direct visibility into assignments, events, and progress without relying solely on their child's account of the day."
+      },
+      {
+        heading: "How Malla Reddy School Uses Digital Communication Tools",
+        content: "",
+        subsections: [
+          {
+            heading: "Centralized Parent Portal",
+            content: "Our parent portal gives families a single place to check attendance, assignments, upcoming events, and academic progress, reducing confusion and missed communication."
+          },
+          {
+            heading: "Real-Time Updates on Assignments and Events",
+            content: "Homework, project deadlines, and school events are communicated digitally as they're assigned or scheduled, rather than relying solely on students to relay information."
+          },
+          {
+            heading: "Direct Messaging With Teachers",
+            content: "Structured communication channels allow parents to reach out to teachers directly with questions or concerns, without waiting for the next scheduled meeting."
+          },
+          {
+            heading: "Digital Progress Tracking",
+            content: "Ongoing access to academic performance data helps parents stay informed continuously, rather than only at term-end report card time."
+          },
+          {
+            heading: "Emergency and Important Notice Alerts",
+            content: "Time-sensitive announcements — schedule changes, weather-related closures, or urgent notices — reach parents instantly through the digital communication system."
+          },
+        ]
+      },
+      {
+        heading: "Building Genuine Partnership Through Technology",
+        content: "Real-time updates don't just improve convenience — they strengthen the overall parent-school partnership by making sure parents are equipped with current, accurate information to support their child effectively at home."
+      },
+      {
+        heading: "Balancing Digital Convenience With Personal Connection",
+        content: "While digital tools improve day-to-day communication significantly, they complement — rather than replace — regular parent-teacher meetings and personal conversations, which remain essential for deeper discussions about a child's progress and wellbeing."
+      },
+    ],
+    faqs: [],
+    conclusion: "Staying informed about a child's school life shouldn't require waiting for a report card. At Malla Reddy School, our digital communication tools ensure parents remain genuinely connected partners in their child's education, every single day.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   },
   {
@@ -5399,38 +5634,51 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'In a crowded classroom, it\'s easy for a student to go unnoticed. At Malla Reddy School, small class sizes ensure every child gets seen, heard, and genuinely supported.',
     coverImage: '/images/small-class-sizes.png',
     coverImageAlt: 'A teacher engaging closely with a small group of students in a classroom setting',
-    content: `
-      <p class="lead">One of the most overlooked factors in choosing a school is class size — yet it directly affects how much individual attention a child actually receives during the school day. Small class sizes aren't just a comfort factor; they meaningfully change how effectively a teacher can teach, support, and connect with every student in the room.</p>
-
-      <h2>Why Class Size Matters More Than Parents Often Realize</h2>
-      <p>In an overcrowded classroom, even the most skilled teacher struggles to give every student meaningful individual attention. Quiet students go unnoticed, struggling students fall further behind before anyone catches it, and even high-performing students miss out on the deeper engagement that comes from a teacher who genuinely knows their strengths and gaps.</p>
-
-      <h2>How Small Class Sizes Benefit Students at Malla Reddy School</h2>
-
-      <h3>Genuine Individual Attention</h3>
-      <p>With fewer students per teacher, every child gets noticed — academically, socially, and emotionally — rather than blending into a crowd.</p>
-
-      <h3>Faster Identification of Learning Gaps</h3>
-      <p>Teachers can spot when a student is struggling with a concept much earlier, allowing for timely intervention rather than gaps compounding over time.</p>
-
-      <h3>More Opportunities for Active Participation</h3>
-      <p>Smaller groups naturally encourage more classroom discussion, questions, and participation from every student, not just the most confident ones.</p>
-
-      <h3>Stronger Teacher-Student Relationships</h3>
-      <p>Teachers get to genuinely know each student's learning style, personality, and needs, enabling more personalized, effective teaching.</p>
-
-      <h3>Better Behavioural and Emotional Support</h3>
-      <p>Emotional or behavioural concerns are noticed and addressed sooner in a smaller, more closely observed classroom environment.</p>
-
-      <h2>Personalized Learning Becomes Genuinely Possible</h2>
-      <p>Personalized learning is often discussed as an aspiration in education, but it becomes genuinely achievable only when class sizes allow teachers the bandwidth to actually adapt their approach for individual students, not just teach to an average.</p>
-
-      <h2>The Impact of Teacher-Student Ratio on Long-Term Outcomes</h2>
-      <p>A favorable teacher-student ratio consistently correlates with stronger academic outcomes, higher student confidence, and better classroom behaviour — benefits that compound over a student's years in school.</p>
-
-      <h2>Conclusion</h2>
-      <p>A classroom is only as effective as the attention each student can actually receive within it. At Malla Reddy School, our commitment to small class sizes ensures every child gets the individual attention needed to genuinely thrive.</p>
-    `,
+    intro: "One of the most overlooked factors in choosing a school is class size — yet it directly affects how much individual attention a child actually receives during the school day. Small class sizes aren't just a comfort factor; they meaningfully change how effectively a teacher can teach, support, and connect with every student in the room.",
+    sections: [
+      {
+        heading: "Why Class Size Matters More Than Parents Often Realize",
+        content: "In an overcrowded classroom, even the most skilled teacher struggles to give every student meaningful individual attention. Quiet students go unnoticed, struggling students fall further behind before anyone catches it, and even high-performing students miss out on the deeper engagement that comes from a teacher who genuinely knows their strengths and gaps."
+      },
+      {
+        heading: "How Small Class Sizes Benefit Students at Malla Reddy School",
+        content: "",
+        subsections: [
+          {
+            heading: "Genuine Individual Attention",
+            content: "With fewer students per teacher, every child gets noticed — academically, socially, and emotionally — rather than blending into a crowd."
+          },
+          {
+            heading: "Faster Identification of Learning Gaps",
+            content: "Teachers can spot when a student is struggling with a concept much earlier, allowing for timely intervention rather than gaps compounding over time."
+          },
+          {
+            heading: "More Opportunities for Active Participation",
+            content: "Smaller groups naturally encourage more classroom discussion, questions, and participation from every student, not just the most confident ones."
+          },
+          {
+            heading: "Stronger Teacher-Student Relationships",
+            content: "Teachers get to genuinely know each student's learning style, personality, and needs, enabling more personalized, effective teaching."
+          },
+          {
+            heading: "Better Behavioural and Emotional Support",
+            content: "Emotional or behavioural concerns are noticed and addressed sooner in a smaller, more closely observed classroom environment."
+          },
+        ]
+      },
+      {
+        heading: "Personalized Learning Becomes Genuinely Possible",
+        content: "Personalized learning is often discussed as an aspiration in education, but it becomes genuinely achievable only when class sizes allow teachers the bandwidth to actually adapt their approach for individual students, not just teach to an average."
+      },
+      {
+        heading: "The Impact of Teacher-Student Ratio on Long-Term Outcomes",
+        content: "A favorable teacher-student ratio consistently correlates with stronger academic outcomes, higher student confidence, and better classroom behaviour — benefits that compound over a student's years in school."
+      },
+    ],
+    faqs: [],
+    conclusion: "A classroom is only as effective as the attention each student can actually receive within it. At Malla Reddy School, our commitment to small class sizes ensures every child gets the individual attention needed to genuinely thrive.",
+    ctaText: "Enquire About Admissions — Malla Reddy School",
+    ctaHref: "/contact",
     relatedSlugs: []
   }
 ];
