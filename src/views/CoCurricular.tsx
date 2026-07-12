@@ -6,11 +6,6 @@ import Image from 'next/image';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import './CoCurricular.css';
 
-/** Unsplash Source (source.unsplash.com) is discontinued — use images.unsplash.com with stable photo IDs. */
-function unsplashPhoto(idWithSuffix: string, width = 1400) {
-  return `https://images.unsplash.com/photo-${idWithSuffix}?auto=format&fit=crop&w=${width}&q=82`;
-}
-
 type Category = 'All' | 'Arts' | 'Indoor' | 'Outdoor';
 
 interface Activity {

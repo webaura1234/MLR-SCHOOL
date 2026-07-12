@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { DEFAULT_SITE_INFO } from './siteInfo';
 import {
   DEFAULT_SEO_DESCRIPTION,
   DEFAULT_SEO_TITLE,

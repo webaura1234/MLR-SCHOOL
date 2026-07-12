@@ -78,7 +78,7 @@ const Blog = ({ posts }: BlogProps) => {
         day: 'numeric',
       });
       sortTs = d.getTime();
-    } catch (e) {
+    } catch {
       formattedDate = '1 May 2026';
     }
 
