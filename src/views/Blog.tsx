@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import { BLOG_POSTS } from '@/lib/blog-posts';
+import { withImageVersion } from '@/lib/imageCacheBust';
 import './Home.css';
 
 interface SheetBlogPost {
@@ -140,7 +141,7 @@ const Blog = ({ posts }: BlogProps) => {
                   <div className="polaroid-img-wrapper" style={{ height: '250px' }}>
                     {post.img && post.img.length > 5 ? (
                       <Image
-                        src={post.img}
+                        src={withImageVersion(post.img)}
                         alt={post.title ?? 'Blog post image'}
                         width={400}
                         height={250}

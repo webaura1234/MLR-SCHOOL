@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, ChevronRight } from 'lucide-react';
 import type { BlogPost } from '@/lib/blog-posts';
 import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
+import { withImageVersion } from '@/lib/imageCacheBust';
 
 /* ─── JSON-LD helpers rendered server-side ─────────────────────────────────── */
 
@@ -236,7 +237,7 @@ export default function BlogPostView({ post, relatedPosts, siteUrl }: BlogPostVi
         <div style={{ maxWidth: '860px', margin: '2rem auto', padding: '0 1.5rem' }}>
           <div style={{ borderRadius: '12px', overflow: 'hidden', aspectRatio: '16/9', position: 'relative' }}>
             <Image
-              src={post.coverImage}
+              src={withImageVersion(post.coverImage)}
               alt={post.coverImageAlt}
               fill
               style={{ objectFit: 'cover' }}
@@ -443,7 +444,7 @@ export default function BlogPostView({ post, relatedPosts, siteUrl }: BlogPostVi
                   >
                     <div style={{ position: 'relative', aspectRatio: '16/9' }}>
                       <Image
-                        src={related.coverImage}
+                        src={withImageVersion(related.coverImage)}
                         alt={related.coverImageAlt}
                         fill
                         style={{ objectFit: 'cover' }}
