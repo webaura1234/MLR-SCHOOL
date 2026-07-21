@@ -1,5 +1,5 @@
 /** Bump when public blog images are replaced so browsers and Next.js reload them. */
-const IMAGE_VERSION = '20260718';
+const IMAGE_VERSION = '20260721';
 
 export function withImageVersion(src: string): string {
   if (!src || src.startsWith('http')) return src;
