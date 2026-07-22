@@ -88,6 +88,7 @@ while ((match = slugRegex.exec(blogPostsContent)) !== null) {
   }
 }
 
+
 const blogRoutes = BLOG_SLUGS.map((slug) => ({
   path: `/blog/${slug}`,
   changefreq: 'monthly',
