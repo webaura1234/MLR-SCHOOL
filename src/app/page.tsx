@@ -15,14 +15,6 @@ export const metadata = constructMetadata({
   path: '/',
 });
 
-// Do NOT change these IDs (hardcoded by requirement)
-// NOTE: This must match the real spreadsheet id exactly (from the /d/<id>/edit URL).
-const GOOGLE_SHEET_ID = '1yq3iz43AgYlSZKXJEE6P6aMmYme84eo8SXPmsgCt4Bs';
-const GIDS = {
-  PROGRAMS: '185361245',
-  FACILITIES: '1248382523',
-} as const;
-
 const FACILITIES_SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vTbL71Gd0aoSu7IjhZAmInxnV1VUvEmTHb6rM7IINr-n2dibyvMqx3CZ4zXjHceVaAHi7v2XRC5HRmE/pub?gid=1248382523&single=true&output=csv';
 

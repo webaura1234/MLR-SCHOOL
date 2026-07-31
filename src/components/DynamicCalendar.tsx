@@ -16,16 +16,9 @@ import {
 } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, X } from "lucide-react";
-import { type SchoolEvent, type EventCategory } from "@/lib/calendar-data";
+import { type SchoolEvent } from "@/lib/calendar-data";
 import { createPortal } from "react-dom";
 import "./DynamicCalendar.css";
-
-const MONTH_MAP: Record<string, string> = {
-  'JAN': '01', 'FEB': '02', 'MAR': '03', 'APR': '04', 'MAY': '05', 'JUN': '06',
-  'JUL': '07', 'AUG': '08', 'SEP': '09', 'OCT': '10', 'NOV': '11', 'DEC': '12',
-  'JANUARY': '01', 'FEBRUARY': '02', 'MARCH': '03', 'APRIL': '04', 'JUNE': '06',
-  'JULY': '07', 'AUGUST': '08', 'SEPTEMBER': '09', 'OCTOBER': '10', 'NOVEMBER': '11', 'DECEMBER': '12'
-};
 
 const CATEGORY_COLORS: Record<string, string> = {
   Exam: "#EF4444", 
