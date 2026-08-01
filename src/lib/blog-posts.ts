@@ -1642,45 +1642,6 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['how-to-choose-right-school-hyderabad', 'cbse-schools-in-medchal-hyderabad-guide-for-parents'],
   },
 
-  {
-    slug: 'cbse-vs-icse-which-board-right-child',
-    title: 'CBSE vs ICSE: Which Board Is Right for Your Child?',
-    metaTitle: 'CBSE vs ICSE — Which Board Is Right for Your Child? | Malla Reddy School',
-    metaDescription: "CBSE and ICSE are India's two most popular school boards. This guide explains the key differences and helps parents decide which is the better fit for their child.",
-    keywords: ['CBSE vs ICSE India', 'CBSE or ICSE which is better', 'difference CBSE ICSE school', 'CBSE ICSE comparison parents India', 'which board school Hyderabad'],
-    publishedDate: '2026-05-07',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 6,
-    category: 'CBSE Education',
-    excerpt: "CBSE or ICSE? It's one of the most common questions parents ask when choosing a school. Here's a clear, honest comparison to help you decide.",
-    coverImage: '/images/programs/primary.jpg',
-    coverImageAlt: 'Comparing CBSE and ICSE school boards for children in India',
-    intro: 'When parents start researching schools in India, the CBSE vs ICSE question comes up quickly. Both are nationally recognised, both produce excellent students, and both have passionate advocates. The right answer depends on your child, your family circumstances, and what you value in an education.',
-    sections: [
-      { heading: 'What Is CBSE?', content: 'CBSE (Central Board of Secondary Education) is a national board under the Government of India. It prescribes the NCERT curriculum, conducts Class 10 and 12 board exams, and is the board most closely aligned with national competitive exams like JEE and NEET. CBSE schools exist in every Indian state, making transfers easy for families who relocate.' },
-      { heading: 'What Is ICSE?', content: 'ICSE (Indian Certificate of Secondary Education) is administered by CISCE (Council for the Indian School Certificate Examinations). It is known for its comprehensive syllabus, strong emphasis on English language and literature, and broader coverage of subjects including a mandatory third language and environmental studies.' },
-      {
-        heading: 'Key Differences', content: '',
-        subsections: [
-          { heading: 'Curriculum Breadth', content: 'ICSE covers more subjects and goes into greater depth in areas like English, History, and Geography. CBSE is more streamlined — which some students find less stressful and which makes it easier to align with competitive exam preparation.' },
-          { heading: 'Language and Literature', content: "ICSE places significantly more emphasis on English language and literature. Students who enjoy reading and writing often thrive in ICSE programs. CBSE's English component is solid but less extensive." },
-          { heading: 'Science and Mathematics', content: "CBSE's NCERT syllabus for Science and Mathematics is particularly well-aligned with JEE and NEET preparation. Many coaching institutes structure their programs around NCERT content." },
-          { heading: 'Transferability', content: 'CBSE schools exist nationwide. If your family may relocate, CBSE makes school transfers straightforward. ICSE schools are concentrated in major cities, making transfers outside urban areas harder.' },
-          { heading: 'Assessment and Examinations', content: 'ICSE assessments tend to be more comprehensive, with project and internal assessment components. CBSE has moved toward Continuous and Comprehensive Evaluation (CCE) in lower classes, reducing reliance on single-exam performance.' },
-        ],
-      },
-      { heading: 'Which Board Should You Choose?', content: 'Choose CBSE if: your family may relocate, your child is interested in engineering or medicine, you want alignment with national competitive exams, or you prefer a streamlined, nationally standardised curriculum. Choose ICSE if: your child is strong in language and literature, you value breadth of subjects, you are in a city with good ICSE school options, and competitive exam alignment is not a priority.' },
-    ],
-    faqs: [
-      { question: 'Is CBSE easier than ICSE?', answer: "CBSE is generally considered more streamlined and its exams are more predictable in scope. ICSE is broader and its English and Humanities assessments are more extensive. Neither is objectively \"easier\" — it depends on the student's strengths." },
-      { question: 'Can a student transfer from ICSE to CBSE mid-school?', answer: 'Yes, but it requires a Transfer Certificate from the ICSE school and a Migration Certificate from CISCE. The transition is manageable but there are curriculum differences to account for, particularly in Science and Mathematics.' },
-      { question: 'Does Malla Reddy School Medchal follow CBSE?', answer: 'Yes. Malla Reddy School Medchal is a CBSE-affiliated school, following the NCERT curriculum enriched with STEAM learning from Pre-Primary to Class 8.' },
-    ],
-    conclusion: 'Both CBSE and ICSE produce well-educated students. The board matters less than the quality of the school. A strong CBSE school will always outperform a weak ICSE school, and vice versa. Focus on the school first, the board second.',
-    ctaText: 'Learn About Our CBSE Program — Malla Reddy School Medchal',
-    ctaHref: '/curriculum',
-    relatedSlugs: ['understanding-cbse-curriculum-parents-guide', 'cbse-schools-in-medchal-hyderabad-guide-for-parents'],
-  },
 
   {
     slug: 'cbse-vs-state-board-hyderabad',
@@ -1718,123 +1679,8 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['cbse-vs-icse-which-board-right-child', 'understanding-cbse-curriculum-parents-guide'],
   },
 
-  {
-    slug: 'coding-robotics-problem-solving-children',
-    title: 'How Coding and Robotics Build Problem-Solving Skills in Children',
-    metaTitle: 'Coding and Robotics for Children — Problem Solving | Malla Reddy School Medchal',
-    metaDescription: 'Coding and robotics teach children far more than technology skills. Here is how they develop problem-solving, logical thinking, and persistence from an early age.',
-    keywords: ['coding robotics school children India', 'coding school Hyderabad', 'robotics lab school Medchal', 'coding benefits children', 'robotics education school India'],
-    publishedDate: '2026-05-17',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'STEAM Education',
-    excerpt: 'When children build a robot or write their first program, they are learning far more than technology. They are learning how to think.',
-    coverImage: '/images/labs/robotics-1.jpg',
-    coverImageAlt: 'Students working on robotics at Malla Reddy School Medchal — coding and problem solving',
-    intro: 'Coding and robotics have become standard components of quality school programs — and for good reason. These activities develop a specific type of thinking that is difficult to teach through traditional subjects: the ability to break a complex problem into smaller steps, test a solution, identify what went wrong, and try again.',
-    sections: [
-      {
-        heading: 'What Coding Actually Teaches', content: 'Writing code is fundamentally an exercise in logical thinking. A program does exactly what you tell it to — nothing more, nothing less. This precision forces children to think clearly, plan sequentially, and develop a tolerance for iteration when the first approach does not work.',
-        subsections: [
-          { heading: 'Decomposition', content: 'Every programming problem requires breaking a large goal into smaller, manageable steps — a thinking skill that applies to mathematics, essay writing, project planning, and every complex task a child will encounter in school and life.' },
-          { heading: 'Debugging — Learning From Errors', content: 'When code does not work, children must find out why and fix it. This builds a constructive relationship with mistakes — treating them as information rather than failure.' },
-        ],
-      },
-      { heading: 'What Robotics Adds to Coding', content: 'Robotics makes abstract programming concrete. A robot that does not move as expected provides immediate, physical feedback. This tangibility makes the learning more engaging for younger students and adds mechanical design and engineering thinking to the mix.' },
-      { heading: 'Age-Appropriate Introduction', content: 'Children can begin basic coding concepts from age 5 through block-based programming tools that teach sequence, loops, and conditionals through drag-and-drop interfaces. Physical robotics kits can be introduced from around age 7. By middle school, students can work with text-based programming and more complex robotics projects.' },
-      { heading: 'Robotics at Malla Reddy School Medchal', content: "Malla Reddy School Medchal has a dedicated robotics lab as part of its STEAM infrastructure. Students engage with robotics and coding as part of the school's technology and engineering curriculum." },
-    ],
-    faqs: [
-      { question: 'What age should children start learning coding?', answer: 'Children can be introduced to coding concepts as early as age 5 through play-based block programming. Structured coding classes are typically introduced from Class 3 or 4, with text-based programming from Class 6 onwards.' },
-      { question: 'Does Malla Reddy School Medchal have a robotics lab?', answer: 'Yes. Malla Reddy School Medchal has a dedicated robotics lab as part of its STEAM facilities.' },
-      { question: 'Do children need prior knowledge to start coding at school?', answer: 'No. School coding programs are designed to introduce concepts from scratch. No prior knowledge is needed.' },
-    ],
-    conclusion: 'Coding and robotics are not just about producing future software engineers. They develop a way of thinking — logical, iterative, and creative — that benefits every child regardless of the career they eventually pursue.',
-    ctaText: 'Explore Our STEAM Labs — Malla Reddy School Medchal',
-    ctaHref: '/labs',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child', 'science-labs-schools-hands-on-learning'],
-  },
 
-  {
-    slug: 'science-labs-schools-hands-on-learning',
-    title: 'Science Labs in Schools: Why Hands-On Learning Makes a Real Difference',
-    metaTitle: 'Science Labs in Schools — Why Hands-On Learning Matters | Malla Reddy School',
-    metaDescription: 'A science lab is not just a room with equipment — it is where abstract concepts become real. Here is why hands-on science learning matters and what to look for in a school lab.',
-    keywords: ['science lab school India', 'hands on learning school Hyderabad', 'science lab CBSE school Medchal', 'school science facilities Hyderabad', 'laboratory school children India'],
-    publishedDate: '2026-06-05',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'STEAM Education',
-    excerpt: 'There is a significant difference between reading about photosynthesis and growing a plant under different light conditions. Here is why science labs matter.',
-    coverImage: '/images/labs/science-1.jpg',
-    coverImageAlt: 'Students conducting experiments in the science lab at Malla Reddy School Medchal',
-    intro: 'Science education in India has historically leaned heavily on theory — textbook concepts memorised for examinations. But science is fundamentally an empirical discipline: it is about observing, testing, measuring, and concluding. Without a lab, students learn about science. With a well-used lab, they practise it.',
-    sections: [
-      {
-        heading: 'What Hands-On Science Learning Develops', content: '',
-        subsections: [
-          { heading: 'Conceptual Understanding', content: "When a student conducts an experiment to demonstrate Archimedes' principle rather than just reading about it, the concept becomes tangible and memorable. Experiments attach physical experience to abstract knowledge." },
-          { heading: 'Scientific Thinking', content: 'Lab work teaches the scientific method — forming a hypothesis, designing a test, collecting data, and drawing conclusions. This is exactly the kind of structured analytical thinking that serves students in every discipline, not just science.' },
-          { heading: 'Observation Skills', content: 'A lab requires attention to detail: measuring accurately, recording observations systematically, and noticing unexpected results. These are precision skills that transfer across subjects.' },
-        ],
-      },
-      { heading: 'What a Good School Science Lab Looks Like', content: 'A functional school science lab is not defined by expensive equipment — it is defined by whether it is actually used. Look for: evidence of regular use (equipment that is handled, not just displayed), age-appropriate experiments that connect to the curriculum, safety equipment in place (eye protection, first aid), and organised materials that students can access independently.' },
-      { heading: 'Science Labs at Malla Reddy School Medchal', content: 'Malla Reddy School Medchal has a dedicated science laboratory used by students from the primary and middle school stages. Experiments are integrated with the CBSE science curriculum, giving students practical experience with concepts they study in class.' },
-    ],
-    faqs: [
-      { question: 'From which class do students start using the science lab?', answer: 'At most CBSE schools, structured lab work begins from Class 6 or 7. However, activity-based science experiments can begin in primary school with age-appropriate materials. Malla Reddy School integrates lab-based learning across primary and middle school.' },
-      { question: 'Is a science lab important for CBSE exam preparation?', answer: 'Yes. CBSE assessments include practical components in senior classes. More importantly, the conceptual understanding developed through lab work significantly improves performance in theoretical science papers.' },
-    ],
-    conclusion: 'When you visit a school, ask to see the science lab — and ask how often it is used. A lab that is kept pristine for show is not the same as one that is busy with student experiments every week.',
-    ctaText: 'See Our Labs in Person — Malla Reddy School Medchal',
-    ctaHref: '/labs',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child', 'coding-robotics-problem-solving-children'],
-  },
 
-  {
-    slug: 'nursery-lkg-ukg-difference-parents',
-    title: 'Nursery, LKG, UKG: What Is the Difference and What Does Your Child Learn?',
-    metaTitle: 'Nursery vs LKG vs UKG — Difference Explained for Parents | Malla Reddy School',
-    metaDescription: 'What is the difference between Nursery, LKG, and UKG? This guide explains what children learn at each pre-primary stage and when to enrol your child.',
-    keywords: ['nursery LKG UKG difference', 'what is LKG UKG India', 'pre-primary stages India', 'nursery school admission age India', 'LKG UKG curriculum India'],
-    publishedDate: '2026-05-21',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 4,
-    category: 'Parenting Guides',
-    excerpt: 'Nursery, LKG, UKG — three pre-primary stages that lay the foundation for everything that follows. Here is what each stage covers and when your child should join.',
-    coverImage: '/images/programs/pre-primary.jpg',
-    coverImageAlt: 'Pre-primary children in Nursery, LKG and UKG at Malla Reddy School Medchal',
-    intro: 'If you are enrolling your child in pre-primary school for the first time, the three-stage structure of Nursery, LKG (Lower Kindergarten), and UKG (Upper Kindergarten) can be confusing. Each stage has a distinct developmental focus, and understanding the progression helps you set appropriate expectations for your child at each level.',
-    sections: [
-      {
-        heading: 'Nursery (Age 2.5 to 3.5 years)', content: 'Nursery is the entry point to formal schooling. At this stage, the focus is almost entirely on social and emotional adjustment — helping children feel comfortable away from home, making friends, following simple instructions, and participating in group activities. Academic content is minimal: children explore colours, shapes, and simple counting through play.',
-        subsections: [
-          { heading: 'What Children Learn in Nursery', content: 'Basic social skills, following a routine, recognising colours and shapes, nursery rhymes and songs, fine motor activities (colouring, clay work, tearing and pasting), and early phonics awareness through stories and sounds.' },
-        ],
-      },
-      {
-        heading: 'LKG — Lower Kindergarten (Age 3.5 to 4.5 years)', content: 'LKG introduces structured early literacy and numeracy in a still play-centred environment. Children begin learning letter recognition, simple phonics, number recognition up to 20, and basic concepts like big/small, near/far. Writing readiness is developed through pre-writing activities.',
-        subsections: [
-          { heading: 'What Children Learn in LKG', content: 'Letter recognition and phonics (A-Z), number recognition and counting to 20, pre-writing strokes and letter tracing, basic vocabulary development, oral language skills, and introduction to concepts (seasons, animals, family, community helpers).' },
-        ],
-      },
-      {
-        heading: 'UKG — Upper Kindergarten (Age 4.5 to 5.5 years)', content: 'UKG is the final bridge before Class 1. Children begin reading simple words and sentences, writing letters and numbers, and solving basic addition and subtraction problems. The pace increases, preparing children for the structured learning of Class 1.',
-        subsections: [
-          { heading: 'What Children Learn in UKG', content: 'Reading simple words and sentences, writing letters and numbers, addition and subtraction within 10, sentence formation, creative drawing and colouring, and early environmental science concepts.' },
-        ],
-      },
-    ],
-    faqs: [
-      { question: 'What age is right for Nursery admission in India?', answer: 'Most schools admit children to Nursery between 2.5 and 3 years of age. Check the specific age cutoff of your chosen school, as requirements vary.' },
-      { question: 'Is it mandatory to complete all three pre-primary stages?', answer: 'Completing all three stages is strongly recommended. Each builds on the previous, and children who skip stages sometimes struggle with the academic and social expectations of Class 1.' },
-      { question: 'Does Malla Reddy School Medchal offer Nursery, LKG, and UKG?', answer: 'Yes. Malla Reddy School Medchal offers all three pre-primary stages — Nursery, LKG, and UKG — with a play-based curriculum leading into the CBSE primary program.' },
-    ],
-    conclusion: 'Each pre-primary stage is developmentally distinct. Rushing a child through or skipping a stage to save a year is rarely beneficial. The foundation built in Nursery, LKG, and UKG directly supports how well a child copes with Class 1 and beyond.',
-    ctaText: 'Pre-Primary Admissions Open — Malla Reddy School Medchal',
-    ctaHref: '/admission',
-    relatedSlugs: ['pre-primary-school-medchal-how-to-choose', 'what-is-play-based-learning-and-why-it-matters'],
-  },
 
   {
     slug: 'how-to-prepare-child-first-day-school',
@@ -1868,106 +1714,8 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['nursery-lkg-ukg-difference-parents', 'pre-primary-school-medchal-how-to-choose'],
   },
 
-  {
-    slug: 'build-confidence-child-school-activities',
-    title: 'How to Build Confidence in Your Child Through School Activities',
-    metaTitle: 'Build Confidence in Children Through School Activities | Malla Reddy School',
-    metaDescription: 'Confidence is not a personality trait — it is a skill built through experience. Here is how school activities develop genuine confidence in children.',
-    keywords: ['build confidence children school', 'school activities confidence children India', 'how to make child confident India', 'confident children school activities', 'child confidence development India'],
-    publishedDate: '2026-06-03',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Student Development',
-    excerpt: 'Confidence in children is not innate — it is built through repeated, successful engagement with challenges. Here is how school activities create it.',
-    coverImage: '/images/sports_day.png',
-    coverImageAlt: 'Students building confidence through sports and activities at Malla Reddy School Medchal',
-    intro: 'Parents often wish their child were "more confident" — but confidence is not a character trait that some children have and others lack. It is a skill built through experience: attempting something, succeeding (or failing and trying again), and developing the internal belief that effort leads to improvement. School is one of the most powerful environments for building this.',
-    sections: [
-      { heading: 'How Performing Arts Build Confidence', content: "Standing on a stage and performing — whether in a school play, a dance recital, or a music event — requires and develops public presence. The child who was terrified to speak in front of others in Class 1 and performs confidently by Class 4 has not become a different person. They have accumulated enough stage experience that it no longer feels threatening." },
-      {
-        heading: 'How Sports Build Confidence', content: "Sports put children in situations with clear, measurable outcomes — win or lose, score or miss, improve or plateau. This feedback loop, when handled well by coaches and teachers, builds resilience. Children who play team sports learn that individual mistakes do not end the game and that sustained effort produces visible improvement.",
-        subsections: [
-          { heading: 'Handling Loss Constructively', content: "One of the most confidence-building experiences available to children is losing a match and returning to training anyway. Schools and coaches who treat losing as information — what did we learn? what do we practise next? — are doing more for confidence development than those who only celebrate wins." },
-        ],
-      },
-      { heading: 'How Public Speaking and Competitions Build Confidence', content: "Debates, recitations, quiz competitions, and science exhibitions require children to present ideas to an audience and defend them. Each successful experience — and even each uncomfortable one that the child survives — expands their tolerance for public performance and reduces the fear that underlies shyness." },
-      { heading: 'The Role of Teachers in Confidence Building', content: "Teachers who notice and affirm genuine effort — not just results — build confidence in a way that results-only praise does not. A child who is told 'I saw how hard you worked on that' learns that effort is valuable, regardless of outcome. This growth mindset orientation is one of the most reliable predictors of academic resilience." },
-    ],
-    faqs: [
-      { question: 'My child is very shy. Will school activities help?', answer: "Yes, with the right approach. Shy children benefit from gradual exposure to performance and group activities rather than being pushed into large-audience situations before they are ready. A good school manages this progression carefully." },
-      { question: 'Which school activity is best for building confidence?', answer: "Different activities build confidence in different domains. Performing arts help with public presence, team sports build social and competitive confidence, and academic competitions develop intellectual confidence. A mix is ideal." },
-    ],
-    conclusion: "Confidence is built one experience at a time. A school that gives children repeated opportunities to perform, compete, collaborate, and recover from setbacks is doing far more for their development than one that focuses on marks alone.",
-    ctaText: 'Explore Co-Curricular Programs at Malla Reddy School Medchal',
-    ctaHref: '/co-curricular',
-    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'sports-physical-education-academic-performance'],
-  },
 
-  {
-    slug: 'sports-physical-education-academic-performance',
-    title: 'How Sports and Physical Education Improve Academic Performance',
-    metaTitle: 'Sports and Physical Education Improve Academic Performance | Malla Reddy School',
-    metaDescription: 'Research consistently shows that physical activity improves academic performance. Here is how sports and PE benefit children in the classroom, not just on the field.',
-    keywords: ['sports academic performance children India', 'physical education school benefits', 'how sports help academic performance', 'physical activity learning children', 'PE school children India'],
-    publishedDate: '2026-06-09',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Student Development',
-    excerpt: 'Physical activity is not a distraction from academic work — it is one of the most effective tools for improving it. Here is the evidence and what it means for your child.',
-    coverImage: '/images/athletics.png',
-    coverImageAlt: 'Students in athletic training at Malla Reddy School Medchal — sports and academic performance',
-    intro: "Many parents treat sports as time that could be spent studying. This is a misunderstanding of how learning and cognitive performance actually work. Decades of research in neuroscience and education consistently show that regular physical activity directly improves academic outcomes — concentration, memory, and classroom behaviour.",
-    sections: [
-      { heading: 'The Neuroscience of Physical Activity and Learning', content: "Exercise increases blood flow to the brain and stimulates the production of chemicals — including dopamine, serotonin, and BDNF (Brain-Derived Neurotrophic Factor) — that support learning, memory formation, and mood regulation. A child who exercises regularly has a brain that is physiologically better prepared to learn." },
-      {
-        heading: 'What the Research Shows', content: "Studies across multiple countries consistently find that students who participate in regular physical activity show better concentration in class, improved behaviour, stronger academic performance in core subjects, and better management of test anxiety. The effect is particularly pronounced for children with attention difficulties.",
-        subsections: [
-          { heading: 'Movement Breaks Improve Concentration', content: "Children who have regular physical activity breaks — sports periods, physical education, outdoor play — concentrate better in the classroom periods that follow. Sustained sedentary study periods actually reduce cognitive performance over time." },
-        ],
-      },
-      { heading: 'Team Sports and Executive Function', content: "Team sports develop executive function — the cognitive processes that govern planning, impulse control, attention shifting, and working memory. These are exactly the processes needed for academic work: planning an essay, maintaining attention during a lesson, switching between tasks." },
-      { heading: 'Sports at Malla Reddy School Medchal', content: "Malla Reddy School Medchal integrates sports across the school week. Programs include cricket, kabaddi, athletics, basketball, tennis, skating, chess, and carrom. Physical education is treated as an integral part of the school program, not an optional extra." },
-    ],
-    faqs: [
-      { question: "Should I reduce my child's sports to give more time for studying?", answer: "In most cases, no. Unless a child is significantly behind academically and the issue is time management rather than understanding, reducing physical activity typically worsens academic performance by reducing concentration and increasing stress." },
-      { question: 'What sports are available at Malla Reddy School Medchal?', answer: "Malla Reddy School offers cricket, kabaddi, athletics, basketball, tennis, skating, chess, and carrom as part of its co-curricular sports program." },
-    ],
-    conclusion: "Physical activity is not competing with academic success — it is supporting it. The most effective approach to a child's academic development includes regular sport and physical education as a non-negotiable component, not a reward for finishing homework.",
-    ctaText: 'View Our Sports Programs — Malla Reddy School Medchal',
-    ctaHref: '/co-curricular',
-    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'build-confidence-child-school-activities'],
-  },
 
-  {
-    slug: 'benefits-music-education-children',
-    title: 'The Benefits of Music Education for School Children',
-    metaTitle: 'Benefits of Music Education for Children | Malla Reddy School Medchal',
-    metaDescription: 'Music education does far more than teach children to sing or play an instrument. Here are the proven cognitive and developmental benefits of music in school.',
-    keywords: ['music education benefits children India', 'music school Hyderabad children', 'benefits learning music children', 'music school Medchal', 'music cognitive benefits students'],
-    publishedDate: '2026-05-29',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 4,
-    category: 'Co-Curricular Activities',
-    excerpt: 'Learning music develops mathematical reasoning, language skills, memory, and emotional intelligence — alongside the joy of creating something beautiful.',
-    coverImage: '/images/music.png',
-    coverImageAlt: 'Students learning music at Malla Reddy School Medchal — benefits of music education',
-    intro: 'Music is often treated as a nice-to-have in school programs — something children do when the serious subjects are done. This undervalues what music education actually does for developing minds. The cognitive benefits of learning music are well-documented and extend far beyond the music classroom.',
-    sections: [
-      { heading: 'Music and Mathematical Reasoning', content: "Music is deeply mathematical. Reading notation involves fractions (note values), counting (rhythm), and pattern recognition. Research consistently finds a positive correlation between music training and mathematical performance — not because one teaches the other directly, but because both engage the same underlying reasoning processes." },
-      { heading: 'Music and Language Development', content: "Learning music develops phonological awareness — the ability to distinguish sounds and their patterns — which is the foundation of reading and language acquisition. Children who study music tend to develop stronger reading skills and better verbal memory." },
-      { heading: 'Music and Memory', content: "Learning to play an instrument requires memorising notation, finger patterns, and musical phrases. This develops working memory and the ability to hold and manipulate multiple pieces of information simultaneously — skills that support academic learning in every subject." },
-      { heading: 'Music and Emotional Intelligence', content: "Performing music requires understanding and conveying emotion through sound — a process that develops empathy and emotional literacy. Music is also one of the most reliable tools for emotional regulation: children who engage with music learn to express and manage feelings through a creative outlet." },
-      { heading: 'Music at Malla Reddy School Medchal', content: "Malla Reddy School Medchal includes music as part of its co-curricular program, giving students the opportunity to develop musical skills alongside their academic curriculum." },
-    ],
-    faqs: [
-      { question: 'Does learning music help children with maths?', answer: "Research suggests a positive relationship between music training and mathematical reasoning, particularly in areas involving pattern recognition, fractions, and spatial reasoning." },
-      { question: 'At what age should children start learning music?', answer: "Children can begin musical exposure — singing, rhythmic activities, simple percussion — from pre-primary age. Formal instrument learning is typically introduced from around age 6 to 7." },
-    ],
-    conclusion: "Music education is an investment in cognitive development, emotional wellbeing, and creative expression simultaneously. Schools that take it seriously are developing the whole child, not just preparing them for exams.",
-    ctaText: 'Discover Co-Curricular Programs at Malla Reddy School Medchal',
-    ctaHref: '/co-curricular',
-    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'dance-performing-arts-confidence-children'],
-  },
 
   {
     slug: 'dance-performing-arts-confidence-children',
@@ -2032,45 +1780,6 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['how-to-help-child-with-homework-without-taking-over', 'how-to-create-perfect-study-environment-home-children'],
   },
 
-  {
-    slug: 'nep-2020-explained-parents',
-    title: "NEP 2020 Explained: What It Means for Your Child's Education in India",
-    metaTitle: "NEP 2020 Explained for Parents | Malla Reddy School Medchal",
-    metaDescription: "India's National Education Policy 2020 is the most significant education reform in decades. Here is what NEP 2020 means for your child's schooling in plain language.",
-    keywords: ['NEP 2020 India parents', 'National Education Policy 2020 explained', 'NEP 2020 schools India', 'NEP 2020 CBSE impact', 'new education policy India parents'],
-    publishedDate: '2026-05-15',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 6,
-    category: 'Education Trends',
-    excerpt: "NEP 2020 is India's most significant education reform in 34 years. Here is what it actually means for your child's school experience, without the jargon.",
-    coverImage: '/images/programs/middle.jpg',
-    coverImageAlt: "NEP 2020 education reform impact on school children in India",
-    intro: "India's National Education Policy 2020 (NEP 2020) is the most comprehensive overhaul of the country's education system since 1986. Approved by the Union Cabinet in July 2020, it introduces fundamental changes to how schools are structured, what children learn, and how they are assessed. Here is what parents need to understand.",
-    sections: [
-      {
-        heading: 'The New School Structure: 5+3+3+4', content: "NEP 2020 replaces the traditional 10+2 school structure with a new 5+3+3+4 model aligned with child development stages:",
-        subsections: [
-          { heading: 'Foundational Stage (Ages 3 to 8)', content: "Covers 3 years of pre-primary (Nursery to UKG) and Classes 1 and 2. Focus on play-based, activity-based learning with emphasis on oral language, basic literacy and numeracy." },
-          { heading: 'Preparatory Stage (Ages 8 to 11, Classes 3 to 5)', content: "Introduction of formal subjects with an activity-based approach continuing. Light textbooks, discovery learning, and connection to the child's local context." },
-          { heading: 'Middle Stage (Ages 11 to 14, Classes 6 to 8)', content: "Subject specialisation begins. Coding, vocational exposure, and experiential learning are introduced. This is where schools like Malla Reddy School's IIT Foundation program fits into the NEP framework." },
-          { heading: 'Secondary Stage (Ages 14 to 18, Classes 9 to 12)', content: "Greater flexibility in subject choice. Students can take subjects across streams rather than being locked into Science, Commerce, or Arts." },
-        ],
-      },
-      { heading: 'Reduced Curriculum Load and Conceptual Focus', content: "NEP 2020 explicitly targets a reduction in the volume of content students are expected to memorise. The goal is deeper understanding of fewer concepts rather than surface coverage of many. This is a significant philosophical shift from India's historically content-heavy curriculum." },
-      { heading: 'Mother Tongue as Medium of Instruction', content: "NEP recommends using the mother tongue or regional language as the medium of instruction up to Class 5 (and preferably Class 8). This is a recommendation rather than a mandate for private schools, and implementation varies." },
-      { heading: 'Assessment Reform', content: "NEP moves away from high-stakes annual examinations toward competency-based, formative assessment. The goal is to assess what students can do with knowledge, not just recall it." },
-      { heading: 'What This Means for CBSE Schools', content: "CBSE has been progressively aligning its curriculum and assessment with NEP 2020 principles. Schools that already integrate project-based learning, STEAM activities, coding, and competency-based assessment — as Malla Reddy School Medchal does — are ahead of the curve in NEP alignment." },
-    ],
-    faqs: [
-      { question: 'Has NEP 2020 been fully implemented in schools?', answer: "NEP 2020 is being implemented in phases. CBSE and state boards have been progressively aligning curriculum and assessment frameworks with NEP principles since 2021-22." },
-      { question: 'Does NEP 2020 affect CBSE schools specifically?', answer: "Yes. CBSE has been updating its curriculum frameworks, assessment patterns, and competency-based question formats in alignment with NEP 2020 goals." },
-      { question: 'Will the 10+2 board exam structure change under NEP?', answer: "NEP 2020 proposes that Class 10 and 12 board exams eventually become lower-stakes and more flexible, but significant changes to the current board exam structure are being implemented gradually over several years." },
-    ],
-    conclusion: "NEP 2020 represents a significant and largely positive shift in Indian education — toward understanding over memorisation, flexibility over rigid streams, and holistic development over exam performance alone. Parents whose children are in the school system now will see its effects gradually unfold over the next decade.",
-    ctaText: 'Learn About Our NEP-Aligned Programs — Malla Reddy School Medchal',
-    ctaHref: '/curriculum',
-    relatedSlugs: ['understanding-cbse-curriculum-parents-guide', 'what-is-steam-education-and-why-it-matters-for-your-child'],
-  },
 
   // ─── BATCH 3 — posts 30-45 ──────────────────────────────────────────────────
 
@@ -2298,42 +2007,6 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['emotional-intelligence-children-school', 'managing-school-stress-children'],
   },
 
-  {
-    slug: 'chess-schools-cognitive-benefits',
-    title: 'Chess in Schools: Cognitive Benefits for Young Students',
-    metaTitle: 'Chess in Schools — Cognitive Benefits for Children | Malla Reddy School Medchal',
-    metaDescription: 'Chess develops logical thinking, concentration, and strategic planning in school children. Here is the evidence for chess as an educational tool and why more schools are adding it.',
-    keywords: ['chess school children benefits', 'chess cognitive development India', 'chess school Hyderabad', 'chess learning children India', 'chess school Medchal'],
-    publishedDate: '2026-05-01',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 4,
-    category: 'Co-Curricular Activities',
-    excerpt: "Chess teaches children to think several moves ahead, evaluate consequences, and manage mistakes. These are not just game skills — they are life skills.",
-    coverImage: '/images/chess.png',
-    coverImageAlt: "Students playing chess at Malla Reddy School Medchal — cognitive development through chess",
-    intro: "Chess has been played in India for over 1,500 years — and its presence in schools has grown significantly as educators and researchers have documented its cognitive benefits. Far from being an elite pastime, chess is accessible to every child and develops a specific set of thinking skills that transfer directly to academic performance.",
-    sections: [
-      {
-        heading: 'Cognitive Skills Chess Develops', content: '',
-        subsections: [
-          { heading: 'Planning and Foresight', content: "Chess requires thinking ahead — anticipating an opponent's response before making a move. This forward planning is the same skill used in mathematical problem-solving, essay structuring, and project management." },
-          { heading: 'Concentration and Patience', content: "A chess game can last 30 minutes to several hours. Playing it well requires sustained attention — the ability to remain focused on a complex problem for extended periods." },
-          { heading: 'Logical Reasoning', content: "Every move in chess has consequences that flow from the rules. Children who play regularly develop a systematic approach to problem evaluation — considering options, predicting outcomes, and selecting the most logical path." },
-          { heading: 'Coping with Mistakes', content: "Losing a chess game is the most instructive thing that can happen to a chess player. Analysing what went wrong, identifying the mistake, and learning from it builds exactly the growth mindset and error tolerance that academic learning requires." },
-        ],
-      },
-      { heading: 'Chess and Academic Performance', content: "Multiple studies in different countries have found positive correlations between regular chess participation and academic performance, particularly in mathematics and reading. While causation is complex, the skills chess develops — concentration, logical reasoning, pattern recognition — are clearly relevant to classroom learning." },
-      { heading: 'Chess at Malla Reddy School Medchal', content: "Chess is part of Malla Reddy School Medchal's co-curricular program, available to students as both a recreational and competitive activity." },
-    ],
-    faqs: [
-      { question: 'What age is appropriate to start chess?', answer: "Children can learn the basic rules of chess from around age 5 or 6. Competitive and more strategic play typically develops from age 7 to 8 onwards." },
-      { question: 'Does chess help with mathematics?', answer: "Research suggests a positive relationship. The pattern recognition, sequential reasoning, and spatial thinking in chess overlap with mathematical thinking skills." },
-    ],
-    conclusion: "Chess is one of the simplest, cheapest, and most cognitively valuable activities a school can offer. A child who learns chess is learning to think — and that is a skill they will use every day of their life.",
-    ctaText: 'Discover Co-Curricular Activities at Malla Reddy School Medchal',
-    ctaHref: '/co-curricular',
-    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'benefits-music-education-children'],
-  },
 
   {
     slug: 'improve-concentration-children',
@@ -2705,41 +2378,6 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['coding-robotics-problem-solving-children', 'what-is-steam-education-and-why-it-matters-for-your-child'],
   },
 
-  {
-    slug: 'living-in-medchal-schools-family',
-    title: 'Living in Medchal, Hyderabad: Schools, Amenities, and Family Life',
-    metaTitle: 'Living in Medchal Hyderabad — Schools and Family Life | Malla Reddy School',
-    metaDescription: 'Medchal is one of the fastest-growing family destinations near Hyderabad. Here is a guide to schools, amenities, and what family life looks like in Medchal.',
-    keywords: ['living in Medchal Hyderabad', 'Medchal family residential area', 'Medchal schools amenities', 'life in Medchal Hyderabad', 'Medchal residential guide families'],
-    publishedDate: '2026-05-25',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Local SEO',
-    excerpt: "Medchal has transformed from a peripheral town into one of Hyderabad's preferred family residential destinations. Here is what families moving to the area need to know.",
-    coverImage: '/images/hero-aspirational.png',
-    coverImageAlt: 'Medchal Hyderabad — schools and family life near Malla Reddy School',
-    intro: "Medchal, located in the Medchal-Malkajgiri district on the northern edge of Hyderabad, has undergone significant transformation over the past decade. What was once a predominantly agricultural area adjacent to the city has grown into an established residential and educational hub — attracting families who want proximity to Hyderabad's employment centres without the cost and congestion of city-centre living.",
-    sections: [
-      { heading: 'Location and Connectivity', content: "Medchal is connected to central Hyderabad via the Outer Ring Road (ORR), putting major employment areas — IT hubs like HITEC City, Gachibowli, and Kondapur — within a 30 to 45 minute commute. The NH-44 highway also runs through or near Medchal, providing connectivity to Secunderabad and northward." },
-      { heading: 'Infrastructure and Amenities', content: "Over the last decade, Medchal has seen development in road infrastructure, healthcare facilities (clinics and small hospitals), retail (local markets and shopping centres), and residential housing across multiple price points. The area is served by the Medchal Municipal Corporation." },
-      {
-        heading: 'Schools in and Near Medchal', content: "The growth of residential areas has driven demand for quality schooling in Medchal. Several established school groups have opened campuses in the area. Families can access CBSE schools locally without commuting into central Hyderabad, which is a significant quality-of-life advantage for families with school-age children.",
-        subsections: [
-          { heading: 'Malla Reddy School Medchal', content: "Malla Reddy School is located at Sy No.1101/P, Medchal Village — one of the established CBSE schools in the area, offering education from Pre-Primary to Class 8 with STEAM learning and modern campus facilities." },
-        ],
-      },
-      { heading: 'What Makes Medchal Attractive for Families', content: "Lower property prices compared to inner Hyderabad, larger living spaces, proximity to the ORR for professional commutes, growing local amenities, and improving school options are the primary reasons families are choosing Medchal. For families with children, the availability of local quality schooling is increasingly central to the decision." },
-    ],
-    faqs: [
-      { question: 'Is Medchal a good place to live for families with school-age children?', answer: "Medchal offers a balance of space, affordability, and improving infrastructure for families. The availability of quality CBSE schools locally — including Malla Reddy School Medchal — makes it a practical choice for families who prioritise not commuting children long distances." },
-      { question: 'How far is Medchal from HITEC City?', answer: "Medchal is approximately 30 to 40 kilometres from HITEC City via the Outer Ring Road, with travel times typically ranging from 30 to 50 minutes depending on traffic conditions." },
-      { question: 'Are there good schools in Medchal?', answer: "Yes. Medchal has established CBSE schools including Malla Reddy School Medchal, which offers education from Pre-Primary to Class 8." },
-    ],
-    conclusion: "Medchal offers families an attractive alternative to city-centre Hyderabad: more space, lower costs, shorter school commutes, and a growing community infrastructure. For families considering the area, visiting local schools is a practical first step in assessing whether it meets their children's educational needs.",
-    ctaText: 'Visit Malla Reddy School Medchal — Book a Campus Visit',
-    ctaHref: '/admission',
-    relatedSlugs: ['why-families-choose-schools-near-medchal', 'cbse-schools-near-outer-ring-road-hyderabad'],
-  },
 
   // ─── BATCH 3 — posts 48-60 ──────────────────────────────────────────────────
 
@@ -2787,40 +2425,6 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: ['managing-school-stress-children', 'how-to-talk-to-child-teacher-effectively'],
   },
 
-  {
-    slug: 'competitive-exams-school-students-india',
-    title: "Top Competitive Exams for School Students in India: A Parent's Guide",
-    metaTitle: "Competitive Exams for School Students India | Malla Reddy School Medchal",
-    metaDescription: "From SOF Olympiads to NTSE, school students in India have access to a range of competitive exams that build skills and open doors. Here is what parents need to know.",
-    keywords: ['competitive exams school students India', 'SOF olympiad school India', 'NTSE school India', 'school olympiads India', 'competitive exams classes 6 7 8 India'],
-    publishedDate: '2026-06-23',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Academic Excellence',
-    excerpt: "School students in India have access to a rich ecosystem of competitive exams. Here is what is available, what each offers, and how to prepare without overwhelming your child.",
-    coverImage: '/images/labs/science-2.jpg',
-    coverImageAlt: "School students preparing for competitive exams in India — olympiads and NTSE",
-    intro: "India has one of the richest ecosystems of competitive examinations for school students in the world. These exams — Olympiads, NTSE, KVPY, and more — offer students the chance to test themselves beyond the CBSE syllabus, earn recognition, develop competitive exam skills, and in some cases access scholarships. Here is a practical overview for parents.",
-    sections: [
-      {
-        heading: 'Science Olympiad Foundation (SOF) Exams', content: "SOF conducts several annual Olympiads open to school students from Class 1 onwards: NSO (National Science Olympiad), IMO (International Mathematics Olympiad), IEO (International English Olympiad), and others. These exams are school-based — students register through their school — and are assessed at school, city, national, and international levels.",
-        subsections: [
-          { heading: 'Who Should Participate', content: "SOF Olympiads are suitable for students across ability levels. Participation itself builds exam exposure and competitive experience. Top performers gain national recognition and medals." },
-        ],
-      },
-      { heading: 'NTSE (National Talent Search Examination)', content: "NTSE is conducted by NCERT for Class 10 students and is one of the most prestigious school-level examinations in India. It assesses Mental Ability, Scholastic Aptitude, and Language Comprehension. Successful candidates receive scholarships for Class 11, 12, and higher education." },
-      { heading: 'MI Champs and Similar Programs', content: "Various organisations run school-level championship programs across subjects including mathematics and science. These are typically organised through schools and provide competitive experience in a lower-stakes environment than national exams." },
-      { heading: 'Competitions at Malla Reddy School Medchal', content: "Malla Reddy School Medchal participates in national and international competitions including SOF Olympiads and MI Champs, giving students structured competitive experience alongside their academic curriculum." },
-    ],
-    faqs: [
-      { question: "What is the SOF Olympiad and is it worth participating in?", answer: "SOF Olympiads are school-based competitive exams in Science, Mathematics, and English. Participation develops competitive exam skills, introduces question formats beyond CBSE board patterns, and offers national recognition for top performers. For most students, the experience of participating is the primary value." },
-      { question: "From which class should students start preparing for competitive exams?", answer: "SOF Olympiads are available from Class 1. For more intensive programs like NTSE preparation, Class 8 is a natural starting point. IIT Foundation work in Classes 6 to 8 provides strong foundations for later competitive exams." },
-    ],
-    conclusion: "Competitive exams provide something the classroom cannot: the experience of applying knowledge under real competitive conditions. Participation — even when results are not at the top — builds the exam temperament that makes later high-stakes exams less intimidating.",
-    ctaText: "Learn About Our Competitions Program — Malla Reddy School Medchal",
-    ctaHref: '/competitions',
-    relatedSlugs: ['iit-foundation-early-preparation-matters', 'iit-foundation-vs-regular-cbse'],
-  },
 
   {
     slug: 'study-habits-class-6-students',
@@ -3594,7 +3198,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The right CBSE school for your child combines a strong academic foundation, adequate infrastructure, experienced teachers, and a campus culture that supports the whole child. Use this checklist on your next school visit and trust your observations over brochure claims.",
     ctaText: "Schedule a Campus Visit — Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['how-to-prepare-child-for-school-admission-interview', 'what-is-ncert-why-cbse-schools-use-it'],
+    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'what-is-ncert-why-cbse-schools-use-it'],
   },
 
   {
@@ -3640,7 +3244,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "A consistent morning routine is one of the highest-return investments a parent can make in their child's academic performance and emotional wellbeing. It takes effort to establish but becomes self-sustaining once the habits are set.",
     ctaText: "Learn More About Student Wellbeing at Malla Reddy School Medchal",
     ctaHref: '/life-at-school',
-    relatedSlugs: ['screen-time-sleep-learning-school-children', 'how-to-help-child-develop-study-habits-cbse'],
+    relatedSlugs: ['screen-time-sleep-learning-school-children', 'building-time-management-and-study-habits-that-last'],
   },
 
   {
@@ -3686,7 +3290,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "SEL is not soft. It is one of the most evidence-backed investments a school can make in children's academic performance and lifelong outcomes. When evaluating schools, ask about how SEL is embedded — not just whether it appears on the brochure.",
     ctaText: "Explore Holistic Development at Malla Reddy School Medchal",
     ctaHref: '/co-curricular',
-    relatedSlugs: ['how-to-help-child-make-friends-school', 'importance-co-curricular-activities-cbse-school'],
+    relatedSlugs: ['how-to-help-child-make-friends-school', 'why-co-curricular-activities-matter-child-development'],
   },
 
   {
@@ -3783,7 +3387,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Resilience is not a personality trait — it is a set of skills built through experience and supportive responses to setbacks. How you talk to your child after a failure is one of the highest-leverage parenting moves available to you.",
     ctaText: "Explore Student Development at Malla Reddy School Medchal",
     ctaHref: '/life-at-school',
-    relatedSlugs: ['parent-involvement-school-how-much-is-right', 'importance-mental-health-school-students'],
+    relatedSlugs: ['parent-involvement-school-how-much-is-right', 'managing-school-stress-children'],
   },
 
   {
@@ -3828,7 +3432,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Understanding the structure of early schooling helps parents make confident, well-timed decisions. Start pre-school at the right age, prioritise play-based development in the early years, and focus on social-emotional readiness — not early academic achievement — when evaluating Class 1 readiness.",
     ctaText: "Enquire About Admissions at Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['how-to-prepare-child-for-school-admission-interview', 'how-to-identify-good-school-cbse-hyderabad'],
+    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'how-to-identify-good-school-cbse-hyderabad'],
   },
 
   {
@@ -3873,7 +3477,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The skills built through school leadership — responsibility, communication, resilience, and the ability to bring others together around a goal — are among the most durable and transferable any school can develop.",
     ctaText: "Explore Co-Curricular Programmes at Malla Reddy School Medchal",
     ctaHref: '/co-curricular',
-    relatedSlugs: ['importance-co-curricular-activities-cbse-school', 'future-skills-children-school-2030'],
+    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'future-skills-children-school-2030'],
   },
 
   {
@@ -3921,7 +3525,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "A learning difficulty identified early and supported well does not limit a child's potential — it changes the support they need, not what they can achieve. Advocate for your child, work constructively with the school, and build the home environment that sustains their confidence alongside their academic skills.",
     ctaText: "Contact Malla Reddy School Medchal to Discuss Your Child's Needs",
     ctaHref: '/contact',
-    relatedSlugs: ['social-emotional-learning-schools-india', 'importance-mental-health-school-students'],
+    relatedSlugs: ['social-emotional-learning-schools-india', 'managing-school-stress-children'],
   },
 
   {
@@ -4110,7 +3714,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The best preparation for Class 10 board exams is calm, consistent, concept-based study over two years — not frantic cramming in the final weeks. Your role as a parent is to create the environment and emotional support that makes that possible.",
     ctaText: "Learn About IIT Foundation and Board Preparation at Malla Reddy School",
     ctaHref: '/iit-foundation',
-    relatedSlugs: ['cbse-board-exam-preparation-hyderabad', 'how-to-help-child-develop-study-habits-cbse'],
+    relatedSlugs: ['cbse-board-exam-preparation-hyderabad', 'building-time-management-and-study-habits-that-last'],
   },
 
   {
@@ -4336,7 +3940,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "A calm, organised start to the school year sets a positive tone that carries through the first weeks — the period when habits and relationships that shape the whole year are formed. Invest 2-3 weeks in preparation and the year starts better for everyone.",
     ctaText: "Enquire About Admissions for the New Academic Year at Malla Reddy School",
     ctaHref: '/admission',
-    relatedSlugs: ['importance-of-morning-routine-school-children', 'how-to-help-child-develop-study-habits-cbse'],
+    relatedSlugs: ['importance-of-morning-routine-school-children', 'building-time-management-and-study-habits-that-last'],
   },
 
   {
@@ -4460,7 +4064,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The right tuition is a targeted, temporary support that builds independence rather than dependence. Choose a centre based on teaching quality and conceptual approach — not proximity or price alone — and periodically reassess whether the support is still genuinely needed.",
     ctaText: "Learn About Malla Reddy School's IIT Foundation Programme",
     ctaHref: '/iit-foundation',
-    relatedSlugs: ['how-to-help-child-develop-study-habits-cbse', 'how-to-prepare-child-for-class-10-board-exams'],
+    relatedSlugs: ['building-time-management-and-study-habits-that-last', 'how-to-prepare-child-for-class-10-board-exams'],
   },
 
   // ── END BATCH 5 ────────────────────────────────────────────────────────────

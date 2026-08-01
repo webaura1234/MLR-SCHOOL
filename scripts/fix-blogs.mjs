@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'node:fs';
 let fileContent = fs.readFileSync('src/lib/blog-posts.ts', 'utf8');
 
 const regex = /content:\s*`([\s\S]*?)`,\s*relatedSlugs/g;
