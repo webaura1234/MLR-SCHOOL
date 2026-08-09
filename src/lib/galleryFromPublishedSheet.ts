@@ -69,14 +69,30 @@ function urlsFromWholeRow(cols: string[]): string[] {
 }
 
 function sheetRowToGalleryItems(cols: string[], rowIndex: number): PublishedGalleryItem[] {
+  /**
+   * Published sheet columns (current):
+   * id, title, category, year, photos, coverImage
+   *
+   * Legacy fallback still supported:
+   * id, imageUrl, category, title, size
+   */
   const idBase = cols[0]?.trim() || `row-${rowIndex + 1}`;
+
+  // Current published schema puts the image in coverImage (col 6).
+  // Legacy schema put the image URL in col 2.
+  const currentSchemaUrls = urlsFromCell(cols[5]);
+  const legacySchemaUrls = urlsFromCell(cols[1]);
+  const looksLikeCurrentSchema =
+    currentSchemaUrls.length > 0 ||
+    (Boolean(cols[1]?.trim()) && !cols[1].includes('http') && Boolean(cols[2]?.trim()));
+
   const category = (cols[2]?.trim() || 'general').toLowerCase();
-  let title = cols[3]?.trim() || '';
-  const sizeRaw = cols[4]?.trim();
+  let title = looksLikeCurrentSchema ? cols[1]?.trim() || '' : cols[3]?.trim() || '';
+  const sizeRaw = looksLikeCurrentSchema ? undefined : cols[4]?.trim();
   const size: PublishedGalleryItem['size'] =
     sizeRaw === 'sm' || sizeRaw === 'md' || sizeRaw === 'lg' ? sizeRaw : 'md';
 
-  let urls = urlsFromCell(cols[1]);
+  let urls = looksLikeCurrentSchema ? currentSchemaUrls : legacySchemaUrls;
   if (urls.length === 0) urls = urlsFromWholeRow(cols);
   if (urls.length === 0) return [];
 
@@ -86,8 +102,14 @@ function sheetRowToGalleryItems(cols: string[], rowIndex: number): PublishedGall
     title = cols[1].trim();
   }
 
+  // Sheet album ids repeat across rows; keep each cover image addressable.
+  const uniqueIdBase =
+    urls.length === 1 && idBase && !idBase.startsWith('row-')
+      ? `${idBase}-${rowIndex + 1}`
+      : idBase;
+
   return urls.map((src, i) => ({
-    id: urls.length > 1 ? `${idBase}-${i + 1}` : idBase,
+    id: urls.length > 1 ? `${uniqueIdBase}-${i + 1}` : uniqueIdBase,
     src,
     srcHd: src,
     category,
