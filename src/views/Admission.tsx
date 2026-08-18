@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import OptimizedImage from '../components/OptimizedImage';
 import { trackAdmissionSubmit, trackPhoneClick } from '@/lib/googleAds';
+import { FEE_ACADEMIC_YEAR } from '@/lib/fee-structure';
 import './Admission.css';
 import { useSiteInfo } from '@/lib/useSiteInfo';
 
@@ -129,16 +131,23 @@ const Admission = () => {
                 marginBottom: '2rem'
               }}>
                 <h4 style={{ fontWeight: 800, color: '#0A2463', marginBottom: '0.5rem', fontSize: '1rem' }}>Fee Structure</h4>
-                <p style={{ color: '#475569', fontStyle: 'italic', lineHeight: '1.5', fontSize: '0.85rem' }}>
-                  &quot;For fee structure details, please{' '}
+                <p style={{ color: '#475569', lineHeight: '1.5', fontSize: '0.85rem' }}>
+                  See our{' '}
+                  <Link
+                    href="/fee-structure"
+                    style={{ color: '#0DB6B5', fontWeight: 800, textDecoration: 'underline' }}
+                  >
+                    class-wise fee structure
+                  </Link>
+                  {' '}for {FEE_ACADEMIC_YEAR}, or{' '}
                   <a
                     href={`tel:${siteInfo.phoneTel}`}
-                    style={{ color: '#0DB6B5', fontWeight: 800, textDecoration: 'underline', fontStyle: 'normal' }}
+                    style={{ color: '#0DB6B5', fontWeight: 800, textDecoration: 'underline' }}
                     onClick={() => trackPhoneClick('admission_page')}
                   >
                     call us directly
                   </a>
-                  {' '}or visit our Malla Reddy School campus.&quot;
+                  {' '}or visit our Malla Reddy School campus.
                 </p>
               </div>
               <h2>Enquiry Form</h2>

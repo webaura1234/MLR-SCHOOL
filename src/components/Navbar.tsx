@@ -87,6 +87,7 @@ const Navbar = () => {
       path: '#',
       dropdown: [
         { name: 'Admission Procedure', path: '/admission' },
+        { name: 'Fee Structure', path: '/fee-structure' },
       ],
     },
     { name: 'Contact', path: '/contact' },

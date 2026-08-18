@@ -39,6 +39,11 @@ const admissionFaqs = [
       'Yes, Malla Reddy School Medchal follows the CBSE curriculum, ensuring a nationally recognised standard of education.',
   },
   {
+    question: 'What is the fee structure at Malla Reddy School Medchal?',
+    answer:
+      'Our class-wise fee structure for 2026-27, covering the registration fee and term/tuition fee for Nursery through Class VIII, is published at https://www.mallareddyschool.com/fee-structure. You can also call +91 92 4758 7086 for details.',
+  },
+  {
     question: 'What is the admission process for the 2026-27 academic year?',
     answer:
       'The admission process involves submitting an inquiry, a campus visit, document verification, and completion of the enrollment form. Contact our admissions team for current availability and exact requirements.',
@@ -56,6 +61,11 @@ const admissionFaqs = [
 ];
 
 const admissionRelatedLinks = [
+  {
+    label: 'Fee Structure 2026-27',
+    href: '/fee-structure',
+    description: 'Class-wise registration and term/tuition fees.',
+  },
   {
     label: 'CBSE Curriculum & STEAM',
     href: '/curriculum',
