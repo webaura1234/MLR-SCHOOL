@@ -1477,6 +1477,44 @@
   }
 }
 
+/* —— World-Class Facilities CTA Button —— */
+.facilities-showcase-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.facilities-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 2.25rem;
+  background-color: var(--cta-blue, #1a2314);
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-full, 9999px);
+  text-decoration: none;
+  box-shadow: 0 4px 14px var(--cta-blue-glow, rgba(26, 35, 20, 0.42));
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.facilities-cta-btn:hover {
+  background-color: var(--cta-blue-hover, #2a3824);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 35, 20, 0.35);
+}
+
+.facilities-cta-btn:active {
+  background-color: var(--cta-blue-active, #121810);
+  transform: translateY(0);
+}
+
 .facilities-card--base {
   grid-column: span 4;
   grid-row: span 2;

@@ -89,8 +89,8 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" data-scroll-behavior="smooth" className={`${sans.variable} ${serif.variable}`}>
-      <body>
+    <html lang="en-IN" data-scroll-behavior="smooth" className={`${sans.variable} ${serif.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <GoogleTagLoader />
         <MetaPixelLoader />
         <SchoolJsonLd />

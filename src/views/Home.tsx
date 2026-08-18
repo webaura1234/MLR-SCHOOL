@@ -329,6 +329,19 @@ const Home = ({ galleryPreview, programs, facilityImages, calendarEvents }: Home
                 </motion.button>
               ))}
             </motion.div>
+
+            <motion.div
+              className="facilities-showcase-cta"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
+              <Link href="/infrastructure" className="btn-primary squishy-btn facilities-cta-btn">
+                <span>Explore all infrastructure</span>
+                <ArrowRight size={18} aria-hidden />
+              </Link>
+            </motion.div>
           </div>
 
           <FacilityLightbox

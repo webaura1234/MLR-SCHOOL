@@ -78,6 +78,7 @@ const Navbar = () => {
       path: '#',
       galleryPill: true,
       dropdown: [
+        { name: 'Infrastructure', path: '/infrastructure' },
         { name: 'Event Gallery', path: '/gallery' },
         { name: 'Media Gallery', path: '/media-gallery' },
       ],
