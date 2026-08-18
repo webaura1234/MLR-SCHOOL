@@ -1,0 +1,54 @@
+---
+description: Rules and guidelines for Malla Reddy School blog image generation, visual branding, uniform standards, logo compositing, and visual quality auditing.
+globs: src/lib/blog-posts.ts, public/images/**, scripts/**
+---
+
+# Malla Reddy School — Blog Image Generation & Visual Branding Rules
+
+## 1. Topic-Specific & Unique Images
+- Every blog post must have a **completely unique image** specifically tailored to that blog's topic.
+- Never reuse existing blog images or make minor color/layout variations of previous images.
+- Avoid generic stock-style school images.
+
+## 2. Visual Reference Standards
+
+### Reference 1: Student Photography Style (Type A)
+- **Style**: Photorealistic, high-end school website photography.
+- **Subjects**: Natural-looking Indian/South Asian students and teachers.
+- **Setting**: Realistic classroom, laboratory, library, campus, or outdoor environments.
+- **Lighting & Details**: Professional lighting, natural expressions, realistic skin texture, realistic hair, proper perspective, and depth.
+
+### Reference 2: Official Malla Reddy School Uniform
+Whenever students are depicted representing Malla Reddy School:
+- **Blazer**: Dark/navy blue blazer.
+- **Shirt**: Light blue / sky-blue formal shirt.
+- **Tie**: Navy blue tie with red/blue diagonal striping.
+- **Logo Placement**: Official school emblem on the left blazer pocket.
+- **Forbidden**: Casual clothing (unless outdoor sports kit), black blazers, grey blazers, plain red ties, generic badges.
+
+### Reference 3: Official Malla Reddy School Logo
+- **Logo Design**: Double circular border, `MALLA REDDY SCHOOL` text on upper portion, `MEDCHAL` text on bottom, central stylized M / open-book educational symbol with central person/dot element, left and right stars, laurel wreath, deep navy-blue color.
+- **Zero Alteration**: Do NOT accept AI-invented or approximate school logos.
+
+## 3. Logo Compositing Workflow (4-Step Process)
+1. **Generate Base Scene**: Prompt the image generator to create the student/classroom/infrastructure scene without forcing it to draw text/logos.
+2. **Source Official Asset**: Use the official logo asset (`public/logo.png` or vector asset).
+3. **Composite Logo**: Overlay the logo onto blazer pockets, school walls, banners, or signage.
+4. **Perspective & Texture Integration**: Match perspective, lighting, shadow, scale, and surface texture (e.g. fabric embroidery on blazers, wall painting on infrastructure).
+
+## 4. Image Types Selection
+- **TYPE A — Student / People Photography**: For blogs on student life, teaching, classroom learning, science activities, mathematics, debates, sports, art, competitions.
+- **TYPE B — School Infrastructure Photography**: For blogs on library, computer/AI labs, smart classrooms, sports facilities, corridors, campus grounds, safety.
+- **TYPE C — Illustrated / Ghibli-Inspired**: Selective use for conceptual, storytelling, childhood curiosity, or cultural blogs (e.g. joy of reading, imagination).
+
+## 5. Logo Placement Rule
+- Include the logo **only when** a physical uniform, school building sign, banner, or branded surface is present.
+- Do NOT artificially insert logos into close-up book shots, abstract illustrations, or nature details.
+
+## 6. Generation Retry & Quality Gate
+Before accepting any blog image, perform a strict visual audit:
+- Check student faces and expressions (no distortions/extra limbs/warped fingers).
+- Check uniform accuracy (navy blazer, sky blue shirt, striped tie).
+- Check logo placement, scale, and clarity.
+- Check scene relevance to the blog title.
+- If audit fails $\rightarrow$ REGENERATE or apply FALLBACK STRATEGY (switch to Infrastructure or Ghibli illustration).
