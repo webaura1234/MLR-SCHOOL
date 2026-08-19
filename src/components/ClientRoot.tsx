@@ -30,7 +30,7 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
 
   // We must ensure the first render matches the server exactly to avoid hydration errors
   const showPreloader = !isMounted || loading;
-  const isAdmissionPage = pathname === '/admission';
+  const isHomePage = pathname === '/';
 
   return (
     <>
@@ -49,9 +49,8 @@ export default function ClientRoot({ children }: { children: React.ReactNode }) 
         <ContactFab />
         <CallFab />
         <AdmissionsPopup 
-          enabled={!showPreloader && !isAdmissionPage} 
-          initialDelayMs={5_000} 
-          intervalMs={30_000} 
+          enabled={!showPreloader && isHomePage} 
+          initialDelayMs={15_000} 
         />
       </div>
     </>
