@@ -141,7 +141,7 @@ export default function Infrastructure({ facilityImages }: InfrastructureProps) 
           >
             <div className="infrastructure-cta-card">
               <h2>Experience Our Campus Firsthand</h2>
-              <p>Schedule a guided campus tour or start your child's admission process today.</p>
+              <p>Schedule a guided campus tour or start your child&apos;s admission process today.</p>
               <div className="infrastructure-cta-actions">
                 <Link href="/admission" className="btn-primary squishy-btn">
                   <span>Admissions Procedure</span>

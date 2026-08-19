@@ -8868,7 +8868,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'role-technology-smart-classrooms',
-      'safe-inclusive-learning-environment',
+      'safe-inclusive-positive-learning-environment-malla-reddy-school',
       'cbse-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
@@ -9017,7 +9017,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: [
       'pre-primary-school-medchal-how-to-choose',
       'fostering-love-for-reading-early-years',
-      'play_based_learning'
+      'play-based-learning-importance-children'
     ]
   },
 
@@ -9237,7 +9237,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Learn About Our School Values & Culture',
     ctaHref: '/admission',
     relatedSlugs: [
-      'value-based-education',
+      'why-value-based-education-matters-as-much-as-academics-at-malla-reddy-school',
       'building-emotional-intelligence-in-children',
       'safe-nurturing-school-culture-malla-reddy-approach'
     ]
@@ -9387,7 +9387,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: [
       'sports-physical-education-academic-performance',
       'sports-physical-education-benefits',
-      'co-curricular-activities'
+      'role-of-co-curricular-activities-in-childs-overall-growth'
     ]
   },
 
@@ -9461,7 +9461,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: [
       'top-5-study-habits-middle-school-students',
       'preparing-cbse-exams-foundation-strategies',
-      'board-exam-preparation'
+      'board-exam-preparation-tips-how-malla-reddy-school-helps-students-excel'
     ]
   },
 
@@ -9534,7 +9534,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'developing-leadership-skills-school-students',
-      'value-based-education',
+      'why-value-based-education-matters-as-much-as-academics-at-malla-reddy-school',
       'safe-nurturing-school-culture-malla-reddy-approach'
     ]
   }
