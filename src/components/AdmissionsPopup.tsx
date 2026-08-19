@@ -15,12 +15,13 @@ type AdmissionsPopupProps = {
 
 export default function AdmissionsPopup({ 
   enabled = true, 
-  intervalMs = 30_000,
-  initialDelayMs = 5_000
+  initialDelayMs = 15_000
 }: AdmissionsPopupProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [hasDismissed, setHasDismissed] = useState(false);
+  const [hasBeenOpened, setHasBeenOpened] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -40,24 +41,36 @@ export default function AdmissionsPopup({
     setMounted(true);
     if (typeof window !== 'undefined') {
       const submitted = localStorage.getItem('hasSubmittedAdmissionsEnquiry') === 'true';
+      const dismissed = localStorage.getItem('hasDismissedAdmissionsPopup') === 'true';
       setHasSubmitted(submitted);
+      setHasDismissed(dismissed);
     }
   }, []);
 
+  // When the modal opens and is later closed by any trigger (X button, backdrop, ESC, etc.), mark as permanently dismissed
   useEffect(() => {
-    if (!mounted || !enabled || hasSubmitted) return;
+    if (isOpen) {
+      setHasBeenOpened(true);
+    } else if (hasBeenOpened) {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('hasDismissedAdmissionsPopup', 'true');
+        setHasDismissed(true);
+      }
+    }
+  }, [isOpen, hasBeenOpened]);
 
-    const openIfClosed = () => setIsOpen((prev) => (prev ? prev : true));
+  useEffect(() => {
+    if (!mounted || !enabled || hasSubmitted || hasDismissed) return;
 
-    // First popup after initialDelayMs, then repeat every intervalMs.
+    const openIfClosed = () => setIsOpen(true);
+
+    // Pop up once within initialDelayMs (15 seconds on home page)
     const timeoutId = window.setTimeout(openIfClosed, initialDelayMs);
-    const intervalId = window.setInterval(openIfClosed, intervalMs);
 
     return () => {
       window.clearTimeout(timeoutId);
-      window.clearInterval(intervalId);
     };
-  }, [enabled, intervalMs, initialDelayMs, mounted, hasSubmitted]);
+  }, [enabled, initialDelayMs, mounted, hasSubmitted, hasDismissed]);
 
   useEffect(() => {
     if (!isOpen) return;
