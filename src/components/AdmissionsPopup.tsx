@@ -9,7 +9,6 @@ import './AdmissionsPopup.css';
 
 type AdmissionsPopupProps = {
   enabled?: boolean;
-  intervalMs?: number;
   initialDelayMs?: number;
 };
 
