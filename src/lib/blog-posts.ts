@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Choosing the right CBSE school in Medchal is one of the most important decisions a parent can make. This guide helps you evaluate options, ask the right questions, and find the best fit for your child.',
-    coverImage: '/images/hero-aspirational.png',
+    coverImage: '/images/cbse-schools-in-medchal-hyderabad-guide-for-parents.jpg',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school in Hyderabad',
     intro:
       "Medchal has grown rapidly as a residential hub on the northern edge of Hyderabad. With that growth has come a surge in school options — and for parents, more choices can mean more confusion. If you are searching for the right CBSE school in Medchal for your child, this guide will help you cut through the noise, ask the right questions, and make a confident decision.",
@@ -613,7 +613,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Before you visit a school for admission, having the right documents ready saves time and avoids last-minute delays. This checklist covers everything you need for CBSE school admissions in Hyderabad.',
-    coverImage: '/images/hero-admissions-2026-27.png',
+    coverImage: '/images/documents-required-school-admission-hyderabad.jpg',
     coverImageAlt: 'School admission documents checklist — Malla Reddy School Medchal Hyderabad',
     intro:
       'One of the most common reasons admission processes stall is incomplete documentation. Whether you are enrolling your child for the first time or transferring from another school, having the right papers ready on your first visit makes the process smooth and quick. Here is the complete checklist for CBSE school admissions in Hyderabad.',
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Families in Medchal no longer need to commute into central Hyderabad for quality CBSE schooling. Here is why the Medchal area has become a preferred destination for parents seeking great schools close to home.',
-    coverImage: '/images/hero-aspirational.png',
+    coverImage: '/images/why-families-choose-schools-near-medchal.jpg',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school near Hyderabad Outer Ring Road',
     intro:
       "A decade ago, families living in Medchal and the surrounding areas often faced a difficult choice: commute children long distances to well-known schools in Hyderabad, or settle for limited local options. That picture has changed significantly. Medchal has grown into a well-connected residential area with quality CBSE schools — and families are increasingly choosing to school their children locally.",
@@ -1087,7 +1087,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Parenting Guides',
     excerpt:
       "A school brochure shows you the best version of everything. A campus visit shows you the truth. Here is a practical checklist of what to look for when visiting a school in Hyderabad.",
-    coverImage: '/images/school_campus_hero.png',
+    coverImage: '/images/what-to-look-for-in-a-school-campus-parents-checklist.jpg',
     coverImageAlt: 'School campus visit checklist — what parents should look for at a CBSE school',
     intro:
       "Every school presents its best face in brochures and on websites. A campus visit is your opportunity to look beyond the marketing and assess whether a school is genuinely right for your child. Most parents visit a campus with a vague sense of what they are looking for. This checklist makes it specific.",
@@ -1480,7 +1480,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Study Tips',
     excerpt:
       "Where your child studies affects how well they study. A few practical changes to the home study environment can make a significant difference to focus, output, and study habits.",
-    coverImage: '/images/labs/library-1.jpg',
+    coverImage: '/images/how-to-create-perfect-study-environment-home-children.png',
     coverImageAlt: 'Quiet study environment with books — tips for home study space for school children',
     intro:
       "Schools provide the curriculum, teachers, and structure. What happens at home — particularly how and where children do their independent study — plays a significant role in how well that learning consolidates. The good news is that an effective home study environment does not require a dedicated study room or expensive furniture. It requires a few consistent, intentional choices.",
@@ -1558,7 +1558,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'School Admissions',
     excerpt: 'With dozens of schools to choose from in Hyderabad, parents often feel overwhelmed. This practical guide cuts through the noise and shows you exactly what to look for.',
-    coverImage: '/images/hero-aspirational.png',
+    coverImage: '/images/how-to-choose-right-school-hyderabad.jpg',
     coverImageAlt: 'Parents choosing the right school in Hyderabad — Malla Reddy School Medchal',
     intro: 'Choosing a school is one of the most consequential decisions a parent makes for their child. In Hyderabad, the number of options — CBSE, ICSE, state board, international — can make the process feel overwhelming. This guide gives you a clear, practical framework for making the right choice.',
     sections: [
@@ -1794,7 +1794,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Academic Excellence',
     excerpt: 'IIT Foundation and regular CBSE are not in competition — one builds on the other. Here is how they differ and why the combination is powerful.',
-    coverImage: '/images/labs/math-1.jpg',
+    coverImage: '/images/iit-foundation-vs-regular-cbse.jpg',
     coverImageAlt: 'Students in IIT Foundation mathematics class at Malla Reddy School Medchal',
     intro: 'Parents of middle school students frequently ask: what is the difference between an IIT Foundation program and the regular CBSE curriculum? The short answer is that Foundation programs extend and deepen the CBSE curriculum — they do not replace it. Here is a clearer picture of what each involves.',
     sections: [
@@ -2473,7 +2473,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Academic Excellence',
     excerpt: "Mathematics is the common thread in JEE, NEET, NTSE, and every major Olympiad. Here are the core skills to build — and when to start.",
-    coverImage: '/images/labs/math-1.jpg',
+    coverImage: '/images/mathematics-skills-competitive-exams.jpg',
     coverImageAlt: "Students building mathematics skills for competitive exams at Malla Reddy School Medchal",
     intro: "Every major competitive examination in India — JEE Main and Advanced, NEET, NTSE, and the major Olympiads — has a significant mathematics component. The students who perform best in these exams share a common characteristic: they have deep, flexible mathematical understanding built over years, not crammed in the final months before an exam.",
     sections: [
@@ -2780,7 +2780,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'Child Growth & Learning',
     excerpt: "The brain is a physical organ, and its performance depends on physical health. Here is why regular movement is one of the most important supports for academic learning.",
-    coverImage: '/images/athletics.png',
+    coverImage: '/images/importance-physical-activity-learning-children.jpg',
     coverImageAlt: "Children running and exercising — physical activity supports learning at school",
     intro: "In the push to maximise academic instruction time, schools and parents often see physical activity as a trade-off — time spent moving is time not spent studying. Neuroscience and educational research tell a different story: physical activity is not a break from learning. For children's brains, it is a prerequisite.",
     sections: [
@@ -3008,7 +3008,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Child Growth & Learning',
     excerpt: "Screens are the dominant leisure activity for most school-age children in India. Here is what the research shows about their effects on sleep and learning — and how to manage it.",
-    coverImage: '/images/labs/computer-2.jpg',
+    coverImage: '/images/screen-time-sleep-learning-school-children.jpg',
     coverImageAlt: "Managing screen time for school children — effects on sleep and learning",
     intro: "Smartphones, tablets, and television are now the primary leisure activity for most school-age children in urban India. This is not inherently problematic — screens can be used purposefully and educationally. The concern is passive, excessive, and poorly-timed screen use that directly impairs the sleep and cognitive performance school children need.",
     sections: [
@@ -4118,7 +4118,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'Child Growth & Learning',
     excerpt: 'True education does not end at the last page of a textbook. At Malla Reddy School, holistic education means shaping confident, capable, and compassionate human beings — not just good exam scorers.',
-    coverImage: '/images/holistic-education.png',
+    coverImage: '/images/why-malla-reddy-school-focuses-on-holistic-education-for-every-child.jpg',
     coverImageAlt: 'A day in the life of a Malla Reddy School student — academics, activity, and expression, all in balance.',
     intro: 'Every parent wants their child to succeed — but success today means far more than marks on a report card. It means resilience, curiosity, empathy, and the ability to think for oneself. This is the foundation of holistic education, and it is the guiding philosophy behind everything we do at Malla Reddy School.',
     sections: [
@@ -4266,7 +4266,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Child Growth & Learning',
     excerpt: 'A concept read in a textbook is remembered for a test. A concept experienced firsthand is remembered for life. At Malla Reddy School, experiential learning turns every lesson into something students can see, touch, and understand.',
-    coverImage: '/images/experiential-learning.png',
+    coverImage: '/images/how-experiential-learning-helps-students-learn-beyond-textbooks.jpg',
     coverImageAlt: 'Learning by doing — a core part of the Malla Reddy School classroom experience.',
     intro: 'Ask any adult what they remember most from school, and it\'s rarely the chapter they memorized — it\'s the science experiment that worked, the field trip that opened their eyes, or the project they built with their own hands. This is the power of experiential learning, and it\'s a philosophy Malla Reddy School builds into everyday teaching.',
     sections: [
@@ -4488,7 +4488,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Career Readiness',
     excerpt: 'Leadership isn\'t taught through a lecture — it\'s built through responsibility, real decisions, and real consequences. At Malla Reddy School, student councils and school activities give children exactly that.',
-    coverImage: '/images/leadership-skills.png',
+    coverImage: '/images/building-leadership-skills-through-student-councils-and-school-activities.png',
     coverImageAlt: 'Student council members taking the lead at a Malla Reddy School event.',
     intro: 'Every parent hopes their child grows into someone who can lead — someone who takes initiative, communicates confidently, and takes responsibility for outcomes. But leadership skills aren\'t developed through instruction alone; they\'re built through real experience. At Malla Reddy School, structured opportunities like the student council give students exactly that kind of hands-on leadership training.',
     sections: [
@@ -4773,7 +4773,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Parenting Guides',
     excerpt:
       "A child's education doesn't happen in isolation inside a classroom — it happens in the space between what's taught at school and what's reinforced at home. At Malla Reddy School, we treat parents as true partners in that journey.",
-    coverImage: '/images/parent-school-partnerships.png',
+    coverImage: '/images/parent-school-partnerships-academic-success.jpg',
     coverImageAlt: 'Parents and teachers, working together for every child\'s success at Malla Reddy School.',
     intro:
       "It's tempting to think of a child's education as something that happens entirely at school, with parents simply reviewing report cards from the sidelines. But research and experience consistently show otherwise: children perform better, feel more supported, and stay more motivated when parents and schools work together as genuine partners. At Malla Reddy School, parent involvement is treated as an essential part of how we support every student.",
@@ -5036,7 +5036,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Student Life',
     excerpt: 'The classroom teaches a child what to know. Co-curricular activities teach a child who to become. At Malla Reddy School, both are treated as equally essential.',
-    coverImage: '/images/co-curricular-activities.png',
+    coverImage: '/images/role-of-co-curricular-activities-in-childs-overall-growth.jpg',
     coverImageAlt: 'Students participating in a mix of clubs — dance, debate, art, or music activities',
     intro: "Ask a student what they remember most fondly about school years later, and it's rarely a chapter from a textbook — it's the play they performed in, the club they joined, or the competition they trained for. Co-curricular activities aren't a break from real learning; they are a core part of it, and at Malla Reddy School, they receive the same care and structure as the academic curriculum.",
     sections: [
@@ -5304,7 +5304,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Student Life',
     excerpt: 'The ability to stand up, speak clearly, and argue a point with confidence is one of the most valuable skills a school can build — and one of the hardest to teach through a textbook alone.',
-    coverImage: '/images/public-speaking-debate.png',
+    coverImage: '/images/building-confidence-in-children-through-public-speaking-and-debate.png',
     coverImageAlt: 'A student speaking at a podium or participating in a school debate competition',
     intro: "Many of the most successful adults point to a single school memory as a turning point in their confidence — the first time they spoke in front of an audience and realized they could do it. Public speaking skills don't develop by accident; they are built through consistent, structured practice, which is exactly what Malla Reddy School's debate and elocution programs are designed to provide.",
     sections: [
@@ -5766,7 +5766,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Parenting Guides',
     excerpt: 'Discipline isn\'t about control — it\'s about giving children the structure they need to feel secure, respected, and capable of managing themselves.',
-    coverImage: '/images/school-discipline.png',
+    coverImage: '/images/role-of-school-discipline-in-building-positive-behaviour.jpg',
     coverImageAlt: 'Students following an orderly classroom routine or morning assembly',
     intro: "The word \"discipline\" often carries a negative connotation — rules, restrictions, punishment. But genuine school discipline, done well, is one of the most supportive things a school can offer a child. It provides the structure, consistency, and clear expectations that help students feel secure and, over time, manage themselves independently.",
     sections: [
@@ -6398,7 +6398,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Co-Curricular',
     excerpt: 'Academics are just one part of the equation. Learn how co-curricular activities build confidence and key life skills.',
-    coverImage: '/images/co_curricular_activities.png',
+    coverImage: '/images/why-co-curricular-activities-matter.jpg',
     coverImageAlt: 'Students in Malla Reddy School uniform engaged in co-curricular activities like chess, drama, and art in a large school hall',
     intro: "When we think of a school, we often picture textbooks, exams, and classrooms. However, a child's education is incomplete without co-curricular activities. At Malla Reddy School, we believe that learning happens everywhere—on the sports field, the stage, and the art room. These activities are essential for raising well-rounded individuals.",
     sections: [
@@ -6483,7 +6483,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'School Admissions',
     excerpt: 'Medchal is fast becoming Hyderabad\'s preferred destination for families seeking green spaces and excellent schools.',
-    coverImage: '/images/medchal_campus_life.png',
+    coverImage: '/images/living-in-medchal-schools-family.png',
     coverImageAlt: 'Families and students in Malla Reddy School uniform outside a clean, modern school campus in Medchal, Hyderabad',
     intro: "Over the past decade, northern Hyderabad has seen remarkable development, and Medchal has emerged as a top choice for families. Combining peaceful, green suburbs with excellent connectivity, Medchal offers a high quality of life. For parents, one of the biggest draws is the presence of world-class educational institutions like Malla Reddy School.",
     sections: [
@@ -7249,7 +7249,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'School Philosophy',
     excerpt: 'Understand how modern CBSE assessments focus on critical thinking and real-world application, eliminating rote learning.',
-    coverImage: '/images/cbse_assessment_system.png',
+    coverImage: '/images/cbse-assessment-system-explained.jpg',
     coverImageAlt: 'Students raising hands enthusiastically in a modern classroom at Malla Reddy School',
     intro: "For decades, education in India was associated with memorising textbooks to clear annual exams. However, the Central Board of Secondary Education has fundamentally reformed this model. The modern CBSE assessment system is designed to test understanding, critical thinking, and practical application, ensuring students actually absorb what they learn.",
     sections: [
@@ -7334,7 +7334,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'STEAM Education',
     excerpt: 'More than tech skills. Learn how hands-on coding and robotics lessons develop logical thinking and resilience in children.',
-    coverImage: '/images/coding_robotics_skills.png',
+    coverImage: '/images/coding-robotics-problem-solving-children.jpg',
     coverImageAlt: 'Students working together on building and coding a small robot in a STEAM class',
     intro: "In the digital age, technology is part of daily life. However, teaching children how to create with technology—not just use it—is a powerful educational goal. Coding and robotics are not just specialized skills for future engineers; they are interactive tools that develop logic, planning, and resilience in young minds.",
     sections: [
@@ -8124,7 +8124,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Holistic Education',
     excerpt: 'Great leaders are nurtured, not just born. Discover the programs and strategies we use to instill confidence, empathy, and leadership skills in our students.',
-    coverImage: '/images/leadership-skills.png',
+    coverImage: '/images/developing-leadership-skills-school-students.jpg',
     coverImageAlt: 'Student leaders wearing school uniform and prefect badges',
     intro: 'Leadership is not about titles; it is about taking responsibility, showing empathy, and inspiring others. Developing these qualities early is a core part of the educational philosophy at Malla Reddy School Medchal, where we actively cultivate the leaders of tomorrow.',
     sections: [
@@ -8388,7 +8388,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'School Admissions',
     excerpt: 'True education prepares students for life, not just exams. Discover how a holistic approach to the CBSE curriculum creates resilient, capable, and well-rounded individuals.',
-    coverImage: '/images/holistic-education.png',
+    coverImage: '/images/why-holistic-education-future.jpg',
     coverImageAlt: 'A collage of students engaged in academics, sports, and arts at Malla Reddy School',
     intro: 'The National Education Policy (NEP) 2020 emphasizes the need for an education system that goes beyond rote memorization. Holistic education is no longer an alternative approach; it is the essential future of schooling. At Malla Reddy School Medchal, our entire ecosystem is built around nurturing the whole child—intellectually, emotionally, physically, and socially.',
     sections: [
@@ -9112,7 +9112,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Co-Curricular',
     excerpt: 'Standing under stage lights and projecting one voice builds self-assurance that carries through every aspect of academic and professional life.',
-    coverImage: '/images/power-of-performing-arts-building-expressive-confidence-drama-speech.png',
+    coverImage: '/images/power-of-performing-arts-building-expressive-confidence-drama-speech.jpg',
     coverImageAlt: 'Malla Reddy School student rehearsing public speech on auditorium stage',
     intro: 'The ability to communicate articulate ideas with poise and emotional authenticity is one of the most valuable competencies a young person can develop. While written exams assess knowledge, performing arts — drama, theatrical monologue, and public speaking — build expressive presence. At Malla Reddy School Medchal, performing arts are an integral component of holistic education.',
     sections: [
@@ -9186,7 +9186,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 6,
     category: 'School Culture',
     excerpt: 'True patriotism goes beyond ceremonial observances — it is rooted in civic awareness, ethical responsibility, and active contribution to society.',
-    coverImage: '/images/fostering-civic-responsibility-national-pride-school-cultural-traditions.png',
+    coverImage: '/images/fostering-civic-responsibility-national-pride-school-cultural-traditions.jpg',
     coverImageAlt: 'Malla Reddy School students celebrating national cultural traditions during campus assembly',
     intro: 'As India celebrates Independence Day on August 15, educational institutions reflect on their vital role in shaping the nation future citizens. True civic education extends far beyond memorising historical dates; it instills a deep sense of responsibility, respect for diversity, and dedication to community welfare. At Malla Reddy School Medchal, cultural traditions and civic initiatives guide students to become principled leaders.',
     sections: [
@@ -9334,7 +9334,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'Co-Curricular',
     excerpt: 'The athletic field is one of the most effective classrooms for learning how to handle victory with humility, bounce back from setbacks, and work as a unified team.',
-    coverImage: '/images/athletics-teamwork-competitive-sports-develop-grit-sportsmanship.png',
+    coverImage: '/images/athletics-teamwork-competitive-sports-develop-grit-sportsmanship.jpg',
     coverImageAlt: 'Malla Reddy School students engaged in competitive track athletics and sportsmanship',
     intro: 'While academic classrooms train intellect and analytical logic, the sports ground trains physical endurance, emotional composure, and strategic teamwork. Participation in athletics, basketball, cricket, and martial arts teaches lessons that cannot be replicated in textbooks. At Malla Reddy School Medchal, physical education is an essential pillar of holistic child development.',
     sections: [
