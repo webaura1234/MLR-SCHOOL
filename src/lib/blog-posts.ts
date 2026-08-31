@@ -2495,7 +2495,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Mathematical strength for competitive exams is built through years of deliberate practice on progressively harder problems — not by reading more theory or memorising more formulas. Starting that practice in Class 6, rather than Class 11, is the most significant competitive advantage a student can have.",
     ctaText: "Explore IIT Foundation Mathematics — Malla Reddy School Medchal",
     ctaHref: '/iit-foundation',
-    relatedSlugs: ['iit-foundation-vs-regular-cbse', 'competitive-exams-school-students-india'],
+    relatedSlugs: ['iit-foundation-vs-regular-cbse', 'iit-foundation-early-preparation-matters'],
   },
 
   {
@@ -3144,63 +3144,6 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
   // ── BATCH 5 — Posts 71–80 ──────────────────────────────────────────────────
-
-  {
-    slug: 'how-to-identify-good-school-cbse-hyderabad',
-    title: 'How to Identify a Good CBSE School in Hyderabad: A Parent\'s Checklist',
-    metaTitle: "How to Choose a Good CBSE School in Hyderabad | Parent Checklist",
-    metaDescription: "Not all CBSE schools are equal. Here is a clear, practical checklist to help Hyderabad parents evaluate schools before choosing one for their child.",
-    keywords: ['good CBSE school Hyderabad','choose CBSE school Hyderabad checklist','best CBSE school Medchal','how to evaluate school India','CBSE school selection tips parents'],
-    publishedDate: '2025-06-04',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Admissions',
-    excerpt: "Choosing a CBSE school in Hyderabad involves more than rankings and fees. Here is what to actually look for — infrastructure, teacher quality, curriculum depth, and more.",
-    coverImage: '/images/school_campus_hero.png',
-    coverImageAlt: "Parents evaluating a CBSE school in Hyderabad — Malla Reddy School Medchal",
-    intro: "Hyderabad has hundreds of CBSE-affiliated schools, and choosing the right one is one of the most consequential decisions you will make for your child. Fee structures and school names alone are not reliable guides. Here is a checklist that helps you look beyond surface signals and evaluate what genuinely matters.",
-    sections: [
-      {
-        heading: "Academic Quality Indicators",
-        content: "",
-        subsections: [
-          { heading: "CBSE Affiliation Status", content: "Verify that the school holds a valid CBSE affiliation number on the CBSE website (cbseaff.nic.in). A lapsed or provisional affiliation is a red flag." },
-          { heading: "NCERT Curriculum Fidelity", content: "Good CBSE schools build their teaching around NCERT textbooks and concepts, then extend beyond. Schools that replace NCERT with third-party material entirely may be teaching outside the exam framework." },
-          { heading: "Board Exam Results Pattern", content: "Ask for the past three years of Class 10 results — pass percentage, distinction percentage, and subject-wise averages. One good year may be an outlier; a trend tells you more." },
-        ],
-      },
-      {
-        heading: "Infrastructure and Facilities",
-        content: "Visit the campus in person. Check for: well-maintained classrooms with adequate lighting and ventilation, functional science and computer laboratories, a library with current books and periodicals, a playground or sports field, and clean, hygienic sanitation facilities. Modern schools increasingly offer smart classrooms — verify these are in use, not showpieces.",
-      },
-      {
-        heading: "Teacher Quality and Stability",
-        content: "Ask about teacher qualification requirements, average years of experience on staff, and annual teacher turnover. High turnover is a systemic signal. Check whether teachers are trained in CBSE pedagogy and whether the school invests in ongoing professional development.",
-      },
-      {
-        heading: "Co-Curricular and Holistic Development",
-        content: "CBSE's own guidelines emphasise holistic development. Look for active sports programmes, arts and cultural activities, science clubs, and student leadership opportunities. Schools that treat these as afterthoughts are not implementing the CBSE vision fully.",
-      },
-      {
-        heading: "Safety, Nutrition, and Campus Culture",
-        content: "Enquire about campus security measures, a functional grievance mechanism, and the school's approach to bullying and student welfare. If the school has a canteen, check whether it follows CBSE's healthy food guidelines. A positive, inclusive campus culture is difficult to quantify but worth probing — speak to a few parents whose children already attend.",
-      },
-      {
-        heading: "Malla Reddy School Medchal — What You Will Find",
-        content: "Malla Reddy School in Medchal holds full CBSE affiliation and operates modern science, computer, and mathematics labs, a sports ground, arts programmes, and an IIT Foundation track. Campus visits are welcomed so you can evaluate the school directly before admission.",
-      },
-    ],
-    faqs: [
-      { question: "How do I verify a school's CBSE affiliation?", answer: "Visit cbseaff.nic.in and search for the school by name or affiliation number. You can confirm whether the affiliation is active, provisional, or lapsed." },
-      { question: "Is a school's CBSE rank or rating publicly available?", answer: "CBSE does not publish school rankings. You can access board exam results data and affiliation status. Independent rankings published by magazines or websites vary in methodology — treat them as one input, not a definitive guide." },
-      { question: "Should I prioritise proximity to home when choosing a CBSE school?", answer: "Proximity reduces commute stress and time for children, which has measurable benefits on wellbeing and study time. It is a valid factor alongside academic quality, not separate from it." },
-    ],
-    conclusion: "The right CBSE school for your child combines a strong academic foundation, adequate infrastructure, experienced teachers, and a campus culture that supports the whole child. Use this checklist on your next school visit and trust your observations over brochure claims.",
-    ctaText: "Schedule a Campus Visit — Malla Reddy School Medchal",
-    ctaHref: '/admission',
-    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'what-is-ncert-why-cbse-schools-use-it'],
-  },
-
   {
     slug: 'importance-of-morning-routine-school-children',
     title: 'Why a Morning Routine Matters for School Children — and How to Build One',
@@ -3432,7 +3375,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Understanding the structure of early schooling helps parents make confident, well-timed decisions. Start pre-school at the right age, prioritise play-based development in the early years, and focus on social-emotional readiness — not early academic achievement — when evaluating Class 1 readiness.",
     ctaText: "Enquire About Admissions at Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'how-to-identify-good-school-cbse-hyderabad'],
+    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'cbse-schools-in-medchal-hyderabad-guide-for-parents'],
   },
 
   {
@@ -3573,7 +3516,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Medchal-Malkajgiri combines residential affordability, good connectivity, and improving educational infrastructure — making it an increasingly attractive choice for families seeking quality schooling outside the congestion of central Hyderabad.",
     ctaText: "Enquire About Admission at Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['how-to-identify-good-school-cbse-hyderabad', 'cbse-board-exam-preparation-hyderabad'],
+    relatedSlugs: ['cbse-schools-in-medchal-hyderabad-guide-for-parents', 'cbse-board-exam-preparation-hyderabad'],
   },
 
   {
@@ -4022,51 +3965,6 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/life-at-school',
     relatedSlugs: ['social-emotional-learning-schools-india', 'importance-physical-activity-learning-children'],
   },
-
-  {
-    slug: 'how-to-choose-right-tuition-coaching-class-cbse',
-    title: 'How to Choose the Right Tuition or Coaching Class for Your CBSE Child',
-    metaTitle: "Choosing Tuition and Coaching for CBSE Students | Malla Reddy School Medchal",
-    metaDescription: "Not all tuition centres are equal — and some actively harm children's learning. Here is how Indian parents can evaluate and choose the right academic support for their child.",
-    keywords: ['tuition class CBSE child India','coaching class school children Hyderabad','how to choose tuition class India','best coaching CBSE school Hyderabad','tuition vs self study India school'],
-    publishedDate: '2025-06-21',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Admissions',
-    excerpt: "Tuition is near-ubiquitous in Indian school culture — but choosing the wrong kind can create dependency, reduce confidence, and undermine school learning rather than supporting it. Here is how to choose well.",
-    coverImage: '/images/labs/science-1.jpg',
-    coverImageAlt: "Parent choosing the right tuition class for a CBSE student — Malla Reddy School Medchal",
-    intro: "Tuition has become a default expectation for many Indian school families, regardless of whether their child is struggling or not. The market ranges from highly effective, concept-based support to rote-drill factories that undermine school learning. Here is how to evaluate tuition options rigorously and — equally importantly — how to know when tuition is not actually needed.",
-    sections: [
-      {
-        heading: "Does Your Child Actually Need Tuition?",
-        content: "Start with this question before choosing a tuition centre. The need for additional academic support is genuine when: your child is consistently struggling with specific subject concepts despite effort and school attendance, they have fallen significantly behind and need structured catch-up, or they are preparing for specific competitive exams (JEE, NEET) that require depth beyond the school syllabus. Children who do well in school without tuition typically develop stronger independent learning skills.",
-      },
-      {
-        heading: "What to Look for in a Tuition Centre",
-        content: "",
-        subsections: [
-          { heading: "Concept-Based Teaching, Not Just Drill", content: "The right tuition centre explains why and how, not just what. Ask how a concept is taught — a good centre will describe the conceptual approach. A poor one will describe the number of practice problems assigned." },
-          { heading: "Small Batch Sizes", content: "Batches above 20-25 students rarely allow individual attention. Personalised gap-identification requires small groups or individual sessions." },
-          { heading: "Alignment with School Curriculum", content: "The best tuition support builds on and aligns with what is being taught in school. Centres that operate on a completely separate, parallel track create cognitive load — children manage two different systems rather than deepening their understanding of one." },
-        ],
-      },
-      {
-        heading: "Warning Signs and When to Stop",
-        content: "Avoid tuition that creates complete dependence, covers material well ahead of the school syllabus without consolidating current concepts, or assigns so much work that it leaves no time for school homework, sleep, or play. Tuition should be a temporary support, not a permanent structure. If your child has been attending tuition for more than one academic year without reducing their dependence on it, something is wrong.",
-      },
-    ],
-    faqs: [
-      { question: "At what age should children start tuition?", answer: "There is no right age — tuition should start when a specific, identified need exists, not as a preventive measure. Starting very early (Classes 1-3) without a genuine gap often creates tuition dependency before children have had the chance to develop independent learning habits." },
-      { question: "Is online tuition as effective as in-person?", answer: "For concept explanation and practice, quality online tuition from a skilled teacher can be highly effective. For younger children (Classes 1-5) who benefit from in-person interaction, in-person is generally preferable. For secondary students preparing for competitive exams, high-quality online platforms offer access to excellent instruction that may not be locally available." },
-      { question: "My child is doing well in school — should they still attend tuition?", answer: "Not necessarily. If your child is genuinely understanding the material, performing well on assessments, and has adequate time for rest, play, and family — additional tuition may not add value. If they are targeting highly competitive entrance exams, specialist coaching in Classes 9-12 may be genuinely useful even for strong students." },
-    ],
-    conclusion: "The right tuition is a targeted, temporary support that builds independence rather than dependence. Choose a centre based on teaching quality and conceptual approach — not proximity or price alone — and periodically reassess whether the support is still genuinely needed.",
-    ctaText: "Learn About Malla Reddy School's IIT Foundation Programme",
-    ctaHref: '/iit-foundation',
-    relatedSlugs: ['building-time-management-and-study-habits-that-last', 'how-to-prepare-child-for-class-10-board-exams'],
-  },
-
   // ── END BATCH 5 ────────────────────────────────────────────────────────────
 
   {
@@ -7573,92 +7471,6 @@ export const BLOG_POSTS: BlogPost[] = [
       'what-is-steam-education-and-why-it-matters-for-your-child'
     ]
   },
-
-  {
-    slug: 'competitive-exams-school-students-india',
-    title: 'Top Competitive Exams for School Students in India',
-    metaTitle: 'Competitive Exams for School Students | Malla Reddy School',
-    metaDescription: 'Olympiads, NTSE, and foundations. Explore the top competitive exams school students in India can attempt to test their skills.',
-    keywords: [
-      'competitive exams school students India',
-      'IIT JEE foundation school Medchal',
-      'maths competitive exam preparation'
-    ],
-    publishedDate: '2026-07-20',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Academics',
-    excerpt: 'Beyond school boards. Discover the leading national olympiads, talent searches, and scholarship exams for school students.',
-    coverImage: '/images/competitive_exams_india.png',
-    coverImageAlt: 'A group of senior secondary students in Malla Reddy School uniform study-planning together for exams',
-    intro: "While school exams assess a student's understanding of the local curriculum, competitive exams evaluate their skills at a national and international level. Participating in olympiads, talent search exams, and scholarship tests helps students build confidence, identify academic interests, and prepare for future entrance exams.",
-    sections: [
-      {
-        heading: "Why Students Should Participate in Competitive Exams",
-        content: "Attempting competitive tests early helps take away the fear of major entrance exams like JEE or NEET. These tests measure conceptual understanding and application rather than textbook recall. Additionally, success in national competitive exams school students India programs offers scholarships, certificates, and recognition that support future college admissions."
-      },
-      {
-        heading: "Top National and International Exams",
-        content: "Here are the leading exams school-age students in India can prepare for:",
-        subsections: [
-          {
-            heading: "National Talent Search Examination (NTSE)",
-            content: "A prestigious national scholarship exam for Class 10 students that evaluates Mental Ability and Scholastic Aptitude."
-          },
-          {
-            heading: "Science and Math Olympiads (SOF/Homi Bhabha)",
-            content: "Olympiads in Science, Math, English, and Cyber fields that test logical reasoning and conceptual depth from Class 1 onwards."
-          },
-          {
-            heading: "Kishore Vaigyanik Protsahan Yojana (KVPY)",
-            content: "A national fellowship program funded by the Government of India to encourage students to pursue research careers in basic sciences."
-          },
-          {
-            heading: "National Standard Examinations (NSE)",
-            content: "Exams in Physics, Chemistry, Biology, and Astronomy that serve as the first stage for selecting the Indian Olympiad teams."
-          },
-          {
-            heading: "Unified Cyber Olympiad (UCO)",
-            content: "An exam designed to test students' logical reasoning, mental ability, and computer skills, preparing them for tech fields."
-          }
-        ]
-      },
-      {
-        heading: "Effective Strategies for Competitive Exam Preparation",
-        content: "Preparing for these exams requires a focus on logical reasoning. Building deep conceptual skills, working on mental math, and practicing past question papers are key steps in maths competitive exam preparation. Rather than cramming, students should focus on understanding the core principles of Physics, Chemistry, and Mathematics."
-      },
-      {
-        heading: "How Malla Reddy School Fosters Competitive Excellence",
-        content: "Malla Reddy School Medchal provides a supportive environment for competitive preparation. Through our integrated IIT JEE foundation school Medchal program, we help middle school students prepare for national olympiads and NTSE. We host mock tests, offer guidance on problem-solving techniques, and coordinate registrations for major national exams."
-      }
-    ],
-    faqs: [
-      {
-        question: "What are the best competitive exams school students India can attempt?",
-        answer: "Key exams include the SOF Olympiads (Math/Science/English), NTSE (Class 10), and various state-level talent search exams."
-      },
-      {
-        question: "How does an IIT JEE foundation school Medchal program help with olympiads?",
-        answer: "It covers advanced science and mathematics concepts, helping students build the logical thinking and problem-solving skills needed for olympiads."
-      },
-      {
-        question: "What are the key steps in maths competitive exam preparation?",
-        answer: "Focus on arithmetic, algebra, and geometry concepts, practice logic and mental math regularly, and solve past years' olympiad papers."
-      },
-      {
-        question: "Does Malla Reddy School help students register for national olympiads?",
-        answer: "Yes. We register our students for various national olympiads, coordinate exam dates, and provide study resources and guidance."
-      }
-    ],
-    conclusion: "Competitive exams are a great way to test student skills and build academic confidence. By preparing for these challenges in a supportive school environment, students develop the analytical depth and study discipline needed for future success. Discover how Malla Reddy School guides students toward competitive excellence.",
-    ctaText: "Enquire About Admissions — Competitive Exam Preparation",
-    ctaHref: "/admission",
-    relatedSlugs: [
-      'iit-foundation-early-preparation-matters',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents'
-    ]
-  },
-
   {
     slug: 'nursery-lkg-ukg-difference-parents',
     title: 'Nursery vs LKG vs UKG: What Parents Need to Know',
@@ -8415,52 +8227,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Apply Now for Admissions',
     ctaHref: '/admission',
     relatedSlugs: ['importance-of-extracurricular-activities-cbse-curriculum']
-  },
-  {
-    slug: 'fostering-environmental-consciousness-school-students',
-    title: 'Fostering Environmental Consciousness in School Students',
-    metaTitle: 'Fostering Environmental Consciousness in School Students | Malla Reddy School',
-    metaDescription: 'Learn how Malla Reddy School Medchal integrates environmental awareness, green campus initiatives, and eco-clubs into the CBSE curriculum to build responsible young citizens.',
-    keywords: [
-      'Environmental education CBSE',
-      'eco-friendly school Medchal',
-      'green initiatives Malla Reddy School',
-      'student tree plantation Hyderabad'
-    ],
-    publishedDate: '2026-08-02',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 5,
-    category: 'Holistic Education',
-    excerpt: 'Environmental sustainability begins in the classroom. Discover how Malla Reddy School Medchal nurtures eco-conscious students through practical green initiatives.',
-    coverImage: '/images/environmental_consciousness.png',
-    coverImageAlt: 'Students in Malla Reddy School uniform planting saplings in green campus garden',
-    intro: 'In an era of rapid urbanization and climate challenges, fostering environmental stewardship in children is no longer optional. At Malla Reddy School Medchal, we integrate eco-consciousness into daily school life, empowering students to care for their natural surroundings.',
-    sections: [
-      {
-        heading: 'Green Campus Initiatives',
-        content: 'Our campus features rainwater harvesting, solar powered lighting, and dedicated recycling bins. Students take active part in maintaining these systems, understanding sustainability through direct experience.'
-      },
-      {
-        heading: 'Student Eco-Clubs and Plantation Drives',
-        content: 'Through our active Eco-Club, students participate in seasonal tree plantation drives, organic gardening, and waste reduction campaigns across Medchal and surrounding areas.'
-      },
-      {
-        heading: 'Integrating Sustainability into CBSE Science',
-        content: 'Environmental studies are seamlessly blended with biology, chemistry, and social science topics, helping students understand the science behind ecology and conservation.'
-      }
-    ],
-    faqs: [
-      {
-        question: 'How does Malla Reddy School promote eco-friendly habits?',
-        answer: 'We encourage paperless assignments where feasible, single-use plastic bans, and student-led campus cleanliness drives.'
-      }
-    ],
-    conclusion: 'By instilling respect for nature today, we raise environmentally responsible citizens who will lead a sustainable tomorrow.',
-    ctaText: 'Explore Our Campus Environment',
-    ctaHref: '/life',
-    relatedSlugs: ['why-holistic-education-future', 'importance-of-extracurricular-activities-cbse-curriculum']
-  },
-  {
+  },  {
     slug: 'vedic-mathematics-mental-math-cbse-education',
     title: 'The Role of Vedic Mathematics and Mental Math in CBSE School Education',
     metaTitle: 'Vedic Mathematics & Mental Math in CBSE Schools | Malla Reddy School',
