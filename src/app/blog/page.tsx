@@ -41,7 +41,13 @@ export default async function Page() {
     author: 'School Admin',
   }));
 
-  const validPosts = posts.filter((post) => post.title && post.title.trim() !== '');
+  const hiddenSheetTitles = new Set(['robotics team wins']);
+  const validPosts = posts.filter(
+    (post) =>
+      post.title &&
+      post.title.trim() !== '' &&
+      !hiddenSheetTitles.has(post.title.toLowerCase().trim()),
+  );
   const postsWithBlur = await Promise.all(
     validPosts.map(async (post) => ({
       ...post,
