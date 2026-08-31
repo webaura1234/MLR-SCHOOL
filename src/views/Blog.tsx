@@ -23,6 +23,16 @@ export type BlogProps = {
   posts: SheetBlogPost[];
 };
 
+/** Sheet posts that should not appear on the blog listing. */
+const HIDDEN_BLOG_TITLES = new Set([
+  'robotics team wins',
+]);
+
+function isHiddenBlogTitle(title: string | undefined): boolean {
+  if (!title) return false;
+  return HIDDEN_BLOG_TITLES.has(title.toLowerCase().trim());
+}
+
 /** Convert a blog title to a slug, used to match against BLOG_POSTS */
 function titleToSlug(title: string): string {
   return title
@@ -94,6 +104,7 @@ const Blog = ({ posts }: BlogProps) => {
   const allPosts = [
     ...staticPosts,
     ...sheetPostsWithSlugs.filter((sp) => {
+      if (isHiddenBlogTitle(sp.title)) return false;
       // Deduplicate: skip sheet posts whose title already appears in static posts
       return !BLOG_POSTS.some((bp) =>
         bp.title.toLowerCase().slice(0, 30) === sp.title?.toLowerCase().slice(0, 30),

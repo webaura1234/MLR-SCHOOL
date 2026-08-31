@@ -65,9 +65,9 @@ const curriculumRelatedLinks = [
     description: 'Admissions open for 2026-27 across all classes.',
   },
   {
-    label: 'What Is STEAM Education?',
-    href: '/blog/what-is-steam-education-and-why-it-matters-for-your-child',
-    description: 'Read our complete guide to STEAM learning.',
+    label: 'How STEAM Prepares Students',
+    href: '/blog/how-steam-education-prepares-students-future-careers',
+    description: 'Read how STEAM learning prepares students for future careers.',
   },
 ];
 

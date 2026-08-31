@@ -169,7 +169,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
     ],
   },
 
@@ -284,119 +284,6 @@ export const BLOG_POSTS: BlogPost[] = [
       'pre-primary-school-medchal-how-to-choose',
     ],
   },
-
-  {
-    slug: 'what-is-steam-education-and-why-it-matters-for-your-child',
-    title: 'What Is STEAM Education and Why It Matters for Your Child',
-    metaTitle: 'What Is STEAM Education? Benefits for Children | Malla Reddy School Medchal',
-    metaDescription:
-      'STEAM education combines Science, Technology, Engineering, Arts, and Mathematics for holistic child development. Learn how Malla Reddy School Medchal brings STEAM to life in the classroom.',
-    keywords: [
-      'what is STEAM education',
-      'STEAM education benefits children',
-      'STEAM school Hyderabad',
-      'STEM vs STEAM education India',
-      'STEAM learning CBSE school',
-      'science technology engineering arts mathematics school Hyderabad',
-    ],
-    publishedDate: '2026-05-17',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 6,
-    category: 'STEAM Education',
-    excerpt:
-      'STEAM education goes beyond textbooks — it integrates Science, Technology, Engineering, Arts, and Mathematics into a hands-on approach that prepares children for the real world. Here is why it matters.',
-    coverImage: '/images/labs/science-1.jpg',
-    coverImageAlt: 'Students in a science lab at Malla Reddy School Medchal — STEAM education in action',
-    intro:
-      "You have probably seen the acronym STEAM mentioned in school brochures and education articles. But what does it actually mean in a classroom setting, and why does it matter for your child's development? This article explains the STEAM approach, its benefits, and how it is applied at Malla Reddy School Medchal.",
-    sections: [
-      {
-        heading: 'What Does STEAM Stand For?',
-        content:
-          'STEAM stands for Science, Technology, Engineering, Arts, and Mathematics. It is an educational approach that integrates these five disciplines into a connected, project-based learning experience rather than treating them as separate subjects. The goal is to develop critical thinking, creativity, and problem-solving alongside academic knowledge.',
-        subsections: [
-          {
-            heading: 'The Difference Between STEM and STEAM',
-            content:
-              "STEM (without the A) focuses on Science, Technology, Engineering, and Mathematics. STEAM adds Arts to the mix — recognising that creativity, design thinking, and communication are just as essential as technical skills in today's world. The inclusion of Arts makes STEAM more holistic and better aligned with the full range of careers and challenges children will encounter.",
-          },
-        ],
-      },
-      {
-        heading: 'Why STEAM Education Matters for Children',
-        content:
-          'The skills most valued by the modern economy — creativity, collaboration, analytical thinking, and adaptability — are exactly what STEAM education nurtures. Here is how each element contributes:',
-        subsections: [
-          {
-            heading: 'Science: Asking Questions and Finding Answers',
-            content:
-              'Hands-on science education builds curiosity. When children conduct experiments, observe results, and form their own conclusions, they learn how to think — not just what to think.',
-          },
-          {
-            heading: 'Technology: Digital Literacy from an Early Age',
-            content:
-              'Technology is not just about using devices. In a STEAM classroom, children learn coding, understand how digital systems work, and develop the ability to create with technology rather than just consume it.',
-          },
-          {
-            heading: 'Engineering: Problem-Solving Through Design',
-            content:
-              'Engineering activities — building structures, designing solutions, working with robotics — develop persistence, logical thinking, and the understanding that failure is a step toward success.',
-          },
-          {
-            heading: 'Arts: Creativity and Communication',
-            content:
-              'The Arts element ensures that children learn to express ideas clearly, think creatively, and appreciate aesthetics. These skills are essential in fields from architecture and product design to marketing and leadership.',
-          },
-          {
-            heading: 'Mathematics: The Language of Logic',
-            content:
-              'Mathematics in a STEAM context is applied and meaningful. Rather than abstract drill work, students use mathematical thinking to solve real problems — in science experiments, engineering projects, and coding activities.',
-          },
-        ],
-      },
-      {
-        heading: 'How STEAM Is Delivered at Malla Reddy School Medchal',
-        content:
-          'At Malla Reddy School, STEAM is not a single subject on the timetable — it is integrated across the curriculum and supported by dedicated facilities. The school has science labs, computer labs, a mathematics lab, a robotics lab, and a digital library, all designed to give students access to hands-on learning experiences that reinforce classroom concepts.',
-      },
-      {
-        heading: 'STEAM Education and the CBSE Curriculum',
-        content:
-          'STEAM and CBSE are entirely compatible. The CBSE curriculum provides the strong academic foundation in science, mathematics, and language, while STEAM enrichment adds practical application, creativity, and technological literacy. Together, they prepare students for both board examinations and the broader demands of higher education and careers.',
-      },
-    ],
-    faqs: [
-      {
-        question: 'What is STEAM education in simple terms?',
-        answer:
-          'STEAM education integrates Science, Technology, Engineering, Arts, and Mathematics through project-based, hands-on learning. Instead of teaching subjects in isolation, it connects them so students develop both technical and creative thinking together.',
-      },
-      {
-        question: 'Is STEAM education available in CBSE schools in Hyderabad?',
-        answer:
-          'Yes. Malla Reddy School Medchal is a CBSE school in Hyderabad that integrates STEAM into its curriculum, supported by dedicated science, computer, mathematics, robotics, and arts labs.',
-      },
-      {
-        question: 'What age should children start STEAM education?',
-        answer:
-          'STEAM principles can be introduced from as early as pre-primary age through play-based science, simple building activities, and creative arts. Malla Reddy School Medchal incorporates age-appropriate STEAM learning from Nursery onwards.',
-      },
-      {
-        question: 'Does STEAM education affect CBSE exam results?',
-        answer:
-          'STEAM education builds deeper conceptual understanding, which supports better long-term academic performance. Students who learn through application and experimentation tend to retain knowledge more effectively than those who rely solely on rote learning.',
-      },
-    ],
-    conclusion:
-      "STEAM education is not a trend — it is a response to the real demands of the 21st century. Schools that integrate Science, Technology, Engineering, Arts, and Mathematics into a cohesive learning experience give children the skills, confidence, and curiosity to thrive in a fast-changing world. If you are looking for a CBSE school in Medchal that takes STEAM seriously, we'd love to show you what learning looks like at Malla Reddy School.",
-    ctaText: 'Visit Malla Reddy School — See STEAM Learning in Action',
-    ctaHref: '/admission',
-    relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-      'iit-foundation-early-preparation-matters',
-    ],
-  },
-
   {
     slug: 'pre-primary-school-medchal-how-to-choose',
     title: 'Pre-Primary School in Medchal: How to Choose the Right Start for Your Child',
@@ -587,7 +474,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Enquire About Admissions — IIT Foundation from Class 6',
     ctaHref: '/admission',
     relatedSlugs: [
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'cbse-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
@@ -790,7 +677,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
     ],
   },
 
@@ -1367,7 +1254,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Explore Programs at Malla Reddy School — Admissions Open',
     ctaHref: '/co-curricular',
     relatedSlugs: [
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'cbse-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
@@ -1715,38 +1602,6 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
 
-
-
-  {
-    slug: 'dance-performing-arts-confidence-children',
-    title: 'How Dance and Performing Arts Develop Confidence and Expression in Children',
-    metaTitle: 'Dance and Performing Arts for Children — Confidence Builder | Malla Reddy School',
-    metaDescription: 'Dance and performing arts give children a powerful vehicle for self-expression and confidence. Here is why they belong in every school program.',
-    keywords: ['dance school children India', 'performing arts school Hyderabad', 'dance benefits children India', 'performing arts confidence school', 'dance school Medchal'],
-    publishedDate: '2026-05-08',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 4,
-    category: 'Co-Curricular Activities',
-    excerpt: 'A child who performs on stage in Class 2 and again in Class 6 is not the same child. Dance and performing arts change how children see themselves.',
-    coverImage: '/images/dance.png',
-    coverImageAlt: 'Students performing classical dance at Malla Reddy School Medchal',
-    intro: "Dance and performing arts hold a unique place in child development. They combine physical movement, creative expression, musical understanding, and public performance in a single activity — and in doing so, they develop capabilities that few other school activities can replicate.",
-    sections: [
-      { heading: 'Self-Expression and Emotional Vocabulary', content: "Dance gives children a non-verbal language for emotions. For children who struggle to articulate how they feel in words, movement provides an alternative pathway. The development of emotional vocabulary through physical expression often translates into improved verbal expression over time." },
-      { heading: 'Physical Discipline and Body Awareness', content: "Systematic dance training develops balance, coordination, spatial awareness, and physical discipline. Children learn to control their bodies with precision — a physical competence that supports confidence in everyday movement and in other sports." },
-      { heading: 'Performance and Public Presence', content: "Performing in front of an audience — whether a class presentation, a school event, or a public performance — builds public confidence that extends beyond the stage. Children who have performed regularly are more comfortable in interview settings, public speaking situations, and group leadership roles." },
-      { heading: 'Teamwork in Group Performances', content: "Group dance and drama require precise coordination with others — synchronising movement, responding to cues, and supporting fellow performers. These are teamwork skills with immediate, visible consequences when they fail, making the learning particularly effective." },
-      { heading: 'Performing Arts at Malla Reddy School Medchal', content: "Malla Reddy School Medchal includes dance and performing arts as part of its co-curricular program. Students participate in school events and performances, developing stage confidence progressively through their school years." },
-    ],
-    faqs: [
-      { question: 'Is dance beneficial for boys as well as girls?', answer: "Absolutely. Dance develops physical coordination, rhythm, discipline, and public performance confidence equally in all children. Many of the world's best athletes train in dance for the coordination and body control it develops." },
-      { question: 'Does Malla Reddy School offer classical or folk dance?', answer: "Malla Reddy School Medchal includes dance as part of its performing arts program. Contact the school at +91 92 4758 7086 for current details on the specific styles offered." },
-    ],
-    conclusion: "The child who stands on stage and performs — however nervously the first time — is building something that no classroom lesson can provide: the experience of being seen, doing something difficult, and coming through it. That experience accumulates into lasting confidence.",
-    ctaText: 'Explore Arts Programs at Malla Reddy School Medchal',
-    ctaHref: '/co-curricular',
-    relatedSlugs: ['benefits-music-education-children', 'why-co-curricular-activities-matter-child-development'],
-  },
 
   {
     slug: 'how-to-build-reading-habit-children',
@@ -2375,7 +2230,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Digital literacy — including the ability to create with technology, not just consume it — will be as fundamental to your child's future opportunities as reading and writing were to yours. Schools that introduce coding in structured, creative ways are giving students a genuine 21st-century foundation.",
     ctaText: 'Explore Our Technology Programs — Malla Reddy School Medchal',
     ctaHref: '/labs',
-    relatedSlugs: ['coding-robotics-problem-solving-children', 'what-is-steam-education-and-why-it-matters-for-your-child'],
+    relatedSlugs: ['coding-robotics-problem-solving-children', 'how-steam-education-prepares-students-future-careers'],
   },
 
 
@@ -2531,7 +2386,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "A mathematics lab transforms mathematics from something students do to something students experience. The understanding built through physical exploration is deeper, more durable, and far more enjoyable than understanding built through formulaic practice alone.",
     ctaText: "See Our Labs in Person — Malla Reddy School Medchal",
     ctaHref: '/labs',
-    relatedSlugs: ['science-labs-schools-hands-on-learning', 'what-is-steam-education-and-why-it-matters-for-your-child'],
+    relatedSlugs: ['science-labs-schools-hands-on-learning', 'how-steam-education-prepares-students-future-careers'],
   },
 
   {
@@ -2666,7 +2521,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Art and craft are not breaks from learning — they are a form of learning that develops capabilities which pure academic instruction cannot. Schools that take them seriously are developing the whole child, not just preparing exam candidates.",
     ctaText: "Explore Our Arts Programs — Malla Reddy School Medchal",
     ctaHref: '/co-curricular',
-    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'dance-performing-arts-confidence-children'],
+    relatedSlugs: ['why-co-curricular-activities-matter-child-development', 'power-of-performing-arts-building-expressive-confidence-drama-speech'],
   },
 
   {
@@ -2955,48 +2810,6 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/life',
     relatedSlugs: ['social-emotional-learning-pre-primary', 'signs-child-thriving-at-school'],
   },
-
-  {
-    slug: 'parent-involvement-school-how-much-is-right',
-    title: 'Parent Involvement in School: How Much Is Right?',
-    metaTitle: 'Parent Involvement in School — How Much Is Right? | Malla Reddy School Medchal',
-    metaDescription: 'Parental involvement in school improves outcomes — but there is a level beyond which it becomes counterproductive. Here is how to find the right balance.',
-    keywords: ['parent involvement school India', 'how involved should parents be school India', 'over-involved parents school', 'parent school partnership India', 'parental engagement school children'],
-    publishedDate: '2026-06-22',
-    author: 'Malla Reddy School Editorial Team',
-    readTimeMinutes: 4,
-    category: 'Parenting Guides',
-    excerpt: 'Research is clear that parental involvement improves academic outcomes — up to a point. Here is what helpful involvement looks like and where it becomes harmful.',
-    coverImage: '/images/hero-aspirational.png',
-    coverImageAlt: 'Parent engaging with school at Malla Reddy School Medchal — right level of involvement',
-    intro: 'Parental involvement in school education is consistently associated with better academic outcomes, higher attendance, and stronger social adjustment. But there is a significant difference between supportive involvement — staying informed, communicating with teachers, supporting learning at home — and over-involvement that denies children the independence they need to develop. Here is how to get the balance right.',
-    sections: [
-      {
-        heading: 'What Beneficial Parental Involvement Looks Like', content: '',
-        subsections: [
-          { heading: 'Staying Informed', content: 'Reading school communications, attending parent-teacher meetings, knowing what topics are being covered in class, and being aware of upcoming assessments — without managing them for your child.' },
-          { heading: 'Supporting Learning at Home', content: 'Creating a good study environment, being available to answer questions, reading together, and having conversations that connect school subjects to everyday life.' },
-          { heading: 'Communicating With Teachers', content: 'Reaching out when you notice something concerning, responding to teacher communication promptly, and attending school events. This signals to both teachers and children that school matters.' },
-        ],
-      },
-      {
-        heading: 'Where Involvement Becomes Counterproductive', content: "Completing homework for your child. Contacting teachers daily or escalating minor issues. Making decisions your child should be making themselves. Excessive monitoring of grades and performance to the point where the child's self-assessment is entirely driven by parental feedback rather than their own standards.",
-        subsections: [
-          { heading: 'The Dependency Risk', content: 'Children who are over-managed at home develop less internal motivation, lower tolerance for frustration, and reduced problem-solving capability. The goal of parental support is to progressively become less necessary — not to become more central.' },
-        ],
-      },
-      { heading: 'Age-Appropriate Involvement', content: 'Pre-primary and Class 1: high involvement — children need significant parental scaffolding. Classes 2 to 5: moderate involvement — child takes increasing ownership, parent monitors and supports. Classes 6 to 8: background involvement — child manages own study and social life, parent is available but not directing.' },
-    ],
-    faqs: [
-      { question: "Should I check my child's homework every day?", answer: 'In primary school, reviewing homework briefly and signing the diary is appropriate and most schools require it. By middle school, the goal should be for your child to manage their own homework independently, with you available if they need help rather than routinely checking every task.' },
-      { question: "How often should I contact my child's teacher?", answer: 'Regular contact at scheduled parent-teacher meetings plus reaching out when you have a specific concern is the appropriate pattern. Daily contact or contact for every minor issue is generally counterproductive and can damage the parent-teacher relationship.' },
-    ],
-    conclusion: 'The most effective parental involvement in school is present but not over-bearing, supportive but not doing the work, informed but not anxious. Children whose parents are genuinely engaged but trust them with appropriate independence develop stronger academic and social capabilities than those at either extreme.',
-    ctaText: 'Connect With Our Team — Malla Reddy School Medchal',
-    ctaHref: '/contact',
-    relatedSlugs: ['how-to-talk-to-child-teacher-effectively', 'how-to-help-child-with-homework-without-taking-over'],
-  },
-
   {
     slug: 'screen-time-sleep-learning-school-children',
     title: "How Screen Time Affects Children's Sleep and Learning",
@@ -3330,7 +3143,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Resilience is not a personality trait — it is a set of skills built through experience and supportive responses to setbacks. How you talk to your child after a failure is one of the highest-leverage parenting moves available to you.",
     ctaText: "Explore Student Development at Malla Reddy School Medchal",
     ctaHref: '/life-at-school',
-    relatedSlugs: ['parent-involvement-school-how-much-is-right', 'managing-school-stress-children'],
+    relatedSlugs: ['parent-school-partnerships-academic-success', 'managing-school-stress-children'],
   },
 
   {
@@ -3750,7 +3563,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The most effective parent-teacher relationships are built on mutual respect, specific communication, and a shared focus on the child's wellbeing. Invest in these conversations — they pay dividends in your child's school experience and outcomes.",
     ctaText: "Learn About Malla Reddy School's Parent Engagement Approach",
     ctaHref: '/about',
-    relatedSlugs: ['parent-involvement-school-how-much-is-right', 'how-to-help-child-make-friends-school'],
+    relatedSlugs: ['parent-school-partnerships-academic-success', 'how-to-help-child-make-friends-school'],
   },
 
   {
@@ -3789,7 +3602,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Project-based learning produces deeper understanding, stronger capabilities, and more confident learners than passive instruction alone. When schools use it well — and parents support rather than undermine it — PBL is one of education's most powerful tools.",
     ctaText: "Explore STEAM Learning at Malla Reddy School Medchal",
     ctaHref: '/curriculum',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child', 'importance-of-peer-learning-school-children'],
+    relatedSlugs: ['how-steam-education-prepares-students-future-careers', 'importance-of-peer-learning-school-children'],
   },
 
   {
@@ -4002,7 +3815,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The most future-ready preparation a school can give students is not a specific skill set — it is the ability to think rigorously, create confidently, collaborate effectively, and learn continuously. These are built through a curriculum that prioritises understanding, application, and whole-child development alongside academic achievement.",
     ctaText: "Explore Future-Ready Education — Malla Reddy School Medchal",
     ctaHref: '/curriculum',
-    relatedSlugs: ['coding-schools-new-literacy-india', 'what-is-steam-education-and-why-it-matters-for-your-child'],
+    relatedSlugs: ['coding-schools-new-literacy-india', 'how-steam-education-prepares-students-future-careers'],
   },
 
   {
@@ -4076,7 +3889,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: 'Choosing a school that prioritizes holistic education means choosing a childhood where your child grows as a complete person — curious, confident, kind, and capable. At Malla Reddy School, we believe this is the truest measure of student development, and the best gift we can give every child who walks through our gates.',
     ctaText: 'Enquire About Admissions — Malla Reddy School',
     ctaHref: '/admission',
-    relatedSlugs: ['parent-involvement-school-how-much-is-right', 'future-skills-children-school-2030']
+    relatedSlugs: ['parent-school-partnerships-academic-success', 'future-skills-children-school-2030']
   },
 
   {
@@ -4150,7 +3963,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: 'Preparing children for tomorrow\'s careers means giving them more than information — it means giving them the tools to think, build, and innovate. At Malla Reddy School, our commitment to STEM Education ensures that every student leaves not just knowing facts, but knowing how to solve problems the world hasn\'t faced yet.',
     ctaText: 'Enquire About STEM Programs — Malla Reddy School',
     ctaHref: '/admission',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child', 'future-skills-children-school-2030']
+    relatedSlugs: ['how-steam-education-prepares-students-future-careers', 'future-skills-children-school-2030']
   },
 
   {
@@ -4544,7 +4357,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Enquire About Admissions — Malla Reddy School',
     ctaHref: '/admission',
     relatedSlugs: [
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'cbse-schools-in-medchal-hyderabad-guide-for-parents',
       'iit-foundation-early-preparation-matters',
     ],
@@ -6277,7 +6090,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-      'what-is-steam-education-and-why-it-matters-for-your-child'
+      'how-steam-education-prepares-students-future-careers'
     ]
   },
 
@@ -7213,7 +7026,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'understanding-cbse-curriculum-parents-guide',
-      'what-is-steam-education-and-why-it-matters-for-your-child'
+      'how-steam-education-prepares-students-future-careers'
     ]
   },
 
@@ -7297,7 +7110,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Visit Our STEAM and Robotics Lab — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'cbse-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
@@ -7382,7 +7195,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Visit Our Science Laboratories — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'iit-foundation-early-preparation-matters'
     ]
   },
@@ -7468,7 +7281,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'iit-foundation-early-preparation-matters',
-      'what-is-steam-education-and-why-it-matters-for-your-child'
+      'how-steam-education-prepares-students-future-careers'
     ]
   },
   {
@@ -7822,7 +7635,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: 'Investing in STEAM education is investing in your child\'s future adaptability and success. Join us at Malla Reddy School Medchal to see our STEAM philosophy in action.',
     ctaText: 'Explore Our STEAM Labs',
     ctaHref: '/labs',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child']
+    relatedSlugs: ['how-steam-education-prepares-students-future-careers']
   },
   {
     slug: 'top-5-study-habits-middle-school-students',
@@ -8313,7 +8126,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: 'Science exhibitions ignite curiosity and inspire the next generation of engineers, doctors, and scientific researchers.',
     ctaText: 'Explore Our STEAM Labs',
     ctaHref: '/labs',
-    relatedSlugs: ['what-is-steam-education-and-why-it-matters-for-your-child', 'how-steam-education-prepares-students-future-careers']
+    relatedSlugs: ['how-steam-education-prepares-students-future-careers', 'coding-robotics-problem-solving-children']
   },
   {
     slug: 'building-critical-thinking-debating-skills-middle-school',
@@ -8561,7 +8374,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/curriculum',
     relatedSlugs: [
       'vedic-mathematics-mental-math-cbse-education',
-      'what-is-steam-education-and-why-it-matters-for-your-child',
+      'how-steam-education-prepares-students-future-careers',
       'iit-foundation-early-preparation-matters'
     ]
   },
