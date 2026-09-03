@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
     'IIT foundation classes 6 7 8 Hyderabad',
     'STEM foundation school Medchal',
     'competitive exam preparation school Hyderabad',
-    'IIT JEE foundation CBSE school',
+    'IIT JEE foundation CBSE curriculum school',
     'Malla Reddy School IIT foundation',
   ],
 });

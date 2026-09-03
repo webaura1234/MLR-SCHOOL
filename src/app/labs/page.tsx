@@ -9,7 +9,7 @@ export const metadata = constructMetadata({
   path: '/labs',
   keywords: [
     'school labs Medchal',
-    'science lab CBSE school Hyderabad',
+    'science lab CBSE curriculum school Hyderabad',
     'computer lab school Medchal',
     'robotics lab school Hyderabad',
     'digital library school Medchal',

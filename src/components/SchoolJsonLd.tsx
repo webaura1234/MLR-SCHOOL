@@ -22,7 +22,7 @@ export default function SchoolJsonLd() {
         },
         image: `${siteUrl}/malla-reddy-hero.jpg`,
         description:
-          'Malla Reddy School Medchal is part of Malla Reddy Schools — a CBSE-affiliated campus in Hyderabad offering pre-primary to middle school education with STEAM learning, modern laboratories, and holistic development programs.',
+          'Malla Reddy School Medchal is part of Malla Reddy Schools — a CBSE curriculum campus in Hyderabad offering pre-primary to middle school education with STEAM learning, modern laboratories, and holistic development programs.',
         telephone: DEFAULT_SITE_INFO.phoneTel,
         email: DEFAULT_SITE_INFO.email,
         address: {
@@ -61,7 +61,7 @@ export default function SchoolJsonLd() {
           'IIT Foundation',
         ],
         keywords:
-          'CBSE school Medchal, best school Hyderabad, STEAM education, school admissions Medchal',
+          'CBSE curriculum school Medchal, best school Hyderabad, STEAM education, school admissions Medchal',
       },
       {
         '@type': 'WebSite',
@@ -69,7 +69,7 @@ export default function SchoolJsonLd() {
         url: siteUrl,
         name: 'Malla Reddy School Medchal',
         description:
-          'Official website of Malla Reddy School Medchal — leading CBSE school in Hyderabad, Telangana.',
+          'Official website of Malla Reddy School Medchal — leading CBSE curriculum school in Hyderabad, Telangana.',
         publisher: {
           '@id': `${siteUrl}/#school`,
         },

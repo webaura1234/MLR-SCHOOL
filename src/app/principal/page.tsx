@@ -5,11 +5,11 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: "Principal's Message | Malla Reddy School Medchal",
   description:
-    "Read the Principal's message at Malla Reddy School Medchal. Learn about our leadership's commitment to nurturing every student's potential through quality CBSE education in Hyderabad.",
+    "Read the Principal's message at Malla Reddy School Medchal. Learn about our leadership's commitment to nurturing every student's potential through quality education aligned to the CBSE curriculum in Hyderabad.",
   path: '/principal',
   keywords: [
     'Malla Reddy School principal',
-    'principal message CBSE school Medchal',
+    'principal message CBSE curriculum school Medchal',
     'school leadership Medchal Hyderabad',
     'Malla Reddy Schools principal message',
   ],

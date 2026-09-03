@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   keywords: [
     'school olympiads Medchal Hyderabad',
     'SOF olympiad school Hyderabad',
-    'national competitions CBSE school',
+    'national competitions CBSE curriculum school',
     'student competitions Medchal',
     'MI Champs school Hyderabad',
     'Malla Reddy School competitions',

@@ -7,11 +7,11 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: 'School Blog & News | Malla Reddy School Medchal',
   description:
-    'Stay updated with the latest news, events, parenting tips, and education insights from Malla Reddy School Medchal. Read expert articles on CBSE education, STEAM learning, and school admissions in Hyderabad.',
+    'Stay updated with the latest news, events, parenting tips, and education insights from Malla Reddy School Medchal. Read expert articles on the CBSE curriculum, STEAM learning, and school admissions in Hyderabad.',
   path: '/blog',
   keywords: [
     'Malla Reddy School blog',
-    'CBSE school news Medchal',
+    'CBSE curriculum school news Medchal',
     'school events Hyderabad',
     'parenting education tips Hyderabad',
     'STEAM education articles',

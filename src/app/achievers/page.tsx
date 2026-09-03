@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
   keywords: [
     'student achievers Malla Reddy School',
     'school achievements Medchal',
-    'student awards CBSE school Hyderabad',
+    'student awards CBSE curriculum school Hyderabad',
     'Malla Reddy School hall of fame',
   ],
   noIndex: true, // ⚠️ Remove once real achiever data is populated

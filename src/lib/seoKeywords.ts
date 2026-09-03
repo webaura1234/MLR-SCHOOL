@@ -7,9 +7,9 @@ export const SITE_KEYWORDS = [
   'Malla Reddy School Hyderabad',
   'Malla Reddy Schools Hyderabad',
   'best school in Medchal',
-  'best CBSE school Medchal',
-  'CBSE school Medchal',
-  'CBSE school Hyderabad',
+  'best CBSE curriculum school Medchal',
+  'CBSE curriculum school Medchal',
+  'CBSE curriculum school Hyderabad',
   'schools in Medchal',
   'schools near Medchal',
   'Malla Reddy School admissions',
@@ -17,14 +17,14 @@ export const SITE_KEYWORDS = [
   'pre primary school Medchal',
   'primary school Medchal',
   'STEAM school Hyderabad',
-  'Telangana CBSE school',
+  'Telangana CBSE curriculum school',
 ] as const;
 
 export const DEFAULT_SEO_TITLE =
-  'Malla Reddy School Medchal | Malla Reddy Schools – Best CBSE School in Hyderabad';
+  'Malla Reddy School Medchal | Malla Reddy Schools – Best CBSE Curriculum School in Hyderabad';
 
 export const DEFAULT_SEO_DESCRIPTION =
-  'Malla Reddy School Medchal (Malla Reddy Schools) is a leading CBSE school in Hyderabad with STEAM learning, modern labs, and holistic education. Admissions open — visit our Medchal campus today.';
+  'Malla Reddy School Medchal (Malla Reddy Schools) is a leading CBSE curriculum school in Hyderabad with STEAM learning, modern labs, and holistic education. Admissions open — visit our Medchal campus today.';
 
 export const SITE_ALTERNATE_NAMES = [
   'Malla Reddy Schools',

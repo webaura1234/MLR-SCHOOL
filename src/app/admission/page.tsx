@@ -7,11 +7,11 @@ import RelatedLinksBar from '@/components/RelatedLinksBar';
 export const metadata = constructMetadata({
   title: 'School Admissions 2026-27 | Malla Reddy School Medchal Hyderabad',
   description:
-    'Apply for school admissions 2026-27 at Malla Reddy School Medchal — a leading CBSE school in Hyderabad. Enrol your child for pre-primary, primary, or middle school. Visit our campus in Medchal, Telangana.',
+    'Apply for school admissions 2026-27 at Malla Reddy School Medchal — a leading CBSE curriculum school in Hyderabad. Enrol your child for pre-primary, primary, or middle school. Visit our campus in Medchal, Telangana.',
   path: '/admission',
   keywords: [
     'school admissions 2026 Medchal',
-    'CBSE school admissions Hyderabad',
+    'CBSE curriculum school admissions Hyderabad',
     'school admissions Medchal Hyderabad',
     'Malla Reddy School admissions',
     'pre-primary school admissions Medchal',
@@ -34,7 +34,7 @@ const admissionFaqs = [
       'Malla Reddy School Medchal offers admissions from Pre-Primary (Nursery/LKG/UKG) through to Class 8 (Middle School), subject to seat availability.',
   },
   {
-    question: 'Is Malla Reddy School Medchal affiliated with CBSE?',
+    question: 'Does Malla Reddy School Medchal follow the CBSE curriculum?',
     answer:
       'Yes, Malla Reddy School Medchal follows the CBSE curriculum, ensuring a nationally recognised standard of education.',
   },

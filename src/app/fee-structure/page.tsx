@@ -8,13 +8,13 @@ import { FEE_ACADEMIC_YEAR, FEE_ROWS, formatFee } from '@/lib/fee-structure';
 export const metadata = constructMetadata({
   title: `School Fee Structure ${FEE_ACADEMIC_YEAR} | Malla Reddy School Medchal Hyderabad`,
   description:
-    `Class-wise fee structure for ${FEE_ACADEMIC_YEAR} at Malla Reddy School Medchal — registration and term/tuition fees for Nursery, PP-I, PP-II and Classes I to VIII at our CBSE school in Hyderabad.`,
+    `Class-wise fee structure for ${FEE_ACADEMIC_YEAR} at Malla Reddy School Medchal — registration and term/tuition fees for Nursery, PP-I, PP-II and Classes I to VIII at our CBSE curriculum school in Hyderabad.`,
   path: '/fee-structure',
   keywords: [
     'Malla Reddy School fee structure',
     `school fee structure ${FEE_ACADEMIC_YEAR}`,
-    'CBSE school fees Medchal',
-    'CBSE school fees Hyderabad',
+    'CBSE curriculum school fees Medchal',
+    'CBSE curriculum school fees Hyderabad',
     'school tuition fees Medchal',
     'nursery school fees Hyderabad',
     'primary school fees Medchal',

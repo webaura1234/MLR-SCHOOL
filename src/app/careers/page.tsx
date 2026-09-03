@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: 'Careers at Malla Reddy School Medchal | Teaching & Staff Jobs',
   description:
-    'Explore career opportunities at Malla Reddy School Medchal — teaching positions, administrative roles, and general applications for educators who share our passion for quality CBSE education in Hyderabad.',
+    'Explore career opportunities at Malla Reddy School Medchal — teaching positions, administrative roles, and general applications for educators who share our passion for quality education aligned to the CBSE curriculum in Hyderabad.',
   path: '/careers',
   keywords: [
     'teaching jobs Medchal',

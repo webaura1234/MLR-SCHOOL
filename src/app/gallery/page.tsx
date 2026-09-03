@@ -7,12 +7,12 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: 'School Gallery | Campus Life at Malla Reddy School Medchal',
   description:
-    'Browse photos from Malla Reddy School Medchal — classrooms, labs, sports, events, arts, and everyday campus life. See what learning looks like at our CBSE school in Hyderabad.',
+    'Browse photos from Malla Reddy School Medchal — classrooms, labs, sports, events, arts, and everyday campus life. See what learning looks like at our CBSE curriculum school in Hyderabad.',
   path: '/gallery',
   keywords: [
     'Malla Reddy School gallery',
     'school campus photos Medchal',
-    'CBSE school campus Hyderabad',
+    'CBSE curriculum school campus Hyderabad',
     'school life photos Medchal',
     'Malla Reddy School campus',
   ],

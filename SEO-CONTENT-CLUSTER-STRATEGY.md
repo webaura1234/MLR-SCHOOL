@@ -19,11 +19,11 @@ Each cluster has:
 ---
 
 ## Cluster 1 — School Admissions
-**Pillar:** CBSE Schools in Medchal Hyderabad — Complete Guide for Parents (`/blog/cbse-schools-in-medchal-hyderabad-guide-for-parents`) ✅ LIVE
+**Pillar:** CBSE Curriculum Schools in Medchal Hyderabad — Complete Guide for Parents (`/blog/cbse-schools-in-medchal-hyderabad-guide-for-parents`) ✅ LIVE
 
 | # | Title | Slug | Target Keyword | Priority |
 |---|-------|------|----------------|----------|
-| 1 | ✅ CBSE Schools in Medchal Hyderabad — Complete Parent Guide | cbse-schools-in-medchal-hyderabad-guide-for-parents | CBSE schools Medchal | High |
+| 1 | ✅ CBSE Curriculum Schools in Medchal Hyderabad — Complete Parent Guide | cbse-schools-in-medchal-hyderabad-guide-for-parents | CBSE curriculum schools Medchal | High |
 | 2 | ✅ School Admissions 2026-27 in Hyderabad: What Parents Need to Know | school-admissions-2026-27-hyderabad-what-parents-need-to-know | school admissions 2026 Hyderabad | High |
 | 3 | Documents Required for School Admission in Hyderabad | documents-required-school-admission-hyderabad | school admission documents Hyderabad | High |
 | 4 | How to Choose the Right School for Your Child in Hyderabad | how-to-choose-right-school-hyderabad | how to choose school Hyderabad | High |
@@ -42,7 +42,7 @@ Each cluster has:
 | 9 | Understanding the CBSE Curriculum: A Parent's Guide | understanding-cbse-curriculum-parents-guide | CBSE curriculum explained | High |
 | 10 | CBSE Assessment System Explained — No More Rote Learning | cbse-assessment-system-explained | CBSE assessment pattern | High |
 | 11 | CBSE vs State Board: Pros and Cons for Hyderabad Parents | cbse-vs-state-board-hyderabad | CBSE vs state board Hyderabad | Medium |
-| 12 | How CBSE Schools in Hyderabad Prepare Students for Board Exams | cbse-board-exam-preparation-hyderabad | CBSE board exam preparation | Medium |
+| 12 | How CBSE Curriculum Schools in Hyderabad Prepare Students for Board Exams | cbse-board-exam-preparation-hyderabad | CBSE board exam preparation | Medium |
 | 13 | CBSE Grading System Explained for Parents | cbse-grading-system-explained | CBSE grading system India | Medium |
 | 14 | Benefits of CBSE Education for Students in India | benefits-cbse-education-india | benefits of CBSE education | Low |
 | 15 | CBSE Continuous and Comprehensive Evaluation (CCE) Explained | cbse-cce-explained-parents | CBSE CCE evaluation | Low |
@@ -224,7 +224,7 @@ Each cluster has:
 | 95 | Education in Telangana: How Schools Have Improved Over the Last Decade | education-telangana-schools-decade | education Telangana schools | Medium |
 | 96 | Medchal-Malkajgiri District: A Growing Hub for Families in Hyderabad | medchal-malkajgiri-growing-families-hyderabad | Medchal Malkajgiri families | Medium |
 | 97 | Why More Families Are Choosing Schools Near Medchal | families-choosing-schools-near-medchal | schools near Medchal | High |
-| 98 | CBSE Schools Near Outer Ring Road Hyderabad | cbse-schools-outer-ring-road-hyderabad | CBSE schools Outer Ring Road Hyderabad | High |
+| 98 | CBSE Curriculum Schools Near Outer Ring Road Hyderabad | cbse-schools-outer-ring-road-hyderabad | CBSE curriculum schools Outer Ring Road Hyderabad | High |
 | 99 | School Transport in Hyderabad: What to Look For | school-transport-hyderabad-parents | school transport Hyderabad | Medium |
 | 100 | Hyderabad's Education Landscape: CBSE vs ICSE vs State Board | hyderabad-education-landscape-cbse-icse-state | education landscape Hyderabad | Medium |
 
@@ -267,7 +267,7 @@ Posts 1, 2, 3, 4, 5 — highest-priority admission and STEAM content
 - Post 74: NEP 2020 explained
 - Post 93: Living in Medchal
 - Post 97: Why families choose schools near Medchal
-- Post 98: CBSE schools near ORR Hyderabad
+- Post 98: CBSE curriculum schools near ORR Hyderabad
 
 ### Batch 3 — Weeks 3–4
 Posts 4, 5, 10, 11, 33, 40, 47, 55, 63, 80

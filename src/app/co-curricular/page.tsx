@@ -8,7 +8,7 @@ export const metadata = constructMetadata({
     'Discover co-curricular activities at Malla Reddy School Medchal — sports, arts, music, dance, and performing arts programs that develop well-rounded students. Admissions open for 2026-27.',
   path: '/co-curricular',
   keywords: [
-    'co-curricular activities CBSE school Medchal',
+    'co-curricular activities CBSE curriculum school Medchal',
     'sports school Medchal Hyderabad',
     'arts music dance school Hyderabad',
     'extracurricular activities school Medchal',

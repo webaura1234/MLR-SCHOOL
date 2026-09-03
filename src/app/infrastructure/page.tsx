@@ -13,7 +13,7 @@ export const metadata = constructMetadata({
   keywords: [
     'Malla Reddy School infrastructure',
     'school campus facilities Medchal',
-    'CBSE school facilities Hyderabad',
+    'CBSE curriculum school facilities Hyderabad',
     'science and computer labs Medchal',
     'sports grounds Malla Reddy School',
   ],

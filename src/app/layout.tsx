@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: '/malla-reddy-hero.jpg',
         width: 1200,
         height: 630,
-        alt: 'Malla Reddy School Medchal — Leading CBSE School in Hyderabad',
+        alt: 'Malla Reddy School Medchal — Leading CBSE Curriculum School in Hyderabad',
       },
     ],
   },

@@ -53,16 +53,16 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-    title: 'CBSE Schools in Medchal, Hyderabad — A Complete Guide for Parents',
-    metaTitle: 'CBSE Schools in Medchal Hyderabad — Complete Parent Guide | Malla Reddy School',
+    title: 'CBSE Curriculum Schools in Medchal, Hyderabad — A Complete Guide for Parents',
+    metaTitle: 'CBSE Curriculum Schools in Medchal Hyderabad — Complete Parent Guide | Malla Reddy School',
     metaDescription:
-      'Looking for the best CBSE school in Medchal, Hyderabad? This complete parent guide covers what to look for, key questions to ask, and why Malla Reddy School Medchal stands out.',
+      'Looking for the best CBSE curriculum school in Medchal, Hyderabad? This complete parent guide covers what to look for, key questions to ask, and why Malla Reddy School Medchal stands out.',
     keywords: [
-      'CBSE schools in Medchal',
-      'best CBSE school Medchal Hyderabad',
-      'CBSE school Medchal',
+      'CBSE curriculum schools in Medchal',
+      'best CBSE curriculum school Medchal Hyderabad',
+      'CBSE curriculum school Medchal',
       'schools in Medchal Hyderabad',
-      'how to choose CBSE school Hyderabad',
+      'how to choose CBSE curriculum school Hyderabad',
       'top schools Medchal',
     ],
     publishedDate: '2026-06-10',
@@ -70,11 +70,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 7,
     category: 'School Admissions',
     excerpt:
-      'Choosing the right CBSE school in Medchal is one of the most important decisions a parent can make. This guide helps you evaluate options, ask the right questions, and find the best fit for your child.',
+      'Choosing the right CBSE curriculum school in Medchal is one of the most important decisions a parent can make. This guide helps you evaluate options, ask the right questions, and find the best fit for your child.',
     coverImage: '/images/cbse-schools-in-medchal-hyderabad-guide-for-parents.jpg',
-    coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school in Hyderabad',
+    coverImageAlt: 'Malla Reddy School Medchal campus — CBSE curriculum school in Hyderabad',
     intro:
-      "Medchal has grown rapidly as a residential hub on the northern edge of Hyderabad. With that growth has come a surge in school options — and for parents, more choices can mean more confusion. If you are searching for the right CBSE school in Medchal for your child, this guide will help you cut through the noise, ask the right questions, and make a confident decision.",
+      "Medchal has grown rapidly as a residential hub on the northern edge of Hyderabad. With that growth has come a surge in school options — and for parents, more choices can mean more confusion. If you are searching for the right CBSE curriculum school in Medchal for your child, this guide will help you cut through the noise, ask the right questions, and make a confident decision.",
     sections: [
       {
         heading: 'Why Medchal Is a Growing Education Hub',
@@ -82,14 +82,14 @@ export const BLOG_POSTS: BlogPost[] = [
           "Medchal-Malkajgiri district has seen significant infrastructure and residential development over the past decade. Proximity to Hyderabad's IT corridor, combined with better road connectivity via the Outer Ring Road, has made Medchal an attractive location for families seeking quality schooling outside the city's congested centre. Several reputed school groups have established campuses here precisely because of this growing demand.",
       },
       {
-        heading: 'What to Look for in a CBSE School in Medchal',
+        heading: 'What to Look for in a CBSE Curriculum School in Medchal',
         content:
           'Not all CBSE-affiliated schools deliver the same quality. Here are the most important factors to evaluate:',
         subsections: [
           {
             heading: 'CBSE Affiliation and Recognition',
             content:
-              'Verify that the school holds a valid CBSE affiliation number. A genuine CBSE school must be registered with the Central Board of Secondary Education and follow its prescribed curriculum and assessment patterns.',
+              'Verify that the school holds a valid CBSE affiliation number. A genuine CBSE curriculum school must be registered with the Central Board of Secondary Education and follow its prescribed curriculum and assessment patterns.',
           },
           {
             heading: 'Infrastructure and Learning Facilities',
@@ -138,14 +138,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'About Malla Reddy School Medchal',
         content:
-          'Malla Reddy School is one of Medchal\'s established CBSE campuses, offering education from Pre-Primary (Nursery, LKG, UKG) through to Class 8. The school integrates STEAM — Science, Technology, Engineering, Arts, and Mathematics — into its CBSE curriculum, supported by dedicated science, computer, mathematics, robotics, and digital library facilities. Co-curricular programs include sports, arts, music, and performing arts. For families in Medchal and the surrounding areas of Hyderabad, Malla Reddy School offers a campus environment designed for holistic student development.',
+          'Malla Reddy School is one of Medchal\'s established CBSE curriculum campuses, offering education from Pre-Primary (Nursery, LKG, UKG) through to Class 8. The school integrates STEAM — Science, Technology, Engineering, Arts, and Mathematics — into its CBSE curriculum, supported by dedicated science, computer, mathematics, robotics, and digital library facilities. Co-curricular programs include sports, arts, music, and performing arts. For families in Medchal and the surrounding areas of Hyderabad, Malla Reddy School offers a campus environment designed for holistic student development.',
       },
     ],
     faqs: [
       {
-        question: 'Which are the CBSE schools in Medchal, Hyderabad?',
+        question: 'Which are the CBSE curriculum schools in Medchal, Hyderabad?',
         answer:
-          'Medchal has several CBSE-affiliated schools serving families in the area. Malla Reddy School Medchal is one of the established options, offering CBSE education from Pre-Primary to Class 8 with STEAM-integrated learning.',
+          'Medchal has several CBSE curriculum schools serving families in the area. Malla Reddy School Medchal is one of the established options, following the CBSE curriculum from Pre-Primary to Class 8 with STEAM-integrated learning.',
       },
       {
         question: 'How do I verify if a school in Medchal is truly CBSE-affiliated?',
@@ -155,16 +155,16 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'What is the difference between CBSE and other boards for schools in Hyderabad?',
         answer:
-          'CBSE (Central Board of Secondary Education) follows a standardised national curriculum and is widely recognised across India. It is particularly beneficial for families who may relocate, as students can transfer to CBSE schools in any state without disruption.',
+          'CBSE (Central Board of Secondary Education) follows a standardised national curriculum and is widely recognised across India. It is particularly beneficial for families who may relocate, as students can transfer to CBSE curriculum schools in any state without disruption.',
       },
       {
-        question: 'Are admissions open for CBSE schools in Medchal for 2026-27?',
+        question: 'Are admissions open for CBSE curriculum schools in Medchal for 2026-27?',
         answer:
           'Malla Reddy School Medchal has admissions open for the 2026-27 academic year. Contact the admissions team at +91 92 4758 7086 or visit the campus to check current seat availability.',
       },
     ],
     conclusion:
-      'Choosing a CBSE school in Medchal is a long-term investment in your child\'s future. Take time to visit campuses, speak directly with school staff, and observe how students interact in the environment. The right school will feel welcoming, be transparent about its programs, and align with your values for your child\'s education.',
+      'Choosing a CBSE curriculum school in Medchal is a long-term investment in your child\'s future. Take time to visit campuses, speak directly with school staff, and observe how students interact in the environment. The right school will feel welcoming, be transparent about its programs, and align with your values for your child\'s education.',
     ctaText: 'Enquire About Admissions at Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
@@ -182,7 +182,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'school admissions 2026 Hyderabad',
       'school admission process Hyderabad',
-      'CBSE school admissions 2026-27',
+      'CBSE curriculum school admissions 2026-27',
       'school admissions Medchal 2026',
       'how to apply school admissions Hyderabad',
       'school admission documents Hyderabad',
@@ -194,19 +194,19 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'The 2026-27 school admission season in Hyderabad is underway. Here is everything parents need to know — timelines, documents required, what questions to ask, and how to choose the right school for your child.',
     coverImage: '/images/hero-admissions-2026-27.png',
-    coverImageAlt: 'Malla Reddy School admissions open 2026-27 — CBSE school Medchal Hyderabad',
+    coverImageAlt: 'Malla Reddy School admissions open 2026-27 — CBSE curriculum school Medchal Hyderabad',
     intro:
       "School admissions season always arrives sooner than parents expect. Whether you are enrolling your child for the first time or moving them to a new school, the process in Hyderabad follows a fairly standard pattern — but the details matter. This guide walks you through everything you need to know for the 2026-27 academic year.",
     sections: [
       {
         heading: 'When to Start the Admission Process',
         content:
-          'Most CBSE schools in Hyderabad begin accepting admission inquiries several months before the academic year starts (typically in June). For the 2026-27 year, the window is already open at many schools. Starting early gives you better seat availability, especially for popular classes like Nursery, Class 1, and Class 6.',
+          'Most CBSE curriculum schools in Hyderabad begin accepting admission inquiries several months before the academic year starts (typically in June). For the 2026-27 year, the window is already open at many schools. Starting early gives you better seat availability, especially for popular classes like Nursery, Class 1, and Class 6.',
       },
       {
         heading: 'Documents Required for School Admissions in Hyderabad',
         content:
-          'While exact requirements vary by school, most CBSE schools in Hyderabad will request the following documents:',
+          'While exact requirements vary by school, most CBSE curriculum schools in Hyderabad will request the following documents:',
         subsections: [
           {
             heading: 'For New Admissions (Pre-Primary and Class 1)',
@@ -223,7 +223,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'What to Expect During the Admission Process',
         content:
-          'The typical admission journey at a CBSE school in Hyderabad involves these stages:',
+          'The typical admission journey at a CBSE curriculum school in Hyderabad involves these stages:',
         subsections: [
           {
             heading: 'Step 1: Initial Enquiry',
@@ -257,7 +257,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'When do school admissions open for 2026-27 in Hyderabad?',
         answer:
-          'Most CBSE schools in Hyderabad open admissions for the 2026-27 academic year several months in advance, often from the start of the calendar year. Malla Reddy School Medchal currently has admissions open — contact the school to confirm current availability.',
+          'Most CBSE curriculum schools in Hyderabad open admissions for the 2026-27 academic year several months in advance, often from the start of the calendar year. Malla Reddy School Medchal currently has admissions open — contact the school to confirm current availability.',
       },
       {
         question: 'What documents are needed for school admission in Hyderabad?',
@@ -270,9 +270,9 @@ export const BLOG_POSTS: BlogPost[] = [
           'Please contact the Malla Reddy School admissions office directly at +91 92 4758 7086 for the latest information on admission requirements for specific classes.',
       },
       {
-        question: 'Can I apply for mid-year admission at CBSE schools in Hyderabad?',
+        question: 'Can I apply for mid-year admission at CBSE curriculum schools in Hyderabad?',
         answer:
-          'Mid-year admissions are possible at some CBSE schools depending on seat availability. Contact the school directly to check current vacancies and the process for mid-year transfers.',
+          'Mid-year admissions are possible at some CBSE curriculum schools depending on seat availability. Contact the school directly to check current vacancies and the process for mid-year transfers.',
       },
     ],
     conclusion:
@@ -349,14 +349,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Pre-Primary at Malla Reddy School Medchal',
         content:
-          'Malla Reddy School Medchal offers a play-based pre-primary program for Nursery, LKG, and UKG. The program focuses on language development, early numeracy, creative arts, music, and physical activity — all in a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE campus that runs through Class 8, children enjoy a smooth, familiar transition through each stage of their schooling.',
+          'Malla Reddy School Medchal offers a play-based pre-primary program for Nursery, LKG, and UKG. The program focuses on language development, early numeracy, creative arts, music, and physical activity — all in a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE curriculum campus that runs through Class 8, children enjoy a smooth, familiar transition through each stage of their schooling.',
       },
     ],
     faqs: [
       {
         question: 'What is the right age to start pre-primary school in India?',
         answer:
-          'In India, children typically begin Nursery at around 2.5 to 3 years of age, LKG at 3.5 to 4 years, and UKG at 4.5 to 5 years. Most CBSE schools, including Malla Reddy School Medchal, follow this age progression.',
+          'In India, children typically begin Nursery at around 2.5 to 3 years of age, LKG at 3.5 to 4 years, and UKG at 4.5 to 5 years. Most CBSE curriculum schools, including Malla Reddy School Medchal, follow this age progression.',
       },
       {
         question: 'What is the difference between Nursery, LKG, and UKG?',
@@ -486,11 +486,11 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Documents Required for School Admission in Hyderabad — Complete Checklist',
     metaTitle: 'Documents Required for School Admission Hyderabad | Malla Reddy School',
     metaDescription:
-      'Planning school admission in Hyderabad? Here is the complete checklist of documents required for CBSE school admissions — for new students and transfers alike.',
+      'Planning school admission in Hyderabad? Here is the complete checklist of documents required for CBSE curriculum school admissions — for new students and transfers alike.',
     keywords: [
       'documents required school admission Hyderabad',
       'school admission documents Hyderabad',
-      'CBSE school admission checklist India',
+      'CBSE curriculum school admission checklist India',
       'school transfer documents India',
       'documents needed school admission Medchal',
     ],
@@ -499,15 +499,15 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 4,
     category: 'School Admissions',
     excerpt:
-      'Before you visit a school for admission, having the right documents ready saves time and avoids last-minute delays. This checklist covers everything you need for CBSE school admissions in Hyderabad.',
+      'Before you visit a school for admission, having the right documents ready saves time and avoids last-minute delays. This checklist covers everything you need for CBSE curriculum school admissions in Hyderabad.',
     coverImage: '/images/documents-required-school-admission-hyderabad.jpg',
     coverImageAlt: 'School admission documents checklist — Malla Reddy School Medchal Hyderabad',
     intro:
-      'One of the most common reasons admission processes stall is incomplete documentation. Whether you are enrolling your child for the first time or transferring from another school, having the right papers ready on your first visit makes the process smooth and quick. Here is the complete checklist for CBSE school admissions in Hyderabad.',
+      'One of the most common reasons admission processes stall is incomplete documentation. Whether you are enrolling your child for the first time or transferring from another school, having the right papers ready on your first visit makes the process smooth and quick. Here is the complete checklist for CBSE curriculum school admissions in Hyderabad.',
     sections: [
       {
         heading: 'Documents for New Admissions (Nursery to Class 1)',
-        content: 'If you are enrolling your child for the first time, you will typically need the following documents at most CBSE schools in Hyderabad, including Malla Reddy School Medchal:',
+        content: 'If you are enrolling your child for the first time, you will typically need the following documents at most CBSE curriculum schools in Hyderabad, including Malla Reddy School Medchal:',
         subsections: [
           {
             heading: 'Identity and Age Proof',
@@ -533,7 +533,7 @@ export const BLOG_POSTS: BlogPost[] = [
         subsections: [
           {
             heading: 'Transfer Certificate (TC)',
-            content: "A Transfer Certificate from the previous school is mandatory for all transfer admissions. The TC must be issued on the school's letterhead, signed by the principal, and carry the school's official seal. Without a valid TC, admission cannot be processed at any CBSE school.",
+            content: "A Transfer Certificate from the previous school is mandatory for all transfer admissions. The TC must be issued on the school's letterhead, signed by the principal, and carry the school's official seal. Without a valid TC, admission cannot be processed at any CBSE curriculum school.",
           },
           {
             heading: 'Previous School Report Card',
@@ -541,7 +541,7 @@ export const BLOG_POSTS: BlogPost[] = [
           },
           {
             heading: 'Migration Certificate (Board Transfer)',
-            content: 'If your child is transferring from a school affiliated with a different board (ICSE, State Board, etc.) to a CBSE school, a Migration Certificate from the previous board is required in addition to the TC.',
+            content: 'If your child is transferring from a school affiliated with a different board (ICSE, State Board, etc.) to a CBSE curriculum school, a Migration Certificate from the previous board is required in addition to the TC.',
           },
           {
             heading: 'Character Certificate',
@@ -557,7 +557,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: 'Is a birth certificate mandatory for school admission in India?',
-        answer: "Yes. A birth certificate is the primary document for age verification at all CBSE schools. If the original birth certificate is unavailable, a hospital birth record or affidavit supported by an Aadhaar card may be accepted, subject to the school's policy.",
+        answer: "Yes. A birth certificate is the primary document for age verification at all CBSE curriculum schools. If the original birth certificate is unavailable, a hospital birth record or affidavit supported by an Aadhaar card may be accepted, subject to the school's policy.",
       },
       {
         question: 'Can I apply for admission without a Transfer Certificate?',
@@ -593,18 +593,18 @@ export const BLOG_POSTS: BlogPost[] = [
       'what is CBSE curriculum India',
       'CBSE syllabus primary school',
       'CBSE assessment system India',
-      'CBSE school curriculum Hyderabad',
+      'CBSE curriculum Hyderabad',
     ],
     publishedDate: '2026-05-20',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 6,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt:
       "CBSE is India's most widely recognised school board — but many parents are unsure what the curriculum actually covers and how it works. This guide breaks it down clearly.",
     coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Primary school students in a CBSE classroom at Malla Reddy School Medchal',
     intro:
-      "The Central Board of Secondary Education (CBSE) is the most widely followed school board in India. If your child attends or is about to join a CBSE school, understanding how the curriculum works helps you support their learning more effectively at home. This guide explains the CBSE curriculum in straightforward terms — no jargon.",
+      "The Central Board of Secondary Education (CBSE) is the most widely followed school board in India. If your child attends or is about to join a CBSE curriculum school, understanding how the curriculum works helps you support their learning more effectively at home. This guide explains the CBSE curriculum in straightforward terms — no jargon.",
     sections: [
       {
         heading: 'What Is the CBSE Board?',
@@ -653,7 +653,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'What subjects does CBSE cover in primary school?',
         answer:
-          'Primary CBSE schools typically cover English, Mathematics, Environmental Studies, Hindi (or a regional language), and General Knowledge. Schools may add subjects like Computer Science, Music, Art, and Physical Education.',
+          'Primary CBSE curriculum schools typically cover English, Mathematics, Environmental Studies, Hindi (or a regional language), and General Knowledge. Schools may add subjects like Computer Science, Music, Art, and Physical Education.',
       },
       {
         question: 'Does CBSE have exams in pre-primary classes?',
@@ -668,7 +668,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: 'Is CBSE good for students who may change schools or cities?',
         answer:
-          'Yes. CBSE is a national board recognised in all Indian states, making transfers between CBSE schools straightforward without curriculum disruption. This makes it the preferred choice for families in transferable jobs.',
+          'Yes. CBSE is a national board recognised in all Indian states, making transfers between CBSE curriculum schools straightforward without curriculum disruption. This makes it the preferred choice for families in transferable jobs.',
       },
     ],
     conclusion:
@@ -787,12 +787,12 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why More Families Are Choosing Schools Near Medchal, Hyderabad',
     metaTitle: 'Why Families Choose Schools Near Medchal Hyderabad | Malla Reddy School',
     metaDescription:
-      "Medchal is becoming one of Hyderabad's preferred residential and schooling destinations. Here's why families near Medchal choose local CBSE schools over city-centre options.",
+      "Medchal is becoming one of Hyderabad's preferred residential and schooling destinations. Here's why families near Medchal choose local CBSE curriculum schools over city-centre options.",
     keywords: [
       'schools near Medchal Hyderabad',
       'why choose school near Medchal',
       'Medchal residential area schools',
-      'CBSE school near Medchal',
+      'CBSE curriculum school near Medchal',
       'families Medchal Hyderabad',
     ],
     publishedDate: '2026-05-30',
@@ -802,9 +802,9 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Families in Medchal no longer need to commute into central Hyderabad for quality CBSE schooling. Here is why the Medchal area has become a preferred destination for parents seeking great schools close to home.',
     coverImage: '/images/why-families-choose-schools-near-medchal.jpg',
-    coverImageAlt: 'Malla Reddy School Medchal campus — CBSE school near Hyderabad Outer Ring Road',
+    coverImageAlt: 'Malla Reddy School Medchal campus — CBSE curriculum school near Hyderabad Outer Ring Road',
     intro:
-      "A decade ago, families living in Medchal and the surrounding areas often faced a difficult choice: commute children long distances to well-known schools in Hyderabad, or settle for limited local options. That picture has changed significantly. Medchal has grown into a well-connected residential area with quality CBSE schools — and families are increasingly choosing to school their children locally.",
+      "A decade ago, families living in Medchal and the surrounding areas often faced a difficult choice: commute children long distances to well-known schools in Hyderabad, or settle for limited local options. That picture has changed significantly. Medchal has grown into a well-connected residential area with quality CBSE curriculum schools — and families are increasingly choosing to school their children locally.",
     sections: [
       {
         heading: "Medchal's Growth as a Family Destination",
@@ -814,7 +814,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'The Practical Benefits of Schooling Close to Home',
         content:
-          'For families in Medchal, choosing a local CBSE school has clear practical advantages:',
+          'For families in Medchal, choosing a local CBSE curriculum school has clear practical advantages:',
         subsections: [
           {
             heading: 'Shorter Commute for Students',
@@ -836,19 +836,19 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Quality Is No Longer a Reason to Commute',
         content:
-          "The growth of established school groups in the Medchal area means that quality CBSE education — with modern infrastructure, trained faculty, and co-curricular programs — is now available locally. Families no longer need to compromise on educational quality to avoid long commutes.",
+          "The growth of established school groups in the Medchal area means that quality education under the CBSE curriculum — with modern infrastructure, trained faculty, and co-curricular programs — is now available locally. Families no longer need to compromise on educational quality to avoid long commutes.",
       },
       {
         heading: 'Malla Reddy School Medchal',
         content:
-          "Malla Reddy School is located at Sy No.1101/P, Medchal Village, Medchal Mandal — conveniently accessible for families in Medchal and the surrounding areas. The school offers CBSE education from Pre-Primary through to Class 8, with STEAM-integrated learning, modern labs, sports, arts, and a safe campus environment.",
+          "Malla Reddy School is located at Sy No.1101/P, Medchal Village, Medchal Mandal — conveniently accessible for families in Medchal and the surrounding areas. The school follows the CBSE curriculum from Pre-Primary through to Class 8, with STEAM-integrated learning, modern labs, sports, arts, and a safe campus environment.",
       },
     ],
     faqs: [
       {
-        question: 'Are there good CBSE schools near Medchal, Hyderabad?',
+        question: 'Are there good CBSE curriculum schools near Medchal, Hyderabad?',
         answer:
-          "Yes. Medchal has CBSE-affiliated schools serving the local community, including Malla Reddy School Medchal, which offers education from Pre-Primary to Class 8 with STEAM learning and modern campus facilities.",
+          "Yes. Medchal has CBSE curriculum schools serving the local community, including Malla Reddy School Medchal, which offers education from Pre-Primary to Class 8 with STEAM learning and modern campus facilities.",
       },
       {
         question: 'How far is Malla Reddy School from central Medchal?',
@@ -862,7 +862,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     conclusion:
-      "Medchal has become a genuine alternative to city-centre schooling — offering families quality CBSE education, shorter commutes, and a stronger community environment. If you live in or near Medchal and are looking for a school for your child, a campus visit to Malla Reddy School is a good place to start.",
+      "Medchal has become a genuine alternative to city-centre schooling — offering families quality education under the CBSE curriculum, shorter commutes, and a stronger community environment. If you live in or near Medchal and are looking for a school for your child, a campus visit to Malla Reddy School is a good place to start.",
     ctaText: 'Visit Our Campus — Admissions Open at Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
@@ -873,27 +873,27 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'cbse-schools-near-outer-ring-road-hyderabad',
-    title: 'CBSE Schools Near Outer Ring Road Hyderabad — What Parents Should Know',
-    metaTitle: 'CBSE Schools Near Outer Ring Road Hyderabad | Malla Reddy School Medchal',
+    title: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad — What Parents Should Know',
+    metaTitle: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad | Malla Reddy School Medchal',
     metaDescription:
-      'Looking for CBSE schools near the Outer Ring Road in Hyderabad? Families in Medchal, Kompally, and nearby areas have growing access to quality CBSE campuses. Here is what to look for.',
+      'Looking for CBSE curriculum schools near the Outer Ring Road in Hyderabad? Families in Medchal, Kompally, and nearby areas have growing access to quality CBSE curriculum campuses. Here is what to look for.',
     keywords: [
-      'CBSE schools near Outer Ring Road Hyderabad',
+      'CBSE curriculum schools near Outer Ring Road Hyderabad',
       'schools near ORR Hyderabad',
-      'CBSE school Medchal ORR',
+      'CBSE curriculum school Medchal ORR',
       'school near Hyderabad ORR families',
-      'Kompally Medchal CBSE school',
+      'Kompally Medchal CBSE curriculum school',
     ],
     publishedDate: '2026-05-26',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
     category: 'School Admissions',
     excerpt:
-      "Hyderabad's Outer Ring Road corridor has seen rapid residential growth. Families in areas like Medchal, Kompally, and Shamirpet now have access to CBSE schools without long city commutes. Here's what to look for.",
+      "Hyderabad's Outer Ring Road corridor has seen rapid residential growth. Families in areas like Medchal, Kompally, and Shamirpet now have access to CBSE curriculum schools without long city commutes. Here's what to look for.",
     coverImage: '/images/hero-aspirational.png',
-    coverImageAlt: 'CBSE school near Outer Ring Road Hyderabad — Malla Reddy School Medchal',
+    coverImageAlt: 'CBSE curriculum school near Outer Ring Road Hyderabad — Malla Reddy School Medchal',
     intro:
-      "Hyderabad's Outer Ring Road (ORR) has transformed access across the city. For families living along the northern ORR corridor — in areas such as Medchal, Kompally, Dundigal, and Shamirpet — the question of quality schooling has become much easier to answer. Several established CBSE schools now operate in this corridor, offering families genuine alternatives to long commutes into the city.",
+      "Hyderabad's Outer Ring Road (ORR) has transformed access across the city. For families living along the northern ORR corridor — in areas such as Medchal, Kompally, Dundigal, and Shamirpet — the question of quality schooling has become much easier to answer. Several established CBSE curriculum schools now operate in this corridor, offering families genuine alternatives to long commutes into the city.",
     sections: [
       {
         heading: 'Why the ORR Corridor Is Growing as a Schooling Hub',
@@ -901,7 +901,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "The ORR has opened up residential areas that were previously considered too far from quality schooling. Improved road infrastructure, shorter commute times to IT hubs like Hitech City and Gachibowli (via the ORR), and lower land costs compared to central Hyderabad have driven significant residential development in the Medchal-Kompally-Dundigal belt. Schools have followed this growth.",
       },
       {
-        heading: 'What to Look for in a CBSE School Near the ORR',
+        heading: 'What to Look for in a CBSE Curriculum School Near the ORR',
         content:
           'Location near the ORR is a practical convenience, but the quality of education should be the primary consideration. Here are the key factors to evaluate:',
         subsections: [
@@ -918,21 +918,21 @@ export const BLOG_POSTS: BlogPost[] = [
           {
             heading: 'Program Depth Beyond Standard CBSE',
             content:
-              "The best CBSE schools in this corridor go beyond the standard NCERT syllabus — adding science and computer labs, STEAM activities, co-curricular programs, and IIT Foundation tracks for higher classes.",
+              "The best CBSE curriculum schools in this corridor go beyond the standard NCERT syllabus — adding science and computer labs, STEAM activities, co-curricular programs, and IIT Foundation tracks for higher classes.",
           },
         ],
       },
       {
         heading: 'Malla Reddy School — Medchal, Near the Northern ORR',
         content:
-          "Malla Reddy School is located at Medchal Village, Medchal Mandal — accessible from the northern ORR and serving families in Medchal, Kompally, and surrounding areas. The school offers CBSE education from Pre-Primary through Class 8, with STEAM-integrated learning, dedicated science, computer, and robotics labs, sports, arts, and a safe campus environment.",
+          "Malla Reddy School is located at Medchal Village, Medchal Mandal — accessible from the northern ORR and serving families in Medchal, Kompally, and surrounding areas. The school follows the CBSE curriculum from Pre-Primary through Class 8, with STEAM-integrated learning, dedicated science, computer, and robotics labs, sports, arts, and a safe campus environment.",
       },
     ],
     faqs: [
       {
-        question: 'Which CBSE schools are near the Outer Ring Road in Hyderabad?',
+        question: 'Which CBSE curriculum schools are near the Outer Ring Road in Hyderabad?',
         answer:
-          "Several CBSE schools operate near Hyderabad's Outer Ring Road, particularly along the northern corridor (Medchal, Kompally, Dundigal). Malla Reddy School Medchal is one such school, offering CBSE education from Pre-Primary to Class 8.",
+          "Several CBSE curriculum schools operate near Hyderabad's Outer Ring Road, particularly along the northern corridor (Medchal, Kompally, Dundigal). Malla Reddy School Medchal is one such school, following the CBSE curriculum from Pre-Primary to Class 8.",
       },
       {
         question: 'Is Medchal accessible from the Outer Ring Road?',
@@ -946,7 +946,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     conclusion:
-      "The northern ORR corridor offers families a genuine choice of quality CBSE schooling without the congestion and commute time of central Hyderabad. If you live near Medchal or along the ORR, a campus visit to local CBSE schools — including Malla Reddy School Medchal — gives you a first-hand sense of the environment and programs before making your decision.",
+      "The northern ORR corridor offers families a genuine choice of quality CBSE schooling without the congestion and commute time of central Hyderabad. If you live near Medchal or along the ORR, a campus visit to local CBSE curriculum schools — including Malla Reddy School Medchal — gives you a first-hand sense of the environment and programs before making your decision.",
     ctaText: 'Book a Campus Visit — Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
@@ -966,7 +966,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'what to look for school campus India',
       'school visit questions parents Hyderabad',
       'choosing school campus India',
-      'CBSE school campus quality check',
+      'CBSE curriculum school campus quality check',
     ],
     publishedDate: '2026-05-06',
     author: 'Malla Reddy School Editorial Team',
@@ -975,7 +975,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       "A school brochure shows you the best version of everything. A campus visit shows you the truth. Here is a practical checklist of what to look for when visiting a school in Hyderabad.",
     coverImage: '/images/what-to-look-for-in-a-school-campus-parents-checklist.jpg',
-    coverImageAlt: 'School campus visit checklist — what parents should look for at a CBSE school',
+    coverImageAlt: 'School campus visit checklist — what parents should look for at a CBSE curriculum school',
     intro:
       "Every school presents its best face in brochures and on websites. A campus visit is your opportunity to look beyond the marketing and assess whether a school is genuinely right for your child. Most parents visit a campus with a vague sense of what they are looking for. This checklist makes it specific.",
     sections: [
@@ -1068,7 +1068,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'school safety standards India parents',
       'school safety checklist India',
-      'CBSE school safety Hyderabad',
+      'CBSE curriculum school safety Hyderabad',
       'school campus safety Medchal',
       'child safety school India',
     ],
@@ -1181,7 +1181,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'benefits co-curricular activities school India',
       'sports arts music school children Hyderabad',
       'holistic development school Medchal',
-      'CBSE school co-curricular activities',
+      'CBSE curriculum school co-curricular activities',
     ],
     publishedDate: '2026-05-08',
     author: 'Malla Reddy School Editorial Team',
@@ -1451,14 +1451,14 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       { heading: 'Start With Your Non-Negotiables', content: 'Before comparing schools, list what matters most to your family: proximity and commute time, board affiliation (CBSE, ICSE, state), fee range, medium of instruction, and whether co-curricular programs matter to you. This filter immediately narrows the field.' },
       {
-        heading: 'Evaluate Curriculum Depth', content: 'Every CBSE school follows the same board, but not every school delivers it the same way. Ask how the school goes beyond the NCERT syllabus — are there labs, STEAM activities, IIT Foundation tracks, or project-based learning? A school that only covers the board minimum is not the same as one that builds genuine understanding.',
+        heading: 'Evaluate Curriculum Depth', content: 'Every CBSE curriculum school follows the same board, but not every school delivers it the same way. Ask how the school goes beyond the NCERT syllabus — are there labs, STEAM activities, IIT Foundation tracks, or project-based learning? A school that only covers the board minimum is not the same as one that builds genuine understanding.',
         subsections: [
           { heading: 'Primary vs Middle School Focus', content: 'Some schools excel at primary and become average by middle school. Ask specifically about programs from Class 6 onwards — IIT Foundation, science labs, digital literacy — not just the pre-primary program you see during the admission visit.' },
         ],
       },
       { heading: 'Visit in Person — And Observe', content: 'A brochure shows you the best version of a school. A campus visit shows you the reality. During your visit: look at how teachers interact with students, check whether classrooms feel active or passive, observe cleanliness and maintenance, and ask to speak with a teacher — not just the admissions officer.' },
       { heading: 'Ask Other Parents', content: 'Parents of current students are your most honest source of information. Ask about communication from school to parents, how problems are handled, and whether the school follows through on what it promises.' },
-      { heading: 'Malla Reddy School Medchal', content: 'Malla Reddy School Medchal offers CBSE education from Pre-Primary to Class 8 with STEAM integration, dedicated labs, sports, arts, and a safe campus. We welcome campus visits — contact our admissions team at +91 92 4758 7086 to schedule one.' },
+      { heading: 'Malla Reddy School Medchal', content: 'Malla Reddy School Medchal follows the CBSE curriculum from Pre-Primary to Class 8 with STEAM integration, dedicated labs, sports, arts, and a safe campus. We welcome campus visits — contact our admissions team at +91 92 4758 7086 to schedule one.' },
     ],
     faqs: [
       { question: 'What is the most important factor when choosing a school in Hyderabad?', answer: 'There is no single factor — it depends on your child and family. However, teacher quality, curriculum depth, and a safe, nurturing environment consistently matter more than reputation or brand name alone.' },
@@ -1476,7 +1476,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What to Ask During a School Admission Visit: 12 Questions Every Parent Should Ask',
     metaTitle: 'Questions to Ask During School Admission Visit | Malla Reddy School Medchal',
     metaDescription: 'Most parents leave school admission visits without asking the questions that actually matter. Here are 12 questions that reveal what a school is really like.',
-    keywords: ['school admission visit questions', 'what to ask school admission India', 'school visit questions parents', 'CBSE school admission questions Hyderabad'],
+    keywords: ['school admission visit questions', 'what to ask school admission India', 'school visit questions parents', 'CBSE curriculum school admission questions Hyderabad'],
     publishedDate: '2026-06-08',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -1539,7 +1539,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-06-06',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: 'For parents in Hyderabad and Telangana, the choice between CBSE and the State Board is common. Here is an honest comparison of what each offers.',
     coverImage: '/images/programs/middle.jpg',
     coverImageAlt: 'Comparing CBSE and Telangana State Board schools in Hyderabad',
@@ -1551,16 +1551,16 @@ export const BLOG_POSTS: BlogPost[] = [
           { heading: 'NCERT vs State Textbooks', content: 'NCERT books (used in CBSE) are widely considered the most authoritative resource for competitive exam preparation. State board textbooks are designed for the state-level examination and may not align as closely with JEE, NEET, or other national exams.' },
         ],
       },
-      { heading: 'National Portability', content: 'CBSE is recognised in every Indian state. If your family relocates — even temporarily — a child from a CBSE school can transfer to another CBSE school anywhere in India without curriculum disruption. State board transfers require catching up with curriculum differences.' },
-      { heading: 'Language of Instruction', content: 'CBSE schools typically offer instruction in English (with Hindi and a regional language as subjects). State board schools may offer instruction in Telugu medium, English medium, or both, depending on the school.' },
+      { heading: 'National Portability', content: 'CBSE is recognised in every Indian state. If your family relocates — even temporarily — a child from a CBSE curriculum school can transfer to another CBSE curriculum school anywhere in India without curriculum disruption. State board transfers require catching up with curriculum differences.' },
+      { heading: 'Language of Instruction', content: 'CBSE curriculum schools typically offer instruction in English (with Hindi and a regional language as subjects). State board schools may offer instruction in Telugu medium, English medium, or both, depending on the school.' },
       { heading: 'Competitive Exam Alignment', content: 'JEE (engineering entrance), NEET (medical entrance), and most central government competitive exams are based on the CBSE/NCERT syllabus. Students from state board schools often need additional coaching to bridge the gap when targeting these exams.' },
       { heading: 'Which Is Right for Your Child?', content: 'CBSE is the better choice if: your family may relocate, your child is targeting national competitive exams, or you want a nationally standardised curriculum. The State Board may suit families who are certain of staying in Telangana and whose child will not target national competitive exams.' },
     ],
     faqs: [
       { question: 'Can a student from Telangana State Board switch to CBSE?', answer: 'Yes. Students can switch from State Board to CBSE with a Transfer Certificate and Migration Certificate. The transition is most seamless at the start of a new school stage (Class 1, Class 6).' },
-      { question: 'Is CBSE more expensive than state board schools in Hyderabad?', answer: 'CBSE schools generally have a wider fee range than government state board schools, but private state board schools can also be comparable in fee structure. Fee levels depend more on the individual school than the board affiliation.' },
+      { question: 'Is CBSE more expensive than state board schools in Hyderabad?', answer: 'CBSE curriculum schools generally have a wider fee range than government state board schools, but private state board schools can also be comparable in fee structure. Fee levels depend more on the individual school than the board affiliation.' },
     ],
-    conclusion: 'The board choice is important, but the school matters more. A quality CBSE school in Medchal or Hyderabad gives your child a nationally portable, competitive-exam-aligned education with strong academic foundations.',
+    conclusion: 'The board choice is important, but the school matters more. A quality CBSE curriculum school in Medchal or Hyderabad gives your child a nationally portable, competitive-exam-aligned education with strong academic foundations.',
     ctaText: 'Enquire About Our CBSE Program — Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: ['cbse-vs-icse-which-board-right-child', 'understanding-cbse-curriculum-parents-guide'],
@@ -1758,7 +1758,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Digital Library and How Does It Benefit School Students?',
     metaTitle: 'What Is a Digital Library? Benefits for School Students | Malla Reddy School',
     metaDescription: 'A digital library is more than books on screens. Here is how digital library facilities in schools support reading, research, and digital literacy for students.',
-    keywords: ['digital library school India', 'school digital library benefits', 'e-library school children', 'digital library CBSE school Hyderabad', 'school library facilities Medchal'],
+    keywords: ['digital library school India', 'school digital library benefits', 'e-library school children', 'digital library CBSE curriculum school Hyderabad', 'school library facilities Medchal'],
     publishedDate: '2026-05-05',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -2049,7 +2049,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'What Parents Can Do at Home', content: "Name emotions in daily life: 'You seem frustrated. What happened?' Read books that feature characters navigating emotions. Model healthy emotional regulation when you are stressed. Celebrate kindness as explicitly as academic success. Take social difficulties seriously — they are real learning challenges, not minor incidents." },
     ],
     faqs: [
-      { question: 'Is SEL part of the CBSE curriculum?', answer: "CBSE guidelines, particularly post-NEP 2020, emphasise holistic development including social-emotional dimensions. Quality CBSE schools embed SEL into their pre-primary and primary programs through structured activities and teacher approaches." },
+      { question: 'Is SEL part of the CBSE curriculum?', answer: "CBSE guidelines, particularly post-NEP 2020, emphasise holistic development including social-emotional dimensions. Quality CBSE curriculum schools embed SEL into their pre-primary and primary programs through structured activities and teacher approaches." },
       { question: 'What if my child struggles socially in pre-primary?', answer: "Social difficulties in pre-primary are common and usually temporary. Speak with the class teacher early — experienced pre-primary teachers have effective strategies for helping children build social skills in a supportive environment." },
     ],
     conclusion: "The child who learns to manage emotions, resolve conflicts peacefully, and build genuine friendships in pre-primary school arrives in Class 1 ready to learn in ways that academic preparation alone cannot provide.",
@@ -2067,7 +2067,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-05-11',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: 'CBSE report cards use letter grades and grade points rather than just percentages. Here is a clear explanation of how the system works.',
     coverImage: '/images/programs/primary.jpg',
     coverImageAlt: 'Understanding CBSE grading system for school students in India',
@@ -2358,7 +2358,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'What Is a Mathematics Lab and How Does It Help Students?',
     metaTitle: "What Is a Mathematics Lab? Benefits for School Students | Malla Reddy School",
     metaDescription: "A mathematics lab makes abstract mathematical concepts concrete through hands-on exploration. Here is what a maths lab is, what it contains, and how it benefits students.",
-    keywords: ['mathematics lab school India', 'maths lab school benefits', 'maths lab CBSE school Hyderabad', 'school maths lab activities', 'mathematics laboratory school India'],
+    keywords: ['mathematics lab school India', 'maths lab school benefits', 'maths lab CBSE curriculum school Hyderabad', 'school maths lab activities', 'mathematics laboratory school India'],
     publishedDate: '2026-05-25',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -2394,7 +2394,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Technology in the Classroom: What Good Digital Learning Looks Like',
     metaTitle: "Technology in the Primary School Classroom | Malla Reddy School Medchal",
     metaDescription: "Technology in classrooms can be transformative or distracting — it depends entirely on how it is used. Here is what effective classroom technology integration looks like.",
-    keywords: ['technology classroom school India', 'digital learning school India', 'classroom technology primary school', 'ICT school India', 'digital tools classroom CBSE school Hyderabad'],
+    keywords: ['technology classroom school India', 'digital learning school India', 'classroom technology primary school', 'ICT school India', 'digital tools classroom CBSE curriculum school Hyderabad'],
     publishedDate: '2026-06-25',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -2438,7 +2438,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "India's education system is changing — away from memorisation and toward understanding. Here is why it matters and what it means for your child's school.",
     coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "Students developing conceptual understanding rather than rote learning at Malla Reddy School Medchal",
-    intro: "For decades, a significant criticism of Indian school education has been its reliance on rote memorisation — learning definitions, dates, and formulas without understanding why they are true or how to apply them. This approach produces students who can reproduce what they have memorised in familiar formats but struggle when questions require application, analysis, or synthesis. NEP 2020 and thoughtful CBSE schools have been working to change this.",
+    intro: "For decades, a significant criticism of Indian school education has been its reliance on rote memorisation — learning definitions, dates, and formulas without understanding why they are true or how to apply them. This approach produces students who can reproduce what they have memorised in familiar formats but struggle when questions require application, analysis, or synthesis. NEP 2020 and thoughtful CBSE curriculum schools have been working to change this.",
     sections: [
       {
         heading: "What Rote Learning Is and Why It Persists", content: "Rote learning is the memorisation of information through repetition, without connecting it to meaning or understanding. It persists in Indian education for structural reasons: high-stakes examinations that can be passed through memorisation reward the approach, large class sizes make individual conceptual coaching difficult, and assessment patterns that primarily test recall rather than application do not penalise surface learning.",
@@ -2590,14 +2590,14 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'cbse-board-exam-preparation-hyderabad',
-    title: 'How CBSE Schools in Hyderabad Prepare Students for Board Exams',
+    title: 'How CBSE Curriculum Schools in Hyderabad Prepare Students for Board Exams',
     metaTitle: "CBSE Board Exam Preparation in Hyderabad | Malla Reddy School Medchal",
-    metaDescription: "CBSE board exams at Class 10 and 12 are high-stakes milestones. Here is how quality CBSE schools in Hyderabad prepare students — and what parents can do to support.",
+    metaDescription: "CBSE board exams at Class 10 and 12 are high-stakes milestones. Here is how quality CBSE curriculum schools in Hyderabad prepare students — and what parents can do to support.",
     keywords: ['CBSE board exam preparation Hyderabad', 'CBSE Class 10 preparation India', 'board exam tips school students', 'CBSE board exam school Hyderabad', 'prepare CBSE board exam India'],
     publishedDate: '2026-05-19',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "CBSE board exams are a major milestone in a student's academic journey. Here is how schools prepare students — and how parents can reinforce that preparation at home.",
     coverImage: '/images/programs/middle.jpg',
     coverImageAlt: "CBSE board exam preparation at Malla Reddy School Medchal Hyderabad",
@@ -2710,14 +2710,14 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How Much Homework Is Too Much? What CBSE Guidelines Say and What Research Shows',
     metaTitle: 'How Much Homework Is Too Much? CBSE Guidelines | Malla Reddy School Medchal',
     metaDescription: 'Homework overload is a real concern for families in India. Here is what CBSE guidelines recommend, what research shows about optimal homework load, and how to respond.',
-    keywords: ['how much homework school children India', 'CBSE homework guidelines India', 'too much homework school children', 'homework load CBSE school', 'school homework policy India'],
+    keywords: ['how much homework school children India', 'CBSE homework guidelines India', 'too much homework school children', 'homework load CBSE curriculum school', 'school homework policy India'],
     publishedDate: '2026-05-13',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
     category: 'Parenting Guides',
     excerpt: 'Hours of homework every evening is not a sign of a rigorous school — it may be a sign of a poorly managed one. Here is what is appropriate at each class level.',
     coverImage: '/images/programs/primary.jpg',
-    coverImageAlt: 'Child doing homework at home — how much is the right amount for CBSE school students',
+    coverImageAlt: 'Child doing homework at home — how much is the right amount for CBSE curriculum school students',
     intro: 'Homework is one of the most contentious topics in school education. Parents in India often interpret heavy homework as a sign of academic seriousness. Research, however, consistently shows that beyond a modest amount, homework has diminishing returns — and for younger children, it may actively harm the love of learning. Here is what the evidence says.',
     sections: [
       {
@@ -2742,20 +2742,20 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'what-is-ncert-why-cbse-schools-use-it',
-    title: 'What Is NCERT and Why Do CBSE Schools Use NCERT Textbooks?',
-    metaTitle: 'What Is NCERT and Why Do CBSE Schools Use It? | Malla Reddy School Medchal',
-    metaDescription: 'NCERT textbooks are the foundation of CBSE education in India. Here is what NCERT is, why its books are prescribed, and how to use them most effectively.',
+    title: 'What Is NCERT and Why Do CBSE Curriculum Schools Use NCERT Textbooks?',
+    metaTitle: 'What Is NCERT and Why Do CBSE Curriculum Schools Use It? | Malla Reddy School Medchal',
+    metaDescription: 'NCERT textbooks are the foundation of the CBSE curriculum in India. Here is what NCERT is, why its books are prescribed, and how to use them most effectively.',
     keywords: ['what is NCERT India', 'NCERT textbooks CBSE', 'NCERT books school India', 'why CBSE uses NCERT', 'NCERT syllabus explained parents India'],
     publishedDate: '2026-05-11',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
-    category: 'CBSE Education',
-    excerpt: 'NCERT books are the backbone of CBSE education — and mastering them is the most reliable path to board exam success. Here is what parents need to know.',
+    category: 'CBSE Curriculum',
+    excerpt: 'NCERT books are the backbone of the CBSE curriculum — and mastering them is the most reliable path to board exam success. Here is what parents need to know.',
     coverImage: '/images/programs/primary.jpg',
-    coverImageAlt: 'NCERT textbooks used in CBSE schools — explained for parents by Malla Reddy School Medchal',
-    intro: 'If your child attends a CBSE school, they use NCERT textbooks. But many parents have only a vague understanding of what NCERT is, why these books are prescribed, and how central they are to board exam performance. Here is a clear explanation.',
+    coverImageAlt: 'NCERT textbooks used in CBSE curriculum schools — explained for parents by Malla Reddy School Medchal',
+    intro: 'If your child attends a CBSE curriculum school, they use NCERT textbooks. But many parents have only a vague understanding of what NCERT is, why these books are prescribed, and how central they are to board exam performance. Here is a clear explanation.',
     sections: [
-      { heading: 'What Is NCERT?', content: 'NCERT (National Council of Educational Research and Training) is an autonomous organisation under the Government of India that develops curriculum frameworks, textbooks, and educational materials for school education. NCERT is not a school board — it is the body that creates the content that CBSE schools use.' },
+      { heading: 'What Is NCERT?', content: 'NCERT (National Council of Educational Research and Training) is an autonomous organisation under the Government of India that develops curriculum frameworks, textbooks, and educational materials for school education. NCERT is not a school board — it is the body that creates the content that CBSE curriculum schools use.' },
       {
         heading: 'Why CBSE Prescribes NCERT Books', content: 'CBSE board examinations — including the Class 10 and Class 12 board exams — are based on the NCERT syllabus. Questions in CBSE board papers are drawn directly from NCERT content, concepts, and examples. A student who has thoroughly mastered NCERT books has covered the essential content required for CBSE board exams.',
         subsections: [
@@ -2767,7 +2767,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       { question: 'Are NCERT books enough for CBSE Class 10 board exams?', answer: 'Yes, for most subjects, thorough mastery of NCERT books is sufficient for Class 10 board exams. Reference books add value for students targeting very high marks but should supplement rather than replace NCERT.' },
-      { question: 'Do CBSE schools use only NCERT books?', answer: 'CBSE prescribes NCERT as the primary textbook. Schools may supplement with additional workbooks or reference materials, but NCERT content forms the core of the curriculum.' },
+      { question: 'Do CBSE curriculum schools use only NCERT books?', answer: 'CBSE prescribes NCERT as the primary textbook. Schools may supplement with additional workbooks or reference materials, but NCERT content forms the core of the curriculum.' },
     ],
     conclusion: "NCERT books are the most important resource in a CBSE student's study toolkit. Students who treat them as the primary source — reading carefully, solving all exercises, understanding every concept — build the academic foundation on which all further learning rests.",
     ctaText: 'Learn About Our CBSE Curriculum — Malla Reddy School Medchal',
@@ -2855,7 +2855,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Career Counselling for School Students: When to Start and Why It Matters',
     metaTitle: "Career Counselling for School Students | Malla Reddy School Medchal",
     metaDescription: "Career counselling doesn't start in Class 12 — it starts with helping children explore interests from Class 6 onwards. Here is why early career exploration matters.",
-    keywords: ['career counselling school students India', 'when to start career planning school', 'career guidance class 6 7 8 India', 'career exploration children school', 'career counselling CBSE school Hyderabad'],
+    keywords: ['career counselling school students India', 'when to start career planning school', 'career guidance class 6 7 8 India', 'career exploration children school', 'career counselling CBSE curriculum school Hyderabad'],
     publishedDate: '2026-05-02',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -2933,7 +2933,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "India is naturally multilingual. Children raised with multiple languages — English, Hindi, a regional language — gain cognitive advantages that go far beyond the languages themselves.",
     coverImage: '/images/programs/primary.jpg',
     coverImageAlt: "Multilingual school children learning multiple languages at Malla Reddy School Medchal",
-    intro: "India's linguistic landscape is uniquely rich. Most Indian children grow up exposed to at least two languages — a regional language at home, and English or Hindi at school. CBSE schools typically teach three languages: English, Hindi, and a regional language like Telugu. Far from being a burden, this multilingual environment confers significant cognitive advantages.",
+    intro: "India's linguistic landscape is uniquely rich. Most Indian children grow up exposed to at least two languages — a regional language at home, and English or Hindi at school. CBSE curriculum schools typically teach three languages: English, Hindi, and a regional language like Telugu. Far from being a burden, this multilingual environment confers significant cognitive advantages.",
     sections: [
       {
         heading: "Cognitive Benefits of Multilingualism", content: "",
@@ -2962,7 +2962,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why a Morning Routine Matters for School Children — and How to Build One',
     metaTitle: "Morning Routine for School Children | Benefits and Tips | Malla Reddy School",
     metaDescription: "A consistent morning routine improves focus, reduces anxiety, and sets children up for a better school day. Here is the research and a practical guide for parents.",
-    keywords: ['morning routine school children India','school morning routine tips parents','morning habits children focus school','healthy morning routine kids','child morning routine CBSE school'],
+    keywords: ['morning routine school children India','school morning routine tips parents','morning habits children focus school','healthy morning routine kids','child morning routine CBSE curriculum school'],
     publishedDate: '2025-06-05',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3008,7 +3008,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Social-Emotional Learning in Schools: Why It Matters as Much as Academics',
     metaTitle: "Social-Emotional Learning in Indian Schools | SEL Benefits | Malla Reddy School",
     metaDescription: "Social-emotional learning (SEL) develops empathy, self-regulation, and collaboration — skills that predict life success as reliably as academic grades. Here is why it matters.",
-    keywords: ['social emotional learning schools India','SEL school children India','emotional intelligence school children','social skills children school India','SEL CBSE school Hyderabad'],
+    keywords: ['social emotional learning schools India','SEL school children India','emotional intelligence school children','social skills children school India','SEL CBSE curriculum school Hyderabad'],
     publishedDate: '2025-06-06',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -3051,14 +3051,14 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'what-is-formative-assessment-cbse-schools',
-    title: 'What Is Formative Assessment in CBSE Schools and Why It Matters',
-    metaTitle: "Formative Assessment in CBSE Schools Explained | Malla Reddy School Medchal",
+    title: 'What Is Formative Assessment in CBSE Curriculum Schools and Why It Matters',
+    metaTitle: "Formative Assessment in CBSE Curriculum Schools Explained | Malla Reddy School Medchal",
     metaDescription: "CBSE uses formative assessments alongside board exams. Learn what they are, how they work, and why they are better for your child's learning than exams alone.",
-    keywords: ['formative assessment CBSE school India','CBSE assessment pattern explained','continuous evaluation CBSE school','CBSE CCE assessment system','formative summative assessment India'],
+    keywords: ['formative assessment CBSE curriculum school India','CBSE assessment pattern explained','continuous evaluation CBSE curriculum school','CBSE CCE assessment system','formative summative assessment India'],
     publishedDate: '2025-06-07',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "CBSE's assessment system is not just about board exams. Formative assessments track learning continuously — and schools that use them well produce more confident, better-prepared students.",
     coverImage: '/images/labs/math-2.jpg',
     coverImageAlt: "CBSE formative assessment in a classroom — Malla Reddy School Medchal",
@@ -3074,7 +3074,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "How CBSE Implements Formative Assessment",
-        content: "CBSE guidelines require schools to assess students on multiple parameters — written work, oral work, practical skills, and co-curricular participation. For Classes 1-8 (before the board examination years), schools have significant flexibility to design formative activities aligned with NCERT learning outcomes. Good CBSE schools use this flexibility to assess students in varied ways that build confidence and identify gaps early.",
+        content: "CBSE guidelines require schools to assess students on multiple parameters — written work, oral work, practical skills, and co-curricular participation. For Classes 1-8 (before the board examination years), schools have significant flexibility to design formative activities aligned with NCERT learning outcomes. Good CBSE curriculum schools use this flexibility to assess students in varied ways that build confidence and identify gaps early.",
       },
       {
         heading: "Why Formative Assessment Benefits Your Child",
@@ -3150,19 +3150,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'what-is-cbse-pre-school-nursery-vs-class-1',
     title: 'CBSE Pre-School vs Class 1: What Parents Need to Know About Early Admission',
     metaTitle: "CBSE Pre-School vs Class 1 Admission | What Parents Must Know | Malla Reddy School",
-    metaDescription: "Confused about whether to admit your child to nursery or directly to Class 1 in a CBSE school? Here is everything parents need to know about early CBSE school admission.",
-    keywords: ['CBSE preschool admission India','nursery to Class 1 CBSE','CBSE school Class 1 admission age','early admission CBSE school Hyderabad','nursery admission CBSE school India'],
+    metaDescription: "Confused about whether to admit your child to nursery or directly to Class 1 in a CBSE curriculum school? Here is everything parents need to know about early CBSE curriculum school admission.",
+    keywords: ['CBSE preschool admission India','nursery to Class 1 CBSE','CBSE curriculum school Class 1 admission age','early admission CBSE curriculum school Hyderabad','nursery admission CBSE curriculum school India'],
     publishedDate: '2025-06-09',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
     category: 'Admissions',
-    excerpt: "When is the right age to start school? What comes before Class 1 in a CBSE school? Here is a clear guide to pre-school levels, the transition to Class 1, and what readiness actually looks like.",
+    excerpt: "When is the right age to start school? What comes before Class 1 in a CBSE curriculum school? Here is a clear guide to pre-school levels, the transition to Class 1, and what readiness actually looks like.",
     coverImage: '/images/programs/pre-primary.jpg',
     coverImageAlt: "Early childhood education and school readiness — Malla Reddy School Medchal",
     intro: "For parents making their first school admission decision, the landscape can be confusing: LKG, UKG, nursery, pre-primary, Class 1 — terminology varies by school and state. Understanding what each level covers and when children are developmentally ready for Class 1 helps parents make confident decisions and avoid the twin mistakes of starting too early or too late.",
     sections: [
       {
-        heading: "The Typical Pre-Primary Structure in CBSE Schools",
+        heading: "The Typical Pre-Primary Structure in CBSE Curriculum Schools",
         content: "",
         subsections: [
           { heading: "Nursery (Pre-KG)", content: "Usually for children aged 3 to 4 years. Focus is entirely on play-based learning, basic motor skills, social interaction, and early language exposure. No formal academic instruction — and rightly so at this age." },
@@ -3181,7 +3181,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     faqs: [
-      { question: "What is the minimum age for Class 1 admission in CBSE schools?", answer: "CBSE guidelines (aligned with NEP 2020) recommend that children complete 6 years of age by 31 March of the year of admission to Class 1. Individual states and schools may have slightly different cut-off dates — verify with the specific school." },
+      { question: "What is the minimum age for Class 1 admission in CBSE curriculum schools?", answer: "CBSE guidelines (aligned with NEP 2020) recommend that children complete 6 years of age by 31 March of the year of admission to Class 1. Individual states and schools may have slightly different cut-off dates — verify with the specific school." },
       { question: "Is it necessary to attend a CBSE-affiliated pre-school before joining a CBSE Class 1?", answer: "No, it is not mandatory to attend a CBSE-affiliated pre-school. However, structured pre-school experience — regardless of the board — significantly supports the social and self-regulation readiness needed for Class 1." },
       { question: "Can a child with strong academic skills skip LKG and UKG?", answer: "Academic skills alone are not sufficient grounds for skipping pre-primary stages. Social-emotional readiness, peer interaction skills, and self-regulation develop through time and experience, not academic acceleration. Most developmental experts recommend completing the full pre-primary sequence." },
     ],
@@ -3196,7 +3196,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why School Leadership Roles Build Skills No Classroom Can Teach',
     metaTitle: "School Leadership Roles and Skills | Malla Reddy School Medchal",
     metaDescription: "Being a class monitor, house captain, or student council member teaches children leadership, responsibility, and communication in ways that academic study alone cannot replicate.",
-    keywords: ['school leadership roles children India','student council school benefits','class monitor house captain school India','leadership skills school children','extracurricular leadership CBSE school'],
+    keywords: ['school leadership roles children India','student council school benefits','class monitor house captain school India','leadership skills school children','extracurricular leadership CBSE curriculum school'],
     publishedDate: '2025-06-10',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3241,7 +3241,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How to Support a Child with Learning Difficulties in an Indian School',
     metaTitle: "Supporting Children with Learning Difficulties in Indian Schools | Malla Reddy School",
     metaDescription: "Learning difficulties are common and manageable. Here is what parents in India should know about identifying them, talking to schools, and supporting their child effectively.",
-    keywords: ['learning difficulties children India','how to help child learning disability school India','dyslexia school India support','learning support CBSE school India','child learning difficulty Hyderabad school'],
+    keywords: ['learning difficulties children India','how to help child learning disability school India','dyslexia school India support','learning support CBSE curriculum school India','child learning difficulty Hyderabad school'],
     publishedDate: '2025-06-11',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -3289,7 +3289,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why Medchal-Malkajgiri Is Becoming a Top Choice for Families Seeking Quality Education',
     metaTitle: "Education in Medchal-Malkajgiri for Families | Malla Reddy School Medchal",
     metaDescription: "Medchal-Malkajgiri is growing fast, and so is its education infrastructure. Here is why families relocating to the area are choosing it for its schools, connectivity, and quality of life.",
-    keywords: ['Medchal Malkajgiri schools families','best school Medchal Hyderabad','education Medchal growing area','CBSE school Medchal Malkajgiri','relocating Hyderabad Medchal schools'],
+    keywords: ['Medchal Malkajgiri schools families','best school Medchal Hyderabad','education Medchal growing area','CBSE curriculum school Medchal Malkajgiri','relocating Hyderabad Medchal schools'],
     publishedDate: '2025-06-12',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3313,8 +3313,8 @@ export const BLOG_POSTS: BlogPost[] = [
         content: "The residential growth in Medchal-Malkajgiri has been accompanied by an expansion in schooling options. CBSE-affiliated schools in the district range from large campuses to smaller neighbourhood schools. Parents choosing schools in the area should evaluate CBSE affiliation status, campus facilities, board exam results, and co-curricular programmes — using the same criteria that apply anywhere — rather than relying on proximity alone.",
       },
       {
-        heading: "Malla Reddy School — A CBSE School in Medchal",
-        content: "Malla Reddy School is a CBSE-affiliated school located in Medchal, serving families across the district and neighbouring areas. The school offers Classes from pre-primary through to Class 10, with a STEAM-integrated curriculum, modern laboratory and sports facilities, and an IIT Foundation programme for students in Classes 8-10.",
+        heading: "Malla Reddy School — A CBSE Curriculum School in Medchal",
+        content: "Malla Reddy School is a CBSE curriculum school located in Medchal, serving families across the district and neighbouring areas. The school offers Classes from pre-primary through to Class 10, with a STEAM-integrated curriculum, modern laboratory and sports facilities, and an IIT Foundation programme for students in Classes 8-10.",
       },
       {
         heading: "What to Look for When Relocating with Children",
@@ -3323,8 +3323,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       { question: "Is Medchal-Malkajgiri part of Hyderabad for school purposes?", answer: "Medchal-Malkajgiri is a separate district that borders the Hyderabad Metropolitan Development Authority area. Schools in the district follow state and central board guidelines (CBSE, TSBIE) in the same way as schools in Hyderabad." },
-      { question: "Are there quality CBSE schools in Medchal for Classes 1 to 10?", answer: "Yes. Several CBSE-affiliated schools in the Medchal area offer Classes 1-10. Malla Reddy School is one of the established CBSE schools in Medchal offering the full primary and secondary school programme." },
-      { question: "Is mid-year admission possible in Medchal CBSE schools?", answer: "Mid-year admission (outside the standard April-May intake) depends on seat availability and CBSE transfer certificate requirements. Contact individual schools directly to confirm whether mid-year intake is available for your child's class and for the documentation required." },
+      { question: "Are there quality CBSE curriculum schools in Medchal for Classes 1 to 10?", answer: "Yes. Several CBSE-affiliated schools in the Medchal area offer Classes 1-10. Malla Reddy School is one of the established CBSE curriculum schools in Medchal offering the full primary and secondary school programme." },
+      { question: "Is mid-year admission possible in Medchal CBSE curriculum schools?", answer: "Mid-year admission (outside the standard April-May intake) depends on seat availability and CBSE transfer certificate requirements. Contact individual schools directly to confirm whether mid-year intake is available for your child's class and for the documentation required." },
     ],
     conclusion: "Medchal-Malkajgiri combines residential affordability, good connectivity, and improving educational infrastructure — making it an increasingly attractive choice for families seeking quality schooling outside the congestion of central Hyderabad.",
     ctaText: "Enquire About Admission at Malla Reddy School Medchal",
@@ -3389,7 +3389,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2025-06-13',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "CBSE and state boards both have merit — but they are not interchangeable. Here is a parent's guide to understanding the real differences and choosing the right fit for your child's future.",
     coverImage: '/images/labs/library-1.jpg',
     coverImageAlt: "CBSE vs State Board comparison for Indian parents — Malla Reddy School Medchal",
@@ -3408,8 +3408,8 @@ export const BLOG_POSTS: BlogPost[] = [
         content: "",
         subsections: [
           { heading: "Curriculum and Syllabus", content: "CBSE follows NCERT curriculum nationwide. State boards follow state-designed syllabi that may align with NCERT in core subjects but include state-specific content. CBSE's standardisation means identical textbooks and learning outcomes regardless of which school or city." },
-          { heading: "Competitive Exam Alignment", content: "JEE (engineering entrance), NEET (medical entrance), and most central government competitive exams are based on CBSE/NCERT content. Students from CBSE schools generally face less syllabi adjustment when preparing for these exams." },
-          { heading: "Transfer and Mobility", content: "CBSE is the better choice for families who may relocate across states. A CBSE student can transfer to another CBSE school in any city with minimal disruption. State board transfers across states require curriculum adjustment." },
+          { heading: "Competitive Exam Alignment", content: "JEE (engineering entrance), NEET (medical entrance), and most central government competitive exams are based on CBSE/NCERT content. Students from CBSE curriculum schools generally face less syllabi adjustment when preparing for these exams." },
+          { heading: "Transfer and Mobility", content: "CBSE is the better choice for families who may relocate across states. A CBSE student can transfer to another CBSE curriculum school in any city with minimal disruption. State board transfers across states require curriculum adjustment." },
           { heading: "Regional Language and Culture", content: "State boards typically offer stronger emphasis on regional language, local history, and state-specific content — a genuine advantage for families committed to regional identity and language fluency." },
         ],
       },
@@ -3438,7 +3438,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2025-06-14',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "Class 10 board exams are a milestone — not a make-or-break moment. Here is how parents can support preparation, manage anxiety, and help their child perform at their best.",
     coverImage: '/images/labs/computer-1.jpg',
     coverImageAlt: "Student preparing for CBSE Class 10 board exams — Malla Reddy School Medchal",
@@ -3478,7 +3478,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why Peer Learning Is One of the Most Powerful Tools in Education',
     metaTitle: "Peer Learning Benefits for School Children | Malla Reddy School Medchal",
     metaDescription: "When children learn from and with each other, retention improves and confidence grows. Here is why peer learning works and how good schools build it into the curriculum.",
-    keywords: ['peer learning school children India','benefits peer learning CBSE school','collaborative learning school India','group study benefits school children','peer teaching school India'],
+    keywords: ['peer learning school children India','benefits peer learning CBSE curriculum school','collaborative learning school India','group study benefits school children','peer teaching school India'],
     publishedDate: '2025-06-15',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3523,7 +3523,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How to Talk to Your Child\'s Teacher Effectively: A Parent\'s Guide',
     metaTitle: "How to Talk to School Teachers as a Parent | Malla Reddy School Medchal",
     metaDescription: "Parent-teacher communication is one of the strongest predictors of school success. Here is how to have productive conversations with your child's teachers — and what to avoid.",
-    keywords: ['how to talk to school teacher parent India','parent teacher communication tips','parent teacher meeting CBSE school India','talking to child teacher tips','effective parent school communication India'],
+    keywords: ['how to talk to school teacher parent India','parent teacher communication tips','parent teacher meeting CBSE curriculum school India','talking to child teacher tips','effective parent school communication India'],
     publishedDate: '2025-06-16',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3552,13 +3552,13 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "When Communication Breaks Down",
-        content: "If you feel your concern is not being heard at the teacher level, the appropriate next step in most CBSE schools is the Academic Coordinator or Head of Department. Escalate with the same factual, solution-focused approach — not with threats or public complaints.",
+        content: "If you feel your concern is not being heard at the teacher level, the appropriate next step in most CBSE curriculum schools is the Academic Coordinator or Head of Department. Escalate with the same factual, solution-focused approach — not with threats or public complaints.",
       },
     ],
     faqs: [
-      { question: "How often should parents communicate with teachers?", answer: "Beyond scheduled parent-teacher meetings (typically once or twice per term in CBSE schools), proactive communication makes sense when you observe a significant behavioural change, your child reports a specific ongoing problem, or academic performance unexpectedly drops. Routine check-ins are not necessary if things are going well." },
+      { question: "How often should parents communicate with teachers?", answer: "Beyond scheduled parent-teacher meetings (typically once or twice per term in CBSE curriculum schools), proactive communication makes sense when you observe a significant behavioural change, your child reports a specific ongoing problem, or academic performance unexpectedly drops. Routine check-ins are not necessary if things are going well." },
       { question: "What should I do if my child asks me not to talk to their teacher?", answer: "Take the request seriously — children (especially adolescents) have legitimate preferences about autonomy. Understand what specifically worries them about you contacting the teacher. If the concern is significant, have an honest conversation about why you need to engage and involve your child in shaping what you will say." },
-      { question: "Is it appropriate to contact teachers directly via WhatsApp or personal number?", answer: "Follow the school's communication policy. Most CBSE schools prefer parent communication through official channels (school app, email, or the class teacher's school contact number) rather than personal numbers. Personal-number contact can blur professional boundaries and is generally better avoided." },
+      { question: "Is it appropriate to contact teachers directly via WhatsApp or personal number?", answer: "Follow the school's communication policy. Most CBSE curriculum schools prefer parent communication through official channels (school app, email, or the class teacher's school contact number) rather than personal numbers. Personal-number contact can blur professional boundaries and is generally better avoided." },
     ],
     conclusion: "The most effective parent-teacher relationships are built on mutual respect, specific communication, and a shared focus on the child's wellbeing. Invest in these conversations — they pay dividends in your child's school experience and outcomes.",
     ctaText: "Learn About Malla Reddy School's Parent Engagement Approach",
@@ -3568,14 +3568,14 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'what-is-project-based-learning-cbse-schools',
-    title: 'What Is Project-Based Learning and Why CBSE Schools Are Adopting It',
-    metaTitle: "Project-Based Learning in CBSE Schools | Malla Reddy School Medchal",
+    title: 'What Is Project-Based Learning and Why CBSE Curriculum Schools Are Adopting It',
+    metaTitle: "Project-Based Learning in CBSE Curriculum Schools | Malla Reddy School Medchal",
     metaDescription: "Project-based learning (PBL) develops problem-solving, creativity, and collaboration alongside academic content. Here is what it is, how it works, and why it produces better learners.",
-    keywords: ['project based learning CBSE school India','PBL school children India','project based learning benefits school','activity based learning CBSE school','hands on learning school India'],
+    keywords: ['project based learning CBSE curriculum school India','PBL school children India','project based learning benefits school','activity based learning CBSE curriculum school','hands on learning school India'],
     publishedDate: '2025-06-17',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "Project-based learning replaces textbook exercises with real problems that require research, creativity, and teamwork. Here is why it produces deeper understanding than conventional instruction alone.",
     coverImage: '/images/labs/robotics-1.jpg',
     coverImageAlt: "Students working on a project at Malla Reddy School Medchal",
@@ -3656,7 +3656,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Back to School Checklist for Parents: Everything to Do Before Term Starts',
     metaTitle: "Back to School Checklist for Parents India | Malla Reddy School Medchal",
     metaDescription: "A practical, complete checklist for Indian parents to prepare their child for the new school year — from stationery and uniforms to routines, health checks, and mindset preparation.",
-    keywords: ['back to school checklist India parents','school preparation checklist India','new school year preparation India','CBSE school start checklist','school year preparation parents India'],
+    keywords: ['back to school checklist India parents','school preparation checklist India','new school year preparation India','CBSE curriculum school start checklist','school year preparation parents India'],
     publishedDate: '2025-06-19',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
@@ -3708,7 +3708,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2025-06-20',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 4,
-    category: 'CBSE Education',
+    category: 'CBSE Curriculum',
     excerpt: "CBSE report cards show grades, points, and percentiles rather than just raw marks. Here is what each component means and how to interpret your child's results accurately.",
     coverImage: '/images/labs/math-2.jpg',
     coverImageAlt: "CBSE grading system explained for parents — Malla Reddy School Medchal",
@@ -3728,7 +3728,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     faqs: [
-      { question: "Is a CGPA of 8.5 in Class 10 a good result?", answer: "A CGPA of 8.5 in CBSE Class 10 corresponds to an approximate percentage of 80.75% (8.5 x 9.5). This is equivalent to the B2 grade band — a solid result. For stream selection, most CBSE schools accept B2 and above for Science stream." },
+      { question: "Is a CGPA of 8.5 in Class 10 a good result?", answer: "A CGPA of 8.5 in CBSE Class 10 corresponds to an approximate percentage of 80.75% (8.5 x 9.5). This is equivalent to the B2 grade band — a solid result. For stream selection, most CBSE curriculum schools accept B2 and above for Science stream." },
       { question: "Do Class 10 CBSE marks affect college admissions?", answer: "Class 10 marks matter primarily for school-level stream selection (Science, Commerce, Arts) and for some scholarships. Most undergraduate college admissions in India are determined by Class 12 marks and entrance exam scores, not Class 10 results." },
       { question: "What does 'Essential Repeat' mean on a CBSE report card?", answer: "Essential Repeat indicates the student did not achieve the minimum pass marks in one or more subjects and is required to appear for the compartment examination. Students can still pass the year by clearing the compartment exam." },
     ],
@@ -3823,7 +3823,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Why Malla Reddy School Focuses on Holistic Education for Every Child',
     metaTitle: 'Why Malla Reddy School Focuses on Holistic Education for Every Child | Malla Reddy School',
     metaDescription: 'At Malla Reddy School, holistic education means shaping confident, capable, and compassionate human beings — not just good exam scorers. Read why holistic learning is essential for every child.',
-    keywords: ['holistic education Malla Reddy School', 'holistic learning Hyderabad', 'student development Medchal', 'CBSE school holistic development', 'best school holistic learning Hyderabad'],
+    keywords: ['holistic education Malla Reddy School', 'holistic learning Hyderabad', 'student development Medchal', 'CBSE curriculum school holistic development', 'best school holistic learning Hyderabad'],
     publishedDate: '2026-06-14',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 6,
@@ -3897,7 +3897,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'STEM Education at Malla Reddy School: Preparing Students for Tomorrow\'s Careers',
     metaTitle: 'STEM Education at Malla Reddy School: Preparing Students for Tomorrow\'s Careers | Malla Reddy School',
     metaDescription: 'The careers of the future haven\'t been invented yet. At Malla Reddy School, our STEM programs prepare students for a world driven by science, technology, and innovation.',
-    keywords: ['STEM education Malla Reddy School', 'robotics school Hyderabad', 'coding classes for school kids Medchal', 'science labs CBSE school Hyderabad', 'future career preparation school'],
+    keywords: ['STEM education Malla Reddy School', 'robotics school Hyderabad', 'coding classes for school kids Medchal', 'science labs CBSE curriculum school Hyderabad', 'future career preparation school'],
     publishedDate: '2026-06-15',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 6,
@@ -3971,7 +3971,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'How Experiential Learning Helps Students Learn Beyond Textbooks',
     metaTitle: 'How Experiential Learning Helps Students Learn Beyond Textbooks | Malla Reddy School',
     metaDescription: 'Experiential learning turns classroom lessons into direct experience, improving student understanding and memory retention. Read how Malla Reddy School applies this approach.',
-    keywords: ['experiential learning Malla Reddy School', 'practical learning CBSE school', 'hands-on education Hyderabad', 'learning by doing CBSE school', 'school field trips Medchal'],
+    keywords: ['experiential learning Malla Reddy School', 'practical learning CBSE curriculum school', 'hands-on education Hyderabad', 'learning by doing CBSE curriculum school', 'school field trips Medchal'],
     publishedDate: '2026-06-16',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -4016,8 +4016,8 @@ export const BLOG_POSTS: BlogPost[] = [
         content: 'Research consistently shows that students retain information far better when they engage with it actively rather than passively. Beyond retention, experiential learning builds problem-solving skills, curiosity, and independent thinking — qualities that serve students well beyond the CBSE classroom and into higher education and careers.'
       },
       {
-        heading: 'Practical Learning as a CBSE School Priority',
-        content: 'As a CBSE school, we ensure that experiential methods align closely with the prescribed curriculum, so students benefit from practical learning without compromising on syllabus coverage or exam readiness. The two go hand in hand — a student who understands a concept deeply through experience is also better equipped to apply it accurately in an exam.'
+        heading: 'Practical Learning as a CBSE Curriculum School Priority',
+        content: 'As a CBSE curriculum school, we ensure that experiential methods align closely with the prescribed curriculum, so students benefit from practical learning without compromising on syllabus coverage or exam readiness. The two go hand in hand — a student who understands a concept deeply through experience is also better equipped to apply it accurately in an exam.'
       }
     ],
     faqs: [
@@ -4119,7 +4119,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'The Importance of Reading Habits: How Our School Library Inspires Young Minds',
     metaTitle: 'The Importance of Reading Habits: How Our School Library Inspires Young Minds | Malla Reddy School',
     metaDescription: 'Building a love of reading in children is essential for their vocabulary and empathy. Read how Malla Reddy School library and programs inspire young readers.',
-    keywords: ['importance of reading habits children', 'school library benefits students Medchal', 'how to encourage reading habits kids', 'reading books school children Hyderabad', 'CBSE school library resources'],
+    keywords: ['importance of reading habits children', 'school library benefits students Medchal', 'how to encourage reading habits kids', 'reading books school children Hyderabad', 'CBSE curriculum school library resources'],
     publishedDate: '2026-06-18',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
@@ -4274,7 +4274,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'digital classrooms Malla Reddy School',
       'technology in education Hyderabad',
       'best school infrastructure Medchal',
-      'multimedia learning CBSE school',
+      'multimedia learning CBSE curriculum school',
     ],
     publishedDate: '2026-06-20',
     author: 'Malla Reddy School Editorial Team',
@@ -4372,7 +4372,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'safe school environment Medchal',
       'inclusive education Hyderabad',
-      'student safety CBSE school Medchal',
+      'student safety CBSE curriculum school Medchal',
       'student well-being school Hyderabad',
       'Malla Reddy School infrastructure',
       'anti-bullying policies school',
@@ -4475,7 +4475,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'parent involvement in education Hyderabad',
       'parent teacher meetings Malla Reddy School',
       'academic success student motivation',
-      'CBSE school parents communication',
+      'CBSE curriculum school parents communication',
       'school community Hyderabad',
     ],
     publishedDate: '2026-06-22',
@@ -4574,9 +4574,9 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'choosing the right school Hyderabad',
       'how to choose best school Medchal',
-      'CBSE school admission Hyderabad',
+      'CBSE curriculum school admission Hyderabad',
       'Malla Reddy School difference',
-      'best CBSE school Medchal Hyderabad',
+      'best CBSE curriculum school Medchal Hyderabad',
       'school admission criteria parents',
     ],
     publishedDate: '2026-06-13',
@@ -4598,7 +4598,7 @@ export const BLOG_POSTS: BlogPost[] = [
           {
             heading: 'Academic Strength Within a Recognized Curriculum',
             content:
-              'A structured CBSE school curriculum, delivered by qualified and experienced teachers, ensures your child receives a nationally recognized, university-aligned education from the early years onward.',
+              'A structured CBSE curriculum, delivered by qualified and experienced teachers, ensures your child receives a nationally recognized, university-aligned education from the early years onward.',
           },
           {
             heading: 'A Safe and Supportive Environment',
@@ -4683,7 +4683,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         heading: "Why Value-Based Education Cannot Be an Afterthought",
-        content: "Academic knowledge without character can take a child only so far. The ability to be honest under pressure, kind without being asked, and responsible without supervision are qualities that shape long-term success far more than a single exam score ever could. A strong CBSE school doesn't just teach the syllabus — it shapes the person delivering the answers."
+        content: "Academic knowledge without character can take a child only so far. The ability to be honest under pressure, kind without being asked, and responsible without supervision are qualities that shape long-term success far more than a single exam score ever could. A strong CBSE curriculum school doesn't just teach the syllabus — it shapes the person delivering the answers."
       },
       {
         heading: "How Malla Reddy School Builds Character Every Day",
@@ -4826,7 +4826,7 @@ export const BLOG_POSTS: BlogPost[] = [
         content: "The CBSE curriculum, prescribed by the Central Board of Secondary Education, is recognized nationwide and is closely aligned with the requirements of national entrance exams like JEE and NEET. Its structured, concept-driven approach to subjects like mathematics and science gives students a strong foundation for competitive exams later in their academic journey."
       },
       {
-        heading: "Key Advantages of a CBSE Education",
+        heading: "Key Advantages of the CBSE Curriculum",
         content: "",
         subsections: [
           {
@@ -4989,7 +4989,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Pre-Primary Education at Malla Reddy School",
-        content: "Malla Reddy School's pre-primary program for Nursery, LKG, and UKG focuses on language development, early numeracy, creative arts, music, and physical activity — all within a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE campus running through senior classes, children enjoy a smooth, familiar transition through every stage of their schooling."
+        content: "Malla Reddy School's pre-primary program for Nursery, LKG, and UKG focuses on language development, early numeracy, creative arts, music, and physical activity — all within a safe, welcoming campus environment. Because the pre-primary section is part of the same CBSE curriculum campus running through senior classes, children enjoy a smooth, familiar transition through every stage of their schooling."
       },
     ],
     faqs: [],
@@ -6013,24 +6013,24 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'nep-2020-explained-parents',
     title: 'NEP 2020: What the New Education Policy Means for You',
     metaTitle: 'NEP 2020 Explained for Parents | Malla Reddy School',
-    metaDescription: 'Understand how India\'s National Education Policy 2020 reshapes CBSE school curriculum and child development.',
+    metaDescription: 'Understand how India\'s National Education Policy 2020 reshapes CBSE curriculum and child development.',
     keywords: [
       'NEP 2020 India parents',
       'CBSE curriculum explained parents',
-      'CBSE school curriculum Hyderabad'
+      'CBSE curriculum Hyderabad'
     ],
     publishedDate: '2026-07-12',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 6,
     category: 'School Philosophy',
-    excerpt: 'Understand how India\'s National Education Policy 2020 reshapes CBSE school curriculum and child development.',
+    excerpt: 'Understand how India\'s National Education Policy 2020 reshapes CBSE curriculum and child development.',
     coverImage: '/images/nep_2020_education.png',
     coverImageAlt: 'Primary school students in Malla Reddy School uniform working collaboratively on a project with science models',
     intro: "The National Education Policy (NEP 2020) is the most significant educational reform in India in over three decades. For parents, understanding how this policy impacts their child's day-to-day schooling can feel overwhelming. At Malla Reddy School, we have aligned our programs to embrace this progressive vision, focusing on active learning and critical thinking.",
     sections: [
       {
         heading: "Understanding the Core Vision of NEP 2020",
-        content: "The core goal of NEP 2020 is to transition India's education system away from rote learning and toward holistic, conceptual understanding. The policy introduces a new pedagogical structure and emphasizes digital literacy, coding, and flexible learning pathways. For parents looking at the CBSE school curriculum Hyderabad has to offer, this represents a major step forward."
+        content: "The core goal of NEP 2020 is to transition India's education system away from rote learning and toward holistic, conceptual understanding. The policy introduces a new pedagogical structure and emphasizes digital literacy, coding, and flexible learning pathways. For parents looking at the CBSE curriculum Hyderabad has to offer, this represents a major step forward."
       },
       {
         heading: "Key Changes Parents Need to Know",
@@ -6059,7 +6059,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: "How NEP 2020 Changes the CBSE School Curriculum",
+        heading: "How NEP 2020 Changes the CBSE Curriculum",
         content: "Under the new policy, the CBSE curriculum explained parents guide shows a shift toward experiential learning. Science, mathematics, and arts are no longer taught in silos. Instead, students participate in project-based activities that require them to apply what they learn in class to real-world scenarios."
       },
       {
@@ -6073,7 +6073,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "It is India's National Education Policy designed to make schooling more flexible, practical, and focused on thinking rather than memorisation."
       },
       {
-        question: "How does NEP 2020 affect CBSE school curriculum Hyderabad guidelines?",
+        question: "How does NEP 2020 affect CBSE curriculum Hyderabad guidelines?",
         answer: "It updates guidelines to focus on active, experiential learning, project work, and assessments that measure application rather than rote memory."
       },
       {
@@ -6154,7 +6154,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       {
-        question: "What is the co-curricular activities importance in a CBSE school?",
+        question: "What is the co-curricular activities importance in a CBSE curriculum school?",
         answer: "They ensure holistic development by helping students build physical fitness, creativity, communication skills, and social intelligence alongside academics."
       },
       {
@@ -6211,7 +6211,7 @@ export const BLOG_POSTS: BlogPost[] = [
             content: "Unlike congested central areas, Medchal offers space for parks, green cover, and safe walking zones."
           },
           {
-            heading: "Top CBSE Schools",
+            heading: "Top CBSE Curriculum Schools",
             content: "The availability of quality educational institutions makes it easy to find high-standard schooling nearby."
           },
           {
@@ -6436,26 +6436,26 @@ export const BLOG_POSTS: BlogPost[] = [
 
   {
     slug: 'cbse-schools-outer-ring-road-hyderabad',
-    title: 'Why Families Choose CBSE Schools Near Outer Ring Road',
-    metaTitle: 'CBSE Schools Near Outer Ring Road Hyderabad | Malla Reddy School',
-    metaDescription: 'Connectivity is key for families. Discover the benefits of choosing a CBSE school near Hyderabad\'s Outer Ring Road.',
+    title: 'Why Families Choose CBSE Curriculum Schools Near Outer Ring Road',
+    metaTitle: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad | Malla Reddy School',
+    metaDescription: 'Connectivity is key for families. Discover the benefits of choosing a CBSE curriculum school near Hyderabad\'s Outer Ring Road.',
     keywords: [
-      'CBSE schools Outer Ring Road Hyderabad',
-      'best CBSE school Medchal Hyderabad',
+      'CBSE curriculum schools Outer Ring Road Hyderabad',
+      'best CBSE curriculum school Medchal Hyderabad',
       'school transport Hyderabad'
     ],
     publishedDate: '2026-07-15',
     author: 'Malla Reddy School Editorial Team',
     readTimeMinutes: 5,
     category: 'School Admissions',
-    excerpt: 'Connectivity is key for families. Discover the benefits of choosing a CBSE school near Hyderabad\'s Outer Ring Road.',
+    excerpt: 'Connectivity is key for families. Discover the benefits of choosing a CBSE curriculum school near Hyderabad\'s Outer Ring Road.',
     coverImage: '/images/cbse_outer_ring_road.png',
     coverImageAlt: 'A Malla Reddy School bus traveling on a clean road near the Outer Ring Road in Hyderabad, with happy students inside',
-    intro: "As Hyderabad expands, traffic congestion has become a major challenge for families. Commute time is now a critical factor when choosing a school. This is why CBSE schools Outer Ring Road Hyderabad are gaining popularity. They offer world-class facilities and connectivity, making quality education easily accessible without long travel times.",
+    intro: "As Hyderabad expands, traffic congestion has become a major challenge for families. Commute time is now a critical factor when choosing a school. This is why CBSE curriculum schools Outer Ring Road Hyderabad are gaining popularity. They offer world-class facilities and connectivity, making quality education easily accessible without long travel times.",
     sections: [
       {
         heading: "The Connectivity Advantage of the Outer Ring Road",
-        content: "Hyderabad's Outer Ring Road (ORR) connects major residential suburbs, allowing families to avoid city traffic. Choosing a school near this corridor ensures that students enjoy a shorter, smoother commute. For parents in northern suburbs, finding the best CBSE school Medchal Hyderabad offers near the ORR means their children arrive at school fresh and ready to learn."
+        content: "Hyderabad's Outer Ring Road (ORR) connects major residential suburbs, allowing families to avoid city traffic. Choosing a school near this corridor ensures that students enjoy a shorter, smoother commute. For parents in northern suburbs, finding the best CBSE curriculum school Medchal Hyderabad offers near the ORR means their children arrive at school fresh and ready to learn."
       },
       {
         heading: "Why Location and Transport Matter for Student Well-being",
@@ -6494,11 +6494,11 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       {
-        question: "Why are CBSE schools Outer Ring Road Hyderabad popular?",
+        question: "Why are CBSE curriculum schools Outer Ring Road Hyderabad popular?",
         answer: "They combine easy connectivity via the ORR to avoid traffic with spacious campuses that are difficult to find in central city areas."
       },
       {
-        question: "What makes Malla Reddy the best CBSE school Medchal Hyderabad has near the ORR?",
+        question: "What makes Malla Reddy the best CBSE curriculum school Medchal Hyderabad has near the ORR?",
         answer: "Our school offers a balanced curriculum with STEAM and IIT Foundation programs, a secure campus, and excellent transport links."
       },
       {
@@ -6510,7 +6510,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "No. We are a day school, but we provide extensive and safe bus transportation across Medchal and surrounding residential zones."
       }
     ],
-    conclusion: "Choosing a school with the right balance of academic quality and location is key to a happy school experience. CBSE schools near the Outer Ring Road provide the perfect solution, keeping commutes short and campuses spacious. At Malla Reddy School, we combine this connectivity with a commitment to academic excellence. Visit us to learn more about our programs and transport routes.",
+    conclusion: "Choosing a school with the right balance of academic quality and location is key to a happy school experience. CBSE curriculum schools near the Outer Ring Road provide the perfect solution, keeping commutes short and campuses spacious. At Malla Reddy School, we combine this connectivity with a commitment to academic excellence. Visit us to learn more about our programs and transport routes.",
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
@@ -6765,7 +6765,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "We introduce basic chess concepts to students starting from Class 1, as soon as they can understand the movement of the pieces."
       }
     ],
-    conclusion: "Chess is more than a board game; it is a tool for building smarter, more patient, and strategic thinkers. By integrating chess into our campus life, we help our students build mental stamina that supports their growth. Discover how Malla Reddy School CBSE education programs raise future leaders.",
+    conclusion: "Chess is more than a board game; it is a tool for building smarter, more patient, and strategic thinkers. By integrating chess into our campus life, we help our students build mental stamina that supports their growth. Discover how Malla Reddy School CBSE curriculum programs raise future leaders.",
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
@@ -6782,8 +6782,8 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Unsure between CBSE and ICSE? Learn the differences in syllabus, exams, and future scope in our detailed comparison guide.',
     keywords: [
       'CBSE vs ICSE India',
-      'CBSE school Medchal',
-      'how to choose CBSE school Hyderabad'
+      'CBSE curriculum school Medchal',
+      'how to choose CBSE curriculum school Hyderabad'
     ],
     publishedDate: '2026-07-17',
     author: 'Malla Reddy School Editorial Team',
@@ -6796,7 +6796,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         heading: "The Core Differences Between CBSE and ICSE",
-        content: "The primary difference lies in the focus and structure of the syllabus. CBSE vs ICSE India comparisons show that CBSE is highly structured, emphasizing Science and Mathematics, while ICSE offers a broader, detail-heavy syllabus with a strong emphasis on English literature and humanities. Choosing a CBSE school Medchal offers helps prepare students for national entrance exams."
+        content: "The primary difference lies in the focus and structure of the syllabus. CBSE vs ICSE India comparisons show that CBSE is highly structured, emphasizing Science and Mathematics, while ICSE offers a broader, detail-heavy syllabus with a strong emphasis on English literature and humanities. Choosing a CBSE curriculum school Medchal offers helps prepare students for national entrance exams."
       },
       {
         heading: "Detailed Comparison for Parents",
@@ -6826,7 +6826,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "How to Choose the Best Path for Your Child",
-        content: "When deciding, look at your child's learning style and future goals. If they are analytical and aim for competitive exams in India, a CBSE program is ideal. If they love reading, languages, and show a creative, self-directed learning style, the ICSE curriculum might suit them. Knowing how to choose CBSE school Hyderabad options can simplify this decision."
+        content: "When deciding, look at your child's learning style and future goals. If they are analytical and aim for competitive exams in India, a CBSE program is ideal. If they love reading, languages, and show a creative, self-directed learning style, the ICSE curriculum might suit them. Knowing how to choose CBSE curriculum school Hyderabad options can simplify this decision."
       },
       {
         heading: "Why Malla Reddy School Combines the Best of CBSE",
@@ -6843,11 +6843,11 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "Yes. The CBSE syllabus is the basis for national exams like JEE and NEET, giving CBSE students a natural advantage in preparation."
       },
       {
-        question: "How do I choose the best CBSE school Medchal has to offer?",
+        question: "How do I choose the best CBSE curriculum school Medchal has to offer?",
         answer: "Look for qualified faculty, modern lab facilities, a balanced co-curricular program, and a curriculum integrated with competitive exam foundations."
       },
       {
-        question: "What factors guide how to choose CBSE school Hyderabad options?",
+        question: "What factors guide how to choose CBSE curriculum school Hyderabad options?",
         answer: "Key factors include school reputation, distance and transportation, board affiliation, student safety, and holistic growth opportunities."
       }
     ],
@@ -6868,7 +6868,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'school visit questions parents',
       'school admissions Medchal 2026',
-      'best CBSE school Medchal Hyderabad'
+      'best CBSE curriculum school Medchal Hyderabad'
     ],
     publishedDate: '2026-07-17',
     author: 'Malla Reddy School Editorial Team',
@@ -6911,7 +6911,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Observational Checklist during the Tour",
-        content: "While asking questions is important, observing is equally vital. Check if the classrooms are well-ventilated, if the science and computer labs look actively used rather than just displayed, and if the students you pass in the corridor seem happy, engaged, and respectful. These small indicators speak volumes about the best CBSE school Medchal Hyderabad has to offer."
+        content: "While asking questions is important, observing is equally vital. Check if the classrooms are well-ventilated, if the science and computer labs look actively used rather than just displayed, and if the students you pass in the corridor seem happy, engaged, and respectful. These small indicators speak volumes about the best CBSE curriculum school Medchal Hyderabad has to offer."
       },
       {
         heading: "Experiencing the Malla Reddy School Difference",
@@ -7038,7 +7038,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'coding robotics school Hyderabad',
       'what is STEAM education',
-      'STEAM learning CBSE school'
+      'STEAM learning CBSE curriculum school'
     ],
     publishedDate: '2026-07-18',
     author: 'Malla Reddy School Editorial Team',
@@ -7080,8 +7080,8 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: "Integrating Tech into STEAM Learning CBSE School Programs",
-        content: "Coding and robotics are core pillars of what is STEAM education. By combining Science, Technology, Engineering, Arts, and Mathematics, STEAM learning CBSE school curricula help students see how disciplines connect. A math class teaches coordinates, a science class teaches sensors, and the robotics lab brings them together in a unified project."
+        heading: "Integrating Tech into STEAM Learning in CBSE Curriculum Programs",
+        content: "Coding and robotics are core pillars of what is STEAM education. By combining Science, Technology, Engineering, Arts, and Mathematics, STEAM learning CBSE curricula help students see how disciplines connect. A math class teaches coordinates, a science class teaches sensors, and the robotics lab brings them together in a unified project."
       },
       {
         heading: "Hands-on Technology at Malla Reddy School",
@@ -7119,7 +7119,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'science-labs-schools-hands-on-learning',
     title: 'Science Labs in Schools: Why Hands-On Learning Works',
     metaTitle: 'Science Labs and Hands-on Learning | Malla Reddy School',
-    metaDescription: 'Textbooks teach facts, but science labs teach inquiry. Discover the benefits of hands-on experimentation in CBSE schools.',
+    metaDescription: 'Textbooks teach facts, but science labs teach inquiry. Discover the benefits of hands-on experimentation in CBSE curriculum schools.',
     keywords: [
       'science lab school Hyderabad',
       'STEAM education benefits children',
@@ -7376,7 +7376,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Campus security, transport, and hygiene. Discover the essential school safety standards parents should verify during admission.',
     keywords: [
       'school safety India parents',
-      'best CBSE school Medchal Hyderabad',
+      'best CBSE curriculum school Medchal Hyderabad',
       'school transport Hyderabad'
     ],
     publishedDate: '2026-07-21',
@@ -7420,7 +7420,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         heading: "Evaluating Student Well-being and Anti-Bullying Policies",
-        content: "Safety is emotional as well as physical. Ask about the school's anti-bullying guidelines, counseling support, and how teachers manage student discipline. The best CBSE school Medchal Hyderabad offers should have clear codes of conduct and a supportive, inclusive atmosphere that encourages respect and empathy."
+        content: "Safety is emotional as well as physical. Ask about the school's anti-bullying guidelines, counseling support, and how teachers manage student discipline. The best CBSE curriculum school Medchal Hyderabad offers should have clear codes of conduct and a supportive, inclusive atmosphere that encourages respect and empathy."
       },
       {
         heading: "Safety Protocols at Malla Reddy School",
@@ -7441,7 +7441,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "We have a dedicated medical room with first aid supplies. In case of emergency, we notify parents immediately and coordinate with nearby healthcare centers."
       },
       {
-        question: "What makes Malla Reddy the best CBSE school Medchal Hyderabad has for safety?",
+        question: "What makes Malla Reddy the best CBSE curriculum school Medchal Hyderabad has for safety?",
         answer: "Our combination of security monitoring, strict visitor access, clean hygiene standards, and a supportive, inclusive campus culture."
       }
     ],
@@ -7548,7 +7548,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'Extracurricular activities CBSE Medchal',
       'co-curricular programs school Hyderabad',
-      'holistic development CBSE school',
+      'holistic development CBSE curriculum school',
       'Malla Reddy School extracurriculars',
       'benefits of school activities'
     ],
@@ -7784,7 +7784,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Smart classrooms are revolutionizing how students learn. Read about the integration of modern technology and digital tools at Malla Reddy School Medchal.',
     keywords: [
       'Technology in classroom Hyderabad',
-      'smart classrooms CBSE school',
+      'smart classrooms CBSE curriculum school',
       'digital learning tools education',
       'Malla Reddy School infrastructure'
     ],
@@ -7918,7 +7918,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Physical education benefits schools',
       'importance of sports for students',
       'Malla Reddy School sports facilities',
-      'health and fitness in CBSE schools'
+      'health and fitness in CBSE curriculum schools'
     ],
     publishedDate: '2026-07-30',
     author: 'Malla Reddy School Editorial Team',
@@ -7999,11 +7999,11 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'why-holistic-education-future',
-    title: 'Why Holistic Education is the Future of CBSE Schools',
-    metaTitle: 'Holistic Education at Malla Reddy School Medchal | Best CBSE School',
+    title: 'Why Holistic Education is the Future of CBSE Curriculum Schools',
+    metaTitle: 'Holistic Education at Malla Reddy School Medchal | Best CBSE Curriculum School',
     metaDescription: 'Holistic education focuses on the intellectual, emotional, and social development of a child. Learn why it is the core philosophy at Malla Reddy School Medchal.',
     keywords: [
-      'Best CBSE school Medchal Hyderabad',
+      'Best CBSE curriculum school Medchal Hyderabad',
       'holistic education benefits',
       'NEP 2020 aligned schools Medchal',
       'Malla Reddy School educational philosophy'
@@ -8036,14 +8036,14 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: 'Look at their timetable and infrastructure. A truly holistic school dedicates substantial time and quality facilities to sports, arts, labs, and student well-being, alongside academics.'
       }
     ],
-    conclusion: 'Holistic education is the key to raising happy, successful, and compassionate global citizens. As the premier CBSE school in Medchal, Malla Reddy School is committed to delivering this comprehensive educational experience. Admissions for the upcoming session are now open.',
+    conclusion: 'Holistic education is the key to raising happy, successful, and compassionate global citizens. As the premier CBSE curriculum school in Medchal, Malla Reddy School is committed to delivering this comprehensive educational experience. Admissions for the upcoming session are now open.',
     ctaText: 'Apply Now for Admissions',
     ctaHref: '/admission',
     relatedSlugs: ['importance-of-extracurricular-activities-cbse-curriculum']
   },  {
     slug: 'vedic-mathematics-mental-math-cbse-education',
-    title: 'The Role of Vedic Mathematics and Mental Math in CBSE School Education',
-    metaTitle: 'Vedic Mathematics & Mental Math in CBSE Schools | Malla Reddy School',
+    title: 'The Role of Vedic Mathematics and Mental Math in CBSE Curriculum Education',
+    metaTitle: 'Vedic Mathematics & Mental Math in CBSE Curriculum Schools | Malla Reddy School',
     metaDescription: 'Discover how integrating Vedic mathematics and mental math techniques enhances speed, accuracy, and confidence in Malla Reddy School students.',
     keywords: [
       'Vedic mathematics school Hyderabad',
@@ -8175,7 +8175,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'modern-computer-ai-labs-future-skills',
     title: 'How Modern Computer & AI Labs Prepare Students for the Tech-Driven World',
-    metaTitle: 'Computer & AI Labs in CBSE Education | Malla Reddy School Medchal',
+    metaTitle: 'Computer & AI Labs in the CBSE Curriculum | Malla Reddy School Medchal',
     metaDescription: 'Digital literacy, coding, and AI exposure in middle school. Read how Malla Reddy School Medchal prepares students for a technology-driven future.',
     keywords: [
       'AI labs school Medchal',
@@ -8269,7 +8269,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Safe school environment Medchal',
       'inclusive education Hyderabad',
       'student safety Malla Reddy School',
-      'best CBSE school Medchal'
+      'best CBSE curriculum school Medchal'
     ],
     publishedDate: '2026-08-08',
     author: 'Malla Reddy School Editorial Team',
@@ -8386,7 +8386,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Explore how ergonomic classroom design, acoustic engineering, and smart technology enhance focus, collaboration, and student wellbeing at Malla Reddy School Medchal.',
     keywords: [
       'modern classroom infrastructure Medchal',
-      'smart classrooms CBSE school',
+      'smart classrooms CBSE curriculum school',
       'learning environment design',
       'Malla Reddy School infrastructure',
       'school architecture Hyderabad'
@@ -8683,7 +8683,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'performing arts school Medchal',
       'public speaking kids Hyderabad',
-      'drama and speech CBSE school',
+      'drama and speech CBSE curriculum school',
       'building stage confidence',
       'Malla Reddy School co-curricular'
     ],
@@ -8809,7 +8809,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: 'National festivals like Independence Day and Republic Day are marked with flag hoisting, patriotic cultural performances, student speeches, and community service drives.'
       },
       {
-        question: 'Why is civic responsibility important in a CBSE school curriculum?',
+        question: 'Why is civic responsibility important in a CBSE curriculum?',
         answer: 'Civic responsibility ensures academic knowledge is applied ethically to build a compassionate, sustainable, and harmonious society.'
       }
     ],
@@ -8904,7 +8904,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: 'Discover how structured physical education, athletics tournaments, and team sports instill resilience, discipline, and sportsmanship in school students.',
     keywords: [
       'sports education Medchal',
-      'athletics in CBSE schools',
+      'athletics in CBSE curriculum schools',
       'building grit sportsmanship',
       'physical education Malla Reddy School',
       'school sports tournaments Hyderabad'
@@ -9053,7 +9053,7 @@ export const BLOG_POSTS: BlogPost[] = [
     keywords: [
       'values based education Medchal',
       'ethical leadership students',
-      'character development CBSE school',
+      'character development CBSE curriculum school',
       'Malla Reddy School philosophy',
       'moral education Hyderabad'
     ],
@@ -9101,7 +9101,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     faqs: [
       {
-        question: 'How are moral values taught in a CBSE school environment?',
+        question: 'How are moral values taught in a CBSE curriculum school environment?',
         answer: 'Values are integrated through literature, social studies, school assemblies, community service projects, and the daily conduct modeled across the campus.'
       },
       {

@@ -12,7 +12,7 @@ export const metadata = constructMetadata({
   keywords: [
     'CBSE curriculum Medchal',
     'STEAM education Hyderabad',
-    'CBSE school curriculum Hyderabad',
+    'CBSE curriculum Hyderabad',
     'holistic education Medchal',
     'science technology engineering arts mathematics school',
     'CBSE syllabus primary school Hyderabad',
