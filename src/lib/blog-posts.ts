@@ -52,7 +52,7 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: 'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+    slug: 'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     title: 'CBSE Curriculum Schools in Medchal, Hyderabad — A Complete Guide for Parents',
     metaTitle: 'CBSE Curriculum Schools in Medchal Hyderabad — Complete Parent Guide | Malla Reddy School',
     metaDescription:
@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'School Admissions',
     excerpt:
       'Choosing the right CBSE curriculum school in Medchal is one of the most important decisions a parent can make. This guide helps you evaluate options, ask the right questions, and find the best fit for your child.',
-    coverImage: '/images/cbse-schools-in-medchal-hyderabad-guide-for-parents.jpg',
+    coverImage: '/images/cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents.jpg',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE curriculum school in Hyderabad',
     intro:
       "Medchal has grown rapidly as a residential hub on the northern edge of Hyderabad. With that growth has come a surge in school options — and for parents, more choices can mean more confusion. If you are searching for the right CBSE curriculum school in Medchal for your child, this guide will help you cut through the noise, ask the right questions, and make a confident decision.",
@@ -280,7 +280,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Apply Now — Admissions Open for 2026-27',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'pre-primary-school-medchal-how-to-choose',
     ],
   },
@@ -380,7 +380,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -475,7 +475,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'how-steam-education-prepares-students-future-careers',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -578,7 +578,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -676,7 +676,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Visit Malla Reddy School — Admissions Open 2026-27',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'how-steam-education-prepares-students-future-careers',
     ],
   },
@@ -778,7 +778,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'pre-primary-school-medchal-how-to-choose',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -866,13 +866,13 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Visit Our Campus — Admissions Open at Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
     ],
   },
 
   {
-    slug: 'cbse-schools-near-outer-ring-road-hyderabad',
+    slug: 'cbse-curriculum-schools-near-outer-ring-road-hyderabad',
     title: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad — What Parents Should Know',
     metaTitle: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad | Malla Reddy School Medchal',
     metaDescription:
@@ -951,7 +951,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'why-families-choose-schools-near-medchal',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -1054,7 +1054,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Schedule a Campus Visit at Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'school-safety-standards-every-parent-should-check',
     ],
   },
@@ -1166,7 +1166,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'what-to-look-for-in-a-school-campus-parents-checklist',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -1255,7 +1255,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/co-curricular',
     relatedSlugs: [
       'how-steam-education-prepares-students-future-careers',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
     ],
   },
 
@@ -1468,7 +1468,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: 'The right school is not necessarily the most famous or the most expensive — it is the one where your child will feel safe, curious, and supported. Take time to visit, observe, and ask questions. The extra effort before enrollment saves years of regret after.',
     ctaText: 'Visit Malla Reddy School Medchal — Book a Campus Tour',
     ctaHref: '/admission',
-    relatedSlugs: ['cbse-schools-in-medchal-hyderabad-guide-for-parents', 'documents-required-school-admission-hyderabad'],
+    relatedSlugs: ['cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents', 'documents-required-school-admission-hyderabad'],
   },
 
   {
@@ -1526,7 +1526,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "The quality of a school's answers to these questions tells you as much as the campus itself. Confident, specific, honest answers indicate a well-run institution. Vague, deflecting, or oversold answers are worth noting.",
     ctaText: 'Schedule Your Visit — Malla Reddy School Medchal',
     ctaHref: '/admission',
-    relatedSlugs: ['how-to-choose-right-school-hyderabad', 'cbse-schools-in-medchal-hyderabad-guide-for-parents'],
+    relatedSlugs: ['how-to-choose-right-school-hyderabad', 'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'],
   },
 
 
@@ -2741,7 +2741,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
   {
-    slug: 'what-is-ncert-why-cbse-schools-use-it',
+    slug: 'what-is-ncert-why-cbse-curriculum-schools-use-it',
     title: 'What Is NCERT and Why Do CBSE Curriculum Schools Use NCERT Textbooks?',
     metaTitle: 'What Is NCERT and Why Do CBSE Curriculum Schools Use It? | Malla Reddy School Medchal',
     metaDescription: 'NCERT textbooks are the foundation of the CBSE curriculum in India. Here is what NCERT is, why its books are prescribed, and how to use them most effectively.',
@@ -3050,7 +3050,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
   {
-    slug: 'what-is-formative-assessment-cbse-schools',
+    slug: 'what-is-formative-assessment-cbse-curriculum-schools',
     title: 'What Is Formative Assessment in CBSE Curriculum Schools and Why It Matters',
     metaTitle: "Formative Assessment in CBSE Curriculum Schools Explained | Malla Reddy School Medchal",
     metaDescription: "CBSE uses formative assessments alongside board exams. Learn what they are, how they work, and why they are better for your child's learning than exams alone.",
@@ -3093,7 +3093,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "A school that takes formative assessment seriously is investing in your child's learning, not just their exam performance. When you visit a school, ask about how they assess — not just what they test at the end of term.",
     ctaText: "Learn About Malla Reddy School's Academic Approach",
     ctaHref: '/curriculum',
-    relatedSlugs: ['rote-learning-vs-conceptual-understanding-india', 'what-is-ncert-why-cbse-schools-use-it'],
+    relatedSlugs: ['rote-learning-vs-conceptual-understanding-india', 'what-is-ncert-why-cbse-curriculum-schools-use-it'],
   },
 
   {
@@ -3188,7 +3188,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Understanding the structure of early schooling helps parents make confident, well-timed decisions. Start pre-school at the right age, prioritise play-based development in the early years, and focus on social-emotional readiness — not early academic achievement — when evaluating Class 1 readiness.",
     ctaText: "Enquire About Admissions at Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'cbse-schools-in-medchal-hyderabad-guide-for-parents'],
+    relatedSlugs: ['what-to-ask-during-school-admission-visit', 'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'],
   },
 
   {
@@ -3329,7 +3329,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Medchal-Malkajgiri combines residential affordability, good connectivity, and improving educational infrastructure — making it an increasingly attractive choice for families seeking quality schooling outside the congestion of central Hyderabad.",
     ctaText: "Enquire About Admission at Malla Reddy School Medchal",
     ctaHref: '/admission',
-    relatedSlugs: ['cbse-schools-in-medchal-hyderabad-guide-for-parents', 'cbse-board-exam-preparation-hyderabad'],
+    relatedSlugs: ['cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents', 'cbse-board-exam-preparation-hyderabad'],
   },
 
   {
@@ -3426,7 +3426,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "There is no universally superior board — only the one that better fits your child's learning style, your family's circumstances, and your child's long-term goals. For families targeting competitive entrance exams or planning potential relocation, CBSE is typically the stronger choice.",
     ctaText: "Learn About Malla Reddy School's CBSE Curriculum",
     ctaHref: '/curriculum',
-    relatedSlugs: ['what-is-ncert-why-cbse-schools-use-it', 'what-is-formative-assessment-cbse-schools'],
+    relatedSlugs: ['what-is-ncert-why-cbse-curriculum-schools-use-it', 'what-is-formative-assessment-cbse-curriculum-schools'],
   },
 
   {
@@ -3567,7 +3567,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
   {
-    slug: 'what-is-project-based-learning-cbse-schools',
+    slug: 'what-is-project-based-learning-cbse-curriculum-schools',
     title: 'What Is Project-Based Learning and Why CBSE Curriculum Schools Are Adopting It',
     metaTitle: "Project-Based Learning in CBSE Curriculum Schools | Malla Reddy School Medchal",
     metaDescription: "Project-based learning (PBL) develops problem-solving, creativity, and collaboration alongside academic content. Here is what it is, how it works, and why it produces better learners.",
@@ -3648,7 +3648,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Critical thinking is a skill that can be deliberately developed — through the questions parents ask, the discussions families have, and the teaching approaches schools choose. It is the capability that makes all other knowledge more valuable.",
     ctaText: "Explore STEAM and Critical Thinking at Malla Reddy School Medchal",
     ctaHref: '/curriculum',
-    relatedSlugs: ['rote-learning-vs-conceptual-understanding-india', 'what-is-project-based-learning-cbse-schools'],
+    relatedSlugs: ['rote-learning-vs-conceptual-understanding-india', 'what-is-project-based-learning-cbse-curriculum-schools'],
   },
 
   {
@@ -3735,7 +3735,7 @@ export const BLOG_POSTS: BlogPost[] = [
     conclusion: "Understanding CBSE's grading system removes the anxiety of misinterpretation and helps parents have accurate, specific conversations with teachers about their child's progress. The system is consistent once its structure is clear.",
     ctaText: "Learn About Academic Standards at Malla Reddy School Medchal",
     ctaHref: '/curriculum',
-    relatedSlugs: ['what-is-formative-assessment-cbse-schools', 'how-to-prepare-child-for-class-10-board-exams'],
+    relatedSlugs: ['what-is-formative-assessment-cbse-curriculum-schools', 'how-to-prepare-child-for-class-10-board-exams'],
   },
 
   {
@@ -4358,7 +4358,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'how-steam-education-prepares-students-future-careers',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'iit-foundation-early-preparation-matters',
     ],
   },
@@ -4458,7 +4458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Enquire About Admissions — Malla Reddy School',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'pre-primary-school-medchal-how-to-choose',
       'how-smart-classrooms-make-learning-more-interactive-and-effective',
     ],
@@ -4560,7 +4560,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: '/admission',
     relatedSlugs: [
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'pre-primary-school-medchal-how-to-choose',
     ],
   },
@@ -4655,7 +4655,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: 'Enquire About Admissions 2026-27 — Malla Reddy School',
     ctaHref: '/admission',
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
       'documents-required-school-admission-hyderabad',
     ],
@@ -6005,7 +6005,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents'
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
 
@@ -6089,7 +6089,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'how-steam-education-prepares-students-future-careers'
     ]
   },
@@ -6174,7 +6174,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'benefits-of-small-class-sizes-for-student-growth'
     ]
   },
@@ -6259,7 +6259,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know'
     ]
   },
@@ -6435,7 +6435,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 
   {
-    slug: 'cbse-schools-outer-ring-road-hyderabad',
+    slug: 'cbse-curriculum-schools-outer-ring-road-hyderabad',
     title: 'Why Families Choose CBSE Curriculum Schools Near Outer Ring Road',
     metaTitle: 'CBSE Curriculum Schools Near Outer Ring Road Hyderabad | Malla Reddy School',
     metaDescription: 'Connectivity is key for families. Discover the benefits of choosing a CBSE curriculum school near Hyderabad\'s Outer Ring Road.',
@@ -6515,7 +6515,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'living-in-medchal-schools-family',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents'
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
 
@@ -6855,7 +6855,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Enquire About Admissions — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'understanding-cbse-curriculum-parents-guide'
     ]
   },
@@ -6940,7 +6940,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Schedule a Campus Visit — Malla Reddy School",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
       'school-admissions-2026-27-hyderabad-what-parents-need-to-know'
     ]
   },
@@ -7111,7 +7111,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHref: "/admission",
     relatedSlugs: [
       'how-steam-education-prepares-students-future-careers',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents'
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
 
@@ -7449,8 +7449,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaText: "Enquire About Admissions — Student Safety First",
     ctaHref: "/admission",
     relatedSlugs: [
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents',
-      'cbse-schools-outer-ring-road-hyderabad'
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
+      'cbse-curriculum-schools-outer-ring-road-hyderabad'
     ]
   },
 
@@ -8449,7 +8449,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedSlugs: [
       'role-technology-smart-classrooms',
       'safe-inclusive-positive-learning-environment-malla-reddy-school',
-      'cbse-schools-in-medchal-hyderabad-guide-for-parents'
+      'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents'
     ]
   },
 

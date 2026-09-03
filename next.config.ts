@@ -4,8 +4,40 @@ import { fileURLToPath } from 'node:url';
 
 const appDir = dirname(fileURLToPath(import.meta.url));
 
+/**
+ * Blog slugs renamed when "CBSE School(s)" was replaced with "CBSE Curriculum"
+ * site-wide. Old URLs are already indexed by Google and linked externally, so
+ * every one of them 301s to its new address instead of 404ing.
+ *
+ * Keep these entries permanently — removing one resurrects a dead URL.
+ */
+const RENAMED_BLOG_SLUGS: Record<string, string> = {
+  'cbse-schools-in-medchal-hyderabad-guide-for-parents':
+    'cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents',
+  'cbse-schools-near-outer-ring-road-hyderabad':
+    'cbse-curriculum-schools-near-outer-ring-road-hyderabad',
+  'cbse-schools-outer-ring-road-hyderabad':
+    'cbse-curriculum-schools-outer-ring-road-hyderabad',
+  'what-is-ncert-why-cbse-schools-use-it':
+    'what-is-ncert-why-cbse-curriculum-schools-use-it',
+  'what-is-formative-assessment-cbse-schools':
+    'what-is-formative-assessment-cbse-curriculum-schools',
+  'what-is-project-based-learning-cbse-schools':
+    'what-is-project-based-learning-cbse-curriculum-schools',
+};
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return Object.entries(RENAMED_BLOG_SLUGS).map(([from, to]) => ({
+      source: `/blog/${from}`,
+      destination: `/blog/${to}`,
+      // Explicit 301 rather than `permanent: true` (which emits a 308).
+      // Both are permanent redirects and Google honours either, but 301 is
+      // what every SEO auditing tool and older crawler expects to see.
+      statusCode: 301,
+    }));
+  },
   /** Hides the Next.js dev-tools indicator (circular N) in development */
   devIndicators: false,
   webpack: (config, { dev }) => {

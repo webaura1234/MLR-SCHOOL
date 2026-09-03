@@ -19,11 +19,11 @@ Each cluster has:
 ---
 
 ## Cluster 1 — School Admissions
-**Pillar:** CBSE Curriculum Schools in Medchal Hyderabad — Complete Guide for Parents (`/blog/cbse-schools-in-medchal-hyderabad-guide-for-parents`) ✅ LIVE
+**Pillar:** CBSE Curriculum Schools in Medchal Hyderabad — Complete Guide for Parents (`/blog/cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents`) ✅ LIVE
 
 | # | Title | Slug | Target Keyword | Priority |
 |---|-------|------|----------------|----------|
-| 1 | ✅ CBSE Curriculum Schools in Medchal Hyderabad — Complete Parent Guide | cbse-schools-in-medchal-hyderabad-guide-for-parents | CBSE curriculum schools Medchal | High |
+| 1 | ✅ CBSE Curriculum Schools in Medchal Hyderabad — Complete Parent Guide | cbse-curriculum-schools-in-medchal-hyderabad-guide-for-parents | CBSE curriculum schools Medchal | High |
 | 2 | ✅ School Admissions 2026-27 in Hyderabad: What Parents Need to Know | school-admissions-2026-27-hyderabad-what-parents-need-to-know | school admissions 2026 Hyderabad | High |
 | 3 | Documents Required for School Admission in Hyderabad | documents-required-school-admission-hyderabad | school admission documents Hyderabad | High |
 | 4 | How to Choose the Right School for Your Child in Hyderabad | how-to-choose-right-school-hyderabad | how to choose school Hyderabad | High |
@@ -224,7 +224,7 @@ Each cluster has:
 | 95 | Education in Telangana: How Schools Have Improved Over the Last Decade | education-telangana-schools-decade | education Telangana schools | Medium |
 | 96 | Medchal-Malkajgiri District: A Growing Hub for Families in Hyderabad | medchal-malkajgiri-growing-families-hyderabad | Medchal Malkajgiri families | Medium |
 | 97 | Why More Families Are Choosing Schools Near Medchal | families-choosing-schools-near-medchal | schools near Medchal | High |
-| 98 | CBSE Curriculum Schools Near Outer Ring Road Hyderabad | cbse-schools-outer-ring-road-hyderabad | CBSE curriculum schools Outer Ring Road Hyderabad | High |
+| 98 | CBSE Curriculum Schools Near Outer Ring Road Hyderabad | cbse-curriculum-schools-outer-ring-road-hyderabad | CBSE curriculum schools Outer Ring Road Hyderabad | High |
 | 99 | School Transport in Hyderabad: What to Look For | school-transport-hyderabad-parents | school transport Hyderabad | Medium |
 | 100 | Hyderabad's Education Landscape: CBSE vs ICSE vs State Board | hyderabad-education-landscape-cbse-icse-state | education landscape Hyderabad | Medium |
 

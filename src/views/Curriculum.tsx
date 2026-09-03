@@ -112,7 +112,7 @@ const Curriculum = () => {
                 Middle <span className="text-accent">(Grade VI – VIII)</span>
               </h2>
               <p>
-                A structured CBSE-aligned programme through Class VIII that strengthens concepts,
+                A structured CBSE curriculum programme through Class VIII that strengthens concepts,
                 inquiry, and collaboration. We emphasize STEM connections, digital literacy, and
                 values-led leadership while learners prepare confidently for the next stage of
                 schooling beyond our campus.

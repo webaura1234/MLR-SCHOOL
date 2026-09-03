@@ -34,7 +34,7 @@ const About = () => {
             Vision <span className="text-primary">&amp; Mission</span>
           </>
         ),
-        lead: 'Our purpose and promise to every learner — aligned with CBSE excellence and whole-child growth.',
+        lead: 'Our purpose and promise to every learner — aligned with the CBSE curriculum and whole-child growth.',
       }
       : mode === 'principal'
         ? {
@@ -192,7 +192,7 @@ const About = () => {
                 textAlign: 'center',
               }}
             >
-              Malla Reddy School operates under a dedicated board and academic council that set policy, uphold CBSE
+              Malla Reddy School operates under a dedicated board and academic council that set policy, uphold CBSE curriculum
               standards, and ensure transparent, child-safe operations across campus life.
             </p>
             <p style={{ fontSize: '1.05rem', lineHeight: 1.7, color: '#333', textAlign: 'center' }}>

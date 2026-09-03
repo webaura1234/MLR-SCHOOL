@@ -52,8 +52,12 @@ export default function SchoolJsonLd() {
           'https://x.com/mallareddyschl',
           'https://www.youtube.com/@mallareddyschool_medchal',
         ],
-        educationalCredentialAwarded: 'CBSE',
+        // NOTE: `educationalCredentialAwarded` is deliberately omitted. The
+        // school follows the CBSE curriculum; it does not itself award a CBSE
+        // credential, and declaring one would be an inaccurate claim in
+        // structured data. The curriculum is described via `teaches` instead.
         teaches: [
+          'CBSE Curriculum',
           'Pre-Primary Education',
           'Primary Education',
           'Middle School Education',
