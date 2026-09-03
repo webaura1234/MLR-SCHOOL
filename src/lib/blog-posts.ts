@@ -800,7 +800,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTimeMinutes: 5,
     category: 'School Admissions',
     excerpt:
-      'Families in Medchal no longer need to commute into central Hyderabad for quality CBSE schooling. Here is why the Medchal area has become a preferred destination for parents seeking great schools close to home.',
+      'Families in Medchal no longer need to commute into central Hyderabad for quality schooling under the CBSE curriculum. Here is why the Medchal area has become a preferred destination for parents seeking great schools close to home.',
     coverImage: '/images/why-families-choose-schools-near-medchal.jpg',
     coverImageAlt: 'Malla Reddy School Medchal campus — CBSE curriculum school near Hyderabad Outer Ring Road',
     intro:
@@ -946,7 +946,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     conclusion:
-      "The northern ORR corridor offers families a genuine choice of quality CBSE schooling without the congestion and commute time of central Hyderabad. If you live near Medchal or along the ORR, a campus visit to local CBSE curriculum schools — including Malla Reddy School Medchal — gives you a first-hand sense of the environment and programs before making your decision.",
+      "The northern ORR corridor offers families a genuine choice of quality schooling under the CBSE curriculum without the congestion and commute time of central Hyderabad. If you live near Medchal or along the ORR, a campus visit to local CBSE curriculum schools — including Malla Reddy School Medchal — gives you a first-hand sense of the environment and programs before making your decision.",
     ctaText: 'Book a Campus Visit — Malla Reddy School Medchal',
     ctaHref: '/admission',
     relatedSlugs: [
