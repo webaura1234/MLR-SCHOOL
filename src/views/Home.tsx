@@ -25,8 +25,6 @@ import { DEFAULT_BLUR } from '@/lib/blurPlaceholder';
 import HeroCarousel, { type HeroSlide } from '@/components/HeroCarousel';
 import heroDesktop from '../../public/malla-reddy-hero.jpg';
 import heroMobile from '../../public/malla-reddy-hero-mobile.jpg';
-import heroAdmissions from '../../public/images/hero-admissions-2026-27.png';
-import heroAdmissionsMobile from '../../public/images/hero-admissions-2026-27-mobile.jpg';
 import safetyCampus from '../../public/images/safety/campus-safety.png';
 import safetyHealth from '../../public/images/safety/health-safety.png';
 import safetyHygiene from '../../public/images/safety/safety-hygiene.png';
@@ -36,6 +34,11 @@ import safetyPest from '../../public/images/safety/pest-control.png';
 // Framer Motion v12+ deprecates motion(); prefer motion.create()
 const MotionLink = motion.create(Link);
 
+/**
+ * Single static hero. HeroCarousel hides its dots and stops auto-rotating
+ * whenever there is only one slide, so this renders as a plain hero image.
+ * Add another entry here to turn the carousel back on.
+ */
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'campus',
@@ -44,14 +47,6 @@ const HERO_SLIDES: HeroSlide[] = [
     alt: 'Malla Reddy School Medchal — Malla Reddy Schools CBSE curriculum campus in Hyderabad',
     overlayOpacity: 0.15,
     variant: 'photo',
-  },
-  {
-    id: 'admissions-2026',
-    desktop: heroAdmissions,
-    mobile: heroAdmissionsMobile,
-    alt: 'Malla Reddy School — 40+ years of legacy. Admissions open for 2026-27',
-    overlayOpacity: 0,
-    variant: 'banner',
   },
 ];
 
