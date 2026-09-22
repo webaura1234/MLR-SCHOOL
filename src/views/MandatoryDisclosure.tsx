@@ -195,31 +195,7 @@ export default function MandatoryDisclosure() {
                         <td className="md-cell-index">{item.sno}</td>
                         <td className="md-cell-title md-cell-title--doc">
                           <FileText size={16} className="md-doc-icon" />
-                          <div className="md-doc-title-group">
-                            <span className="md-doc-heading">{item.documentTitle}</span>
-                            {item.certificateNo && (
-                              <div className="md-doc-metadata">
-                                <span className="md-meta-badge">
-                                  <strong>Cert No:</strong> {item.certificateNo}
-                                </span>
-                                {item.issueDate && (
-                                  <span className="md-meta-badge">
-                                    <strong>Dated:</strong> {item.issueDate}
-                                  </span>
-                                )}
-                                {item.validity && (
-                                  <span className="md-meta-badge md-meta-badge--validity">
-                                    <strong>Validity:</strong> {item.validity}
-                                  </span>
-                                )}
-                                {item.issuingAuthority && (
-                                  <span className="md-meta-badge md-meta-badge--authority">
-                                    <strong>Authority:</strong> {item.issuingAuthority}
-                                  </span>
-                                )}
-                              </div>
-                            )}
-                          </div>
+                          <span className="md-doc-heading">{item.documentTitle}</span>
                         </td>
                         <td className="md-cell-action">
                           {item.fileAvailable ? (
@@ -303,20 +279,7 @@ export default function MandatoryDisclosure() {
                         <td className="md-cell-index">{item.sno}</td>
                         <td className="md-cell-title md-cell-title--doc">
                           <GraduationCap size={16} className="md-doc-icon" />
-                          <div className="md-doc-title-group">
-                            <span className="md-doc-heading">{item.documentTitle}</span>
-                            {item.academicYear && (
-                              <div className="md-doc-metadata">
-                                <span className="md-meta-badge">
-                                  <strong>Session:</strong> {item.academicYear}
-                                </span>
-                                <span className="md-meta-badge md-meta-badge--verified">
-                                  <CheckCircle2 size={11} />
-                                  <span>Duly Signed & Attested</span>
-                                </span>
-                              </div>
-                            )}
-                          </div>
+                          <span className="md-doc-heading">{item.documentTitle}</span>
                         </td>
                         <td className="md-cell-action">
                           {item.fileAvailable ? (
