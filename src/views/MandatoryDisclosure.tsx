@@ -1,22 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
 import {
   FileText,
   ExternalLink,
-  Printer,
   Building2,
   GraduationCap,
   Users,
-  Mail,
-  PlayCircle,
-  ShieldCheck,
-  ChevronRight,
-  Clock,
   CheckCircle2,
-  Calendar,
-  FileCheck,
+  PlayCircle,
 } from 'lucide-react';
 import {
   GENERAL_INFO,
@@ -30,72 +21,14 @@ import {
 import './MandatoryDisclosure.css';
 
 export default function MandatoryDisclosure() {
-  const [modalDoc, setModalDoc] = useState<{ title: string; url: string } | null>(null);
-
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <div className="md-page">
-      {/* Top Banner / Hero */}
-      <section className="md-hero">
+      {/* Page Header */}
+      <section className="page-header">
         <div className="container">
-          <div className="md-hero-card">
-            <div className="md-hero-topline">
-              <div className="md-pill-badge">
-                <ShieldCheck size={15} />
-                <span>CBSE Appendix IX Statutory Compliance</span>
-              </div>
-              <div className="md-session-tag">
-                <Calendar size={13} />
-                <span>Academic Session 2026-27</span>
-              </div>
-            </div>
-
-            <h1 className="md-hero-title">
-              Mandatory Public <span className="text-primary">Disclosure</span>
-            </h1>
-
-            <p className="md-hero-desc">
-              In accordance with Central Board of Secondary Education (CBSE) guidelines, Malla Reddy School provides
-              complete public access to institutional certifications, governance details, academic performance, and
-              infrastructure standards.
-            </p>
-
-            {/* Institutional Summary Metadata Strip */}
-            <div className="md-meta-strip">
-              <div className="md-meta-item">
-                <span className="md-meta-label">Institution</span>
-                <span className="md-meta-value">Malla Reddy School</span>
-              </div>
-              <div className="md-meta-divider" />
-              <div className="md-meta-item">
-                <span className="md-meta-label">Location</span>
-                <span className="md-meta-value">Medchal, Hyderabad (TS)</span>
-              </div>
-              <div className="md-meta-divider" />
-              <div className="md-meta-item">
-                <span className="md-meta-label">Principal</span>
-                <span className="md-meta-value">Mrs. V Swathi (M.Sc, B.Ed)</span>
-              </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="md-hero-actions">
-              <button type="button" className="md-btn md-btn-primary" onClick={handlePrint}>
-                <Printer size={16} />
-                <span>Print Disclosure Document</span>
-              </button>
-              <a
-                href="mailto:mallareddyschoolcbsemedchal@gmail.com?subject=Enquiry%20regarding%20Mandatory%20Public%20Disclosure"
-                className="md-btn md-btn-outline"
-              >
-                <Mail size={16} />
-                <span>Contact Compliance Desk</span>
-              </a>
-            </div>
-          </div>
+          <h1 className="hero-brand-name">
+            Mandatory Public <span className="text-primary">Disclosure</span>
+          </h1>
         </div>
       </section>
 
@@ -123,12 +56,17 @@ export default function MandatoryDisclosure() {
               </div>
 
               <div className="md-table-wrapper">
-                <table className="md-table">
+                <table className="md-table md-table--3col">
                   <caption className="sr-only">Section A: General Information</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '52%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" style={{ width: '60px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '38%' }}>INFORMATION</th>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '52%' }}>INFORMATION</th>
                       <th scope="col">DETAILS</th>
                     </tr>
                   </thead>
@@ -138,7 +76,7 @@ export default function MandatoryDisclosure() {
                         <td className="md-cell-index">{item.sno}</td>
                         <td className="md-cell-title">{item.information}</td>
                         <td className="md-cell-content">
-                          {item.isLink && item.linkHref ? (
+                          {item.isLink && item.linkHref && item.details?.trim() ? (
                             <a
                               href={item.linkHref}
                               target={item.linkHref.startsWith('http') ? '_blank' : undefined}
@@ -149,7 +87,9 @@ export default function MandatoryDisclosure() {
                               {item.linkHref.startsWith('http') ? <ExternalLink size={13} /> : null}
                             </a>
                           ) : (
-                            <span className="md-data-text">{item.details}</span>
+                            <span className={item.details?.trim() ? 'md-data-text' : 'md-empty-dash'}>
+                              {item.details?.trim() ? item.details : '-'}
+                            </span>
                           )}
                         </td>
                       </tr>
@@ -175,17 +115,22 @@ export default function MandatoryDisclosure() {
                 </div>
                 <div className="md-card-header-badge">
                   <FileText size={14} />
-                  <span>5 Uploaded • 3 in Progress</span>
+                  <span>8 Documents</span>
                 </div>
               </div>
 
               <div className="md-table-wrapper">
-                <table className="md-table">
+                <table className="md-table md-table--3col">
                   <caption className="sr-only">Section B: Documents and Information</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '52%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" style={{ width: '60px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '62%' }}>DOCUMENTS / INFORMATION</th>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '52%' }}>DOCUMENTS / INFORMATION</th>
                       <th scope="col" style={{ textAlign: 'center' }}>UPLOAD DOCUMENTS</th>
                     </tr>
                   </thead>
@@ -198,7 +143,7 @@ export default function MandatoryDisclosure() {
                           <span className="md-doc-heading">{item.documentTitle}</span>
                         </td>
                         <td className="md-cell-action">
-                          {item.fileAvailable ? (
+                          {item.fileAvailable && item.documentUrl ? (
                             <a
                               href={item.documentUrl}
                               target="_blank"
@@ -210,36 +155,13 @@ export default function MandatoryDisclosure() {
                               <ExternalLink size={12} />
                             </a>
                           ) : (
-                            <button
-                              type="button"
-                              className="md-action-btn md-action-btn--pending"
-                              onClick={() => setModalDoc({ title: item.documentTitle, url: item.documentUrl })}
-                              title="Click to view certification status"
-                            >
-                              <Clock size={13} />
-                              <span>Certification in Progress</span>
-                            </button>
+                            <span className="md-empty-dash">-</span>
                           )}
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-              </div>
-
-              {/* Statutory Note Box */}
-              <div className="md-statutory-note">
-                <div className="md-note-icon-wrap">
-                  <ShieldCheck size={20} />
-                </div>
-                <div className="md-note-content">
-                  <h4 className="md-note-title">CBSE Mandatory Self-Attestation Compliance</h4>
-                  <p className="md-note-desc">
-                    The school uploads self-attested copies of the above-listed documents duly signed by the
-                    Chairman/Manager/Secretary and Principal. In case it is noticed at a later stage that uploaded documents
-                    are not genuine, the school shall be liable for regulatory action as per CBSE affiliation norms.
-                  </p>
-                </div>
               </div>
             </div>
           </section>
@@ -259,17 +181,22 @@ export default function MandatoryDisclosure() {
                 </div>
                 <div className="md-card-header-badge">
                   <GraduationCap size={14} />
-                  <span>4 Uploaded • 1 in Progress</span>
+                  <span>5 Items</span>
                 </div>
               </div>
 
               <div className="md-table-wrapper">
-                <table className="md-table">
+                <table className="md-table md-table--3col">
                   <caption className="sr-only">Section C: Results and Academics</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '52%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" style={{ width: '60px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '62%' }}>DOCUMENTS / INFORMATION</th>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '52%' }}>DOCUMENTS / INFORMATION</th>
                       <th scope="col" style={{ textAlign: 'center' }}>UPLOAD DOCUMENTS</th>
                     </tr>
                   </thead>
@@ -282,7 +209,7 @@ export default function MandatoryDisclosure() {
                           <span className="md-doc-heading">{item.documentTitle}</span>
                         </td>
                         <td className="md-cell-action">
-                          {item.fileAvailable ? (
+                          {item.fileAvailable && item.documentUrl ? (
                             <a
                               href={item.documentUrl}
                               target="_blank"
@@ -294,15 +221,7 @@ export default function MandatoryDisclosure() {
                               <ExternalLink size={12} />
                             </a>
                           ) : (
-                            <button
-                              type="button"
-                              className="md-action-btn md-action-btn--pending"
-                              onClick={() => setModalDoc({ title: item.documentTitle, url: item.documentUrl })}
-                              title="Click to view status"
-                            >
-                              <Clock size={13} />
-                              <span>Under Publication</span>
-                            </button>
+                            <span className="md-empty-dash">-</span>
                           )}
                         </td>
                       </tr>
@@ -314,7 +233,7 @@ export default function MandatoryDisclosure() {
           </section>
 
           {/* =================================================================
-             SECTION D: STAFF (TEACHING) & RESULTS
+             SECTION D: STAFF (TEACHING)
              ================================================================= */}
           <section id="sec-staff" className="md-card-section">
             <div className="md-card">
@@ -334,12 +253,18 @@ export default function MandatoryDisclosure() {
 
               {/* Staff Table */}
               <div className="md-table-wrapper">
-                <table className="md-table">
+                <table className="md-table md-table--4col">
                   <caption className="sr-only">Section D: Staff (Teaching)</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '40%' }} />
+                    <col style={{ width: '20%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" style={{ width: '60px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '35%' }}>INFORMATION</th>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '40%' }}>INFORMATION</th>
                       <th scope="col" style={{ width: '20%', textAlign: 'center' }}>NUMBER / STRENGTH</th>
                       <th scope="col">NAME AND QUALIFICATIONS</th>
                     </tr>
@@ -347,95 +272,175 @@ export default function MandatoryDisclosure() {
                   <tbody>
                     {STAFF_INFO.map((item, idx) => (
                       <tr key={`${item.information}-${idx}`}>
-                        <td className="md-cell-index">{item.sno || ''}</td>
+                        <td className="md-cell-index">{item.sno || '-'}</td>
                         <td className="md-cell-title">{item.information}</td>
                         <td style={{ textAlign: 'center' }}>
-                          {item.strength ? <span className="md-pill-number">{item.strength}</span> : null}
+                          {item.strength?.trim() ? (
+                            <span className="md-pill-number">{item.strength}</span>
+                          ) : (
+                            <span className="md-empty-dash">-</span>
+                          )}
                         </td>
                         <td className="md-cell-content">
-                          <span className="md-data-text">{item.qualifications}</span>
+                          <span className={item.qualifications?.trim() ? 'md-data-text' : 'md-empty-dash'}>
+                            {item.qualifications?.trim() ? item.qualifications : '-'}
+                          </span>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
+            </div>
+          </section>
 
-              {/* Sub-Tables: Board Results */}
-              <div className="md-subtables-container">
-                {/* Class X */}
-                <div className="md-subtable-block">
-                  <div className="md-subtable-header">
-                    <div className="md-subtable-badge">Class X</div>
-                    <h3 className="md-subtable-title">Result Class: X</h3>
-                  </div>
-                  <div className="md-table-wrapper">
-                    <table className="md-table md-table--compact">
-                      <thead>
-                        <tr>
-                          <th scope="col" style={{ width: '50px', textAlign: 'center' }}>S.NO</th>
-                          <th scope="col">YEAR</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASS PERCENTAGE</th>
-                          <th scope="col">REMARKS</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {CLASS_X_RESULTS.map((r, idx) => (
-                          <tr key={idx}>
-                            <td className="md-cell-index">{r.sno || ''}</td>
-                            <td><strong>{r.year}</strong></td>
-                            <td style={{ textAlign: 'center' }}>{r.registeredStudents}</td>
-                            <td style={{ textAlign: 'center' }}>{r.passedStudents}</td>
-                            <td style={{ textAlign: 'center' }}>
-                              {r.passPercentage ? <span className="md-pass-badge">{r.passPercentage}</span> : null}
-                            </td>
-                            <td><span className="md-data-subtext">{r.remarks}</span></td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+          {/* =================================================================
+             RESULT CLASS: X (SEPARATE CARD)
+             ================================================================= */}
+          <section id="sec-result-x" className="md-card-section">
+            <div className="md-card">
+              <div className="md-card-header">
+                <div className="md-card-header-left">
+                  <div className="md-section-indicator md-section-indicator--roman">X</div>
+                  <div>
+                    <h2 className="md-card-title">Result Class: X</h2>
+                    <p className="md-card-subtitle">Three-year academic performance records for CBSE Class X Board Examinations.</p>
                   </div>
                 </div>
-
-                {/* Class XII */}
-                <div className="md-subtable-block">
-                  <div className="md-subtable-header">
-                    <div className="md-subtable-badge">Class XII</div>
-                    <h3 className="md-subtable-title">Result Class: XII</h3>
-                  </div>
-                  <div className="md-table-wrapper">
-                    <table className="md-table md-table--compact">
-                      <thead>
-                        <tr>
-                          <th scope="col" style={{ width: '50px', textAlign: 'center' }}>S.NO</th>
-                          <th scope="col">YEAR</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASS PERCENTAGE</th>
-                          <th scope="col">REMARKS</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {CLASS_XII_RESULTS.map((r, idx) => (
-                          <tr key={idx}>
-                            <td className="md-cell-index">{r.sno || ''}</td>
-                            <td><strong>{r.year}</strong></td>
-                            <td style={{ textAlign: 'center' }}>{r.registeredStudents}</td>
-                            <td style={{ textAlign: 'center' }}>{r.passedStudents}</td>
-                            <td style={{ textAlign: 'center' }}>
-                              {r.passPercentage ? <span className="md-pass-badge">{r.passPercentage}</span> : null}
-                            </td>
-                            <td><span className="md-data-subtext">{r.remarks}</span></td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                <div className="md-card-header-badge">
+                  <GraduationCap size={14} />
+                  <span>Class X Results</span>
                 </div>
               </div>
 
+              <div className="md-table-wrapper">
+                <table className="md-table md-table--6col">
+                  <caption className="sr-only">CBSE Class X Board Results</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '15%' }} />
+                    <col style={{ width: '22%' }} />
+                    <col style={{ width: '20%' }} />
+                    <col style={{ width: '18%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '15%', textAlign: 'center' }}>YEAR</th>
+                      <th scope="col" style={{ width: '22%', textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
+                      <th scope="col" style={{ width: '20%', textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
+                      <th scope="col" style={{ width: '18%', textAlign: 'center' }}>PASS PERCENTAGE</th>
+                      <th scope="col" style={{ textAlign: 'center' }}>REMARKS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {CLASS_X_RESULTS.map((r, idx) => (
+                      <tr key={idx}>
+                        <td className="md-cell-index">{r.sno || '-'}</td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.year?.trim() ? <strong>{r.year}</strong> : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.registeredStudents?.trim() ? r.registeredStudents : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.passedStudents?.trim() ? r.passedStudents : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.passPercentage?.trim() ? (
+                            <span className="md-pass-badge">{r.passPercentage}</span>
+                          ) : (
+                            <span className="md-empty-dash">-</span>
+                          )}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.remarks?.trim() ? (
+                            <span className="md-data-subtext">{r.remarks}</span>
+                          ) : (
+                            <span className="md-empty-dash">-</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* =================================================================
+             RESULT CLASS: XII (SEPARATE CARD)
+             ================================================================= */}
+          <section id="sec-result-xii" className="md-card-section">
+            <div className="md-card">
+              <div className="md-card-header">
+                <div className="md-card-header-left">
+                  <div className="md-section-indicator md-section-indicator--roman">XII</div>
+                  <div>
+                    <h2 className="md-card-title">Result Class: XII</h2>
+                    <p className="md-card-subtitle">Three-year academic performance records for CBSE Class XII Board Examinations.</p>
+                  </div>
+                </div>
+                <div className="md-card-header-badge">
+                  <GraduationCap size={14} />
+                  <span>Class XII Results</span>
+                </div>
+              </div>
+
+              <div className="md-table-wrapper">
+                <table className="md-table md-table--6col">
+                  <caption className="sr-only">CBSE Class XII Board Results</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '15%' }} />
+                    <col style={{ width: '22%' }} />
+                    <col style={{ width: '20%' }} />
+                    <col style={{ width: '18%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '15%', textAlign: 'center' }}>YEAR</th>
+                      <th scope="col" style={{ width: '22%', textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
+                      <th scope="col" style={{ width: '20%', textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
+                      <th scope="col" style={{ width: '18%', textAlign: 'center' }}>PASS PERCENTAGE</th>
+                      <th scope="col" style={{ textAlign: 'center' }}>REMARKS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {CLASS_XII_RESULTS.map((r, idx) => (
+                      <tr key={idx}>
+                        <td className="md-cell-index">{r.sno || '-'}</td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.year?.trim() ? <strong>{r.year}</strong> : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.registeredStudents?.trim() ? r.registeredStudents : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.passedStudents?.trim() ? r.passedStudents : <span className="md-empty-dash">-</span>}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.passPercentage?.trim() ? (
+                            <span className="md-pass-badge">{r.passPercentage}</span>
+                          ) : (
+                            <span className="md-empty-dash">-</span>
+                          )}
+                        </td>
+                        <td style={{ textAlign: 'center' }}>
+                          {r.remarks?.trim() ? (
+                            <span className="md-data-subtext">{r.remarks}</span>
+                          ) : (
+                            <span className="md-empty-dash">-</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
 
@@ -459,12 +464,17 @@ export default function MandatoryDisclosure() {
               </div>
 
               <div className="md-table-wrapper">
-                <table className="md-table">
+                <table className="md-table md-table--3col">
                   <caption className="sr-only">Section E: School Infrastructure</caption>
+                  <colgroup>
+                    <col style={{ width: '70px' }} />
+                    <col style={{ width: '52%' }} />
+                    <col style={{ width: 'auto' }} />
+                  </colgroup>
                   <thead>
                     <tr>
-                      <th scope="col" style={{ width: '60px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '45%' }}>INFORMATION</th>
+                      <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
+                      <th scope="col" style={{ width: '52%' }}>INFORMATION</th>
                       <th scope="col">DETAILS</th>
                     </tr>
                   </thead>
@@ -486,7 +496,9 @@ export default function MandatoryDisclosure() {
                               <ExternalLink size={13} />
                             </a>
                           ) : (
-                            <span className="md-data-text">{item.details}</span>
+                            <span className={item.details?.trim() ? 'md-data-text' : 'md-empty-dash'}>
+                              {item.details?.trim() ? item.details : '-'}
+                            </span>
                           )}
                         </td>
                       </tr>
@@ -499,38 +511,6 @@ export default function MandatoryDisclosure() {
 
         </div>
       </main>
-
-      {/* Document Certification Notice Modal */}
-      {modalDoc && (
-        <div className="md-modal-overlay" onClick={() => setModalDoc(null)}>
-          <div className="md-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="md-modal-header">
-              <div className="md-modal-icon">
-                <FileCheck size={22} />
-              </div>
-              <div>
-                <h3 className="md-modal-title">Document Verification Status</h3>
-                <span className="md-modal-tag">Official Certification Underway</span>
-              </div>
-            </div>
-            <div className="md-modal-body">
-              <p className="md-modal-desc">
-                The certified copy of <strong>{modalDoc.title}</strong> is currently being attested and processed
-                by school management for CBSE regulatory publication.
-              </p>
-              <div className="md-modal-meta">
-                <span className="md-modal-meta-label">Designated File:</span>
-                <code className="md-modal-meta-code">{modalDoc.url}</code>
-              </div>
-            </div>
-            <div className="md-modal-footer">
-              <button type="button" className="md-btn md-btn-primary" onClick={() => setModalDoc(null)}>
-                Understood & Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

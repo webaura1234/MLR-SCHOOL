@@ -193,6 +193,9 @@ const Footer = () => {
               <li>
                 <Link href="/fee-structure">Fee Structure</Link>
               </li>
+              <li>
+                <Link href="/mandatory-disclosure">Mandatory Public Disclosure</Link>
+              </li>
             </ul>
           </div>
         </div>

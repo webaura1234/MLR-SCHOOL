@@ -22,151 +22,13 @@
 }
 
 /* ==========================================================================
-   HERO / EXECUTIVE CARD
+   BUTTONS (MODAL & SHARED)
    ========================================================================== */
-
-.md-hero {
-  padding: clamp(2rem, 4vw, 3.5rem) 0 1.5rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f5f0 100%);
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.md-hero-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 1.25rem;
-  padding: clamp(1.5rem, 3.5vw, 2.75rem);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-}
-
-.md-hero-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.md-pill-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: rgba(61, 79, 47, 0.08);
-  color: #3d4f2f;
-  border: 1px solid rgba(61, 79, 47, 0.2);
-  padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.md-session-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #64748b;
-  font-size: 0.82rem;
-  font-weight: 600;
-  background: #f8fafc;
-  padding: 0.3rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid #e2e8f0;
-}
-
-.md-hero-title {
-  font-family: var(--font-heading, "Charter", Georgia, serif);
-  font-size: clamp(2rem, 4.5vw, 3.1rem);
-  font-weight: 800;
-  color: #111827;
-  line-height: 1.2;
-  margin-bottom: 0.85rem;
-  letter-spacing: -0.02em;
-}
-
-.md-hero-title .text-primary {
-  color: #3d4f2f;
-}
-
-.md-hero-desc {
-  font-size: clamp(0.95rem, 1.8vw, 1.08rem);
-  color: #4b5563;
-  line-height: 1.65;
-  max-width: 860px;
-  margin-bottom: 2rem;
-}
-
-/* Institutional Summary Metadata Strip */
-.md-meta-strip {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.85rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.md-meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.md-meta-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  color: #64748b;
-}
-
-.md-meta-value {
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.md-status-tag {
-  display: inline-block;
-  background: #fef3c7;
-  color: #92400e;
-  padding: 0.15rem 0.6rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border: 1px solid #fde68a;
-  width: fit-content;
-}
-
-.md-meta-divider {
-  width: 1px;
-  height: 28px;
-  background: #cbd5e1;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .md-meta-divider {
-    display: block;
-  }
-}
-
-/* Quick Actions */
-.md-hero-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
 
 .md-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.35rem;
   border-radius: 9999px;
@@ -190,17 +52,32 @@
   box-shadow: 0 4px 12px rgba(61, 79, 47, 0.35);
 }
 
-.md-btn-outline {
-  background: #ffffff;
-  color: #374151;
-  border-color: #d1d5db;
+/* ==========================================================================
+   PAGE HEADER & SPACING OVERRIDES (REDUCE TOP BLANK SPACE)
+   ========================================================================== */
+
+.md-page .page-header {
+  padding: 3rem 0 0.75rem;
+  margin-bottom: 0;
+  background: transparent;
 }
 
-.md-btn-outline:hover {
-  background: #f9fafb;
-  border-color: #3d4f2f;
-  color: #3d4f2f;
-  transform: translateY(-1px);
+.md-page .hero-brand-name {
+  font-family: var(--font-heading, "Charter", Georgia, serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.md-page .hero-brand-tagline {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  color: #4b5563;
+  margin: 0 auto;
+  max-width: 720px;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -208,17 +85,17 @@
    ========================================================================== */
 
 .md-main-content {
-  padding: clamp(2rem, 3.5vw, 3.5rem) 0 5rem;
+  padding: 1rem 0 4rem;
 }
 
 .md-card-section {
-  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
   scroll-margin-top: 8rem;
 }
 
 .md-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
   border-radius: 1.15rem;
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
   overflow: hidden;
@@ -231,8 +108,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1.5rem clamp(1.25rem, 2.5vw, 2rem);
-  border-bottom: 1px solid #f1f5f9;
+  padding: 1.25rem clamp(1.25rem, 2.5vw, 2rem);
+  border-bottom: 1.5px solid #cbd5e1;
   background: #ffffff;
 }
 
@@ -255,6 +132,13 @@
   font-size: 1.15rem;
   flex-shrink: 0;
   box-shadow: 0 3px 8px rgba(61, 79, 47, 0.3);
+}
+
+.md-section-indicator--roman {
+  min-width: 42px;
+  width: auto;
+  padding: 0 0.65rem;
+  font-size: 0.95rem;
 }
 
 .md-card-title {
@@ -286,7 +170,7 @@
 }
 
 /* ==========================================================================
-   TABLES
+   TABLES (CLEAR, CRISP & PROPERLY ALIGNED VERTICAL & HORIZONTAL DIVIDER LINES)
    ========================================================================== */
 
 .md-table-wrapper {
@@ -297,24 +181,56 @@
 .md-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   text-align: left;
+}
+
+/* Responsive table minimum widths so columns never cram or squash on mobile */
+.md-table--3col {
+  min-width: 540px;
+}
+
+.md-table--4col {
+  min-width: 620px;
+}
+
+.md-table--6col {
+  min-width: 720px;
+}
+
+@media (min-width: 860px) {
+  .md-table--3col,
+  .md-table--4col,
+  .md-table--6col {
+    min-width: 100%;
+  }
 }
 
 .md-table thead th {
   background: #f8fafc;
-  color: #475569;
+  color: #334155;
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.9rem clamp(0.75rem, 2vw, 1.5rem);
-  border-bottom: 1px solid #e2e8f0;
-  white-space: nowrap;
+  padding: 0.95rem clamp(0.75rem, 1.5vw, 1.25rem);
+  border-bottom: 1.5px solid #cbd5e1;
+  border-right: 1.5px solid #cbd5e1;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+.md-table thead th:last-child {
+  border-right: none;
 }
 
 .md-table tbody tr {
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #cbd5e1;
   transition: background-color 0.12s ease;
+}
+
+.md-table tbody tr:last-child {
+  border-bottom: none;
 }
 
 .md-table tbody tr:nth-child(even) {
@@ -326,11 +242,27 @@
 }
 
 .md-table tbody td {
-  padding: 1rem clamp(0.75rem, 2vw, 1.5rem);
+  padding: 0.95rem clamp(0.75rem, 1.5vw, 1.25rem);
   font-size: 0.92rem;
   color: #1f2937;
   vertical-align: middle;
   line-height: 1.5;
+  border-right: 1.5px solid #cbd5e1;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.md-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Empty Dash (-) Symbol */
+.md-empty-dash {
+  display: inline-block;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 /* Index cell */
@@ -620,109 +552,6 @@
   color: #64748b;
 }
 
-/* Sub-Tables (Class X & XII) */
-.md-subtables-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  padding: 1.5rem clamp(1.25rem, 2.5vw, 2rem);
-  background: #f8fafc;
-  border-top: 1px solid #e2e8f0;
-}
-
-@media (min-width: 900px) {
-  .md-subtables-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.md-subtable-block {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.85rem;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-}
-
-.md-subtable-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1.25rem;
-  background: #f1f5f9;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.md-subtable-badge {
-  background: #3d4f2f;
-  color: #ffffff;
-  font-size: 0.74rem;
-  font-weight: 800;
-  padding: 0.2rem 0.6rem;
-  border-radius: 9999px;
-  text-transform: uppercase;
-}
-
-.md-subtable-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0;
-}
-
-.md-table--compact thead th {
-  padding: 0.65rem 0.85rem;
-  font-size: 0.7rem;
-}
-
-.md-table--compact tbody td {
-  padding: 0.75rem 0.85rem;
-  font-size: 0.85rem;
-}
-
-/* ==========================================================================
-   STATUTORY NOTE BOX
-   ========================================================================== */
-
-.md-statutory-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: #fffbeb;
-  border-top: 1px solid #fef3c7;
-  padding: 1.25rem clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.md-note-icon-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: #fde68a;
-  color: #92400e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.md-note-content {
-  flex: 1;
-}
-
-.md-note-title {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #78350f;
-  margin: 0 0 0.25rem 0;
-}
-
-.md-note-desc {
-  font-size: 0.82rem;
-  color: #92400e;
-  line-height: 1.6;
-  margin: 0;
-}
-
 /* ==========================================================================
    MODAL
    ========================================================================== */
@@ -835,6 +664,70 @@
   border-top: 1px solid #e2e8f0;
   display: flex;
   justify-content: flex-end;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & CLEAN REFINEMENTS
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .md-page .page-header {
+    padding: 1.75rem 0 0.5rem;
+  }
+
+  .md-page .hero-brand-name {
+    font-size: 1.85rem;
+    margin-bottom: 0;
+  }
+
+  .md-main-content {
+    padding: 0.75rem 0 3rem;
+  }
+
+  .md-card {
+    border-radius: 0.85rem;
+  }
+
+  .md-card-header {
+    padding: 0.85rem 1rem;
+    gap: 0.65rem;
+  }
+
+  .md-section-indicator {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+    border-radius: 9px;
+  }
+
+  .md-card-title {
+    font-size: 1.15rem;
+  }
+
+  .md-card-subtitle {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .md-card-header-badge {
+    padding: 0.22rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .md-table thead th {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.72rem;
+  }
+
+  .md-table tbody td {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .md-action-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.78rem;
+  }
 }
 
 /* ==========================================================================
