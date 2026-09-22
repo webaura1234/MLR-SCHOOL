@@ -29,14 +29,14 @@ export interface AcademicItem {
 }
 
 export interface StaffItem {
-  sno: number;
+  sno?: number | string;
   information: string;
   strength: string;
   qualifications: string;
 }
 
 export interface BoardResultItem {
-  sno: number;
+  sno?: number | string;
   year: string;
   registeredStudents: string;
   passedStudents: string;
@@ -62,12 +62,12 @@ export const GENERAL_INFO: GeneralInfoItem[] = [
   {
     sno: 2,
     information: 'AFFILIATION NO. (IF APPLICABLE)',
-    details: 'Under Process / Applied for CBSE Affiliation',
+    details: '',
   },
   {
     sno: 3,
     information: 'SCHOOL CODE (IF APPLICABLE)',
-    details: 'Under Process',
+    details: '',
   },
   {
     sno: 4,
@@ -215,129 +215,141 @@ export const STAFF_INFO: StaffItem[] = [
     sno: 1,
     information: 'PRINCIPAL',
     strength: '01',
-    qualifications: 'Mrs. V Swathi, M.Sc, B.Ed',
+    qualifications: 'Mrs. V Swathi M.Sc, B.Ed',
+  },
+  {
+    sno: 2,
+    information: 'VICE PRINCIPAL',
+    strength: '',
+    qualifications: '',
+  },
+  {
+    sno: 3,
+    information: 'HEADMISTRESS/HEADMASTER',
+    strength: '',
+    qualifications: '',
   },
   {
     sno: 2,
     information: 'TOTAL NO. OF TEACHERS',
-    strength: '35',
-    qualifications: 'Highly Qualified & Certified Faculty',
+    strength: '',
+    qualifications: '',
+  },
+  {
+    sno: '',
+    information: 'PGT',
+    strength: '',
+    qualifications: '',
+  },
+  {
+    sno: '',
+    information: 'TGT',
+    strength: '',
+    qualifications: '',
+  },
+  {
+    sno: '',
+    information: 'PRT',
+    strength: '',
+    qualifications: '',
   },
   {
     sno: 3,
-    information: 'PGT (POST GRADUATE TEACHERS)',
-    strength: '08',
-    qualifications: 'Post Graduate with B.Ed',
+    information: 'TEACHERS SECTION RATIO',
+    strength: '1.5:1',
+    qualifications: 'NA',
   },
   {
     sno: 4,
-    information: 'TGT (TRAINED GRADUATE TEACHERS)',
-    strength: '15',
-    qualifications: 'Graduate with B.Ed',
+    information: 'DETAILS OF SPECIAL EDUCATOR',
+    strength: '',
+    qualifications: '',
   },
   {
     sno: 5,
-    information: 'PRT (PRIMARY TEACHERS)',
-    strength: '12',
-    qualifications: 'Graduate with D.El.Ed / B.Ed',
-  },
-  {
-    sno: 6,
-    information: 'TEACHERS SECTION RATIO',
-    strength: '1.5:1',
-    qualifications: 'Complies with CBSE Mandate',
-  },
-  {
-    sno: 7,
-    information: 'DETAILS OF SPECIAL EDUCATOR',
-    strength: '01',
-    qualifications: 'Trained & Certified in Inclusive Education',
-  },
-  {
-    sno: 8,
-    information: 'DETAILS OF COUNSELLOR AND WELLNESS TEACHER',
-    strength: '01',
-    qualifications: 'M.A. Psychology / Certified Child Counsellor',
+    information: 'DETAILS OF COUNSELLOR AND WELLNESS TEACHERS',
+    strength: '',
+    qualifications: '',
   },
 ];
 
 export const CLASS_X_RESULTS: BoardResultItem[] = [
   {
-    sno: 1,
-    year: '2024-2025',
-    registeredStudents: '—',
-    passedStudents: '—',
-    passPercentage: '100%',
-    remarks: 'First Batch In Progress',
+    sno: '',
+    year: '',
+    registeredStudents: '',
+    passedStudents: '',
+    passPercentage: '',
+    remarks: '',
   },
 ];
 
 export const CLASS_XII_RESULTS: BoardResultItem[] = [
   {
-    sno: 1,
-    year: '2024-2025',
-    registeredStudents: '—',
-    passedStudents: '—',
-    passPercentage: '—',
-    remarks: 'Schooling up to Secondary / Senior Secondary to follow',
+    sno: '',
+    year: '',
+    registeredStudents: '',
+    passedStudents: '',
+    passPercentage: '',
+    remarks: '',
   },
 ];
 
 export const INFRASTRUCTURE_INFO: InfrastructureItem[] = [
   {
     sno: 1,
-    information: 'TOTAL CAMPUS AREA OF THE SCHOOL (IN SQ MTR)',
-    details: '8383.4 SQ MTR (Approx. 2.07 Acres)',
+    information: 'TOTAL CAMPUS AREA OF THE SCHOOL(IN SQR MTR)',
+    details: '8383.4 SQ MTR',
     iconType: 'campus',
   },
   {
     sno: 2,
-    information: 'NO. AND SIZE OF THE CLASS ROOMS (IN SQ MTR)',
-    details: '33 Classrooms, 48 SQ MTR each (Spacious, Well-Ventilated)',
+    information: 'NO. AND SIZE OF THE CLASSROOM (IN SQR MTR)',
+    details: '33, SQ MTR',
     iconType: 'classroom',
   },
   {
     sno: 3,
-    information: 'NO. AND SIZE OF LABORATORIES INCLUDING COMPUTER LABS (IN SQ MTR)',
-    details: '5 Laboratories, 56 SQ MTR each (Composite Science, Physics, Chemistry, Biology, Computer Science)',
+    information: 'NO. AND SIZE OF THE LABORATORIES INCLUDING COMPUTER LABS (IN SQR MTR)',
+    details: 'SQ MTR',
     iconType: 'lab',
   },
   {
     sno: 4,
-    information: 'NO. AND SIZE OF LIBRARY (IN SQ MTR)',
-    details: '1 Central Library, 112 SQ MTR (Extensive Collection & Reading Area)',
+    information: 'NO. AND SIZE OF LIBRARY (IN SQR MTR)',
+    details: 'SQR MTR',
     iconType: 'library',
   },
   {
     sno: 5,
     information: 'INTERNET FACILITY',
-    details: 'Yes (High-speed Wi-Fi & Fiber Optic Connectivity across Campus)',
+    details: 'Yes',
     iconType: 'wifi',
   },
   {
     sno: 6,
     information: 'NO. OF GIRLS TOILETS',
-    details: '24 (Clean, Hygienic with Continuous Water Supply)',
+    details: '',
     iconType: 'toilet',
   },
   {
     sno: 7,
     information: 'NO. OF BOYS TOILETS',
-    details: '24 (Clean, Modern Urinals and Stalls)',
+    details: '',
     iconType: 'toilet',
   },
   {
     sno: 8,
-    information: 'NO. OF TOILETS FOR DIFFERENTLY ABLED PERSONS (CWSN)',
-    details: '04 (Specially Equipped Barrier-Free Facilities)',
+    information: 'NO. OF CWSN TOILETS',
+    details: '',
     iconType: 'accessibility',
   },
   {
     sno: 9,
     information: 'LINK OF YOUTUBE VIDEO OF THE INSPECTION OF SCHOOL COVERING THE INFRASTRUCTURE OF THE SCHOOL',
-    details: 'Watch Campus & Infrastructure Video on YouTube',
-    isLink: true,
-    linkHref: 'https://www.youtube.com',
+    details: '',
+    isLink: false,
+    linkHref: '',
     iconType: 'video',
   },
 ];

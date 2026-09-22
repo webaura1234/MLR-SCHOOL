@@ -76,11 +76,6 @@ export default function MandatoryDisclosure() {
               </div>
               <div className="md-meta-divider" />
               <div className="md-meta-item">
-                <span className="md-meta-label">Affiliation Status</span>
-                <span className="md-meta-value md-status-tag">Under Process</span>
-              </div>
-              <div className="md-meta-divider" />
-              <div className="md-meta-item">
                 <span className="md-meta-label">Principal</span>
                 <span className="md-meta-value">Mrs. V Swathi (M.Sc, B.Ed)</span>
               </div>
@@ -123,7 +118,7 @@ export default function MandatoryDisclosure() {
                 </div>
                 <div className="md-card-header-badge">
                   <CheckCircle2 size={14} />
-                  <span>8 Verified Items</span>
+                  <span>8 Items</span>
                 </div>
               </div>
 
@@ -364,37 +359,13 @@ export default function MandatoryDisclosure() {
                 <div className="md-card-header-left">
                   <div className="md-section-indicator">D</div>
                   <div>
-                    <h2 className="md-card-title">Staff (Teaching) & Academic Performance</h2>
-                    <p className="md-card-subtitle">Faculty deployment, educational qualifications, teacher-student ratios, and board outcomes.</p>
+                    <h2 className="md-card-title">Staff (Teaching)</h2>
+                    <p className="md-card-subtitle">Teaching staff, qualifications, and ratio as per disclosure.</p>
                   </div>
                 </div>
                 <div className="md-card-header-badge">
                   <Users size={14} />
-                  <span>Faculty & Exam Results</span>
-                </div>
-              </div>
-
-              {/* Quick Metrics Bar */}
-              <div className="md-metrics-grid">
-                <div className="md-metric-card">
-                  <span className="md-metric-label">Head of Institution</span>
-                  <span className="md-metric-val">Mrs. V Swathi</span>
-                  <span className="md-metric-sub">Principal • M.Sc, B.Ed</span>
-                </div>
-                <div className="md-metric-card">
-                  <span className="md-metric-label">Total Teaching Staff</span>
-                  <span className="md-metric-val">35 Teachers</span>
-                  <span className="md-metric-sub">PGT (08) • TGT (15) • PRT (12)</span>
-                </div>
-                <div className="md-metric-card">
-                  <span className="md-metric-label">Teacher-Section Ratio</span>
-                  <span className="md-metric-val">1.5 : 1</span>
-                  <span className="md-metric-sub">Fully CBSE Compliant</span>
-                </div>
-                <div className="md-metric-card">
-                  <span className="md-metric-label">Specialist Staff</span>
-                  <span className="md-metric-val">02 Specialists</span>
-                  <span className="md-metric-sub">Special Educator & Counsellor</span>
+                  <span>Teaching Staff</span>
                 </div>
               </div>
 
@@ -411,12 +382,12 @@ export default function MandatoryDisclosure() {
                     </tr>
                   </thead>
                   <tbody>
-                    {STAFF_INFO.map((item) => (
-                      <tr key={item.sno}>
-                        <td className="md-cell-index">{item.sno}</td>
+                    {STAFF_INFO.map((item, idx) => (
+                      <tr key={`${item.information}-${idx}`}>
+                        <td className="md-cell-index">{item.sno || ''}</td>
                         <td className="md-cell-title">{item.information}</td>
                         <td style={{ textAlign: 'center' }}>
-                          <span className="md-pill-number">{item.strength}</span>
+                          {item.strength ? <span className="md-pill-number">{item.strength}</span> : null}
                         </td>
                         <td className="md-cell-content">
                           <span className="md-data-text">{item.qualifications}</span>
@@ -433,7 +404,7 @@ export default function MandatoryDisclosure() {
                 <div className="md-subtable-block">
                   <div className="md-subtable-header">
                     <div className="md-subtable-badge">Class X</div>
-                    <h3 className="md-subtable-title">Secondary School Examination Results</h3>
+                    <h3 className="md-subtable-title">Result Class: X</h3>
                   </div>
                   <div className="md-table-wrapper">
                     <table className="md-table md-table--compact">
@@ -441,21 +412,21 @@ export default function MandatoryDisclosure() {
                         <tr>
                           <th scope="col" style={{ width: '50px', textAlign: 'center' }}>S.NO</th>
                           <th scope="col">YEAR</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>REGISTERED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASSED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASS %</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>PASS PERCENTAGE</th>
                           <th scope="col">REMARKS</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {CLASS_X_RESULTS.map((r) => (
-                          <tr key={r.sno}>
-                            <td className="md-cell-index">{r.sno}</td>
+                        {CLASS_X_RESULTS.map((r, idx) => (
+                          <tr key={idx}>
+                            <td className="md-cell-index">{r.sno || ''}</td>
                             <td><strong>{r.year}</strong></td>
                             <td style={{ textAlign: 'center' }}>{r.registeredStudents}</td>
                             <td style={{ textAlign: 'center' }}>{r.passedStudents}</td>
                             <td style={{ textAlign: 'center' }}>
-                              <span className="md-pass-badge">{r.passPercentage}</span>
+                              {r.passPercentage ? <span className="md-pass-badge">{r.passPercentage}</span> : null}
                             </td>
                             <td><span className="md-data-subtext">{r.remarks}</span></td>
                           </tr>
@@ -469,7 +440,7 @@ export default function MandatoryDisclosure() {
                 <div className="md-subtable-block">
                   <div className="md-subtable-header">
                     <div className="md-subtable-badge">Class XII</div>
-                    <h3 className="md-subtable-title">Senior Secondary Examination Results</h3>
+                    <h3 className="md-subtable-title">Result Class: XII</h3>
                   </div>
                   <div className="md-table-wrapper">
                     <table className="md-table md-table--compact">
@@ -477,20 +448,22 @@ export default function MandatoryDisclosure() {
                         <tr>
                           <th scope="col" style={{ width: '50px', textAlign: 'center' }}>S.NO</th>
                           <th scope="col">YEAR</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>REGISTERED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASSED</th>
-                          <th scope="col" style={{ textAlign: 'center' }}>PASS %</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF REGISTERED STUDENTS</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>NO. OF STUDENTS PASSED</th>
+                          <th scope="col" style={{ textAlign: 'center' }}>PASS PERCENTAGE</th>
                           <th scope="col">REMARKS</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {CLASS_XII_RESULTS.map((r) => (
-                          <tr key={r.sno}>
-                            <td className="md-cell-index">{r.sno}</td>
+                        {CLASS_XII_RESULTS.map((r, idx) => (
+                          <tr key={idx}>
+                            <td className="md-cell-index">{r.sno || ''}</td>
                             <td><strong>{r.year}</strong></td>
                             <td style={{ textAlign: 'center' }}>{r.registeredStudents}</td>
                             <td style={{ textAlign: 'center' }}>{r.passedStudents}</td>
-                            <td style={{ textAlign: 'center' }}>{r.passPercentage}</td>
+                            <td style={{ textAlign: 'center' }}>
+                              {r.passPercentage ? <span className="md-pass-badge">{r.passPercentage}</span> : null}
+                            </td>
                             <td><span className="md-data-subtext">{r.remarks}</span></td>
                           </tr>
                         ))}
