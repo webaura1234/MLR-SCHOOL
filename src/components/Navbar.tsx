@@ -88,10 +88,17 @@ const Navbar = () => {
       path: '#',
       dropdown: [
         { name: 'Admission Procedure', path: '/admission' },
-        { name: 'Fee Structure', path: '/fee-structure' },
+        { name: 'Fee Structure', path: '/documents/disclosure/fee-structure.pdf' },
       ],
     },
-    { name: 'Contact', path: '/contact' },
+    {
+      name: 'Contact',
+      path: '#',
+      dropdown: [
+        { name: 'Contact Us', path: '/contact' },
+        { name: 'Public Disclosure', path: '/mandatory-disclosure' },
+      ],
+    },
   ];
 
   return (
@@ -149,6 +156,7 @@ const Navbar = () => {
                         className={`navbar-dd-trigger 
                           ${'galleryPill' in link && link.galleryPill ? 'navbar-desktop-link--gallery' : ''} 
                           ${'galleryPill' in link && link.galleryPill && (pathname === '/gallery' || pathname === '/media-gallery') ? 'is-active' : ''}
+                          ${link.dropdown.some((sub) => pathname === sub.path.split('#')[0]) ? 'is-active' : ''}
                         `}
                       >
                         {link.name}

@@ -418,7 +418,8 @@
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.navbar-dd:hover .navbar-dd-trigger {
+.navbar-dd:hover .navbar-dd-trigger,
+.navbar-dd-trigger.is-active {
   background: rgba(61, 79, 47, 0.08);
   color: var(--primary);
   transform: translateY(-1px);
