@@ -667,6 +667,57 @@
 }
 
 /* ==========================================================================
+   SECTION A + B TABLE FIXES
+   Long DETAILS links and document titles were overflowing cells, which
+   expanded horizontal scroll into empty space with no row borders.
+   Scoped to #sec-general and #sec-documents only.
+   ========================================================================== */
+
+#sec-general .md-table tbody td,
+#sec-documents .md-table tbody td {
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#sec-general .md-cell-content,
+#sec-general .md-data-text {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#sec-general .md-data-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 100%;
+  min-width: 0;
+  gap: 0.35rem;
+}
+
+#sec-general .md-data-link span {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#sec-documents .md-cell-title--doc {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#sec-documents .md-doc-heading {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ==========================================================================
    MOBILE RESPONSIVENESS & CLEAN REFINEMENTS
    ========================================================================== */
 
