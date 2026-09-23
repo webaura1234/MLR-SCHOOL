@@ -62,7 +62,7 @@ const curriculumRelatedLinks = [
   {
     label: 'Apply for Admissions',
     href: '/admission',
-    description: 'Admissions open for 2026-27 across all classes.',
+    description: 'Admissions open for 2027-2028 across all classes.',
   },
   {
     label: 'How STEAM Prepares Students',

@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: 'Contact Malla Reddy School Medchal | Phone, Email & Campus Address',
   description:
-    'Contact Malla Reddy School Medchal — call, WhatsApp, or email our admissions team. Visit our campus at Medchal, Hyderabad. Inquiry form available for school admissions 2026-27.',
+    'Contact Malla Reddy School Medchal — call, WhatsApp, or email our admissions team. Visit our campus at Medchal, Hyderabad. Inquiry form available for school admissions 2027-2028.',
   path: '/contact',
   keywords: [
     'contact Malla Reddy School Medchal',

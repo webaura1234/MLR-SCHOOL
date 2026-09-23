@@ -5,9 +5,9 @@ import FaqJsonLd from '@/components/FaqJsonLd';
 import RelatedLinksBar from '@/components/RelatedLinksBar';
 
 export const metadata = constructMetadata({
-  title: 'School Admissions 2026-27 | Malla Reddy School Medchal Hyderabad',
+  title: 'School Admissions 2027-2028 | Malla Reddy School Medchal Hyderabad',
   description:
-    'Apply for school admissions 2026-27 at Malla Reddy School Medchal — a leading CBSE curriculum school in Hyderabad. Enrol your child for pre-primary, primary, or middle school. Visit our campus in Medchal, Telangana.',
+    'Apply for school admissions 2027-2028 at Malla Reddy School Medchal — a leading CBSE curriculum school in Hyderabad. Enrol your child for pre-primary, primary, or middle school. Visit our campus in Medchal, Telangana.',
   path: '/admission',
   keywords: [
     'school admissions 2026 Medchal',
@@ -41,10 +41,10 @@ const admissionFaqs = [
   {
     question: 'What is the fee structure at Malla Reddy School Medchal?',
     answer:
-      'Our class-wise fee structure for 2026-27, covering the registration fee and term/tuition fee for Nursery through Class VIII, is published at https://www.mallareddyschool.com/fee-structure. You can also call +91 92 4758 7086 for details.',
+      'Our class-wise fee structure for 2027-28, covering the registration fee and term/tuition fee for Nursery through Class VIII, is published at https://www.mallareddyschool.com/fee-structure. You can also call +91 92 4758 7086 for details.',
   },
   {
-    question: 'What is the admission process for the 2026-27 academic year?',
+    question: 'What is the admission process for the 2027-2028 academic year?',
     answer:
       'The admission process involves submitting an inquiry, a campus visit, document verification, and completion of the enrollment form. Contact our admissions team for current availability and exact requirements.',
   },
@@ -62,7 +62,7 @@ const admissionFaqs = [
 
 const admissionRelatedLinks = [
   {
-    label: 'Fee Structure 2026-27',
+    label: 'Fee Structure 2027-28',
     href: '/fee-structure',
     description: 'Class-wise registration and term/tuition fees.',
   },

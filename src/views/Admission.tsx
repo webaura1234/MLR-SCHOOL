@@ -81,7 +81,7 @@ const Admission = () => {
           >
             Admission & <span className="text-primary">Enquiry</span>
           </motion.h1>
-          <p>Begin your child&apos;s journey under the <strong>NDP Framework</strong>. Enroll today for the 2026-27 academic year.</p>
+          <p>Begin your child&apos;s journey under the <strong>NDP Framework</strong>. Enroll today for the 2027-2028 academic year.</p>
         </div>
       </section>
 

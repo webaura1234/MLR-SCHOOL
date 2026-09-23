@@ -83,14 +83,7 @@ const Navbar = () => {
         { name: 'Media Gallery', path: '/media-gallery' },
       ],
     },
-    {
-      name: 'Admissions',
-      path: '#',
-      dropdown: [
-        { name: 'Admission Procedure', path: '/admission' },
-        { name: 'Fee Structure', path: '/documents/disclosure/fee-structure.pdf' },
-      ],
-    },
+    { name: 'Admissions', path: '/admission' },
     {
       name: 'Contact',
       path: '#',
@@ -211,8 +204,8 @@ const Navbar = () => {
                   <span>Call Us</span>
                 </a>
                 <Link href="/admission" className="navbar-cta" onClick={closeMenu}>
-                  <span className="navbar-cta-desktop">ADMISSIONS OPEN 2026-27</span>
-                  <span className="navbar-cta-mobile">ADMISSIONS OPEN 2026-27</span>
+                  <span className="navbar-cta-desktop">ADMISSIONS OPEN 2027-2028</span>
+                  <span className="navbar-cta-mobile">ADMISSIONS OPEN 2027-2028</span>
                 </Link>
                 <button
                   type="button"
@@ -272,7 +265,7 @@ const Navbar = () => {
               ))}
               <div className="navbar-menu-ctas" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <Link href="/admission" className="navbar-menu-cta" onClick={closeMenu}>
-                  ADMISSIONS OPEN 2026-27
+                  ADMISSIONS OPEN 2027-2028
                 </Link>
               </div>
             </nav>

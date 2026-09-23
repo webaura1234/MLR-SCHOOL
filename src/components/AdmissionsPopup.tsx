@@ -167,7 +167,7 @@ export default function AdmissionsPopup({
             </button>
 
             <div className="admissions-pop-badge">Admissions</div>
-            <h3 className="admissions-pop-title">Admissions Open 2026-27</h3>
+            <h3 className="admissions-pop-title">Admissions Open 2027-2028</h3>
 
             {status === 'success' ? (
               <motion.div

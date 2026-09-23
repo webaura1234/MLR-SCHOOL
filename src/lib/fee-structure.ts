@@ -3,7 +3,7 @@
  * Update the figures here; the page, FAQs, and JSON-LD all read from this file.
  */
 
-export const FEE_ACADEMIC_YEAR = '2026-27';
+export const FEE_ACADEMIC_YEAR = '2027-28';
 
 export interface FeeRow {
   /** Classes covered by this slab, as shown in the first column. */

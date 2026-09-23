@@ -251,7 +251,7 @@ const IITFoundation = () => {
                 className="btn-primary squishy-btn blink-btn"
                 style={{ backgroundColor: 'var(--accent)', color: 'var(--primary-dark)' }}
               >
-                Admissions Open 2026-27
+                Admissions Open 2027-2028
               </a>
               <a href="/contact" className="btn-secondary-outline">Enquire More</a>
             </div>

@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 export const metadata = constructMetadata({
   title: 'Co-Curricular Activities | Malla Reddy School Medchal Hyderabad',
   description:
-    'Discover co-curricular activities at Malla Reddy School Medchal — sports, arts, music, dance, and performing arts programs that develop well-rounded students. Admissions open for 2026-27.',
+    'Discover co-curricular activities at Malla Reddy School Medchal — sports, arts, music, dance, and performing arts programs that develop well-rounded students. Admissions open for 2027-2028.',
   path: '/co-curricular',
   keywords: [
     'co-curricular activities CBSE curriculum school Medchal',
