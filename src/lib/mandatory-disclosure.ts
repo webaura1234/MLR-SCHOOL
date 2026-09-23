@@ -72,9 +72,9 @@ export const GENERAL_INFO: GeneralInfoItem[] = [
   {
     sno: 4,
     information: 'COMPLETE ADDRESS WITH PIN CODE',
-    details: 'SY.NO. 1101, Medchal (V), Medchal (M), Medchal – Malkajgiri Dist, Telangana - 500055',
+    details: 'SY.NO. 1101, Medchal (V), Medchal (M), Medchal – Malkajgiri Dist, Telangana - 501401',
     isLink: true,
-    linkHref: 'https://maps.google.com/?q=SY.NO.+1101,+Medchal+(V),+Medchal+(M),+Medchal+Malkajgiri+Dist,+Telangana-500055',
+    linkHref: 'https://maps.google.com/?q=SY.NO.+1101,+Medchal+(V),+Medchal+(M),+Medchal+Malkajgiri+Dist,+Telangana-501401',
   },
   {
     sno: 5,
