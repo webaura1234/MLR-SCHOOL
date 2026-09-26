@@ -11,6 +11,8 @@ Place the official PDF files in this directory (`public/documents/disclosure/`):
 6. `fire-safety.pdf` - Fire Safety Certificate
 7. `deo-certificate.pdf` - DEO Certificate / Self-Certification
 8. `water-health-sanitation.pdf` - Water, Health and Sanitation Certificates
+9. `location-certificate.pdf` - Location Certificate (CMC / Municipal Authority)
+10. `built-up-area.pdf` - Certified Statement on Total Built-up Area
 
 ### Section C: Results & Academics
 1. `fee-structure.pdf` - (Currently links to internal `/fee-structure` page, can also place PDF here)

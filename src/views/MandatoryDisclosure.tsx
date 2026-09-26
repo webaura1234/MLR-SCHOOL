@@ -115,7 +115,7 @@ export default function MandatoryDisclosure() {
                 </div>
                 <div className="md-card-header-badge">
                   <FileText size={14} />
-                  <span>8 Documents</span>
+                  <span>10 Documents</span>
                 </div>
               </div>
 
