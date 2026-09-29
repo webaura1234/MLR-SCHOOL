@@ -62,14 +62,29 @@
   background: transparent;
 }
 
+.md-page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
 .md-page .hero-brand-name {
   font-family: var(--font-heading, "Charter", Georgia, serif);
   font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   font-weight: 800;
   color: #111827;
   line-height: 1.15;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   letter-spacing: -0.02em;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.md-download-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .md-page .hero-brand-tagline {
@@ -726,9 +741,19 @@
     padding: 1.75rem 0 0.5rem;
   }
 
+  .md-page-header-row {
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
   .md-page .hero-brand-name {
     font-size: 1.85rem;
     margin-bottom: 0;
+  }
+
+  .md-download-btn {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem;
   }
 
   .md-main-content {

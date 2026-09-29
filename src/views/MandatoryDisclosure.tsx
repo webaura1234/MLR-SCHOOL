@@ -8,6 +8,7 @@ import {
   Users,
   CheckCircle2,
   PlayCircle,
+  Download,
 } from 'lucide-react';
 import {
   GENERAL_INFO,
@@ -20,15 +21,28 @@ import {
 } from '@/lib/mandatory-disclosure';
 import './MandatoryDisclosure.css';
 
+const MANDATORY_DISCLOSURE_PDF = '/documents/disclosure/mandatory-disclosure-saras.pdf';
+
 export default function MandatoryDisclosure() {
   return (
     <div className="md-page">
       {/* Page Header */}
       <section className="page-header">
         <div className="container">
-          <h1 className="hero-brand-name">
-            Mandatory Public <span className="text-primary">Disclosure</span>
-          </h1>
+          <div className="md-page-header-row">
+            <h1 className="hero-brand-name">
+              Mandatory Public <span className="text-primary">Disclosure</span>
+            </h1>
+            <a
+              href={MANDATORY_DISCLOSURE_PDF}
+              download="Mandatory Disclosure Details _ SARAS 7.0.pdf"
+              className="md-btn md-btn-primary md-download-btn"
+              aria-label="Download Mandatory Disclosure Details SARAS 7.0"
+            >
+              <Download size={18} />
+              <span>Download</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -253,20 +267,18 @@ export default function MandatoryDisclosure() {
 
               {/* Staff Table */}
               <div className="md-table-wrapper">
-                <table className="md-table md-table--4col">
+                <table className="md-table md-table--3col">
                   <caption className="sr-only">Section D: Staff (Teaching)</caption>
                   <colgroup>
                     <col style={{ width: '70px' }} />
-                    <col style={{ width: '40%' }} />
-                    <col style={{ width: '20%' }} />
+                    <col style={{ width: '52%' }} />
                     <col style={{ width: 'auto' }} />
                   </colgroup>
                   <thead>
                     <tr>
                       <th scope="col" style={{ width: '70px', textAlign: 'center' }}>S.NO</th>
-                      <th scope="col" style={{ width: '40%' }}>INFORMATION</th>
-                      <th scope="col" style={{ width: '20%', textAlign: 'center' }}>NUMBER / STRENGTH</th>
-                      <th scope="col">NAME AND QUALIFICATIONS</th>
+                      <th scope="col" style={{ width: '52%' }}>INFORMATION</th>
+                      <th scope="col">DETAILS</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -274,16 +286,9 @@ export default function MandatoryDisclosure() {
                       <tr key={`${item.information}-${idx}`}>
                         <td className="md-cell-index">{item.sno || '-'}</td>
                         <td className="md-cell-title">{item.information}</td>
-                        <td style={{ textAlign: 'center' }}>
-                          {item.strength?.trim() ? (
-                            <span className="md-pill-number">{item.strength}</span>
-                          ) : (
-                            <span className="md-empty-dash">-</span>
-                          )}
-                        </td>
                         <td className="md-cell-content">
-                          <span className={item.qualifications?.trim() ? 'md-data-text' : 'md-empty-dash'}>
-                            {item.qualifications?.trim() ? item.qualifications : '-'}
+                          <span className={item.details?.trim() ? 'md-data-text' : 'md-empty-dash'}>
+                            {item.details?.trim() ? item.details : '-'}
                           </span>
                         </td>
                       </tr>

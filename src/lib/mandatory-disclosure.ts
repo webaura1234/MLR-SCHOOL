@@ -31,8 +31,7 @@ export interface AcademicItem {
 export interface StaffItem {
   sno?: number | string;
   information: string;
-  strength: string;
-  qualifications: string;
+  details: string;
 }
 
 export interface BoardResultItem {
@@ -158,7 +157,7 @@ export const DOCUMENTS_INFO: DocumentItem[] = [
   {
     sno: 7,
     documentTitle: 'COPY OF THE DEO CERTIFICATE SUBMITTED BY THE SCHOOL FOR AFFILIATION/UPGRADATION/EXTENSION OF AFFILIATIONOR SELF CERTIFICATION BY SCHOOL',
-    documentUrl: '/documents/disclosure/recognition-certificate.pdf',
+    documentUrl: '/documents/disclosure/deo-certificate.pdf',
     fileAvailable: true,
     certificateNo: 'Proc. No. MDCL-MDCL-010-0054',
     issueDate: '02-05-2026',
@@ -238,62 +237,52 @@ export const STAFF_INFO: StaffItem[] = [
   {
     sno: 1,
     information: 'PRINCIPAL',
-    strength: '01',
-    qualifications: 'Mrs. V Swathi M.Sc, B.Ed',
+    details: 'Mrs. V Swathi M.Sc, B.Ed',
   },
   {
     sno: 2,
     information: 'VICE PRINCIPAL',
-    strength: '',
-    qualifications: '',
+    details: '',
   },
   {
     sno: 3,
     information: 'HEADMISTRESS/HEADMASTER',
-    strength: '',
-    qualifications: '',
+    details: '',
   },
   {
     sno: 2,
     information: 'TOTAL NO. OF TEACHERS',
-    strength: '',
-    qualifications: '',
+    details: '33',
   },
   {
     sno: '',
     information: 'PGT',
-    strength: '',
-    qualifications: '',
+    details: '6',
   },
   {
     sno: '',
     information: 'TGT',
-    strength: '',
-    qualifications: '',
+    details: '8',
   },
   {
     sno: '',
     information: 'PRT',
-    strength: '',
-    qualifications: '',
+    details: '7',
   },
   {
     sno: 3,
     information: 'TEACHERS SECTION RATIO',
-    strength: '1.5:1',
-    qualifications: 'NA',
+    details: '1:1.5',
   },
   {
     sno: 4,
     information: 'DETAILS OF SPECIAL EDUCATOR',
-    strength: '',
-    qualifications: '',
+    details: 'Ms. M Punya',
   },
   {
     sno: 5,
     information: 'DETAILS OF COUNSELLOR AND WELLNESS TEACHERS',
-    strength: '',
-    qualifications: '',
+    details: 'Ms. Rashmi',
   },
 ];
 
@@ -329,13 +318,13 @@ export const INFRASTRUCTURE_INFO: InfrastructureItem[] = [
   {
     sno: 2,
     information: 'NO. AND SIZE OF THE CLASSROOM (IN SQR MTR)',
-    details: '33, SQ MTR',
+    details: '33 & 4285',
     iconType: 'classroom',
   },
   {
     sno: 3,
     information: 'NO. AND SIZE OF THE LABORATORIES INCLUDING COMPUTER LABS (IN SQR MTR)',
-    details: 'SQ MTR',
+    details: '6 & 335',
     iconType: 'lab',
   },
   {
@@ -353,15 +342,16 @@ export const INFRASTRUCTURE_INFO: InfrastructureItem[] = [
   {
     sno: 6,
     information: 'NO. OF GIRLS TOILETS',
-    details: '',
+    details: '20',
     iconType: 'toilet',
   },
   {
     sno: 7,
     information: 'NO. OF BOYS TOILETS',
-    details: '',
+    details: '12',
     iconType: 'toilet',
   },
+
   {
     sno: 8,
     information: 'NO. OF CWSN TOILETS',
